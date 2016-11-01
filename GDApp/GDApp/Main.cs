@@ -369,11 +369,13 @@ namespace GDApp
             #endregion
 
             #endregion
-
+    /*
             #region Maze
             this.textureDictionary.Add("basicTiles",
                 Content.Load<Texture2D>("Assets/Textures/Guidance/BasicTiles"));
             #endregion
+
+    */
         }
         private void LoadVertices()
         {
@@ -623,14 +625,14 @@ namespace GDApp
         private void InitializeModels()
         {
             //to do...
-            Transform3D transform = new Transform3D(new Vector3(10, 10, 0),
-                    new Vector3(0, 0, 0), new Vector3(1, 1, 1),
+            Transform3D transform = new Transform3D(new Vector3(10, 0, 0),
+                    new Vector3(0, 0, 0), new Vector3(0.1f, 0.1f, 0.1f),
                     Vector3.UnitX, Vector3.UnitY);
 
             this.playerObject = new ModelObject("mazeCorner",
                 ActorType.Pickups, transform,
-                this.texturedModelEffect, Color.White, 0.8f,
-                this.textureDictionary["basicTiles"],
+                this.texturedModelEffect, Color.White, 1,
+                this.textureDictionary["checkerboard"],
                 this.modelDictionary["corner"]);
 
             this.playerObject.AttachController(new DriveController("dc1", ControllerType.Drive,

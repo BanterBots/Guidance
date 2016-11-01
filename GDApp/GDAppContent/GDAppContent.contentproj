@@ -242,6 +242,33 @@
   <ItemGroup>
     <Folder Include="Assets\Fonts\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Models\Guidance\m_corner.FBX">
+      <Name>m_corner</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\m_Cross.FBX">
+      <Name>m_Cross</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\m_DeadEnd.FBX">
+      <Name>m_DeadEnd</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\m_Straight.FBX">
+      <Name>m_Straight</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\m_tJunction.FBX">
+      <Name>m_tJunction</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,6 +9,11 @@ Content\Assets\Models\sphere.xnb
 Content\Assets\Models\spindle.xnb
 Content\Assets\Models\torus.xnb
 Content\Assets\Models\torusknot.xnb
+Content\Assets\Models\Guidance\m_corner.xnb
+Content\Assets\Models\Guidance\m_Cross.xnb
+Content\Assets\Models\Guidance\m_DeadEnd.xnb
+Content\Assets\Models\Guidance\m_Straight.xnb
+Content\Assets\Models\Guidance\m_tJunction.xnb
 Content\Assets\Textures\Abstract\abstract1.xnb
 Content\Assets\Textures\Abstract\pink.xnb
 Content\Assets\Textures\Abstract\pink_trans1.xnb
