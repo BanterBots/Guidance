@@ -34,6 +34,7 @@ namespace GDLibrary
 
         public static Keys[] CameraMoveKeys = { Keys.W, Keys.S, Keys.A, Keys.D };
         public static Keys[] CameraMoveKeys_Alt1 = { Keys.T, Keys.G, Keys.F, Keys.H };
+        public static Vector2 CameraMoveThumbStick = GamePad.GetState(PlayerIndex.One).ThumbSticks.Left;
         #endregion
 
         #region Player

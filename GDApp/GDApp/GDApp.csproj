@@ -76,6 +76,7 @@
     <Compile Include="GDLibrary\Controllers\Base\Controller.cs" />
     <Compile Include="GDLibrary\Controllers\Common\DriveController.cs" />
     <Compile Include="GDLibrary\Controllers\Common\FirstPersonController.cs" />
+    <Compile Include="GDLibrary\Controllers\Common\FirstPersonMazeController.cs" />
     <Compile Include="GDLibrary\Controllers\Common\FlightController.cs" />
     <Compile Include="GDLibrary\Controllers\Common\ThirdPersonController.cs" />
     <Compile Include="GDLibrary\Controllers\Common\TrackController.cs" />
