@@ -7,11 +7,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\box_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:45.5012882+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -20,11 +20,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\cylinder_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:45.7060843+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -33,11 +33,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\dome_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:45.8152822+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -46,11 +46,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\hedra_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:45.877681+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -59,11 +59,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\octahedron_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:45.9244801+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -72,11 +72,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\plane_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:46.0180783+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -85,11 +85,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\prism_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:46.0648774+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -98,11 +98,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb</Output>
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\sphere_0.xml</Key>
-        <Value>2016-10-28T09:28:00+01:00</Value>
+        <Value>2016-10-28T09:42:46.2364741+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -111,11 +111,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\spindle_0.xml</Key>
-        <Value>2016-10-28T09:28:02+01:00</Value>
+        <Value>2016-10-28T09:42:46.3038729+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -124,11 +124,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\torus_0.xml</Key>
-        <Value>2016-10-28T09:28:02+01:00</Value>
+        <Value>2016-10-28T09:42:46.350672+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -137,11 +137,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\torusknot_0.xml</Key>
-        <Value>2016-10-28T09:28:02+01:00</Value>
+        <Value>2016-10-28T09:42:46.4754696+01:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -150,7 +150,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -159,7 +159,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -168,7 +168,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -177,7 +177,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -186,7 +186,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -195,7 +195,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -204,7 +204,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -213,7 +213,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -222,7 +222,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -231,7 +231,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -240,7 +240,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -249,7 +249,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -258,7 +258,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb</Output>
       <Time>2016-10-13T14:31:24+01:00</Time>
     </Item>
     <Item>
@@ -267,7 +267,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -276,7 +276,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -285,7 +285,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -294,7 +294,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -303,7 +303,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -312,7 +312,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -321,7 +321,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -330,7 +330,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -339,7 +339,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -348,7 +348,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb</Output>
       <Time>2016-10-13T14:31:26+01:00</Time>
     </Item>
     <Item>
@@ -357,7 +357,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb</Output>
       <Time>2016-10-14T12:11:42+01:00</Time>
     </Item>
     <Item>
@@ -366,7 +366,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb</Output>
       <Time>2016-10-14T12:31:08+01:00</Time>
     </Item>
     <Item>
@@ -375,7 +375,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb</Output>
       <Time>2016-10-14T12:31:08+01:00</Time>
     </Item>
     <Item>
@@ -384,7 +384,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb</Output>
       <Time>2016-10-14T12:31:18+01:00</Time>
     </Item>
     <Item>
@@ -393,7 +393,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb</Output>
       <Time>2016-10-14T12:31:18+01:00</Time>
     </Item>
     <Item>
@@ -402,7 +402,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb</Output>
+      <Output>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb</Output>
       <Time>2016-10-14T12:31:18+01:00</Time>
     </Item>
     <Item>
@@ -488,10 +488,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDAppContent\</RootDirectory>
-      <LoggerRootDirectory>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDAppContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDAppContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDAppContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

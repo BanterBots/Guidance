@@ -676,3 +676,105 @@ E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textur
 E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
 E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
 E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.exe
+C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.exe
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.dll
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.xml
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml

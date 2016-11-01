@@ -112,6 +112,7 @@ namespace GDApp
         private CameraManager cameraManager;
         private Curve1D curve1D;
         private GenericDictionary<string, Transform3DCurve> curveDictionary;
+        private ModelObject playerObject;
         #endregion
        
         #region Properties
@@ -160,15 +161,6 @@ namespace GDApp
 
         protected override void Initialize()
         {
-            float y = MathHelper.Lerp(0, 255, 0.5f);
-
-            for (int i = 0; i <= 10; i++)
-            {
-                Color x = MathUtility.Lerp(Color.Red, Color.Blue, i / 10.0f);
-                System.Diagnostics.Debug.WriteLine(x);
-            }
-
-
             int width = 1024, height = 768;
             int worldScale = 1000;
 
@@ -191,11 +183,6 @@ namespace GDApp
             LoadPrimitiveArchetypes();
             #endregion
 
-            #region Cameras
-            InitializeCameraTracks();
-            InitializeCamera(new Vector3(0, 10, 20), -Vector3.UnitZ, Vector3.UnitY);
-            #endregion
-
             #region Draw Game Objects
             InitializeHelperObjects();
             InitializeWireframeObjects();
@@ -204,6 +191,11 @@ namespace GDApp
             InitializeFoliage(); //trees and shrubs etc
             InitializeArchitecture(); //walls and buildings etc
             InitializeModels();  //3DS Max or Maya FBX format models
+            #endregion
+
+            #region Cameras
+            InitializeCameraTracks();
+            InitializeCamera(new Vector3(0, 10, 20), -Vector3.UnitZ, Vector3.UnitY);
             #endregion
 
             #region Demo
@@ -226,8 +218,6 @@ namespace GDApp
 
             this.curveDictionary.Add("room_action1", curve);
             #endregion
-
-
 
         }
 
@@ -318,9 +308,11 @@ namespace GDApp
          //   Model m = Content.Load<Model>("Assets/Models/box");
 
 
-            this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
-            this.modelDictionary.Add("hedra", Content.Load<Model>("Assets/Models/hedra"));
-            this.modelDictionary.Add("torus", Content.Load<Model>("Assets/Models/torus"));
+            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/m_Corner"));
+            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/m_tJunction"));
+            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/m_Straight"));
+            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/m_Cross"));
+            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/m_DeadEnd"));
             //Add more models...
         }
         private void LoadTextures()
@@ -375,7 +367,12 @@ namespace GDApp
             this.textureDictionary.Add("sidewall",
                 Content.Load<Texture2D>("Assets/Textures/Architecture/Walls/sidewall"));
             #endregion
-            
+
+            #endregion
+
+            #region Maze
+            this.textureDictionary.Add("basicTiles",
+                Content.Load<Texture2D>("Assets/Textures/Guidance/BasicTiles"));
             #endregion
         }
         private void LoadVertices()
@@ -630,53 +627,33 @@ namespace GDApp
                     new Vector3(0, 0, 0), new Vector3(1, 1, 1),
                     Vector3.UnitX, Vector3.UnitY);
 
-            ModelObject modelObject = new ModelObject("box1",
+            this.playerObject = new ModelObject("mazeCorner",
                 ActorType.Pickups, transform,
-                this.texturedModelEffect, Color.White, 0.2f,
-                this.textureDictionary["checkerboard"],
-                this.modelDictionary["box"]);
+                this.texturedModelEffect, Color.White, 0.8f,
+                this.textureDictionary["basicTiles"],
+                this.modelDictionary["corner"]);
 
-            modelObject.AttachController(new DriveController("dc1", ControllerType.Drive,
+            this.playerObject.AttachController(new DriveController("dc1", ControllerType.Drive,
                 AppData.PlayerMoveKeys, AppData.PlayerMoveSpeed,
                 AppData.PlayerStrafeSpeed, AppData.PlayerRotationSpeed));
 
 
-        //    modelObject.AttachController(new FirstPersonController(
-        //        "fpc1", ControllerType.FirstPerson));
 
 
-          /*  
-            modelObject.AttachController(new TranslationLerpController("lerpTransControl1", ControllerType.LerpTranslation));
-            modelObject.AttachController(new RotationController("rotControl1", 
-                ControllerType.Rotation, -0.1f * Vector3.UnitX));
-
-            modelObject.AttachController(new ColorLerpController("lerpColorControl1", 
-                                ControllerType.LerpColor, 
-                                new Color(1, 0, 0, 1), 
-                                new Color(0, 255, 0, 255), 100));
-            */
-
-
-
-            this.objectManager.Add(modelObject);
+            this.objectManager.Add(this.playerObject);
         }
 
         private void InitializeCamera(Vector3 position, Vector3 look, Vector3 up)
         {
             Transform3D transform = new Transform3D(position, look, up);
-
-            Camera3D camera = new Camera3D("camera1", ActorType.Camera, transform,
+            Camera3D camera1 = new Camera3D("camera1", ActorType.Camera, transform,
                 ProjectionParameters.StandardMediumSixteenNine);
 
-            camera.AttachController(new FirstPersonController("firstPersControl1", 
-               ControllerType.FirstPerson, AppData.CameraMoveKeys, 
-               AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
+            //camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
+            //    this.playerObject, 100, 135));
 
- //           camera.AttachController(new TrackController("trk1", ControllerType.Track,
-   //             this.curveDictionary["room_action1"]));
-
-
-            this.cameraManager.Add("1x1", camera);
+            camera1.AttachController(new FirstPersonController("fpc1", ControllerType.FirstPerson, AppData.CameraMoveKeys, AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
+            this.cameraManager.Add("1x1", camera1);
             this.cameraManager.SetActiveCameraLayout("1x1");
         }
 
@@ -711,6 +688,11 @@ namespace GDApp
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            //graphics.GraphicsDevice.Viewport = new Viewport(512, 0, 512, 768);
+            //base.Draw(gameTime);
+
+            //graphics.GraphicsDevice.Viewport = new Viewport(0, 0, 512, 768);
             base.Draw(gameTime);
         }
     }

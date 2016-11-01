@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using GDApp;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace GDLibrary
 {
@@ -11,6 +12,7 @@ namespace GDLibrary
 
         #region Fields
         private ProjectionParameters projectionParameters;
+        private Viewport viewPort;
         #endregion
 
         #region Properties
@@ -44,11 +46,11 @@ namespace GDLibrary
         #endregion
 
         //creates a default camera3D - we can use this for a fixed camera archetype i.e. one we will clone - see MainApp::InitialiseCameras()
-        public Camera3D(string id, ActorType actorType)
+        public Camera3D(string id, ActorType actorType, Viewport viewPort)
             : this(id, actorType, Transform3D.Zero, 
             ProjectionParameters.StandardMediumFourThree)
         {
-
+            this.viewPort = viewPort;
         }
         
         public Camera3D(string id, ActorType actorType,
