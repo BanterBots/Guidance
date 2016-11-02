@@ -39,7 +39,7 @@ namespace GDLibrary
 
         #region Player
         public static Keys[] PlayerMoveKeys = { Keys.U, Keys.J, Keys.H, Keys.K };
-        public static float PlayerMoveSpeed = 0.1f;
+        public static float PlayerMoveSpeed = 0.05f;
         public static float PlayerStrafeSpeed = 0.07f;
         public static float PlayerRotationSpeed = 0.08f;
         #endregion

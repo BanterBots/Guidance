@@ -22,7 +22,7 @@ namespace GDLibrary
 
 
         public static ProjectionParameters StandardMediumSixteenNine
-            = new ProjectionParameters(MathHelper.PiOver4, 16.0f/9, 1, 1000);
+            = new ProjectionParameters(MathHelper.PiOver4, 16.0f/9, 1, 4000);
 
         public static ProjectionParameters StandardShallowFourThree
             = new ProjectionParameters(MathHelper.PiOver2, 4.0f / 3, 1, 500);
