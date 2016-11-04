@@ -373,7 +373,7 @@ namespace GDApp
          
             #region Crate
             this.textureDictionary.Add("crate1",
-                Content.Load<Texture2D>("Assets/Textures/Props/Crates/crate1"));
+                Content.Load<Texture2D>("Assets/Textures/Debug/ml"));
                 this.textureDictionary.Add("crate2",
                 Content.Load<Texture2D>("Assets/Textures/Props/Crates/crate2"));
             #endregion
