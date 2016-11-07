@@ -6,7 +6,7 @@ namespace GDLibrary
     public class Actor3D : Actor, ICloneable
     {
         #region Variables
-        private Transform3D transform;
+        public Transform3D transform;   //maybe revert this back to private at some stage
         private List<IController> controllerList;
         #endregion
 

@@ -46,6 +46,18 @@ namespace GDLibrary
                 this.alpha = value;
             }
         }
+
+        public Texture2D Texture
+        {
+            get
+            {
+                return this.Texture;
+            }
+            set
+            {
+                this.Texture = Texture;
+            }
+        }
         #endregion
 
         //used when we don't want to specify color and alpha

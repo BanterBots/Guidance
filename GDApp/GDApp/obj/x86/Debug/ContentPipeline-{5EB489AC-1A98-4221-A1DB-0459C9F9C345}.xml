@@ -7,11 +7,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
+      <Time>2016-11-07T20:12:10.3674434+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\box_0.xml</Key>
-        <Value>2016-11-01T16:14:00.4291114+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\box_0.xml</Key>
+        <Value>2016-11-07T20:34:35.3455571+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -20,11 +20,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb</Output>
+      <Time>2016-11-07T20:12:10.3684458+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\cylinder_0.xml</Key>
-        <Value>2016-11-01T16:14:00.5510825+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\cylinder_0.xml</Key>
+        <Value>2016-11-07T20:34:35.8473897+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -33,11 +33,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb</Output>
+      <Time>2016-11-07T20:12:10.3714469+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\dome_0.xml</Key>
-        <Value>2016-11-01T16:14:00.6272608+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\dome_0.xml</Key>
+        <Value>2016-11-07T20:34:35.9819793+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -46,11 +46,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb</Output>
+      <Time>2016-11-07T20:12:10.3819534+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\hedra_0.xml</Key>
-        <Value>2016-11-01T16:14:00.6662594+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\hedra_0.xml</Key>
+        <Value>2016-11-07T20:34:36.0435197+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -59,11 +59,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb</Output>
+      <Time>2016-11-07T20:12:10.3829562+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\octahedron_0.xml</Key>
-        <Value>2016-11-01T16:14:00.7012609+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\octahedron_0.xml</Key>
+        <Value>2016-11-07T20:34:36.0975555+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -72,11 +72,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb</Output>
+      <Time>2016-11-07T20:12:10.3844598+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\plane_0.xml</Key>
-        <Value>2016-11-01T16:14:00.7611826+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\plane_0.xml</Key>
+        <Value>2016-11-07T20:34:36.1991228+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -85,11 +85,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb</Output>
+      <Time>2016-11-07T20:12:10.3854609+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\prism_0.xml</Key>
-        <Value>2016-11-01T16:14:00.7947198+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\prism_0.xml</Key>
+        <Value>2016-11-07T20:34:36.2591626+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -98,11 +98,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb</Output>
+      <Time>2016-11-07T20:12:10.3889636+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\sphere_0.xml</Key>
-        <Value>2016-11-01T16:14:00.8366915+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\sphere_0.xml</Key>
+        <Value>2016-11-07T20:34:36.328208+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -111,11 +111,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb</Output>
+      <Time>2016-11-07T20:12:10.3909645+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\spindle_0.xml</Key>
-        <Value>2016-11-01T16:14:00.8757182+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\spindle_0.xml</Key>
+        <Value>2016-11-07T20:34:36.3882478+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -124,11 +124,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb</Output>
+      <Time>2016-11-07T20:12:10.3944673+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torus_0.xml</Key>
-        <Value>2016-11-01T16:14:00.9177199+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torus_0.xml</Key>
+        <Value>2016-11-07T20:34:36.4753055+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -137,11 +137,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb</Output>
+      <Time>2016-11-07T20:12:10.4009707+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torusknot_0.xml</Key>
-        <Value>2016-11-01T16:14:00.9866918+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torusknot_0.xml</Key>
+        <Value>2016-11-07T20:34:36.5813758+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -150,11 +150,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_corner.xnb</Output>
-      <Time>2016-11-01T16:06:23.1144835+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_corner.xnb</Output>
+      <Time>2016-11-07T20:12:10.37545+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_corner_0.xml</Key>
-        <Value>2016-11-01T16:14:01.0327168+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_corner_0.xml</Key>
+        <Value>2016-11-07T20:34:36.64742+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -163,11 +163,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Cross.xnb</Output>
-      <Time>2016-11-01T16:06:23.1184834+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Cross.xnb</Output>
+      <Time>2016-11-07T20:12:10.3764506+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Cross_0.xml</Key>
-        <Value>2016-11-01T16:14:01.0671906+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Cross_0.xml</Key>
+        <Value>2016-11-07T20:34:36.7094615+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -176,11 +176,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_DeadEnd.xnb</Output>
-      <Time>2016-11-01T16:06:23.121483+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_DeadEnd.xnb</Output>
+      <Time>2016-11-07T20:12:10.3779516+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_DeadEnd_0.xml</Key>
-        <Value>2016-11-01T16:14:01.1021921+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_DeadEnd_0.xml</Key>
+        <Value>2016-11-07T20:34:36.7619985+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -189,11 +189,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Straight.xnb</Output>
-      <Time>2016-11-01T16:06:23.1259559+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Straight.xnb</Output>
+      <Time>2016-11-07T20:12:10.3794539+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Straight_0.xml</Key>
-        <Value>2016-11-01T16:14:01.1356926+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Straight_0.xml</Key>
+        <Value>2016-11-07T20:34:36.8155323+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -202,11 +202,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_tJunction.xnb</Output>
-      <Time>2016-11-01T16:06:23.129484+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_tJunction.xnb</Output>
+      <Time>2016-11-07T20:12:10.3809528+00:00</Time>
       <Dependency>
-        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Key>
-        <Value>2016-11-01T16:14:01.1696921+00:00</Value>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Key>
+        <Value>2016-11-07T20:34:36.8745714+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -215,8 +215,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb</Output>
+      <Time>2016-11-07T20:12:10.4059745+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Abstract\pink.jpg</Source>
@@ -224,8 +224,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb</Output>
+      <Time>2016-11-07T20:12:10.4099776+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Abstract\pink_trans1.png</Source>
@@ -233,8 +233,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb</Output>
+      <Time>2016-11-07T20:12:10.4134794+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Architecture\Fence\fence1.jpg</Source>
@@ -242,8 +242,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb</Output>
+      <Time>2016-11-07T20:12:10.4169809+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Architecture\Fence\fence2.jpg</Source>
@@ -251,8 +251,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb</Output>
+      <Time>2016-11-07T20:12:10.4189827+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Architecture\Fence\fence3.jpg</Source>
@@ -260,8 +260,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb</Output>
+      <Time>2016-11-07T20:12:10.4234861+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Architecture\Fence\fence4.png</Source>
@@ -269,8 +269,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb</Output>
+      <Time>2016-11-07T20:12:10.4409973+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Architecture\Walls\backwall.jpg</Source>
@@ -278,8 +278,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb</Output>
+      <Time>2016-11-07T20:12:10.4439992+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Architecture\Walls\sidewall.jpg</Source>
@@ -287,8 +287,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb</Output>
+      <Time>2016-11-07T20:12:10.4450003+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Debug\ml.png</Source>
@@ -296,8 +296,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb</Output>
+      <Time>2016-11-07T20:12:10.4510039+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Ground\foliage.png</Source>
@@ -305,8 +305,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb</Output>
+      <Time>2016-11-07T20:12:10.4565114+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Ground\grass1.jpg</Source>
@@ -314,8 +314,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb</Output>
+      <Time>2016-11-07T20:12:10.4605119+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Trees\tree1.png</Source>
@@ -323,8 +323,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb</Output>
+      <Time>2016-11-07T20:12:10.4833967+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Trees\tree2.png</Source>
@@ -332,8 +332,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb</Output>
+      <Time>2016-11-07T20:12:10.4857483+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Trees\tree3.png</Source>
@@ -341,8 +341,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb</Output>
+      <Time>2016-11-07T20:12:10.4927529+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Props\Crates\crate1.jpg</Source>
@@ -350,8 +350,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb</Output>
+      <Time>2016-11-07T20:12:10.5522924+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Props\Crates\crate2.jpg</Source>
@@ -359,8 +359,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb</Output>
+      <Time>2016-11-07T20:12:10.5547949+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Skybox\back.bmp</Source>
@@ -368,8 +368,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb</Output>
+      <Time>2016-11-07T20:12:10.5648037+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Skybox\front.bmp</Source>
@@ -377,8 +377,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb</Output>
+      <Time>2016-11-07T20:12:10.57631+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Skybox\ground.bmp</Source>
@@ -386,8 +386,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb</Output>
+      <Time>2016-11-07T20:12:10.5844287+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Skybox\left.bmp</Source>
@@ -395,8 +395,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb</Output>
+      <Time>2016-11-07T20:12:10.5944361+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Skybox\right.bmp</Source>
@@ -404,8 +404,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb</Output>
+      <Time>2016-11-07T20:12:10.6034425+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Skybox\sky.bmp</Source>
@@ -413,8 +413,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb</Output>
-      <Time>2016-10-13T14:31:26+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb</Output>
+      <Time>2016-11-07T20:12:10.6194527+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Debug\checkerboard.png</Source>
@@ -422,8 +422,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb</Output>
-      <Time>2016-10-14T12:11:42+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb</Output>
+      <Time>2016-11-07T20:12:10.4465013+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Trees\tree4.png</Source>
@@ -431,8 +431,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb</Output>
-      <Time>2016-10-14T12:31:08+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb</Output>
+      <Time>2016-11-07T20:12:10.530779+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Trees\tree5.png</Source>
@@ -440,8 +440,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb</Output>
-      <Time>2016-10-14T12:31:08+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb</Output>
+      <Time>2016-11-07T20:12:10.5422879+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Shrubs\shrub1.png</Source>
@@ -449,8 +449,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb</Output>
-      <Time>2016-10-14T12:31:18+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb</Output>
+      <Time>2016-11-07T20:12:10.4630118+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Shrubs\shrub2.png</Source>
@@ -458,8 +458,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb</Output>
-      <Time>2016-10-14T12:31:18+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb</Output>
+      <Time>2016-11-07T20:12:10.4685159+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Foliage\Shrubs\shrub3.png</Source>
@@ -467,120 +467,120 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb</Output>
-      <Time>2016-10-14T12:31:18+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb</Output>
+      <Time>2016-11-07T20:12:10.4810264+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\box.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\box_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\box_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3674434+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\cylinder.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\cylinder_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\cylinder_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3684458+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\dome.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\dome_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\dome_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3714469+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\hedra.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\hedra_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\hedra_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3819534+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\octahedron.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\octahedron_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\octahedron_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3829562+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\plane.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\plane_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\plane_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3844598+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\prism.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\prism_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\prism_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3854609+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\sphere.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\sphere_0.xml</Output>
-      <Time>2016-10-13T14:31:22+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\sphere_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3889636+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\spindle.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\spindle_0.xml</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\spindle_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3909645+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\torus.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torus_0.xml</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torus_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3944673+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\torusknot.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torusknot_0.xml</Output>
-      <Time>2016-10-13T14:31:24+01:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torusknot_0.xml</Output>
+      <Time>2016-11-07T20:12:10.4009707+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Guidance\m_corner.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_corner_0.xml</Output>
-      <Time>2016-11-01T16:06:23.1144835+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_corner_0.xml</Output>
+      <Time>2016-11-07T20:12:10.37545+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Guidance\m_Cross.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Cross_0.xml</Output>
-      <Time>2016-11-01T16:06:23.1184834+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Cross_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3764506+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Guidance\m_DeadEnd.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_DeadEnd_0.xml</Output>
-      <Time>2016-11-01T16:06:23.121483+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_DeadEnd_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3779516+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Guidance\m_Straight.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Straight_0.xml</Output>
-      <Time>2016-11-01T16:06:23.1259559+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Straight_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3794539+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Guidance\m_tJunction.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Output>
-      <Time>2016-11-01T16:06:23.129484+00:00</Time>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Output>
+      <Time>2016-11-07T20:12:10.3809528+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -589,10 +589,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>I:\Projects\Guidance\GDApp\GDAppContent\</RootDirectory>
-      <LoggerRootDirectory>I:\Projects\Guidance\GDApp\GDApp\</LoggerRootDirectory>
-      <IntermediateDirectory>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\ciara_000\Guidance\GDApp\GDApp\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -621,7 +621,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-10-28T18:36:17.552484+01:00</Value>
+        <Value>2016-10-04T19:09:13.9699151+01:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

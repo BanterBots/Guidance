@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using GDLibrary;
 using System;
+using GDApp._3DTileEngine;
 
 /* Version:     2.8
  Description:   Added DriveController as first step towards ThirdPersonController.
@@ -96,6 +97,7 @@ namespace GDApp
 {
     public class Main : Microsoft.Xna.Framework.Game
     {
+        /* Nialls shit */
         #region Variables
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -112,10 +114,11 @@ namespace GDApp
         private CameraManager cameraManager;
         private Curve1D curve1D;
         private GenericDictionary<string, Transform3DCurve> curveDictionary;
-        private ModelObject playerObject, mazeObject;
+        private ModelObject playerObject;
+
 
         #endregion
-       
+
         #region Properties
         public GraphicsDeviceManager Graphics
         {
@@ -177,30 +180,34 @@ namespace GDApp
             #endregion
 
             #region Resources
-            LoadFonts();
+            //LoadFonts();
             LoadModels();
             LoadTextures(); 
-            LoadVertices();
-            LoadPrimitiveArchetypes();
+            //LoadVertices();
+            //LoadPrimitiveArchetypes();
             #endregion
 
             #region Draw Game Objects
-            InitializeHelperObjects();
-            InitializeWireframeObjects();
-            InitializeSkyAndGround(worldScale);
-            InitializeProps(); //cubes etc
-            InitializeFoliage(); //trees and shrubs etc
+
+            //InitializeHelperObjects();
+            //InitializeWireframeObjects();
+            //InitializeSkyAndGround(worldScale);
+            //InitializeProps(); //cubes etc
+            //InitializeFoliage(); //trees and shrubs etc
             InitializeArchitecture(); //walls and buildings etc
             InitializeModels();  //3DS Max or Maya FBX format models
+            InitializeMaze(0);
             #endregion
 
             #region Cameras
-            InitializeCameraTracks();
+            //InitializeCameraTracks();
             InitializeCamera(new Vector3(0, 10, 20), -Vector3.UnitZ, Vector3.UnitY);
             #endregion
 
+            
+
             #region Demo
-            InitializeCurveDemo();
+            //InitializeCurveDemo();
             #endregion
             base.Initialize();
         }
@@ -237,6 +244,7 @@ namespace GDApp
             Camera3D.game = this;
             Controller.game = this;
         }
+
         private void InitializeGraphics(int width, int height)
         {
             this.graphics.PreferredBackBufferWidth = width;
@@ -244,13 +252,13 @@ namespace GDApp
             this.graphics.ApplyChanges();
 
             //or we can set full screen
-            //   this.graphics.IsFullScreen = true;
-            //    this.graphics.ApplyChanges();
+            //this.graphics.IsFullScreen = true;
+            //this.graphics.ApplyChanges();
 
             //records screen centre point - used by mouse to see how much the mouse pointer has moved
-            this.screenCentre = new Vector2(this.graphics.PreferredBackBufferWidth / 2.0f,
-                this.graphics.PreferredBackBufferHeight / 2.0f);
+            this.screenCentre = new Vector2(this.graphics.PreferredBackBufferWidth / 2.0f, this.graphics.PreferredBackBufferHeight / 2.0f);
         }
+
         private void InitializeEffects()
         {
             this.wireframeEffect = new BasicEffect(graphics.GraphicsDevice);
@@ -261,10 +269,11 @@ namespace GDApp
             this.texturedPrimitiveEffect.TextureEnabled = true;
 
             this.texturedModelEffect = new BasicEffect(graphics.GraphicsDevice);
-        //    this.texturedModelEffect.VertexColorEnabled = true;
+            //this.texturedModelEffect.VertexColorEnabled = true;
             this.texturedModelEffect.TextureEnabled = true;
 
         }
+
         private void InitializeManagers()
         {
             this.objectManager = new ObjectManager(this, "gameObjects");
@@ -279,13 +288,10 @@ namespace GDApp
 
             this.cameraManager = new CameraManager(this);
             Components.Add(this.cameraManager);
-
-
-            //to do...
         }
+
         private void InitializeDictionaries()
         {
-            //"grass", grass.png
             this.textureDictionary = new GenericDictionary<string, Texture2D>("texture dictionary");
             
             this.vertexDictionary = new GenericDictionary<string, IVertexData>("vertex dictionary");
@@ -296,19 +302,18 @@ namespace GDApp
 
             this.fontDictionary = new GenericDictionary<string, SpriteFont>("font dictionary");
 
-            this.curveDictionary
-                = new GenericDictionary<string, Transform3DCurve>("curve dictionary");
+            this.curveDictionary = new GenericDictionary<string, Transform3DCurve>("curve dictionary");
         }
 
         private void LoadFonts()
         {
             //to do...
         }
+
         private void LoadModels()
         {
 
             this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
-
             this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/m_Corner"));
             this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/m_tJunction"));
             this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/m_Straight"));
@@ -316,6 +321,7 @@ namespace GDApp
             this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/m_DeadEnd"));
             //Add more models...
         }
+
         private void LoadTextures()
         {
             #region debug
@@ -362,6 +368,7 @@ namespace GDApp
                     Content.Load<Texture2D>("Assets/Textures/Architecture/Fence/fence" + i));
             }
             #endregion
+
             #region walls
             this.textureDictionary.Add("backwall",
                   Content.Load<Texture2D>("Assets/Textures/Architecture/Walls/backwall"));
@@ -369,8 +376,6 @@ namespace GDApp
                 Content.Load<Texture2D>("Assets/Textures/Architecture/Walls/sidewall"));
             #endregion
 
-
-         
             #region Crate
             this.textureDictionary.Add("crate1",
                 Content.Load<Texture2D>("Assets/Textures/Debug/ml"));
@@ -380,6 +385,7 @@ namespace GDApp
 
             
         }
+
         private void LoadVertices()
         {
             VertexPositionColor[] verticesPositionColor = null;
@@ -513,6 +519,7 @@ namespace GDApp
             this.vertexDictionary.Add("wireframe_triangle", vertexData);
             #endregion
         }
+
         private void LoadPrimitiveArchetypes()
         {
             Transform3D transform = null;
@@ -539,6 +546,7 @@ namespace GDApp
 
             this.objectManager.Add(originHelper);
         }
+
         private void InitializeWireframeObjects()
         {
             //wireframe triangle
@@ -553,6 +561,7 @@ namespace GDApp
 
             this.objectManager.Add(triangleObject);
         }
+
         private void InitializeSkyAndGround(int worldScale)
         {
             TexturedPrimitiveObject archTexturedPrimitiveObject = null, cloneTexturedPrimitiveObject = null;
@@ -613,54 +622,57 @@ namespace GDApp
             this.objectManager.Add(cloneTexturedPrimitiveObject);
             #endregion
         }
+
         private void InitializeProps()
         {
 
         }
+
         private void InitializeFoliage()
         {
             //to do...
         }
+
         private void InitializeArchitecture()
         {
             //to do...
         }
+
         private void InitializeModels()
         {
+            Transform3D transform = new Transform3D(
+                new Vector3(10, 15, 0),
+                new Vector3(0, 0, 0), new Vector3(0.1f, 0.1f, 0.1f),
+                Vector3.UnitX, Vector3.UnitY);
 
-            GenerateMaze();
-
-            Transform3D transform = new Transform3D(new Vector3(10, 15, 0),
-                    new Vector3(0, 0, 0), new Vector3(0.1f, 0.1f, 0.1f),
-                    Vector3.UnitX, Vector3.UnitY);
-
-            this.playerObject = new ModelObject("box",
-                    ActorType.Pickups, transform,
-                    this.texturedModelEffect, Color.White, 1,
-                    this.textureDictionary["checkerboard"],
-                    this.modelDictionary["box"]);
+            this.playerObject = new ModelObject(
+                "box",
+                ActorType.Pickups, transform,
+                this.texturedModelEffect, Color.White, 1,
+                this.textureDictionary["checkerboard"],
+                this.modelDictionary["box"]);
 
             this.objectManager.Add(this.playerObject);
 
-            this.playerObject.AttachController(new DriveController("dc1", ControllerType.Drive,
-                AppData.PlayerMoveKeys, AppData.PlayerMoveSpeed,
-                AppData.PlayerStrafeSpeed, AppData.PlayerRotationSpeed));
-
-
-
-
-
+            this.playerObject.AttachController(new DriveController(
+                "dc1", 
+                ControllerType.Drive, 
+                AppData.PlayerMoveKeys, 
+                AppData.PlayerMoveSpeed, 
+                AppData.PlayerStrafeSpeed, 
+                AppData.PlayerRotationSpeed));
         }
 
-        private void GenerateMaze()
+        private void InitializeMaze(int size)
         {
-           
-            int xTile = 0, zTile = 0, tileNumber = 0;
-            Transform3D transform = new Transform3D(new Vector3(10, 0, 0),
-                    new Vector3(0, 0, 0), new Vector3(0.1f, 0.1f, 0.1f),
-                    Vector3.UnitX, Vector3.UnitY);
+            // size is hardcoded
+            size = 8;
+            int xTile = 0, zTile = 0;
 
-            Model[] mazeTiles = {
+            
+            Transform3D transform;
+
+            Model[] mazeTiles = new Model[]{
                 this.modelDictionary["deadEnd"],    //0
                 this.modelDictionary["straight"],   //1
                 this.modelDictionary["corner"],     //2
@@ -669,50 +681,103 @@ namespace GDApp
                 this.modelDictionary["box"]         //5
             };
 
-            int[] tileLocations = {
-                5,1,2,0,1,3,3,2,
-                0,2,3,0,3,4,2,1,
-                3,3,4,0,3,4,1,3,
-                1,0,4,1,5,1,0,3,
-                2,3,2,0,3,2,2,3,
-                2,2,0,2,3,0,4,3,
-                1,5,3,2,3,3,3,2,
-                2,2,0,1,2,2,1,5
+            int[,] modelTypes =
+            {
+                {5, 1, 2, 0, 1, 3, 3, 2},
+                {0, 2, 3, 0, 3, 4, 2, 1},
+                {3, 3, 4, 0, 3, 4, 1, 3},
+                {1, 0, 4, 1, 5, 1, 0, 3},
+                {2, 3, 2, 0, 3, 2, 2, 3},
+                {2, 2, 0, 2, 3, 0, 4, 3},
+                {1, 5, 3, 2, 3, 3, 3, 2},
+                {2, 2, 0, 1, 2, 2, 1, 5}
             };
 
-            int[] rotations =
+          
+            int[,] modelRotations =
             {
-                0,90,180,-90,90,180,180,180,
-                180,-90,90,-90,180,0,90,0,
-                -90,0,0,90,-90,0,90,90,
-                0,-90,0,90,0,0,-90,90,
-                0,180,90,-90,180,90,-90,90,
-                -90,90,180,-90,90,-90,0,90,
-                0,0,0,90,-90,180,0,90,
-                0,90,-90,90,90,0,90,0
+                {0, -1, 2,-1, 1, 2, 2, 2},
+                {2,-1, 1,-1, 2, 0, 1, 0},
+                {-1,0, 0, 1,-1, 0, 1, 1},
+                {0,-1, 0, 1, 0, 0,-1, 1},
+                {0, 2, 1,-1, 2, 1,-1, 1},
+                {-1,1, 2,-1, 1,-1, 0, 1},
+                {0, 0, 0, 1,-1, 2, 0, 1},
+                {0, 1,-1, 1, 1, 0, 1, 0}
             };
 
-            for (int i = 0; i < 8; i++)
+            int[,] modelR =
+           {
+
+                { 0,90,180,-90,90,180,180,180 },
+                {180,-90,90,-90,180,0,90,0 },
+                { -90,0,0,90,-90,0,90,90 },
+                { 0,-90,0,90,0,0,-90,90 },
+                { 0,180,90,-90,180,90,-90,90 },
+                { -90,90,180,-90,90,-90,0,90 },
+                { 0,0,0,90,-90,180,0,90 },
+                { 0,90,-90,90,90,0,90,0 }            }; 
+            // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
+            TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
+
+            /*
+            for (int i = 0; i < tg.gridSize; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < tg.gridSize; j++)
                 {
+                    // Creating the Model
+                    //mazeObject = new ModelObject("maze(" + i + "," + j + ")",
+                    //ActorType.Pickups, transform,
+                    //this.texturedModelEffect, Color.White, 1,
+                    //this.textureDictionary["crate1"],
+                    //mazeTiles[tileLocations[tileNumber]]);
+
+                    // Creating Transform
+
+
                     
-                    transform = new Transform3D(new Vector3(xTile, 0, zTile),
-                    new Vector3(0, rotations[tileNumber], 0), new Vector3(0.1f, 0.1f, 0.1f),
-                    Vector3.UnitX, Vector3.UnitY);
 
-                    this.mazeObject = new ModelObject("maze(" + i + "," + j + ")",
-                    ActorType.Pickups, transform,
-                    this.texturedModelEffect, Color.White, 1,
-                    this.textureDictionary["crate1"],
-                    mazeTiles[tileLocations[tileNumber]]);
+                    // this below transform is currently useless because a ModelTileObject creates its own transform from the parameters, which should be handled by the TileGridCreator
+                    transform = new Transform3D(
+                        new Vector3(xTile, 0, zTile),
+                        new Vector3(0, modelRotations[i,j], 0),
+                        new Vector3(0.1f, 0.1f, 0.1f),
+                        Vector3.UnitX,
+                        Vector3.UnitY);
 
-                    this.objectManager.Add(this.mazeObject);
-                    tileNumber++;
-                    xTile += 75;
+                    //hardcoded shit
+                    int x = xTile;
+                    int y = zTile;
+                    int type = 0;
+
+                    // Have to make a Tile class that is a kind of copy of the modelobject class, not inherited from it
+                    ModelTileObject mazeObject = new ModelTileObject(
+                        "maze(" + i + "," + j + ")",
+                        ActorType.Pickups, 
+                        transform,
+                        this.texturedModelEffect,
+                        Color.White,
+                        1,
+                        this.textureDictionary["crate1"],
+                        this.mazeTiles[modelTypes[i,j]],
+                        x,
+                        y,
+                        type,
+                        modelRotations[i,j],
+                        tg.tileSize);
+
+                    this.objectManager.Add(mazeObject);
+                    xTile ++;
                 }
                 xTile = 0;
-                zTile += 75;
+                zTile ++;
+            }*/
+            for (int i = 0; i < tg.gridSize; i++)
+            {
+                for (int j = 0; j < tg.gridSize; j++)
+                {
+                   this.objectManager.Add(tg.grid[i, j]);
+                }
             }
         }
 
@@ -722,8 +787,14 @@ namespace GDApp
             Camera3D camera1 = new Camera3D("camera1", ActorType.Camera, transform,
                 ProjectionParameters.StandardMediumSixteenNine);
 
-            camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
-                this.playerObject, 10, 165));
+            // Below camera angle looks down on the grid
+            //camera1.transform = new Transform3D(new Vector3(300, -1000, 300), Vector3.Down, Vector3.Forward); 
+
+            // Below camera angle has x:0, y:0 at the top left.
+            camera1.transform = new Transform3D(new Vector3(200, -1000, 200), Vector3.Up, -1 * Vector3.Right);
+
+            //  camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
+            //       this.playerObject, 10, 165));
 
             //camera1.AttachController(new FirstPersonMazeController("fpc1", ControllerType.FirstPerson, AppData.CameraMoveKeys, AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
             this.cameraManager.Add("1x1", camera1);
@@ -734,11 +805,14 @@ namespace GDApp
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
         }
+
         protected override void UnloadContent()
         {
         }
+
         protected override void Update(GameTime gameTime)
         {
+            /*
             if (this.keyboardManager.IsFirstKeyPress(Keys.Escape))
                 this.objectManager.Paused = !this.objectManager.Paused;
 
@@ -747,17 +821,20 @@ namespace GDApp
 
             if (this.keyboardManager.IsKeyDown(Keys.P))
                 this.objectManager.Remove(new ActorTypeFilter(ActorType.Decorator));
+            */
 
             #region Demo
+            /*
             float x = this.curve1D.Evaluate(
                    (float)gameTime.TotalGameTime.TotalMilliseconds, 2);
             System.Diagnostics.Debug.WriteLine("X:" + x);
-
+            */
             #endregion
 
             // this.camera.Update(gameTime);
             base.Update(gameTime);
         }
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);

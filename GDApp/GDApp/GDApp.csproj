@@ -72,6 +72,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3DTileEngine\ModelTileObject.cs" />
+    <Compile Include="3DTileEngine\TileGrid.cs" />
     <Compile Include="GDLibrary\Camera\Camera3D.cs" />
     <Compile Include="GDLibrary\Controllers\Base\Controller.cs" />
     <Compile Include="GDLibrary\Controllers\Common\DriveController.cs" />
