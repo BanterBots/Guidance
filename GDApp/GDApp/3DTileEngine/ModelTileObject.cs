@@ -15,6 +15,7 @@ namespace GDApp._3DTileEngine
         private Texture2D texture;
         private Model model;
         private Matrix[] boneTransforms;
+        public int modelNo;
         public int x, y, tileSize, rotation;
         #endregion
 
@@ -54,13 +55,14 @@ namespace GDApp._3DTileEngine
         }
         #endregion
 
-        public ModelTileObject(string id, ActorType actorType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model,
+        public ModelTileObject(string id, ActorType actorType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model, int modelNo,
                     int x, int y) : base(id, actorType, transform, effect, color, alpha)
         {
             this.texture = texture;
             this.model = model;
             this.x = x;
             this.y = y;
+            this.modelNo = modelNo;
 
             InitializeBoneTransforms();
         }

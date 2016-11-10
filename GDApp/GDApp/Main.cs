@@ -681,9 +681,33 @@ namespace GDApp
                 this.modelDictionary["box"]         //5
             };
 
+            //int[,] modelTypes = 
+            //{
+            //    {5, 1, 2, 0, 1, 3, 3, 2},
+            //    {0, 2, 3, 0, 3, 4, 2, 1},
+            //    {3, 3, 4, 0, 3, 4, 1, 3},
+            //    {1, 0, 4, 1, 5, 1, 0, 3},
+            //    {2, 3, 2, 0, 3, 2, 2, 3},
+            //    {2, 2, 0, 2, 3, 0, 4, 3},
+            //    {1, 5, 3, 2, 3, 3, 3, 2},
+            //    {2, 2, 0, 1, 2, 2, 1, 5}
+            //};
+
+            //int[,] modelRotations =
+            //{
+            //    {0,-1, 2,-1, 1, 2, 2, 2},
+            //    {2,-1, 1,-1, 2, 0, 1, 0},
+            //    {-1,0, 0, 1,-1, 0, 1, 1},
+            //    {0,-1, 0, 1, 0, 0,-1, 1},
+            //    {0, 2, 1,-1, 2, 1,-1, 1},
+            //    {-1,1, 2,-1, 1,-1, 0, 1},
+            //    {0, 0, 0, 1,-1, 2, 0, 1},
+            //    {0, 1,-1, 1, 1, 0, 1, 0}
+            //};
+
             int[,] modelTypes =
-            {
-                {5, 1, 2, 0, 1, 3, 3, 2},
+          {
+                {0, 1, 2, 3, 4, 5, 3, 2},
                 {0, 2, 3, 0, 3, 4, 2, 1},
                 {3, 3, 4, 0, 3, 4, 1, 3},
                 {1, 0, 4, 1, 5, 1, 0, 3},
@@ -693,10 +717,9 @@ namespace GDApp
                 {2, 2, 0, 1, 2, 2, 1, 5}
             };
 
-          
             int[,] modelRotations =
             {
-                {0, -1, 2,-1, 1, 2, 2, 2},
+                {0, 0, 0, 0, 0, 2, 2, 2},
                 {2,-1, 1,-1, 2, 0, 1, 0},
                 {-1,0, 0, 1,-1, 0, 1, 1},
                 {0,-1, 0, 1, 0, 0,-1, 1},
@@ -706,19 +729,10 @@ namespace GDApp
                 {0, 1,-1, 1, 1, 0, 1, 0}
             };
 
-            int[,] modelR =
-           {
 
-                { 0,90,180,-90,90,180,180,180 },
-                {180,-90,90,-90,180,0,90,0 },
-                { -90,0,0,90,-90,0,90,90 },
-                { 0,-90,0,90,0,0,-90,90 },
-                { 0,180,90,-90,180,90,-90,90 },
-                { -90,90,180,-90,90,-90,0,90 },
-                { 0,0,0,90,-90,180,0,90 },
-                { 0,90,-90,90,90,0,90,0 }            }; 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
-            TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
+            //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
+            TileGrid tg = new TileGrid(10, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"]);
 
             /*
             for (int i = 0; i < tg.gridSize; i++)
@@ -776,7 +790,10 @@ namespace GDApp
             {
                 for (int j = 0; j < tg.gridSize; j++)
                 {
-                   this.objectManager.Add(tg.grid[i, j]);
+                    if(tg.grid[i,j] != null)
+                    {
+                        this.objectManager.Add(tg.grid[i, j]);
+                    }
                 }
             }
         }
@@ -793,7 +810,7 @@ namespace GDApp
             // Below camera angle has x:0, y:0 at the top left.
             camera1.transform = new Transform3D(new Vector3(200, -1000, 200), Vector3.Up, -1 * Vector3.Right);
 
-            //  camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
+             // camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
             //       this.playerObject, 10, 165));
 
             //camera1.AttachController(new FirstPersonMazeController("fpc1", ControllerType.FirstPerson, AppData.CameraMoveKeys, AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
