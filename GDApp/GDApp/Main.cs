@@ -808,7 +808,7 @@ namespace GDApp
             //camera1.transform = new Transform3D(new Vector3(300, -1000, 300), Vector3.Down, Vector3.Forward); 
 
             // Below camera angle has x:0, y:0 at the top left.
-            camera1.transform = new Transform3D(new Vector3(200, -1000, 200), Vector3.Up, -1 * Vector3.Right);
+            camera1.transform = new Transform3D(new Vector3(400, -1200, 500), Vector3.Up, -1 * Vector3.Right);
 
              // camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
             //       this.playerObject, 10, 165));
