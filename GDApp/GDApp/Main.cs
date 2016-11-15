@@ -313,13 +313,16 @@ namespace GDApp
         private void LoadModels()
         {
 
-            
-            this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Room"));
+
+            this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
+
+            this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Room"));
             this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Corner"));
             this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Junction"));
             this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Straight"));
             this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Cross"));
             this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_DeadEnd"));
+            this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Puzzle"));
             //Add more models...
             /*
             this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
@@ -698,8 +701,8 @@ namespace GDApp
                 this.modelDictionary["corner"],     //2
                 this.modelDictionary["tJunction"],  //3
                 this.modelDictionary["cross"],      //4
-                this.modelDictionary["box"]      //5
-               // this.modelDictionary["puzzle"]      //6
+                this.modelDictionary["room"],      //5
+                this.modelDictionary["puzzle"]      //6
             };
 
             //int[,] modelTypes = 
@@ -753,7 +756,9 @@ namespace GDApp
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(10, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
+            TileGrid tg = new TileGrid(7, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
+            int[] finishRoom = tg.generateRandomGrid();
+            System.Console.WriteLine("end point: "+finishRoom[0] +","+finishRoom[1]);
 
             /*
             for (int i = 0; i < tg.gridSize; i++)
@@ -832,7 +837,7 @@ namespace GDApp
             camera1.transform = new Transform3D(new Vector3(400, 1200, -100), Vector3.Down, -1 * Vector3.Right);
 
              // camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
-            //       this.playerObject, 10, 165));
+             //      this.playerObject, 10, 165));
 
             //camera1.AttachController(new FirstPersonMazeController("fpc1", ControllerType.FirstPerson, AppData.CameraMoveKeys, AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
             this.cameraManager.Add("1x1", camera1);

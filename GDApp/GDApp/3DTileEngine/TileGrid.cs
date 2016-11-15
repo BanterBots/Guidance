@@ -42,7 +42,6 @@ namespace GDApp._3DTileEngine
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
             initializeInfo();
-            generateRandomGrid();
         }
 
         private void initializeInfo()
@@ -60,27 +59,43 @@ namespace GDApp._3DTileEngine
             "box"       index:5     connection:l-d      bytes:          0110                              6
             */
 
-            tileInfo = new int[6];
+            tileInfo = new int[7];
             tileInfo[0] = 8;
             tileInfo[1] = 10;
             tileInfo[2] = 9;
             tileInfo[3] = 13;
             tileInfo[4] = 15;
-            tileInfo[5] = 6;
+            tileInfo[5] = 10; // room
+            tileInfo[6] = 8; // puzzle
         }
 
-        private void generateRandomGrid()
+
+        public int[] generateRandomGrid()
         {
+            createTileAt(0, 0, 0, 0); // startroom
+            createRandomChainAt(0, 1, 3);
 
-            //  0
-            //3   1
-            //  2
-            //           x  y  model  rotation
-            createTileAt(0, 0, 0, 0); // start
-            //createTileAt(gridSize-1, gridSize-1, 0, 2); // finish
-            createRandomChainAt(3, 3, 3);
+            int maxX = 0;
+            int maxY = 0;
 
-            
+            for(int x = 0; x < gridSize-1; x++)
+            {
+                for(int y = 0; y < gridSize-1; y++)
+                {
+                    if (grid[x, y] != null)
+                    {
+                        if(x > maxX)
+                        {
+                            maxX = x;
+                        }
+                        if(y > maxY)
+                        {
+                            maxY = y;
+                        }
+                    }
+                }
+            }
+            return new int[] { maxX, maxY };
         }
 
         private bool createRandomChainAt(int x, int y, int originDir) // originDir represents the direction where we came from
@@ -204,67 +219,153 @@ namespace GDApp._3DTileEngine
             allowedDirs = setBit(allowedDirs, originDir-1, true);
             System.Console.Write("allowed dirs after origin calc " + allowedDirs + "\n");
 
-            /**
-            *   4) We choose a random model based on probability
-            **/
-            int modelNumber = randomTile();
-            System.Console.Write(modelNumber);
 
-            /**
-            *   5) We compare the possible directions and the directions of our model + rotations.
-            **/
 
-            int possibleDirs = tileInfo[modelNumber];
-            System.Console.Write("possible dirs coming from array: " + possibleDirs + "\n");
-            int rotation = -1;
+            int possibleDirs = 0;
+            int modelNumber = 0;
+            bool created = false;
 
-            for(int tries = 0; tries < 4; tries++)
+            // Loops through trying models for the next tile
+
+            for(int tries = 0; tries < 2; tries++)
             {
-                if (compareDirs(allowedDirs, possibleDirs, originDir))
+                /**
+                *   4) We choose a random model based on probability
+                **/
+                modelNumber = randomTile();
+                possibleDirs = tileInfo[modelNumber];
+
+                System.Console.Write(modelNumber);
+
+                /**
+                *   5) We compare the possible directions and the directions of our model + rotations.
+                **/
+                int rotation = -1;
+
+                for (int otries = 0; otries < 4; otries++)
                 {
-                    createTileAt(x, y, modelNumber, rotation);
-                    tries = 4;
+                    if (compareDirs(allowedDirs, possibleDirs, originDir))
+                    {
+                        createTileAt(x, y, modelNumber, rotation);
+                        tries = 4;
+                        created = true;
+                        
+                    }
+                    else
+                    {
+                        possibleDirs = rotateDirs(possibleDirs);
+                        System.Console.Write("Rotating");
+                        rotation++;
+                    }
                 }
-                else
+                if(created)
                 {
-                    possibleDirs = rotateDirs(possibleDirs);
-                    System.Console.Write("Rotating");
-                    rotation++;
+                    tries = 2;
                 }
             }
 
-            if(grid[x,y] != null)
+            /**
+            *   5.5) We create further chains/link up other chains with this one
+            **/
+
+            if (grid[x,y] != null)
             {
                 // Following 
                 //   0
                 // 3   1
                 //   2
-                // For creating further chains
+
                 System.Console.Write("possible dirs " + possibleDirs+"\n");
                 System.Console.Write("allowed dirs  " + allowedDirs + "\n");
-                if (isBitSet(possibleDirs, 4))      // If we can go north...
-                {
-                    createRandomChainAt(x - 1, y, 2);                   // We create a new chain heading north with south (2) as origin
-                }
-
-                if (isBitSet(possibleDirs, 1))      // If we can go east...
-                {
-                   createRandomChainAt(x, y + 1, 3);                   // We create a new chain heading east with west (3) as origin
-                }
-
                 if (isBitSet(possibleDirs, 2))      // If we can go south...
                 {
-                  createRandomChainAt(x + 1, y, 4);                   // We create a new chain heading with north as origin
+                    if(grid[x + 1, y] == null)
+                    {
+                        createRandomChainAt(x + 1, y, 4);                   // We create a new chain heading with north as origin
+                    }
+                    else
+                    {
+                        //Regenerate(x + 1, y, 0, 0, 0); // regenerate this tile to link to the north
+                    }
                 }
-
                 if (isBitSet(possibleDirs, 3))      // If we can go west...
                 {
-                    createRandomChainAt(x, y - 1, 1);                   // We create a new chain heading east
+                    if (grid[x, y - 1] == null)
+                    {
+                        createRandomChainAt(x, y - 1, 1);                   // We create a new chain heading east
+                    }
+                    else
+                    {
+                        //Regenerate(x, y - 1, 0, 0, 0); // regenerate this tile to link to the west
+                    }
                 }
-
+                if (isBitSet(possibleDirs, 4))      // If we can go north...
+                {
+                    if (grid[x - 1, y] == null)
+                    {
+                        createRandomChainAt(x - 1, y, 2);                   // We create a new chain heading north with south (2) as origin
+                    }
+                    else
+                    {
+                        //Regenerate(x - 1, y, 0, 0, 0); // regenerate this tile to link to the north
+                    }
+                }              
+                if (isBitSet(possibleDirs, 1))      // If we can go east...
+                {
+                    if (grid[x, y + 1] == null)
+                    {
+                        createRandomChainAt(x, y + 1, 3);                   // We create a new chain heading east with west (3) as origin
+                    }
+                    else
+                    {
+                        //Regenerate(x, y + 1, 0, 0, 0); // regenerate this tile to link to the east
+                    }
+                }
                 return true;
             }
+            else
+            {
+                /**
+                *   6) At this stage, generation has failed - we throw in dead ends at each opening
+                **/
+
+                if (originDir == 4) // coming from north
+                {
+                    //south dead end
+                    createTileAt(x, y, 0, -1);
+                }
+                else if (originDir == 2) // coming from south
+                {
+                    // north dead end
+                    createTileAt(x, y, 0, 1);
+                }
+                else if (originDir == 3) // coming from west
+                {
+                    // east dead end
+                    createTileAt(x, y, 0, 2);
+                }
+                else if (originDir == 1) // coming from east
+                {
+                    // west dead end
+                    createTileAt(x, y, 0, 0);
+                }
+            }
+
+            
+
             System.Console.Write("Failed generation");
+            return false;
+        }
+
+        private void Regenerate(int x, int y, int origin, int allowedDirs, int possibleDirs)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool tryGenerateRandomTile(int x, int y, int modelNumber, int allowedDirs, int possibleDirs, int originDir)
+        {
+            System.Console.Write("possible dirs coming from array: " + possibleDirs + "\n");
+            
             return false;
         }
 
@@ -298,32 +399,41 @@ namespace GDApp._3DTileEngine
         private int randomTile()
         {
             int modelNumber = -1;
-            int rand = random.Next(1, 101);
+            int rand = random.Next(1, 81);
 
-            if (rand > 90)       // 10 in 100 for a dead end
+            if (rand > 80)       // 5 for a dead end
             {   // Dead End
                 modelNumber = 0;
             }
-            else if (rand > 70)  // 20 in 100 for a straight
+            else if (rand > 75)  // 20 for a straight
             {   // Straight
                 modelNumber = 1;
             }
-            else if (rand > 50)  // 20 in 100 for a corner
+            else if (rand > 55)  // 30 for a corner
             {   // Corner
                 modelNumber = 2;
             }
-            else if (rand > 35)  // 15 in 100 for a T junction
+            else if (rand > 45)  // 10 for a T junction
             {   // T Junction
                 modelNumber = 3;
             }
-            else if (rand > 25)  // 10 in 100 for a cross
+            else if (rand > 5)  // 40 for a cross
             {   // Cross
                 modelNumber = 4;
             }
-            else if (rand > 0)   // 25 in 100 for a box;
+            else if (rand > 3)   // 2 for room
             {   // Box
                 modelNumber = 5;
             }
+            else if(rand > 0)   // 3 for puzzle
+            {
+                modelNumber = 6;
+            }
+            else
+            {
+                modelNumber = 1;
+            }
+
            // modelNumber = 1;
             return modelNumber;
           
