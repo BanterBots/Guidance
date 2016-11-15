@@ -43,3 +43,13 @@ Content\Assets\Textures\Foliage\Trees\tree5.xnb
 Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
 Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
 Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb

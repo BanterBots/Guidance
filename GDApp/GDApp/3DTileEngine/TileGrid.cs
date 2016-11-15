@@ -61,10 +61,10 @@ namespace GDApp._3DTileEngine
             */
 
             tileInfo = new int[6];
-            tileInfo[0] = 4;
+            tileInfo[0] = 1;
             tileInfo[1] = 5;
             tileInfo[2] = 3;
-            tileInfo[3] = 14;
+            tileInfo[3] = 13;
             tileInfo[4] = 15;
             tileInfo[5] = 6;
         }
@@ -77,8 +77,8 @@ namespace GDApp._3DTileEngine
             //  2
             //           x  y  model  rotation
             createTileAt(0, 0, 0, 0); // start
-            createTileAt(gridSize-1, gridSize-1, 0, 2); // finish
-            createRandomChainAt(9, 3, 2);
+            //createTileAt(gridSize-1, gridSize-1, 0, 2); // finish
+            createRandomChainAt(0, 1, 3);
 
             
         }
@@ -200,8 +200,9 @@ namespace GDApp._3DTileEngine
             /**
             *  3.5) The previous code will have blocked passage to the room we're originating from, so...     
             **/
-
-            allowedDirs = setBit(allowedDirs, originDir, true);
+            System.Console.Write("allowed dirs after collision checks " + allowedDirs + "\n");
+            allowedDirs = setBit(allowedDirs, originDir-1, true);
+            System.Console.Write("allowed dirs after origin calc " + allowedDirs + "\n");
 
             /**
             *   4) We choose a random model based on probability
@@ -239,10 +240,11 @@ namespace GDApp._3DTileEngine
                 // 3   1
                 //   2
                 // For creating further chains
-                System.Console.Write("possible dirs after rotation " + possibleDirs+"\n");
-                if (isBitSet(possibleDirs, 3))      // If we can go north...
+                System.Console.Write("possible dirs " + possibleDirs+"\n");
+                System.Console.Write("allowed dirs  " + allowedDirs + "\n");
+                if (isBitSet(possibleDirs, 4))      // If we can go north...
                 {
-                    createRandomChainAt(x - 1, y, 4);                   // We create a new chain heading north with south (2) as origin
+                    createRandomChainAt(x - 1, y, 2);                   // We create a new chain heading north with south (2) as origin
                 }
                 if (isBitSet(tileInfo[grid[x, y].modelNo], 2))      // If we can go east...
                 {
@@ -268,7 +270,8 @@ namespace GDApp._3DTileEngine
             int newBits = 0;
 
             // extract the 4 bits and reorder them.
-            if(isBitSet(dirs, 4))
+            System.Console.Write("incoming dirs for rotation " + dirs + "\n");
+            if (isBitSet(dirs, 4))
             {
                 newBits += 4;
             }
@@ -284,6 +287,7 @@ namespace GDApp._3DTileEngine
             {
                 newBits += 8;
             }
+            System.Console.Write("outgoing dirs after rotation " + newBits + "\n");
             return newBits;
         }
 
@@ -316,7 +320,7 @@ namespace GDApp._3DTileEngine
             {   // Box
                 modelNumber = 5;
             }
-            modelNumber = 2;
+            modelNumber = 3;
             return modelNumber;
           
         }
@@ -324,7 +328,7 @@ namespace GDApp._3DTileEngine
         private void createTileAt(int x, int y, int model, int rotation)
         {
             Transform3D transform = new Transform3D(
-                new Vector3(x * tileSize, 0, y * tileSize),
+                new Vector3(x * tileSize, 0, y * (-1)*tileSize),
                 new Vector3(0, rotation * 90, 0),
                 new Vector3(0.1f, 0.1f, 0.1f),
                 Vector3.UnitX,
@@ -350,6 +354,18 @@ namespace GDApp._3DTileEngine
 
         private bool compareDirs(int allowedDirs, int possibleDirs)
         {
+
+            if (!isBitSet(allowedDirs, 4))
+            {
+                if (isBitSet(possibleDirs, 4))
+                {
+                    return false;
+                }
+                else
+                {
+                    //match
+                }
+            }
 
             if (!isBitSet(allowedDirs, 3))
             {
@@ -378,18 +394,6 @@ namespace GDApp._3DTileEngine
             if (!isBitSet(allowedDirs, 1))
             {
                 if (isBitSet(possibleDirs, 1))
-                {
-                    return false;
-                }
-                else
-                {
-                    //match
-                }
-            }
-
-            if (!isBitSet(allowedDirs, 0))
-            {
-                if (isBitSet(possibleDirs, 0))
                 {
                     return false;
                 }

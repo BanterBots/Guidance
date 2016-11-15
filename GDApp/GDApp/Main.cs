@@ -313,13 +313,33 @@ namespace GDApp
         private void LoadModels()
         {
 
+            
+            this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
+            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Corner"));
+            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/m_tJunction"));
+            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/m_Straight"));
+            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/m_Cross"));
+            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/m_DeadEnd"));
+            //Add more models...
+            /*
             this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
             this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/m_Corner"));
             this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/m_tJunction"));
             this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/m_Straight"));
             this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/m_Cross"));
             this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/m_DeadEnd"));
-            //Add more models...
+            */
+            /*
+
+            this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Room"));
+            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Corner"));
+            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Junction"));
+            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Straight"));
+            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Cross"));
+            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_DeadEnd"));
+            this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Puzzle"));
+            */
+
         }
 
         private void LoadTextures()
@@ -667,18 +687,15 @@ namespace GDApp
         {
             // size is hardcoded
             size = 8;
-            int xTile = 0, zTile = 0;
-
-            
-            Transform3D transform;
-
+ 
             Model[] mazeTiles = new Model[]{
                 this.modelDictionary["deadEnd"],    //0
                 this.modelDictionary["straight"],   //1
                 this.modelDictionary["corner"],     //2
                 this.modelDictionary["tJunction"],  //3
                 this.modelDictionary["cross"],      //4
-                this.modelDictionary["box"]         //5
+                this.modelDictionary["box"]      //5
+               // this.modelDictionary["puzzle"]      //6
             };
 
             //int[,] modelTypes = 
@@ -808,7 +825,7 @@ namespace GDApp
             //camera1.transform = new Transform3D(new Vector3(300, -1000, 300), Vector3.Down, Vector3.Forward); 
 
             // Below camera angle has x:0, y:0 at the top left.
-            camera1.transform = new Transform3D(new Vector3(400, -1200, 500), Vector3.Up, -1 * Vector3.Right);
+            camera1.transform = new Transform3D(new Vector3(400, 1200, 500), Vector3.Down, -1 * Vector3.Right);
 
              // camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
             //       this.playerObject, 10, 165));

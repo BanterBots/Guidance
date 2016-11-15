@@ -84,7 +84,7 @@ namespace GDApp._3DTileEngine
             this.Effect.World = this.Transform3D.World;
             this.Effect.DiffuseColor = this.Color.ToVector3();
             this.Effect.Alpha = this.Alpha;
-            this.Effect.Texture = this.texture;
+            //this.Effect.Texture = this.texture;
             this.Effect.CurrentTechnique.Passes[0].Apply();
 
             foreach (ModelMesh mesh in this.Model.Meshes)

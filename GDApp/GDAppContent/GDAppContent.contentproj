@@ -269,6 +269,55 @@
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.FBX">
+      <Name>Tile_Corner</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.FBX">
+      <Name>Tile_Cross</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.FBX">
+      <Name>Tile_DeadEnd</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.FBX">
+      <Name>Tile_Junction</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.FBX">
+      <Name>Tile_Puzzle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.FBX">
+      <Name>Tile_Room</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.FBX">
+      <Name>Tile_Straight</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.png">
+      <Name>BaseTile01_Diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.png">
+      <Name>BaseTile01_DiffuseLayout</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

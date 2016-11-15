@@ -900,3 +900,13 @@ C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssembl
 C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
 C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb

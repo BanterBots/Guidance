@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
       <Source>Assets\Models\box.FBX</Source>
@@ -581,6 +581,187 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Output>
       <Time>2016-11-07T20:12:10.3809528+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.FBX</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb</Output>
+      <Time>2016-11-15T11:25:45.759312+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner_0.xml</Key>
+        <Value>2016-11-15T11:26:30.9462545+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.FBX</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb</Output>
+      <Time>2016-11-15T11:25:45.7623135+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross_0.xml</Key>
+        <Value>2016-11-15T11:26:36.2444619+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.FBX</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb</Output>
+      <Time>2016-11-15T11:25:45.7648156+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd_0.xml</Key>
+        <Value>2016-11-15T11:26:36.5336527+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.FBX</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb</Output>
+      <Time>2016-11-15T11:25:45.7683175+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction_0.xml</Key>
+        <Value>2016-11-15T11:26:36.9864538+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.FBX</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb</Output>
+      <Time>2016-11-15T11:25:45.7923501+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle_0.xml</Key>
+        <Value>2016-11-15T11:26:37.2376206+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.FBX</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\Tile_Room</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb</Output>
+      <Time>2016-11-15T11:25:45.8545214+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room_0.xml</Key>
+        <Value>2016-11-15T11:26:37.4882871+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.FBX</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb</Output>
+      <Time>2016-11-15T11:25:45.9927533+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight_0.xml</Key>
+        <Value>2016-11-15T11:26:37.6353848+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.png</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb</Output>
+      <Time>2016-11-15T11:25:45.7350553+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.png</Source>
+      <Name>Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb</Output>
+      <Time>2016-11-15T11:25:45.740059+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner_0.xml</Output>
+      <Time>2016-11-15T11:25:45.759312+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Output>
+      <Time>2016-11-15T11:25:45.7350553+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross_0.xml</Output>
+      <Time>2016-11-15T11:25:45.7623135+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd_0.xml</Output>
+      <Time>2016-11-15T11:25:45.7648156+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction_0.xml</Output>
+      <Time>2016-11-15T11:25:45.7683175+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle_0.xml</Output>
+      <Time>2016-11-15T11:25:45.7923501+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room_0.xml</Output>
+      <Time>2016-11-15T11:25:45.8545214+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight_0.xml</Output>
+      <Time>2016-11-15T11:25:45.9927533+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
