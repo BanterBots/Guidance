@@ -112,8 +112,8 @@ namespace GDLibrary
         //Calculates the mouse pointer distance from the screen centre
         public Vector2 GetDeltaFromCentre()
         {
-            return new Vector2(this.newState.X - this.game.ScreenCentre.X,
-                        this.newState.Y - this.game.ScreenCentre.Y);
+            return new Vector2((float)(this.newState.X - this.game.ScreenCentre.X),
+(float)(this.newState.Y - this.game.ScreenCentre.Y));
         }
 
         //has the mouse state changed since the last update?

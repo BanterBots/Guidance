@@ -19,6 +19,11 @@ namespace GDApp._3DTileEngine
         public int[] tileInfo;
         Random random = new Random();
 
+        private int minTiles = 20;
+        private int tiles = 0;
+
+        List<Integer3> regenCoords = new List<Integer3>();
+
         // Hardcoded maze entry, need seperate constructor for random generated one
         public TileGrid(int gridSize, int tileSize, Model[] models, BasicEffect effect, Texture2D texture, int[,] modelTypes, int[,] modelRotations)
         {
@@ -69,11 +74,26 @@ namespace GDApp._3DTileEngine
             tileInfo[6] = 8; // puzzle
         }
 
-
         public int[] generateRandomGrid()
         {
-            createTileAt(0, 0, 0, 0); // startroom
-            createRandomChainAt(0, 1, 3);
+            /*
+            createTileAt(0, 0, 0, 0);
+            createTileAt(0, 1, 2, 1);
+            createTileAt(0, 2, 3, 1);
+
+            regenCoords.Add(new Integer3(0, 1, 1));
+            // startroom
+            */
+
+            while (tiles < minTiles)
+            {
+                tiles = 0;
+                grid = new ModelTileObject[gridSize,gridSize];
+                createTileAt(0, 0, 0, 0);
+                createRandomChainAt(0, 1, 3);
+            }
+            
+            regenerateGaps();
 
             int maxX = 0;
             int maxY = 0;
@@ -215,9 +235,9 @@ namespace GDApp._3DTileEngine
             /**
             *  3.5) The previous code will have blocked passage to the room we're originating from, so...     
             **/
-            System.Console.Write("allowed dirs after collision checks " + allowedDirs + "\n");
+            //System.Console.Write("allowed dirs after collision checks " + allowedDirs + "\n");
             allowedDirs = setBit(allowedDirs, originDir-1, true);
-            System.Console.Write("allowed dirs after origin calc " + allowedDirs + "\n");
+            //System.Console.Write("allowed dirs after origin calc " + allowedDirs + "\n");
 
 
 
@@ -227,7 +247,7 @@ namespace GDApp._3DTileEngine
 
             // Loops through trying models for the next tile
 
-            for(int tries = 0; tries < 2; tries++)
+            for(int tries = 0; tries < 5; tries++)
             {
                 /**
                 *   4) We choose a random model based on probability
@@ -235,7 +255,7 @@ namespace GDApp._3DTileEngine
                 modelNumber = randomTile();
                 possibleDirs = tileInfo[modelNumber];
 
-                System.Console.Write(modelNumber);
+                //System.Console.Write(modelNumber);
 
                 /**
                 *   5) We compare the possible directions and the directions of our model + rotations.
@@ -247,7 +267,7 @@ namespace GDApp._3DTileEngine
                     if (compareDirs(allowedDirs, possibleDirs, originDir))
                     {
                         createTileAt(x, y, modelNumber, rotation);
-                        tries = 4;
+                        tries = 5;
                         created = true;
                         
                     }
@@ -260,7 +280,7 @@ namespace GDApp._3DTileEngine
                 }
                 if(created)
                 {
-                    tries = 2;
+                    tries = 5;
                 }
             }
 
@@ -275,50 +295,52 @@ namespace GDApp._3DTileEngine
                 // 3   1
                 //   2
 
-                System.Console.Write("possible dirs " + possibleDirs+"\n");
-                System.Console.Write("allowed dirs  " + allowedDirs + "\n");
+                //System.Console.Write("possible dirs " + possibleDirs+"\n");
+                //System.Console.Write("allowed dirs  " + allowedDirs + "\n");
+                
+
                 if (isBitSet(possibleDirs, 2))      // If we can go south...
                 {
                     if(grid[x + 1, y] == null)
                     {
-                        createRandomChainAt(x + 1, y, 4);                   // We create a new chain heading with north as origin
+                        createRandomChainAt(x + 1, y, 4);           // We create a new chain heading with north as origin
                     }
                     else
                     {
-                        //Regenerate(x + 1, y, 0, 0, 0); // regenerate this tile to link to the north
+                        regenCoords.Add(new Integer3(x + 1, y, 4)); // Regenerate tile to the south
                     }
                 }
                 if (isBitSet(possibleDirs, 3))      // If we can go west...
                 {
                     if (grid[x, y - 1] == null)
                     {
-                        createRandomChainAt(x, y - 1, 1);                   // We create a new chain heading east
+                        createRandomChainAt(x, y - 1, 1);           // We create a new chain heading east
                     }
                     else
                     {
-                        //Regenerate(x, y - 1, 0, 0, 0); // regenerate this tile to link to the west
+                        regenCoords.Add(new Integer3(x, y - 1, 1)); // Regenerate tile to the west
                     }
                 }
                 if (isBitSet(possibleDirs, 4))      // If we can go north...
                 {
                     if (grid[x - 1, y] == null)
                     {
-                        createRandomChainAt(x - 1, y, 2);                   // We create a new chain heading north with south (2) as origin
+                        createRandomChainAt(x - 1, y, 2);           // We create a new chain heading north with south (2) as origin
                     }
                     else
                     {
-                        //Regenerate(x - 1, y, 0, 0, 0); // regenerate this tile to link to the north
+                        regenCoords.Add(new Integer3(x - 1, y, 2)); // Regenerate the tile to the north
                     }
                 }              
                 if (isBitSet(possibleDirs, 1))      // If we can go east...
                 {
                     if (grid[x, y + 1] == null)
                     {
-                        createRandomChainAt(x, y + 1, 3);                   // We create a new chain heading east with west (3) as origin
+                        createRandomChainAt(x, y + 1, 3);           // We create a new chain heading east with west (3) as origin
                     }
                     else
                     {
-                        //Regenerate(x, y + 1, 0, 0, 0); // regenerate this tile to link to the east
+                        regenCoords.Add(new Integer3(x, y + 1, 3)); // Regenerate the tile to the east
                     }
                 }
                 return true;
@@ -353,28 +375,15 @@ namespace GDApp._3DTileEngine
 
             
 
-            System.Console.Write("Failed generation");
+            //System.Console.Write("Failed generation");
             return false;
         }
-
-        private void Regenerate(int x, int y, int origin, int allowedDirs, int possibleDirs)
-        {
-            throw new NotImplementedException();
-        }
-
-        private bool tryGenerateRandomTile(int x, int y, int modelNumber, int allowedDirs, int possibleDirs, int originDir)
-        {
-            System.Console.Write("possible dirs coming from array: " + possibleDirs + "\n");
-            
-            return false;
-        }
-
+      
         private int rotateDirs(int dirs)
         {
             int newBits = 0;
 
             // extract the 4 bits and reorder them.
-            System.Console.Write("incoming dirs for rotation " + dirs + "\n");
             if (isBitSet(dirs, 4))
             {
                 newBits += 1;
@@ -392,51 +401,105 @@ namespace GDApp._3DTileEngine
             {
                 newBits += 2;
             }
-            System.Console.Write("outgoing dirs after rotation " + newBits + "\n");
             return newBits;
         }
 
         private int randomTile()
         {
             int modelNumber = -1;
-            int rand = random.Next(1, 81);
+            int rand = random.Next(1, 110);
 
-            if (rand > 80)       // 5 for a dead end
-            {   // Dead End
-                modelNumber = 0;
-            }
-            else if (rand > 75)  // 20 for a straight
-            {   // Straight
-                modelNumber = 1;
-            }
-            else if (rand > 55)  // 30 for a corner
-            {   // Corner
-                modelNumber = 2;
-            }
-            else if (rand > 45)  // 10 for a T junction
-            {   // T Junction
-                modelNumber = 3;
-            }
-            else if (rand > 5)  // 40 for a cross
-            {   // Cross
+            if(rand > 60)
+            {
                 modelNumber = 4;
             }
-            else if (rand > 3)   // 2 for room
-            {   // Box
+            else if(rand > 16)
+            {
+                modelNumber = 2;
+            }
+            else if(rand > 15)
+            {
+                modelNumber = 0;
+            }
+            else if(rand > 10)
+            {
+                modelNumber = 3;
+            }
+            else if(rand > 8)
+            {
+                modelNumber = 1;
+            }
+            else if (rand > 5)
+            {
                 modelNumber = 5;
             }
-            else if(rand > 0)   // 3 for puzzle
+            else if(rand > 0)
             {
                 modelNumber = 6;
             }
-            else
-            {
-                modelNumber = 1;
-            }
 
-           // modelNumber = 1;
             return modelNumber;
           
+        }
+
+        private void genRandomTile(int x, int y, int requiredDirs, int originDir)
+        {
+            System.Console.WriteLine("Required direction: "+requiredDirs);
+            int possibleDirs = 0;
+            int modelNumber = 0;
+            bool created = false;
+
+            for (int tries = 0; tries < tileInfo.Length; tries++)
+            {
+                System.Console.WriteLine("Trying model no: " + modelNumber);
+                int rotation = -1;
+                possibleDirs = tileInfo[modelNumber];
+
+                for (int rotations = 0; rotations < 4; rotations++)
+                {
+                    System.Console.WriteLine("Possible directions: " + possibleDirs + "\n");
+                    if (requiredDirs == possibleDirs)
+                    {
+                        createTileAt(x, y, modelNumber, rotation);
+                        tries = tileInfo.Length;
+                        rotations = 4;
+                        created = true;
+                    }
+                    else
+                    {
+                        possibleDirs = rotateDirs(possibleDirs);
+                        rotation++;
+                    }
+                }
+                if (created)
+                {
+                    tries = tileInfo.Length;
+                }
+                modelNumber++;
+                rotation = -1;
+            }
+        }
+
+        private void Regenerate(int x, int y, int originDir)
+        {
+            int allowedDirs = getDirsFromModelAndRotation(x, y);        // Get directional data of x y tile
+
+            allowedDirs = setBit(allowedDirs, originDir -1, true);     // Add the value of our origin
+
+            genRandomTile(x, y, allowedDirs, originDir);                           // Replace the x,y with a new tile
+        }
+
+        private int getDirsFromModelAndRotation(int x, int y)
+        {
+            int modelNo = grid[x, y].modelNo;
+            int rotation = grid[x, y].rotation;
+            int possibleDirs = tileInfo[modelNo];
+
+            for (int i = 0; i <= rotation; i++)
+            {
+                possibleDirs = rotateDirs(possibleDirs);
+            }
+            return possibleDirs;
         }
 
         private void createTileAt(int x, int y, int model, int rotation)
@@ -461,6 +524,8 @@ namespace GDApp._3DTileEngine
                x,
                y);
 
+            mazeObject.rotation = rotation;
+            tiles++;
             grid[x, y] = mazeObject;
             //game.objectManager.Add(grid[x, y]);
 
@@ -577,6 +642,14 @@ namespace GDApp._3DTileEngine
                         x,
                         y);
                 }
+            }
+        }
+
+        private void regenerateGaps()
+        {
+            foreach (Integer3 regenCoord in regenCoords)
+            {
+                Regenerate(regenCoord.X, regenCoord.Y, regenCoord.Z);
             }
         }
     }

@@ -307,7 +307,7 @@ namespace GDApp
             //this.graphics.ApplyChanges();
 
             //records screen centre point - used by mouse to see how much the mouse pointer has moved
-            this.screenCentre = new Vector2(this.graphics.PreferredBackBufferWidth / 2.0f, this.graphics.PreferredBackBufferHeight / 2.0f);
+            this.screenCentre = new Microsoft.Xna.Framework.Vector2(this.graphics.PreferredBackBufferWidth / 2.0f, this.graphics.PreferredBackBufferHeight / 2.0f);
         }
 
         private void InitializeEffects()
@@ -744,7 +744,7 @@ namespace GDApp
         private void InitializeMaze(int size)
         {
             // size is hardcoded
-            size = 8;
+            size = 15;
  
             Model[] mazeTiles = new Model[]{
                 this.modelDictionary["deadEnd"],    //0
