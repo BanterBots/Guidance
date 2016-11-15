@@ -53,3 +53,4 @@ Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
+Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb

@@ -910,3 +910,4 @@ C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guid
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb

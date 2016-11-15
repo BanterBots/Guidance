@@ -763,6 +763,15 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight_0.xml</Output>
       <Time>2016-11-15T11:25:45.9927533+00:00</Time>
     </Item>
+    <Item>
+      <Source>Assets\Textures\Guide\BaseTile01_Diffuse.png</Source>
+      <Name>Assets\Textures\Guide\BaseTile01_Diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb</Output>
+      <Time>2016-11-15T13:44:30.445648+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{5EB489AC-1A98-4221-A1DB-0459C9F9C345}</ContentProjectGUID>

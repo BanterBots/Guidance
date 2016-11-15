@@ -61,9 +61,9 @@ namespace GDApp._3DTileEngine
             */
 
             tileInfo = new int[6];
-            tileInfo[0] = 1;
-            tileInfo[1] = 5;
-            tileInfo[2] = 3;
+            tileInfo[0] = 8;
+            tileInfo[1] = 10;
+            tileInfo[2] = 9;
             tileInfo[3] = 13;
             tileInfo[4] = 15;
             tileInfo[5] = 6;
@@ -78,7 +78,7 @@ namespace GDApp._3DTileEngine
             //           x  y  model  rotation
             createTileAt(0, 0, 0, 0); // start
             //createTileAt(gridSize-1, gridSize-1, 0, 2); // finish
-            createRandomChainAt(0, 1, 3);
+            createRandomChainAt(3, 3, 3);
 
             
         }
@@ -216,11 +216,11 @@ namespace GDApp._3DTileEngine
 
             int possibleDirs = tileInfo[modelNumber];
             System.Console.Write("possible dirs coming from array: " + possibleDirs + "\n");
-            int rotation = 0;
+            int rotation = -1;
 
             for(int tries = 0; tries < 4; tries++)
             {
-                if (compareDirs(allowedDirs, possibleDirs))
+                if (compareDirs(allowedDirs, possibleDirs, originDir))
                 {
                     createTileAt(x, y, modelNumber, rotation);
                     tries = 4;
@@ -246,15 +246,18 @@ namespace GDApp._3DTileEngine
                 {
                     createRandomChainAt(x - 1, y, 2);                   // We create a new chain heading north with south (2) as origin
                 }
-                if (isBitSet(tileInfo[grid[x, y].modelNo], 2))      // If we can go east...
+
+                if (isBitSet(possibleDirs, 1))      // If we can go east...
                 {
-                   // createRandomChainAt(x, y + 1, 0);                   // We create a new chain heading east with west (3) as origin
+                   createRandomChainAt(x, y + 1, 3);                   // We create a new chain heading east with west (3) as origin
                 }
-                if (isBitSet(tileInfo[grid[x, y].modelNo], 2))      // If we can go south...
+
+                if (isBitSet(possibleDirs, 2))      // If we can go south...
                 {
-                   //createRandomChainAt(x + 1, y, 1);                   // We create a new chain heading with north as origin
+                  createRandomChainAt(x + 1, y, 4);                   // We create a new chain heading with north as origin
                 }
-                if (isBitSet(possibleDirs, 2))      // If we can go west...
+
+                if (isBitSet(possibleDirs, 3))      // If we can go west...
                 {
                     createRandomChainAt(x, y - 1, 1);                   // We create a new chain heading east
                 }
@@ -273,19 +276,20 @@ namespace GDApp._3DTileEngine
             System.Console.Write("incoming dirs for rotation " + dirs + "\n");
             if (isBitSet(dirs, 4))
             {
-                newBits += 4;
+                newBits += 1;
             }
             if (isBitSet(dirs, 3))
             {
-                newBits += 2;
+                newBits += 8;
             }
             if (isBitSet(dirs, 2))
             {
-                newBits += 1;
+                newBits += 4;
+                //paddy was here 15/11/16
             }
             if (isBitSet(dirs, 1))
             {
-                newBits += 8;
+                newBits += 2;
             }
             System.Console.Write("outgoing dirs after rotation " + newBits + "\n");
             return newBits;
@@ -312,7 +316,7 @@ namespace GDApp._3DTileEngine
             {   // T Junction
                 modelNumber = 3;
             }
-            else if (rand > 25)  // 10 in 100 for a T junction
+            else if (rand > 25)  // 10 in 100 for a cross
             {   // Cross
                 modelNumber = 4;
             }
@@ -320,7 +324,7 @@ namespace GDApp._3DTileEngine
             {   // Box
                 modelNumber = 5;
             }
-            modelNumber = 3;
+           // modelNumber = 1;
             return modelNumber;
           
         }
@@ -329,7 +333,7 @@ namespace GDApp._3DTileEngine
         {
             Transform3D transform = new Transform3D(
                 new Vector3(x * tileSize, 0, y * (-1)*tileSize),
-                new Vector3(0, rotation * 90, 0),
+                new Vector3(0, rotation * -90, 0),
                 new Vector3(0.1f, 0.1f, 0.1f),
                 Vector3.UnitX,
                 Vector3.UnitY);
@@ -352,11 +356,17 @@ namespace GDApp._3DTileEngine
 
         }
 
-        private bool compareDirs(int allowedDirs, int possibleDirs)
+        private bool compareDirs(int allowedDirs, int possibleDirs, int originDir)
         {
+            System.Console.WriteLine("origin direction: " + originDir);
+            if(!isBitSet(possibleDirs, originDir))
+            {
+                return false;
+            }
 
             if (!isBitSet(allowedDirs, 4))
             {
+                //if(originDir)
                 if (isBitSet(possibleDirs, 4))
                 {
                     return false;
