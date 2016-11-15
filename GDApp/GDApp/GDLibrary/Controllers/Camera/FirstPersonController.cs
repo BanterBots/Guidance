@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 namespace GDLibrary
 {
     //allows movement in any XZ direction (i.e. y is set to zero to prevent flight)
-    public class FirstPersonMazeController : UserInputController
+    public class FirstPersonController : UserInputController
     {
         #region Variables
         #endregion
@@ -12,7 +12,7 @@ namespace GDLibrary
         #region Properties
         #endregion
 
-        public FirstPersonMazeController(string id,
+        public FirstPersonController(string id,
             ControllerType controllerType, Keys[] moveKeys,
             float moveSpeed, float strafeSpeed, float rotationSpeed)
             : base(id, controllerType, moveKeys, moveSpeed, strafeSpeed, rotationSpeed)
@@ -39,7 +39,7 @@ namespace GDLibrary
             if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexMoveForward]))
             {
                 parentActor.Transform3D.TranslateIncrement
-                    += gameTime.ElapsedGameTime.Milliseconds
+                    = gameTime.ElapsedGameTime.Milliseconds
                              * this.MoveSpeed * parentActor.Transform3D.Look;
             }
             else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexMoveBackward]))
@@ -63,7 +63,7 @@ namespace GDLibrary
             }
 
             //prevent movement up or down
-            parentActor.Transform3D.TranslateIncrementY = 0;
+          //  parentActor.Transform3D.TranslateIncrementY = 0;
 
             if (parentActor.Transform3D.TranslateIncrement != Vector3.Zero)
             {
@@ -71,5 +71,7 @@ namespace GDLibrary
                 parentActor.Transform3D.TranslateIncrement = Vector3.Zero;
             }
         }
+
+        //add clone...
     }
 }

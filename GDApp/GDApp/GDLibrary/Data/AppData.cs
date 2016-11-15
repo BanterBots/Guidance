@@ -34,14 +34,24 @@ namespace GDLibrary
 
         public static Keys[] CameraMoveKeys = { Keys.W, Keys.S, Keys.A, Keys.D };
         public static Keys[] CameraMoveKeys_Alt1 = { Keys.T, Keys.G, Keys.F, Keys.H };
-        public static Vector2 CameraMoveThumbStick = GamePad.GetState(PlayerIndex.One).ThumbSticks.Left;
+
+        public static float CameraLerpSpeedSlow = 0.05f;
+        public static float CameraLerpSpeedMedium = 0.1f;
+        public static float CameraLerpSpeedFast = 0.2f;
+
+        public static float CameraThirdPersonScrollSpeedDistanceMultiplier = 0.01f;
+        public static float CameraThirdPersonScrollSpeedElevatationMultiplier = 0.1f;
         #endregion
 
         #region Player
         public static Keys[] PlayerMoveKeys = { Keys.U, Keys.J, Keys.H, Keys.K };
-        public static float PlayerMoveSpeed = 0.05f;
+        public static float PlayerMoveSpeed = 0.1f;
         public static float PlayerStrafeSpeed = 0.07f;
-        public static float PlayerRotationSpeed = 0.08f;
+        public static float PlayerRotationSpeed = 0.04f;
+        public static int IndexJump;
+        public static int IndexJumpCrouch;
+
+
         #endregion
 
 

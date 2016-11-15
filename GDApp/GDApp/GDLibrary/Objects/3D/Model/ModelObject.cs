@@ -87,14 +87,15 @@ namespace GDLibrary
                 }
                 this.Effect.World
                     = this.BoneTransforms[mesh.ParentBone.Index]
-                                    * this.Transform3D.World;
+                                        * GetWorldMatrix(); //CD-CR support
+                                    //* this.Transform3D.World;
                 mesh.Draw();
             }
 
             base.Draw(gameTime);
         }
 
-        public object Clone()
+        public new object Clone()
         {
             return new ModelObject("clone - " + ID, //deep
                 this.ActorType,   //deep

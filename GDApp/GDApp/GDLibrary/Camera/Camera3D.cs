@@ -8,8 +8,6 @@ namespace GDLibrary
     //Represents the base camera class to which controllers can be attached (to do...)
     public class Camera3D : Actor3D
     {
-        public static Main game;
-
         #region Fields
         private ProjectionParameters projectionParameters;
         private Viewport viewPort;
@@ -43,21 +41,33 @@ namespace GDLibrary
                 this.projectionParameters = value;
             }
         }
+        public Viewport Viewport
+        {
+            get
+            {
+                return this.viewPort;
+            }
+            set
+            {
+                this.viewPort = value;
+            }
+        }
         #endregion
 
         //creates a default camera3D - we can use this for a fixed camera archetype i.e. one we will clone - see MainApp::InitialiseCameras()
         public Camera3D(string id, ActorType actorType, Viewport viewPort)
-            : this(id, actorType, Transform3D.Zero, 
-            ProjectionParameters.StandardMediumFourThree)
+            : this(id, actorType, Transform3D.Zero,
+            ProjectionParameters.StandardMediumFourThree, viewPort)
         {
-            this.viewPort = viewPort;
+
         }
         
         public Camera3D(string id, ActorType actorType,
-            Transform3D transform, ProjectionParameters projectionParameters)
+            Transform3D transform, ProjectionParameters projectionParameters, Viewport viewPort)
             : base(id, actorType, transform)
         {
             this.projectionParameters = projectionParameters;
+            this.viewPort = viewPort;
         }
 
         public override bool Equals(object obj)
@@ -78,10 +88,11 @@ namespace GDLibrary
             hash = hash * 51 + this.ProjectionParameters.GetHashCode();
             return hash;
         }
-        public object Clone()
+        public new object Clone()
         {
-            return new Camera3D(this.ID,
-                this.ActorType, (Transform3D)this.Transform3D.Clone(), (ProjectionParameters)this.projectionParameters.Clone());
+            return new Camera3D("clone - " + this.ID,
+                this.ActorType, (Transform3D)this.Transform3D.Clone(), 
+                (ProjectionParameters)this.projectionParameters.Clone(), this.Viewport);
         }
         public override string ToString()
         {

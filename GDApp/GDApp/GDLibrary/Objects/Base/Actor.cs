@@ -48,7 +48,11 @@ namespace GDLibrary
         }
         public virtual void Draw(GameTime gameTime)
         {       
-            //continue...
+        }
+
+        public virtual Matrix GetWorldMatrix()
+        {
+            return Matrix.Identity; //does nothing - see derived classes especially CollidableObject
         }
 
         public object Clone()

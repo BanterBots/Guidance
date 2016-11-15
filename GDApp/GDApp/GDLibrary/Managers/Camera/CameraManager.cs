@@ -10,10 +10,12 @@ Fixes:			None
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using GDApp;
+using System.Collections;
+using System;
 
 namespace GDLibrary
 {
-    public class CameraManager : GameComponent
+    public class CameraManager : GameComponent, IEnumerable<Camera3D>
     {
         #region Variables
         private Dictionary<string, List<Camera3D>> dictionary;
@@ -29,7 +31,7 @@ namespace GDLibrary
         {
             get
             {
-                return this.activeCamera;
+                return this.activeCameraList[this.activeCameraIndex];
             }
         }
         public int ActiveCameraIndex
@@ -144,7 +146,7 @@ namespace GDLibrary
             }
         }
         public bool Remove(string cameraLayout, 
-                                IFilter<Camera3D> filter)
+                                IFilter<Actor> filter)
         {
             cameraLayout = cameraLayout.ToLower().Trim();
 
@@ -159,7 +161,7 @@ namespace GDLibrary
         }
 
         public Camera3D Find(string cameraLayout,
-                                IFilter<Camera3D> filter)
+                                IFilter<Actor> filter)
         {
             if (this.dictionary.ContainsKey(cameraLayout))
             {
@@ -174,6 +176,20 @@ namespace GDLibrary
             } //if
             return null;
         }
+
+        //another form of Find method that uses a Predicate (this is functional programming)
+        public Camera3D Find(string cameraLayout, Predicate<Camera3D> predicate)
+        {
+            if (this.dictionary.ContainsKey(cameraLayout))
+            {
+                List<Camera3D> list = this.dictionary[cameraLayout];
+                return list.Find(predicate);
+            } //if
+            return null;
+        }
+
+
+
 
         public void Find(string cameraLayout, string cameraID,
             out Camera3D camera, out int index)
@@ -208,6 +224,17 @@ namespace GDLibrary
                 }
             }
             base.Update(gameTime);
+        }
+
+        public IEnumerator<Camera3D> GetEnumerator()
+        {
+            return this.activeCameraList.GetEnumerator();
+
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

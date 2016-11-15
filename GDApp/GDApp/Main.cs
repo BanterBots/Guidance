@@ -2,9 +2,56 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using GDLibrary;
+using JigLibX.Collision;
+using JigLibX.Geometry;
 using System;
 using GDApp._3DTileEngine;
 
+
+/* Version:     3.2
+ Description:   Added RailDictionary, RailController and RailParameters. Rail demo in Main::Update on F4 and F5.
+                Called Dispose() on GenericDictionaries used to store assets in Main::UnloadContent().
+                Added EventDispatcher, EventData, CameraEventData, and supporting Event enums.
+ Date:          15/11/16
+ Author:        NMCG
+ Bugs:          4/11/16 - Bug on scale of Box collision primitive.
+ To Do:         Override clone method for each controller, controllers for rail, and flight camera types.              
+                Add ObjectManager::Remove().
+                Add SoundManager for 2D and 3D sounds.
+                Add HUDManager to add UI text (e.g. debug information, FPS).
+                Add hierarchy of objects (i.e. Actor2D, DrawnActor2D, ButtonActor2D, TextActor2D) to support 2D UI elements (e.g. button, text, progress control).
+ */
+/* Version:     3.1
+ Description:   Minor change to Camera3D::Clone(). 
+                Add some "To Do" requirements. 
+                Added folders under Objects to organise 3D and 2D game objects.
+ Date:          7/11/16
+ Author:        NMCG
+ Bugs:          4/11/16 - Bug on scale of Box collision primitive.
+ To Do:         Override clone method for each controller, controllers for rail, and flight camera types.
+                Call Dispose() on GenericDictionaries used to store assets in Main::UnloadContent().
+                Add ObjectManager::Remove().
+                Add EventDispatcher and EventData.
+                Add SoundManager for 2D and 3D sounds.
+                Add HUDManager to add UI text (e.g. debug information, FPS).
+                Add hierarchy of objects (i.e. Actor2D, DrawnActor2D, ButtonActor2D, TextActor2D) to support 2D UI elements (e.g. button, text, progress control).
+ */
+/* Version:     3.0
+ Description:   Added JigLibX collision and physics engine.
+ Date:          4/11/16
+ Author:        NMCG
+ Bugs:          4/11/16 - Bug on scale of Box collision primitive.
+ To Do:         Override clone method for each controller, controllers for rail, and flight camera types.
+ */
+/* Version:     2.9
+ Description:   Added ThirdPersonController, Camera3D::viewport, and split screen demo
+                Added TargetController as a base for any controller (e.g. 3rd Person or Rail) that bases its movement on a target object.
+                Made CameraManager implement IEnumberable to support foreach() loop - see Main::Draw()
+ Date:          3/11/16
+ Author:        NMCG
+ Bugs:          None
+ To Do:         Add JigLibX, override clone method for each controller, controllers for rail, and flight camera types.
+ */
 /* Version:     2.8
  Description:   Added DriveController as first step towards ThirdPersonController.
                 Added FlightController to allow unconstrained movement.
@@ -14,7 +61,6 @@ using GDApp._3DTileEngine;
  Bugs:          None
  To Do:         Add controllers for 3rd, rail, and flight camera types.
  */
-
 /* Version:     2.7
  Description:   Added TrackController and locked Y-movement on FirstPersonController
  Date:          24/10/16
@@ -22,7 +68,6 @@ using GDApp._3DTileEngine;
  Bugs:          None
  To Do:         Add controllers for 3rd, rail, and flight camera types.
  */
-
 /* Version:     2.6
  Description:   Added Curve folder and containing classes to support TrackCamera.
  Date:          24/10/16
@@ -30,7 +75,6 @@ using GDApp._3DTileEngine;
  Bugs:          None
  To Do:         Add controllers for 3rd, rail, track, flight camera types.
  */
-
 /* Version:     2.5
  Description:   Added IController functionality to Actor3D and added introductory controller examples. Added Controller class as base class for all controllers 
 				to enable each specific controller to have id and controller type, and access to game handle.
@@ -39,7 +83,6 @@ using GDApp._3DTileEngine;
  Bugs:          None
  To Do:         Add controllers for 3rd, rail, track, flight camera types.
  */
-
 /* Version:     2.4
  Description:   Added helper methods to CameraManager 
                 WORK IN PROGRESS.
@@ -48,7 +91,6 @@ using GDApp._3DTileEngine;
  Bugs:          None
  To Do:         Add controllers for drawn actors and camera.
  */
-
 /* Version:     2.3
  Description:   Added a CameraManager class to support multi-layout. 
                 Added simple 1st Person camera behaviour on Camera3D.
@@ -58,7 +100,6 @@ using GDApp._3DTileEngine;
  Bugs:          None
  To Do:         Add controllers for drawn actors and camera.
  */
-
 /* Version:     2.2
  Description:   WORK IN PROGRESS...TO COMPLETE IN CLASS
                 Begin to refactor Camera2D class to inherit from Actor and use Transform3D and PresentationParameters.
@@ -97,26 +138,33 @@ namespace GDApp
 {
     public class Main : Microsoft.Xna.Framework.Game
     {
-        /* Nialls shit */
         #region Variables
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private BasicEffect wireframeEffect, texturedPrimitiveEffect, texturedModelEffect;
+
         private ObjectManager objectManager;
+        private MouseManager mouseManager;
+        private KeyboardManager keyboardManager;
+        private CameraManager cameraManager;
+        private PhysicsManager physicsManager;
+
         private GenericDictionary<string, Texture2D> textureDictionary;
         private GenericDictionary<string, IVertexData> vertexDictionary;
         private GenericDictionary<string, DrawnActor3D> objectDictionary;
         private GenericDictionary<string, Model> modelDictionary;
-        private Vector2 screenCentre;
-        private GDLibrary.MouseManager mouseManager;
-        private  GenericDictionary<string,SpriteFont> fontDictionary;
-        private GDLibrary.KeyboardManager keyboardManager;
-        private CameraManager cameraManager;
-        private Curve1D curve1D;
+        private GenericDictionary<string, SpriteFont> fontDictionary;
         private GenericDictionary<string, Transform3DCurve> curveDictionary;
-        private ModelObject playerObject;
+        private GenericDictionary<string, RailParameters> railDictionary;
+
+        private Vector2 screenCentre;
+
+        //temp vars
+        private ModelObject drivableModelObject;
+        private EventDispatcher eventDispatcher;
 
 
+        ModelObject playerObject;
         #endregion
 
         #region Properties
@@ -138,14 +186,14 @@ namespace GDApp
         {
             get
             {
-                return this.mouseManager; 
+                return this.mouseManager;
             }
         }
         public KeyboardManager KeyboardManager
         {
             get
             {
-                return this.keyboardManager; 
+                return this.keyboardManager;
             }
         }
         public CameraManager CameraManager
@@ -153,6 +201,13 @@ namespace GDApp
             get
             {
                 return this.cameraManager;
+            }
+        }
+        public PhysicsManager PhysicsManager
+        {
+            get
+            {
+                return this.physicsManager;
             }
         }
         #endregion
@@ -231,11 +286,7 @@ namespace GDApp
 
         private void InitializeCurveDemo()
         {
-            this.curve1D = new Curve1D(CurveLoopType.Oscillate);
-            this.curve1D.Add(100, 0);
-            this.curve1D.Add(500, 2);
-            this.curve1D.Add(1000, 4);
-            this.curve1D.Add(100, 6);
+            
         }
 
         private void InitializeStaticReferences()
@@ -276,7 +327,7 @@ namespace GDApp
 
         private void InitializeManagers()
         {
-            this.objectManager = new ObjectManager(this, "gameObjects");
+            this.objectManager = new ObjectManager(this, "gameObjects", true);
             Components.Add(this.objectManager);
 
             this.mouseManager = new MouseManager(this, true);
@@ -415,136 +466,136 @@ namespace GDApp
 
         private void LoadVertices()
         {
-            VertexPositionColor[] verticesPositionColor = null;
-            VertexPositionColorTexture[] verticesPositionColorTexture = null;
-            IVertexData vertexData = null;
-            float halfLength = 0.5f;
+            //VertexPositionColor[] verticesPositionColor = null;
+            //VertexPositionColorTexture[] verticesPositionColorTexture = null;
+            //IVertexData vertexData = null;
+            //float halfLength = 0.5f;
 
-            #region Textured Quad
-            verticesPositionColorTexture = new VertexPositionColorTexture[4];
+            //#region Textured Quad
+            //verticesPositionColorTexture = new VertexPositionColorTexture[4];
 
-            //top left
-            verticesPositionColorTexture[0] = new VertexPositionColorTexture(
-                new Vector3(-halfLength, halfLength, 0), Color.White, new Vector2(0, 0));
-            //top right
-            verticesPositionColorTexture[1] = new VertexPositionColorTexture(
-            new Vector3(halfLength, halfLength, 0), Color.White, new Vector2(1, 0));
-            //bottom left
-            verticesPositionColorTexture[2] = new VertexPositionColorTexture(
-            new Vector3(-halfLength, -halfLength, 0), Color.White, new Vector2(0, 1));
-            //bottom right
-            verticesPositionColorTexture[3] = new VertexPositionColorTexture(
-            new Vector3(halfLength, -halfLength, 0), Color.White, new Vector2(1, 1));
+            ////top left
+            //verticesPositionColorTexture[0] = new VertexPositionColorTexture(
+            //    new Vector3(-halfLength, halfLength, 0), Color.White, new Vector2(0, 0));
+            ////top right
+            //verticesPositionColorTexture[1] = new VertexPositionColorTexture(
+            //new Vector3(halfLength, halfLength, 0), Color.White, new Vector2(1, 0));
+            ////bottom left
+            //verticesPositionColorTexture[2] = new VertexPositionColorTexture(
+            //new Vector3(-halfLength, -halfLength, 0), Color.White, new Vector2(0, 1));
+            ////bottom right
+            //verticesPositionColorTexture[3] = new VertexPositionColorTexture(
+            //new Vector3(halfLength, -halfLength, 0), Color.White, new Vector2(1, 1));
 
-            vertexData = new VertexData<VertexPositionColorTexture>(verticesPositionColorTexture, PrimitiveType.TriangleStrip, 2);
-            this.vertexDictionary.Add("textured_quad", vertexData);
-            #endregion
+            //vertexData = new VertexData<VertexPositionColorTexture>(verticesPositionColorTexture, Microsoft.Xna.Framework.Graphics.PrimitiveType.TriangleStrip, 2);
+            //this.vertexDictionary.Add("textured_quad", vertexData);
+            //#endregion
 
-            #region Textured Cube
-            verticesPositionColorTexture = new VertexPositionColorTexture[36];
+            //#region Textured Cube
+            //verticesPositionColorTexture = new VertexPositionColorTexture[36];
 
-            Vector3 topLeftFront = new Vector3(-halfLength, halfLength, halfLength);
-            Vector3 topLeftBack = new Vector3(-halfLength, halfLength, -halfLength);
-            Vector3 topRightFront = new Vector3(halfLength, halfLength, halfLength);
-            Vector3 topRightBack = new Vector3(halfLength, halfLength, -halfLength);
+            //Vector3 topLeftFront = new Vector3(-halfLength, halfLength, halfLength);
+            //Vector3 topLeftBack = new Vector3(-halfLength, halfLength, -halfLength);
+            //Vector3 topRightFront = new Vector3(halfLength, halfLength, halfLength);
+            //Vector3 topRightBack = new Vector3(halfLength, halfLength, -halfLength);
 
-            Vector3 bottomLeftFront = new Vector3(-halfLength, -halfLength, halfLength);
-            Vector3 bottomLeftBack = new Vector3(-halfLength, -halfLength, -halfLength);
-            Vector3 bottomRightFront = new Vector3(halfLength, -halfLength, halfLength);
-            Vector3 bottomRightBack = new Vector3(halfLength, -halfLength, -halfLength);
+            //Vector3 bottomLeftFront = new Vector3(-halfLength, -halfLength, halfLength);
+            //Vector3 bottomLeftBack = new Vector3(-halfLength, -halfLength, -halfLength);
+            //Vector3 bottomRightFront = new Vector3(halfLength, -halfLength, halfLength);
+            //Vector3 bottomRightBack = new Vector3(halfLength, -halfLength, -halfLength);
 
-            //uv coordinates
-            Vector2 uvTopLeft = new Vector2(0, 0);
-            Vector2 uvTopRight = new Vector2(1, 0);
-            Vector2 uvBottomLeft = new Vector2(0, 1);
-            Vector2 uvBottomRight = new Vector2(1, 1);
+            ////uv coordinates
+            //Vector2 uvTopLeft = new Vector2(0, 0);
+            //Vector2 uvTopRight = new Vector2(1, 0);
+            //Vector2 uvBottomLeft = new Vector2(0, 1);
+            //Vector2 uvBottomRight = new Vector2(1, 1);
 
 
-            //top - 1 polygon for the top
-            verticesPositionColorTexture[0] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
-            verticesPositionColorTexture[1] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            verticesPositionColorTexture[2] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
+            ////top - 1 polygon for the top
+            //verticesPositionColorTexture[0] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
+            //verticesPositionColorTexture[1] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[2] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
 
-            verticesPositionColorTexture[3] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
-            verticesPositionColorTexture[4] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
-            verticesPositionColorTexture[5] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[3] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
+            //verticesPositionColorTexture[4] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
+            //verticesPositionColorTexture[5] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
 
-            //front
-            verticesPositionColorTexture[6] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
-            verticesPositionColorTexture[7] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
-            verticesPositionColorTexture[8] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
+            ////front
+            //verticesPositionColorTexture[6] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
+            //verticesPositionColorTexture[7] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[8] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
 
-            verticesPositionColorTexture[9] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
-            verticesPositionColorTexture[10] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
-            verticesPositionColorTexture[11] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvTopRight);
+            //verticesPositionColorTexture[9] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[10] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[11] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvTopRight);
 
-            //back
-            verticesPositionColorTexture[12] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-            verticesPositionColorTexture[13] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
-            verticesPositionColorTexture[14] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
+            ////back
+            //verticesPositionColorTexture[12] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[13] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
+            //verticesPositionColorTexture[14] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
 
-            verticesPositionColorTexture[15] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-            verticesPositionColorTexture[16] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            verticesPositionColorTexture[17] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
+            //verticesPositionColorTexture[15] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[16] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[17] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
 
-            //left 
-            verticesPositionColorTexture[18] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            verticesPositionColorTexture[19] = new VertexPositionColorTexture(topLeftFront, Color.White, uvTopRight);
-            verticesPositionColorTexture[20] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvBottomRight);
+            ////left 
+            //verticesPositionColorTexture[18] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[19] = new VertexPositionColorTexture(topLeftFront, Color.White, uvTopRight);
+            //verticesPositionColorTexture[20] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvBottomRight);
 
-            verticesPositionColorTexture[21] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
-            verticesPositionColorTexture[22] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            verticesPositionColorTexture[23] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[21] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
+            //verticesPositionColorTexture[22] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[23] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvBottomRight);
 
-            //right
-            verticesPositionColorTexture[24] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvBottomLeft);
-            verticesPositionColorTexture[25] = new VertexPositionColorTexture(topRightFront, Color.White, uvTopLeft);
-            verticesPositionColorTexture[26] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
+            ////right
+            //verticesPositionColorTexture[24] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvBottomLeft);
+            //verticesPositionColorTexture[25] = new VertexPositionColorTexture(topRightFront, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[26] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
 
-            verticesPositionColorTexture[27] = new VertexPositionColorTexture(topRightFront, Color.White, uvTopLeft);
-            verticesPositionColorTexture[28] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
-            verticesPositionColorTexture[29] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[27] = new VertexPositionColorTexture(topRightFront, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[28] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
+            //verticesPositionColorTexture[29] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
 
-            //bottom
-            verticesPositionColorTexture[30] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
-            verticesPositionColorTexture[31] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvTopRight);
-            verticesPositionColorTexture[32] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
+            ////bottom
+            //verticesPositionColorTexture[30] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[31] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvTopRight);
+            //verticesPositionColorTexture[32] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
 
-            verticesPositionColorTexture[33] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
-            verticesPositionColorTexture[34] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-            verticesPositionColorTexture[35] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
+            //verticesPositionColorTexture[33] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
+            //verticesPositionColorTexture[34] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
+            //verticesPositionColorTexture[35] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
 
-            vertexData = new VertexData<VertexPositionColorTexture>(verticesPositionColorTexture, PrimitiveType.TriangleList, 12);
-            this.vertexDictionary.Add("textured_cube", vertexData);
-            #endregion
+            //vertexData = new VertexData<VertexPositionColorTexture>(verticesPositionColorTexture, PrimitiveType.TriangleList, 12);
+            //this.vertexDictionary.Add("textured_cube", vertexData);
+            //#endregion
 
-            #region Wireframe Origin Helper
-            verticesPositionColor = new VertexPositionColor[6];
+            //#region Wireframe Origin Helper
+            //verticesPositionColor = new VertexPositionColor[6];
 
-            //x-axis
-            verticesPositionColor[0] = new VertexPositionColor(new Vector3(-halfLength, 0, 0), Color.Red);
-            verticesPositionColor[1] = new VertexPositionColor(new Vector3(halfLength, 0, 0), Color.Red);
-            //y-axis
-            verticesPositionColor[2] = new VertexPositionColor(new Vector3(0, halfLength, 0), Color.Green);
-            verticesPositionColor[3] = new VertexPositionColor(new Vector3(0, -halfLength, 0), Color.Green);
-            //z-axis
-            verticesPositionColor[4] = new VertexPositionColor(new Vector3(0, 0, halfLength), Color.Blue);
-            verticesPositionColor[5] = new VertexPositionColor(new Vector3(0, 0, -halfLength), Color.Blue);
+            ////x-axis
+            //verticesPositionColor[0] = new VertexPositionColor(new Vector3(-halfLength, 0, 0), Color.Red);
+            //verticesPositionColor[1] = new VertexPositionColor(new Vector3(halfLength, 0, 0), Color.Red);
+            ////y-axis
+            //verticesPositionColor[2] = new VertexPositionColor(new Vector3(0, halfLength, 0), Color.Green);
+            //verticesPositionColor[3] = new VertexPositionColor(new Vector3(0, -halfLength, 0), Color.Green);
+            ////z-axis
+            //verticesPositionColor[4] = new VertexPositionColor(new Vector3(0, 0, halfLength), Color.Blue);
+            //verticesPositionColor[5] = new VertexPositionColor(new Vector3(0, 0, -halfLength), Color.Blue);
 
-            vertexData = new VertexData<VertexPositionColor>(verticesPositionColor, PrimitiveType.LineList, 3);            
-            this.vertexDictionary.Add("wireframe_origin_helper", vertexData);
-            #endregion
+            //vertexData = new VertexData<VertexPositionColor>(verticesPositionColor, PrimitiveType.LineList, 3);            
+            //this.vertexDictionary.Add("wireframe_origin_helper", vertexData);
+            //#endregion
 
-            #region Wireframe Triangle
-            verticesPositionColor = new VertexPositionColor[3];
+            //#region Wireframe Triangle
+            //verticesPositionColor = new VertexPositionColor[3];
 
-            verticesPositionColor[0] = new VertexPositionColor(new Vector3(0, 1, 0), Color.Red);
-            verticesPositionColor[1] = new VertexPositionColor(new Vector3(1, 0, 0), Color.Green);
-            verticesPositionColor[2] = new VertexPositionColor(new Vector3(-1, 0, 0), Color.Blue);
+            //verticesPositionColor[0] = new VertexPositionColor(new Vector3(0, 1, 0), Color.Red);
+            //verticesPositionColor[1] = new VertexPositionColor(new Vector3(1, 0, 0), Color.Green);
+            //verticesPositionColor[2] = new VertexPositionColor(new Vector3(-1, 0, 0), Color.Blue);
 
-            vertexData = new VertexData<VertexPositionColor>(verticesPositionColor, PrimitiveType.TriangleStrip, 1);
-            this.vertexDictionary.Add("wireframe_triangle", vertexData);
-            #endregion
+            //vertexData = new VertexData<VertexPositionColor>(verticesPositionColor, PrimitiveType.TriangleStrip, 1);
+            //this.vertexDictionary.Add("wireframe_triangle", vertexData);
+            //#endregion
         }
 
         private void LoadPrimitiveArchetypes()
@@ -674,7 +725,7 @@ namespace GDApp
 
             this.playerObject = new ModelObject(
                 "box",
-                ActorType.Pickups, transform,
+                ActorType.Pickup, transform,
                 this.texturedModelEffect, Color.White, 1,
                 this.textureDictionary["checkerboard"],
                 this.modelDictionary["box"]);
@@ -826,22 +877,60 @@ namespace GDApp
 
         private void InitializeCamera(Vector3 position, Vector3 look, Vector3 up)
         {
-            Transform3D transform = new Transform3D(position, look, up);
-            Camera3D camera1 = new Camera3D("camera1", ActorType.Camera, transform,
-                ProjectionParameters.StandardMediumSixteenNine);
+            Transform3D transform = null;
+            Camera3D camera = null;
+            string cameraLayout = "";
+
+            #region Layout 1x1
+            cameraLayout = "1x1";
+
+            #region First Person Camera
+            transform = new Transform3D(new Vector3(0, 10, 100), -Vector3.UnitZ, Vector3.UnitY);
+            camera = new Camera3D("Static", ActorType.Camera, transform,
+                ProjectionParameters.StandardMediumSixteenNine,
+                new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
+            camera.AttachController(new FirstPersonController("firstPersControl1",
+            ControllerType.FirstPerson, AppData.CameraMoveKeys,
+            AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
+            //add the new camera to the approriate K, V pair in the camera manager dictionary i.e. where key is "1x2"
+            this.cameraManager.Add(cameraLayout, camera);
+            #endregion
+            #endregion
+
+            #region Layout Map
+            cameraLayout = "Map";
+            #region Map View
+            transform = new Transform3D(new Vector3(400, 1200, -100), Vector3.Down, -1 * Vector3.Right);
+            camera = new Camera3D("Static", ActorType.Camera, transform,
+                ProjectionParameters.StandardMediumSixteenNine,
+                new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
+            //camera.AttachController(new FirstPersonController("firstPersControl1",
+            //ControllerType.FirstPerson, AppData.CameraMoveKeys,
+            //AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
+
+            //add the new camera to the approriate K, V pair in the camera manager dictionary i.e. where key is "1x2"
+            this.cameraManager.Add(cameraLayout, camera);
+            #endregion
+            #endregion
+
+            this.cameraManager.SetActiveCameraLayout("1x1");
+
+            //Transform3D transform = new Transform3D(position, look, up);
+            //Camera3D camera1 = new Camera3D("camera1", ActorType.Camera, transform,
+            //    ProjectionParameters.StandardMediumSixteenNine);
 
             // Below camera angle looks down on the grid
             //camera1.transform = new Transform3D(new Vector3(300, -1000, 300), Vector3.Down, Vector3.Forward); 
 
             // Below camera angle has x:0, y:0 at the top left.
-            camera1.transform = new Transform3D(new Vector3(400, 1200, -100), Vector3.Down, -1 * Vector3.Right);
+            //camera1.transform = new Transform3D(new Vector3(400, 1200, -100), Vector3.Down, -1 * Vector3.Right);
 
-             // camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
-             //      this.playerObject, 10, 165));
+            // camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
+            //      this.playerObject, 10, 165));
 
             //camera1.AttachController(new FirstPersonMazeController("fpc1", ControllerType.FirstPerson, AppData.CameraMoveKeys, AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
-            this.cameraManager.Add("1x1", camera1);
-            this.cameraManager.SetActiveCameraLayout("1x1");
+            //this.cameraManager.Add("1x1", camera1);
+            //this.cameraManager.SetActiveCameraLayout("1x1");
         }
 
         protected override void LoadContent()
@@ -851,42 +940,47 @@ namespace GDApp
 
         protected override void UnloadContent()
         {
+            this.fontDictionary.Dispose();
+            this.modelDictionary.Dispose();
+            this.textureDictionary.Dispose();
+            this.vertexDictionary.Dispose();
+            this.objectDictionary.Dispose();
+            //this.railDictionary.Dispose();
+            this.curveDictionary.Dispose();
         }
 
         protected override void Update(GameTime gameTime)
         {
-            /*
-            if (this.keyboardManager.IsFirstKeyPress(Keys.Escape))
-                this.objectManager.Paused = !this.objectManager.Paused;
-
-            if (this.keyboardManager.IsKeyDown(Keys.O))
-                this.objectManager.Remove(new ActorIDFilter("origin1"));
-
-            if (this.keyboardManager.IsKeyDown(Keys.P))
-                this.objectManager.Remove(new ActorTypeFilter(ActorType.Decorator));
-            */
-
-            #region Demo
-            /*
-            float x = this.curve1D.Evaluate(
-                   (float)gameTime.TotalGameTime.TotalMilliseconds, 2);
-            System.Diagnostics.Debug.WriteLine("X:" + x);
-            */
-            #endregion
-
-            // this.camera.Update(gameTime);
+            demoCameraLayoutSwitching();
             base.Update(gameTime);
+        }
+
+        private void demoCameraLayoutSwitching()
+        {
+            if (this.keyboardManager.IsKeyDown(Keys.F1))
+            {
+                this.cameraManager.SetActiveCameraLayout("1x1");
+                Window.Title = "1x1 Camera Layout [FirstPerson]";
+            }
+            else if (this.keyboardManager.IsKeyDown(Keys.F2))
+            {
+                this.cameraManager.SetActiveCameraLayout("Map");
+                Window.Title = "Map Camera Layout [MapView]";
+            }
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            foreach (Camera3D camera in this.cameraManager)
+            {
+                //set the viewport based on the current camera
+                graphics.GraphicsDevice.Viewport = camera.Viewport;
+                base.Draw(gameTime);
 
-            //graphics.GraphicsDevice.Viewport = new Viewport(512, 0, 512, 768);
-            //base.Draw(gameTime);
-
-            //graphics.GraphicsDevice.Viewport = new Viewport(0, 0, 512, 768);
-            base.Draw(gameTime);
+                //set which is the active camera (remember that our objects use the CameraManager::ActiveCamera property to access View and Projection for rendering
+                this.cameraManager.ActiveCameraIndex++;
+            }
         }
     }
 }

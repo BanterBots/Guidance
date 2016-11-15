@@ -71,6 +71,8 @@ namespace GDLibrary
                 parentActor.Transform3D.Up = up;
             }
         }
+
+        //add clone...
     }
 }
 

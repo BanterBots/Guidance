@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 
 namespace GDLibrary
@@ -77,7 +73,6 @@ namespace GDLibrary
             Actor3D parentActor = actor as Actor3D;
             HandleMouseInput(gameTime, parentActor);
             HandleKeyboardInput(gameTime, parentActor);
-
             base.Update(gameTime, actor);
         }
 
@@ -89,5 +84,7 @@ namespace GDLibrary
         public virtual void HandleKeyboardInput(GameTime gameTime, Actor3D parentActor)
         {
         }
+
+        //add clone...
     }
 }

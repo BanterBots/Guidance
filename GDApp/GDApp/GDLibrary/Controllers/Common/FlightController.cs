@@ -68,5 +68,7 @@ namespace GDLibrary
                 parentActor.Transform3D.TranslateIncrement = Vector3.Zero;
             }
         }
+
+        //add clone...
     }
 }

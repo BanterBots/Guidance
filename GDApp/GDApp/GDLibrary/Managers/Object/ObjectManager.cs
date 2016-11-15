@@ -21,9 +21,22 @@ namespace GDLibrary
         private List<IActor> drawList;
         private RasterizerState rasterizerState;
         private bool bPaused;
+        private bool bDebugMode;
+        private Main game;
         #endregion
 
         #region Properties
+        public bool IsDebugMode 
+        { 
+            get
+            {
+                return this.bDebugMode;
+            }
+            set
+            {
+                this.bDebugMode = value;
+            }
+        }
         public int Count
         {
             get
@@ -51,10 +64,11 @@ namespace GDLibrary
         }
         #endregion
 
-        public ObjectManager(Main game, string name)
+        public ObjectManager(Main game, string name, bool bDebugMode)
             : this(game, name, 10)
         {
-           
+            this.game = game;
+            this.bDebugMode = bDebugMode;
         }
 
         public ObjectManager(Main game, string name,
@@ -168,6 +182,7 @@ namespace GDLibrary
                 foreach (IActor actor in this.drawList)
                 {
                     actor.Draw(gameTime);
+                    DebugDrawCollisionSkin(actor);
                 }
             }
 
@@ -188,6 +203,16 @@ namespace GDLibrary
 
             //disable to see what happens when we disable depth buffering - look at the boxes
             this.Game.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+        }
+
+        //debug method to draw collision skins for collidable objects and zone objects
+        private void DebugDrawCollisionSkin(IActor actor)
+        {
+            if ((actor is CollidableObject) && (this.IsDebugMode))
+            {                  
+                CollidableObject collidableObject = actor as CollidableObject;
+                this.game.PhysicsManager.DebugDrawer.DrawDebug(collidableObject.Body, collidableObject.Collision);
+            }
         }
     }
 }

@@ -450,7 +450,7 @@ namespace GDApp._3DTileEngine
 
             ModelTileObject mazeObject = new ModelTileObject(
                "maze(" + x + "," + y + ")",
-               ActorType.Pickups,
+               ActorType.Pickup,
                transform,
                effect,
                Color.White,
@@ -566,7 +566,7 @@ namespace GDApp._3DTileEngine
 
                     grid[x, y] = mazeObject = new ModelTileObject(
                         "maze(" + x + "," + y + ")",
-                        ActorType.Pickups,
+                        ActorType.Pickup,
                         transform,
                         effect,
                         Color.White,

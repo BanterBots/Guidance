@@ -46,18 +46,6 @@ namespace GDLibrary
                 this.alpha = value;
             }
         }
-
-        public Texture2D Texture
-        {
-            get
-            {
-                return this.Texture;
-            }
-            set
-            {
-                this.Texture = Texture;
-            }
-        }
         #endregion
 
         //used when we don't want to specify color and alpha
@@ -76,7 +64,7 @@ namespace GDLibrary
             this.alpha = alpha;
         }
 
-        public object Clone()
+        public new object Clone()
         {
             return new DrawnActor3D("clone - " + ID, //deep
                 this.ActorType, //deep

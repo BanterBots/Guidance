@@ -3,11 +3,13 @@
     public enum ActorType : sbyte
     {
         Props, //interact
-        Pickups, //ammo
+        Pickup, //ammo
         Player,
         Decorator, //building
         Camera,
         Zone, //invisible and triggers event
-        Helper
+        Helper,
+        CollidableProp,
+        CollidableGround
     }
 }

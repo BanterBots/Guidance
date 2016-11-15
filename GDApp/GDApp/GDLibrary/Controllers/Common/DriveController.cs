@@ -48,14 +48,10 @@ namespace GDLibrary
             if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexRotateLeft]))
             {
                 parentActor.Transform3D.RotateAroundYBy(gameTime.ElapsedGameTime.Milliseconds * this.RotationSpeed);
-                //parentActor.Transform3D.Rotate(Vector3.UnitY * gameTime.ElapsedGameTime.Milliseconds
-                //                                        * this.RotationSpeed);
             }
             else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexRotateRight]))
             {
                 parentActor.Transform3D.RotateAroundYBy(-gameTime.ElapsedGameTime.Milliseconds * this.RotationSpeed);
-                //parentActor.Transform3D.Rotate(-Vector3.UnitY * gameTime.ElapsedGameTime.Milliseconds
-                //                                        * this.RotationSpeed);
             }
 
             //prevent movement up or down
@@ -67,5 +63,7 @@ namespace GDLibrary
                 parentActor.Transform3D.TranslateIncrement = Vector3.Zero;
             }
         }
+
+        //add clone...
     }
 }

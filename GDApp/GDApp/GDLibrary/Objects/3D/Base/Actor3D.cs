@@ -6,7 +6,7 @@ namespace GDLibrary
     public class Actor3D : Actor, ICloneable
     {
         #region Variables
-        public Transform3D transform;   //maybe revert this back to private at some stage
+        private Transform3D transform;
         private List<IController> controllerList;
         #endregion
 
@@ -61,9 +61,12 @@ namespace GDLibrary
             base.Update(gameTime);
         }
 
+        public override Matrix GetWorldMatrix()
+        {
+            return this.transform.World;
+        }
 
-
-        public object Clone()
+        public new object Clone()
         {
             return new Actor3D("clone - " + ID, //deep
                 this.ActorType, //deep
