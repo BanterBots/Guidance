@@ -63,7 +63,7 @@ namespace GDLibrary
             }
 
             //prevent movement up or down
-          //  parentActor.Transform3D.TranslateIncrementY = 0;
+                parentActor.Transform3D.TranslateIncrementY = 0;
 
             if (parentActor.Transform3D.TranslateIncrement != Vector3.Zero)
             {

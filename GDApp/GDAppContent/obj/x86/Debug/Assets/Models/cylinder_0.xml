@@ -3,7 +3,11 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Cylinder01</Name>
     <Identity>
+<<<<<<< HEAD
       <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\cylinder.FBX</SourceFilename>
+=======
+      <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\cylinder.FBX</SourceFilename>
+>>>>>>> Notbroken
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>2.54 0 0 0 0 7.19523466E-16 -2.54 0 0 2.54 7.19523466E-16 0 12.8806095 0 -26.0094585 1</Transform>

@@ -3,7 +3,11 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Box01</Name>
     <Identity>
+<<<<<<< HEAD
       <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\box.FBX</SourceFilename>
+=======
+      <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\box.FBX</SourceFilename>
+>>>>>>> Notbroken
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -26,7 +30,11 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>Default</Name>
       <Identity>
+<<<<<<< HEAD
         <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\box.FBX</SourceFilename>
+=======
+        <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\box.FBX</SourceFilename>
+>>>>>>> Notbroken
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
