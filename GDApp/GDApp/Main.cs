@@ -900,7 +900,7 @@ namespace GDApp
             #region Layout Map
             cameraLayout = "Map";
             #region Map View
-            transform = new Transform3D(new Vector3(400, 1200, -100), Vector3.Down, -1 * Vector3.Right);
+            transform = new Transform3D(new Vector3(300, 1000, -500), Vector3.Down, -1 * Vector3.Right);
             camera = new Camera3D("Static", ActorType.Camera, transform,
                 ProjectionParameters.StandardMediumSixteenNine,
                 new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));

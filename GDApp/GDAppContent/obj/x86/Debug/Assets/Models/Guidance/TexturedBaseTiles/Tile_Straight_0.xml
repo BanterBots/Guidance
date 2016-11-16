@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:MeshContent">
+    <Name>m_Cross003</Name>
+    <Identity>
+      <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.FBX</SourceFilename>
+      <SourceTool>FbxImporter</SourceTool>
+    </Identity>
+    <OpaqueData>
+      <Data Key="MaxHandle" Type="int">13</Data>
+    </OpaqueData>
+    <Transform>7.62 0 0 0 0 2.15857029E-15 -7.62 0 0 7.62 2.15857029E-15 0 0 0 0 1</Transform>
+    <Positions>-16.6666679 -50 0 16.6666641 -50 0 -16.6666679 -16.6666679 0 16.6666641 -16.6666679 0 -16.6666679 16.6666641 0 16.6666641 16.6666641 0 -16.6666679 49.9999962 0 16.6666641 49.9999962 0 -16.6666679 -50 39.9999924 16.6666641 -50 39.9999924 -16.6666679 -16.6666679 39.9999924 16.6666641 -16.6666679 39.9999924 -16.6666679 16.6666641 39.9999924 16.6666641 16.6666641 39.9999924 -16.6666679 49.9999962 39.9999924 16.6666641 49.9999962 39.9999924</Positions>
+    <Geometry>
+      <Batch>
+        <Material>#Resource1</Material>
+        <Indices>2 1 0 0 3 2 6 5 4 4 7 6 10 9 8 8 11 10 14 13 12 12 15 14 18 17 16 16 19 18 22 21 20 20 23 22 26 25 24 24 27 26 30 29 28 28 31 30 34 33 32 32 35 34 28 29 36 36 37 28 40 39 38 38 41 40 44 43 42 42 45 44</Indices>
+        <Vertices>
+          <PositionIndices>0 1 3 2 2 3 5 4 4 5 7 6 0 2 10 8 3 1 9 11 4 6 14 12 7 5 13 15 13 12 14 15 9 8 10 11 10 11 10 2 4 12 13 5 3 11</PositionIndices>
+          <Channels>
+            <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</VertexChannel>
+            <VertexChannel Name="TextureCoordinate0" ElementType="Framework:Vector2">0.0008324486 0.878280044 0.4392828 0.878280044 0.4392828 0.439829767 0.0008324486 0.439830065 0.0008324486 0.8782995 0.4392828 0.8782995 0.4392828 0.4398492 0.0008324486 0.4398492 0.0008325271 0.878296 0.439282745 0.878296 0.439282745 0.439845443 0.00083237025 0.439845741 8.571148E-05 0.43892312 0.438667983 0.438923061 0.438667923 7.70092E-05 8.56518745E-05 7.70688057E-05 9.891391E-05 0.438923717 0.438680917 0.438923657 0.438680828 7.772446E-05 9.88543E-05 7.778406E-05 9.86158848E-05 0.438923717 0.438680917 0.438923657 0.438680828 7.772446E-05 9.855628E-05 7.778406E-05 8.571148E-05 0.4389243 0.438667983 0.438924253 0.438667923 7.82012939E-05 8.56518745E-05 7.82609E-05 0.8786806 0.4398492 0.44023025 0.4398492 0.44023025 0.8782995 0.8786806 0.8782995 0.8786806 0.4398511 0.44023025 0.4398511 0.44023025 0.8783013 0.8786806 0.878301 0.44023025 0.8782995 0.8786806 0.8782995 -9.036064E-05 0.0005078912 0.000270545483 0.4389655 0.439014316 0.438714981 0.4386536 0.000257492065 -0.000105679035 0.000519216061 0.000275492668 0.438965857 0.4390086 0.438709855 0.438658237 0.000274121761</VertexChannel>
+          </Channels>
+        </Vertices>
+      </Batch>
+    </Geometry>
+  </Asset>
+  <Resources>
+    <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
+      <Name>04 - Default</Name>
+      <Identity>
+        <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.FBX</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.5882353 0.5882353 0.5882353</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="SpecularPower" Type="float">1.99999988</Data>
+      </OpaqueData>
+      <Textures>
+        <Texture Key="Texture">
+          <OpaqueData>
+            <Data Key="TextureCoordinate">TextureCoordinate0</Data>
+          </OpaqueData>
+          <Reference>#External1</Reference>
+        </Texture>
+      </Textures>
+    </Resource>
+  </Resources>
+  <ExternalReferences>
+    <ExternalReference ID="#External1" TargetType="Graphics:TextureContent">..\..\..\..\..\..\..\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.png</ExternalReference>
+  </ExternalReferences>
+</XnaContent>

@@ -105,7 +105,7 @@
     <Compile Include="GDLibrary\Data\AppData.cs" />
     <Compile Include="GDLibrary\Debug\BoundingBoxDrawer.cs" />
     <Compile Include="GDLibrary\Debug\PhysicsDebugDrawer.cs" />
-    <Compile Include="GDLibrary\Demo\Sprite.cs" />
+    <Compile Include="GDLibrary\Debug\Demo\Sprite.cs" />
     <Compile Include="GDLibrary\Dictionaries\GenericDictionary.cs" />
     <Compile Include="GDLibrary\Enums\ActorType.cs" />
     <Compile Include="GDLibrary\Enums\ControllerType.cs" />

@@ -87,11 +87,17 @@ namespace GDApp._3DTileEngine
 
             while (tiles < minTiles)
             {
+                regenCoords = new List<Integer3>();
                 tiles = 0;
                 grid = new ModelTileObject[gridSize,gridSize];
                 createTileAt(0, 0, 0, 0);
-                createRandomChainAt(0, 1, 3);
-            }
+                createTileAt(gridSize - 1, gridSize - 1, 0, 2);
+                
+                createRandomChainAt(0, 1, 3);      
+
+                createRandomChainAt(gridSize - 1, gridSize - 2, 1);
+                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 2, 1));
+           }
             
             regenerateGaps();
 
@@ -417,26 +423,31 @@ namespace GDApp._3DTileEngine
             {
                 modelNumber = 2;
             }
-            else if(rand > 15)
-            {
-                modelNumber = 0;
-            }
+            
             else if(rand > 10)
             {
                 modelNumber = 3;
             }
-            else if(rand > 8)
+            else if (rand > 8)
             {
                 modelNumber = 1;
             }
-            else if (rand > 5)
+            else
             {
-                modelNumber = 5;
+                modelNumber = 3;
             }
-            else if(rand > 0)
-            {
-                modelNumber = 6;
-            }
+            //else if (rand > 5)
+           // {
+            //    modelNumber = 5;
+            //}
+            //else if(rand > 0)
+            //{
+            //    modelNumber = 6;
+           // }
+            //else if (rand > 15)
+            //{
+            //    modelNumber = 0;
+            //}
 
             return modelNumber;
           
