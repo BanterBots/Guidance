@@ -807,9 +807,8 @@ namespace GDApp
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(7, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
-            int[] finishRoom = tg.generateRandomGrid();
-            System.Console.WriteLine("end point: "+finishRoom[0] +","+finishRoom[1]);
+            TileGrid tg = new TileGrid(10, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
+            tg.generateRandomGrid();
 
             /*
             for (int i = 0; i < tg.gridSize; i++)

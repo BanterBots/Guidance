@@ -3,28 +3,40 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace GDApp._3DTileEngine
 {
     class TileGrid
     {
-        public int gridSize;
+        #region Properties
+        // Grid that holds all tiles
         public ModelTileObject[,] grid;
+
+        // Size of our grid, and size of each tile
+        public int gridSize;
         public int tileSize;
-        public Model[] models;
+        
+        // Graphical data
         public BasicEffect effect;
         public Texture2D texture;
-        public int[] tileInfo;
-        Random random = new Random();
+        public Model[] models;
 
+        // Directional data
+        public int[] tileInfo;
+
+        // Generation settings
         private int minTiles = 20;
         private int tiles = 0;
 
+        // Regeneration list
         List<Integer3> regenCoords = new List<Integer3>();
 
-        // Hardcoded maze entry, need seperate constructor for random generated one
+        // RNG
+        Random random = new Random();
+        #endregion
+
+        #region Constructors
+        // Hardcoded maze
         public TileGrid(int gridSize, int tileSize, Model[] models, BasicEffect effect, Texture2D texture, int[,] modelTypes, int[,] modelRotations)
         {
             this.gridSize = gridSize;
@@ -38,6 +50,7 @@ namespace GDApp._3DTileEngine
             generateGridFromArrays(modelTypes, modelRotations);
         }
 
+        // Random maze
         public TileGrid(int gridSize, int tileSize, Model[] models, BasicEffect effect, Texture2D texture)
         {
             this.gridSize = gridSize;
@@ -47,81 +60,84 @@ namespace GDApp._3DTileEngine
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
             initializeInfo();
+            generateRandomGrid();
         }
+        #endregion
 
+        #region Maze Creation
+        #region Random Gen
+        public void generateRandomGrid()
+        {
+            while (tiles < minTiles)
+            {
+                // Reset values upon failed generation
+                regenCoords = new List<Integer3>();
+                tiles = 0;
+                grid = new ModelTileObject[gridSize,gridSize];
+
+                //  Create hardcoded start and finish
+                createTileAt(0, 0, 0, 0);
+                createTileAt(gridSize - 1, gridSize - 1, 0, 2);
+                
+                // Create two random chains that link with start and finish
+                createRandomChainAt(0, 1, 3);      
+                createRandomChainAt(gridSize - 1, gridSize - 2, 1);
+
+
+                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 2, 1));
+           }
+            
+            regenerateGaps();
+        }
+        #endregion
+
+        #region Input Gen
+        private void generateGridFromArrays(int[,] modelTypes, int[,] modelRotations)
+        {
+            Transform3D transform;
+            ModelTileObject mazeObject;
+
+            for (int x = 0; x < gridSize; x++)
+            {
+                for (int y = 0; y < gridSize; y++)
+                {
+                    transform = new Transform3D(
+                        new Vector3(x * tileSize, 0, y * tileSize),
+                        new Vector3(0, modelRotations[x, y] * 90, 0),
+                        new Vector3(0.1f, 0.1f, 0.1f),
+                        Vector3.UnitX,
+                        Vector3.UnitY);
+
+                    grid[x, y] = mazeObject = new ModelTileObject(
+                        "maze(" + x + "," + y + ")",
+                        ActorType.Pickup,
+                        transform,
+                        effect,
+                        Color.White,
+                        1,
+                        texture,
+                        models[modelTypes[x, y]],
+                        modelTypes[x, y],
+                        x,
+                        y);
+                }
+            }
+        }
+        #endregion
+        #endregion
+
+        #region Random generation
+        // Initialising directional data for tiles with bits
         private void initializeInfo()
         {
-            //  0
-            //3   1
-            //  2                    
-            //                                                          R = 0   R = 1   R = 2   R = 3   R = 0
-            /*                                                          uldr    uldr    uldr    uldr   decimal
-            "deadEnd"   index:0     connection:l        bytes:          0100                              4
-            "straight"  index:1     connection:l-r      bytes:          0101                              5
-            "corner"    index:2     connection:l-d      bytes:          0110                              6
-            "tJunction" index:3     connection:l-d-u    bytes:          1110    1101    1011    0111      14
-            "cross"     index:4     connection:l-d-u-r  bytes:          1111                              15  
-            "box"       index:5     connection:l-d      bytes:          0110                              6
-            */
-
             tileInfo = new int[7];
             tileInfo[0] = 8;
             tileInfo[1] = 10;
             tileInfo[2] = 9;
             tileInfo[3] = 13;
             tileInfo[4] = 15;
-            tileInfo[5] = 10; // room
-            tileInfo[6] = 8; // puzzle
-        }
-
-        public int[] generateRandomGrid()
-        {
-            /*
-            createTileAt(0, 0, 0, 0);
-            createTileAt(0, 1, 2, 1);
-            createTileAt(0, 2, 3, 1);
-
-            regenCoords.Add(new Integer3(0, 1, 1));
-            // startroom
-            */
-
-            while (tiles < minTiles)
-            {
-                regenCoords = new List<Integer3>();
-                tiles = 0;
-                grid = new ModelTileObject[gridSize,gridSize];
-                createTileAt(0, 0, 0, 0);
-                createTileAt(gridSize - 1, gridSize - 1, 0, 2);
-                
-                createRandomChainAt(0, 1, 3);      
-
-                createRandomChainAt(gridSize - 1, gridSize - 2, 1);
-                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 2, 1));
-           }
-            
-            regenerateGaps();
-
-            int maxX = 0;
-            int maxY = 0;
-
-            for(int x = 0; x < gridSize-1; x++)
-            {
-                for(int y = 0; y < gridSize-1; y++)
-                {
-                    if (grid[x, y] != null)
-                    {
-                        if(x > maxX)
-                        {
-                            maxX = x;
-                        }
-                        if(y > maxY)
-                        {
-                            maxY = y;
-                        }
-                    }
-                }
-            }
-            return new int[] { maxX, maxY };
+            tileInfo[5] = 10;
+            tileInfo[6] = 8;
         }
 
         private bool createRandomChainAt(int x, int y, int originDir) // originDir represents the direction where we came from
@@ -131,19 +147,6 @@ namespace GDApp._3DTileEngine
             bool s = true;          // can we go south
             bool w = true;          // can we go west
             int allowedDirs = 15;   // directions we can go
-
-            //  0
-            //3   1
-            //  2                    
-            //                                                          R = 0   R = 1   R = 2   R = 3
-            /*                                                          uldr    uldr    uldr    uldr
-            "deadEnd"   index:0     connection:l        bytes:          0100                
-            "straight"  index:1     connection:l-r      bytes:          0101
-            "corner"    index:2     connection:l-d      bytes:          0110
-            "tJunction" index:3     connection:l-d-u    bytes:          1110    1101    1011    0111
-            "cross"     index:4     connection:l-d-u-r  bytes:          1111
-            "box"       index:5     connection:l-d      bytes:          0110
-            */
 
             /**
             *   0.5) We check if we are asked to go out of bounds
@@ -239,29 +242,28 @@ namespace GDApp._3DTileEngine
             }
 
             /**
-            *  3.5) The previous code will have blocked passage to the room we're originating from, so...     
+            *  3.5) The previous code will have blocked passage to the room we're originating from, so, we set our origin direction to be true    
             **/
-            //System.Console.Write("allowed dirs after collision checks " + allowedDirs + "\n");
+
             allowedDirs = setBit(allowedDirs, originDir-1, true);
-            //System.Console.Write("allowed dirs after origin calc " + allowedDirs + "\n");
 
-
+            /**
+            *  3.6) Initialising random generation variables and random loops
+            **/
 
             int possibleDirs = 0;
             int modelNumber = 0;
             bool created = false;
 
             // Loops through trying models for the next tile
-
             for(int tries = 0; tries < 5; tries++)
-            {
+            {   
                 /**
                 *   4) We choose a random model based on probability
                 **/
                 modelNumber = randomTile();
                 possibleDirs = tileInfo[modelNumber];
 
-                //System.Console.Write(modelNumber);
 
                 /**
                 *   5) We compare the possible directions and the directions of our model + rotations.
@@ -296,14 +298,6 @@ namespace GDApp._3DTileEngine
 
             if (grid[x,y] != null)
             {
-                // Following 
-                //   0
-                // 3   1
-                //   2
-
-                //System.Console.Write("possible dirs " + possibleDirs+"\n");
-                //System.Console.Write("allowed dirs  " + allowedDirs + "\n");
-                
 
                 if (isBitSet(possibleDirs, 2))      // If we can go south...
                 {
@@ -378,38 +372,9 @@ namespace GDApp._3DTileEngine
                     createTileAt(x, y, 0, 0);
                 }
             }
-
-            
-
-            //System.Console.Write("Failed generation");
             return false;
         }
       
-        private int rotateDirs(int dirs)
-        {
-            int newBits = 0;
-
-            // extract the 4 bits and reorder them.
-            if (isBitSet(dirs, 4))
-            {
-                newBits += 1;
-            }
-            if (isBitSet(dirs, 3))
-            {
-                newBits += 8;
-            }
-            if (isBitSet(dirs, 2))
-            {
-                newBits += 4;
-                //paddy was here 15/11/16
-            }
-            if (isBitSet(dirs, 1))
-            {
-                newBits += 2;
-            }
-            return newBits;
-        }
-
         private int randomTile()
         {
             int modelNumber = -1;
@@ -452,94 +417,32 @@ namespace GDApp._3DTileEngine
             return modelNumber;
           
         }
+        #endregion
 
-        private void genRandomTile(int x, int y, int requiredDirs, int originDir)
+        #region Bitwise functions
+        private int rotateDirs(int dirs)
         {
-            System.Console.WriteLine("Required direction: "+requiredDirs);
-            int possibleDirs = 0;
-            int modelNumber = 0;
-            bool created = false;
+            int newBits = 0;
 
-            for (int tries = 0; tries < tileInfo.Length; tries++)
+            // extract the 4 bits and reorder them.
+            if (isBitSet(dirs, 4))
             {
-                System.Console.WriteLine("Trying model no: " + modelNumber);
-                int rotation = -1;
-                possibleDirs = tileInfo[modelNumber];
-
-                for (int rotations = 0; rotations < 4; rotations++)
-                {
-                    System.Console.WriteLine("Possible directions: " + possibleDirs + "\n");
-                    if (requiredDirs == possibleDirs)
-                    {
-                        createTileAt(x, y, modelNumber, rotation);
-                        tries = tileInfo.Length;
-                        rotations = 4;
-                        created = true;
-                    }
-                    else
-                    {
-                        possibleDirs = rotateDirs(possibleDirs);
-                        rotation++;
-                    }
-                }
-                if (created)
-                {
-                    tries = tileInfo.Length;
-                }
-                modelNumber++;
-                rotation = -1;
+                newBits += 1;
             }
-        }
-
-        private void Regenerate(int x, int y, int originDir)
-        {
-            int allowedDirs = getDirsFromModelAndRotation(x, y);        // Get directional data of x y tile
-
-            allowedDirs = setBit(allowedDirs, originDir -1, true);     // Add the value of our origin
-
-            genRandomTile(x, y, allowedDirs, originDir);                           // Replace the x,y with a new tile
-        }
-
-        private int getDirsFromModelAndRotation(int x, int y)
-        {
-            int modelNo = grid[x, y].modelNo;
-            int rotation = grid[x, y].rotation;
-            int possibleDirs = tileInfo[modelNo];
-
-            for (int i = 0; i <= rotation; i++)
+            if (isBitSet(dirs, 3))
             {
-                possibleDirs = rotateDirs(possibleDirs);
+                newBits += 8;
             }
-            return possibleDirs;
-        }
-
-        private void createTileAt(int x, int y, int model, int rotation)
-        {
-            Transform3D transform = new Transform3D(
-                new Vector3(x * tileSize, 0, y * (-1)*tileSize),
-                new Vector3(0, rotation * -90, 0),
-                new Vector3(0.1f, 0.1f, 0.1f),
-                Vector3.UnitX,
-                Vector3.UnitY);
-
-            ModelTileObject mazeObject = new ModelTileObject(
-               "maze(" + x + "," + y + ")",
-               ActorType.Pickup,
-               transform,
-               effect,
-               Color.White,
-               1,
-               texture,
-               models[model],
-               model,
-               x,
-               y);
-
-            mazeObject.rotation = rotation;
-            tiles++;
-            grid[x, y] = mazeObject;
-            //game.objectManager.Add(grid[x, y]);
-
+            if (isBitSet(dirs, 2))
+            {
+                newBits += 4;
+                //paddy was here 15/11/16
+            }
+            if (isBitSet(dirs, 1))
+            {
+                newBits += 2;
+            }
+            return newBits;
         }
 
         private bool compareDirs(int allowedDirs, int possibleDirs, int originDir)
@@ -602,7 +505,6 @@ namespace GDApp._3DTileEngine
             return true;
         }
 
-        //private void shift(int rotation, int )
         private bool isBitSet(int bytes, int bitNumber)
         {
             return (bytes & (1 << bitNumber - 1)) != 0;
@@ -623,45 +525,105 @@ namespace GDApp._3DTileEngine
             }
             return result;
         }
+        #endregion
 
-        private void generateGridFromArrays(int[,] modelTypes, int[,] modelRotations)
-        {
-            Transform3D transform;
-            ModelTileObject mazeObject;
-
-            for (int x = 0; x < gridSize; x++)
-            {
-                for (int y = 0; y < gridSize; y++)
-                {
-                    transform = new Transform3D(
-                        new Vector3(x * tileSize, 0, y * tileSize),
-                        new Vector3(0, modelRotations[x, y] * 90, 0),
-                        new Vector3(0.1f, 0.1f, 0.1f),
-                        Vector3.UnitX,
-                        Vector3.UnitY);
-
-                    grid[x, y] = mazeObject = new ModelTileObject(
-                        "maze(" + x + "," + y + ")",
-                        ActorType.Pickup,
-                        transform,
-                        effect,
-                        Color.White,
-                        1,
-                        texture,
-                        models[modelTypes[x, y]],
-                        modelTypes[x,y],
-                        x,
-                        y);
-                }
-            }
-        }
-
+        #region Regeneration
+        // After our maze gen, we regenerate invalid tiles to fit together
         private void regenerateGaps()
         {
             foreach (Integer3 regenCoord in regenCoords)
             {
                 Regenerate(regenCoord.X, regenCoord.Y, regenCoord.Z);
             }
+        }
+
+        private void Regenerate(int x, int y, int originDir)
+        {
+            int allowedDirs = getDirsFromModelAndRotation(x, y);        // Get directional data of x y tile
+
+            allowedDirs = setBit(allowedDirs, originDir - 1, true);      // Add the value of our origin
+
+            genRandomTile(x, y, allowedDirs, originDir);                // Replace the x,y with a new tile
+        }
+
+        private int getDirsFromModelAndRotation(int x, int y)
+        {
+            int modelNo = grid[x, y].modelNo;
+            int rotation = grid[x, y].rotation;
+            int possibleDirs = tileInfo[modelNo];
+
+            for (int i = 0; i <= rotation; i++)
+            {
+                possibleDirs = rotateDirs(possibleDirs);
+            }
+            return possibleDirs;
+        }
+
+        private void genRandomTile(int x, int y, int requiredDirs, int originDir)
+        {
+            System.Console.WriteLine("Required direction: " + requiredDirs);
+            int possibleDirs = 0;
+            int modelNumber = 0;
+            bool created = false;
+
+            for (int tries = 0; tries < tileInfo.Length; tries++)
+            {
+                System.Console.WriteLine("Trying model no: " + modelNumber);
+                int rotation = -1;
+                possibleDirs = tileInfo[modelNumber];
+
+                for (int rotations = 0; rotations < 4; rotations++)
+                {
+                    System.Console.WriteLine("Possible directions: " + possibleDirs + "\n");
+                    if (requiredDirs == possibleDirs)
+                    {
+                        createTileAt(x, y, modelNumber, rotation);
+                        tries = tileInfo.Length;
+                        rotations = 4;
+                        created = true;
+                    }
+                    else
+                    {
+                        possibleDirs = rotateDirs(possibleDirs);
+                        rotation++;
+                    }
+                }
+                if (created)
+                {
+                    tries = tileInfo.Length;
+                }
+                modelNumber++;
+                rotation = -1;
+            }
+        }
+        #endregion
+
+        // This function is used to create all tiles
+        private void createTileAt(int x, int y, int model, int rotation)
+        {
+            Transform3D transform = new Transform3D(
+                new Vector3(x * tileSize, 0, y * (-1) * tileSize),
+                new Vector3(0, rotation * -90, 0),
+                new Vector3(0.1f, 0.1f, 0.1f),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            ModelTileObject mazeObject = new ModelTileObject(
+               "maze(" + x + "," + y + ")",
+               ActorType.Pickup,
+               transform,
+               effect,
+               Color.White,
+               1,
+               texture,
+               models[model],
+               model,
+               x,
+               y);
+
+            mazeObject.rotation = rotation;
+            tiles++;
+            grid[x, y] = mazeObject;
         }
     }
 }

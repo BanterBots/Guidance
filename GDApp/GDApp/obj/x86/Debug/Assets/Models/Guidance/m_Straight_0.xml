@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Straight</Name>
     <Identity>
-      <SourceFilename>I:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_Straight.FBX</SourceFilename>
+      <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_Straight.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
