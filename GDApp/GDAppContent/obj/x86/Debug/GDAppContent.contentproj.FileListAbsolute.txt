@@ -17,3 +17,4 @@ C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDAppConten
 I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 I:\Projects\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 C:\Users\ciara_000\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+E:\Projects\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
