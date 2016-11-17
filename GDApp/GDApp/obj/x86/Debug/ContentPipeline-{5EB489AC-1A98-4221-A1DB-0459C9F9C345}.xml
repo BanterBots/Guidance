@@ -772,6 +772,26 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight_0.xml</Output>
       <Time>2016-11-15T11:25:45.9927533+00:00</Time>
     </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\Items\Pickups\m_potion.FBX</Source>
+      <Name>Assets\Models\Guidance\Items\Pickups\m_potion</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb</Output>
+      <Time>2016-11-16T19:59:40.1653369+00:00</Time>
+      <Dependency>
+        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\Items\Pickups\m_potion_0.xml</Key>
+        <Value>2016-11-16T20:18:44.0852539+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\Items\Pickups\m_potion.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\Items\Pickups\m_potion_0.xml</Output>
+      <Time>2016-11-16T19:59:40.1653369+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{5EB489AC-1A98-4221-A1DB-0459C9F9C345}</ContentProjectGUID>

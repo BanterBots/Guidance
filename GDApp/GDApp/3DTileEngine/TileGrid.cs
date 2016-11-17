@@ -1,4 +1,6 @@
-﻿using GDLibrary;
+﻿using GDApp._3DTileEngine.Objects.Items;
+using GDLibrary;
+using JigLibX.Collision;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -11,6 +13,7 @@ namespace GDApp._3DTileEngine
         #region Properties
         // Grid that holds all tiles
         public ModelTileObject[,] grid;
+        public List<DrawnActor3D> itemList;
 
         // Size of our grid, and size of each tile
         public int gridSize;
@@ -74,11 +77,15 @@ namespace GDApp._3DTileEngine
                 regenCoords = new List<Integer3>();
                 tiles = 0;
                 grid = new ModelTileObject[gridSize,gridSize];
+                itemList = new List<DrawnActor3D>();
 
                 //  Create hardcoded start and finish
                 createTileAt(0, 0, 0, 0);
                 createTileAt(gridSize - 1, gridSize - 1, 0, 2);
-                
+
+                // Hardcoded item
+                createPotionAt(0, 0);
+
                 // Create two random chains that link with start and finish
                 createRandomChainAt(0, 1, 3);      
                 createRandomChainAt(gridSize - 1, gridSize - 2, 1);
@@ -610,7 +617,7 @@ namespace GDApp._3DTileEngine
 
             ModelTileObject mazeObject = new ModelTileObject(
                "maze(" + x + "," + y + ")",
-               ActorType.Pickup,
+               ActorType.CollidableGround,
                transform,
                effect,
                Color.White,
@@ -624,6 +631,34 @@ namespace GDApp._3DTileEngine
             mazeObject.rotation = rotation;
             tiles++;
             grid[x, y] = mazeObject;
+        }
+
+        private void createPotionAt(int x, int y)
+        {
+            CollidableObject collidableObject = null;
+
+            Transform3D transform = new Transform3D(
+                new Vector3(x * tileSize, 0, y * (-1) * tileSize),
+                new Vector3(0, 0 * -90, 0),
+                new Vector3(0.1f, 0.1f, 0.1f),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            collidableObject = new TriangleMeshObject(
+               "maze(" + x + "," + y + ")",
+               ActorType.CollidableProp,
+               transform,
+               effect,
+               Color.White,
+               1,
+               null,
+               models[7],
+               new MaterialProperties(0.2f, 0.8f, 0.7f));
+
+            collidableObject.Enable(true, 1);
+            collidableObject.ActorType = ActorType.Pickup;
+
+            itemList.Add(collidableObject);
         }
     }
 }

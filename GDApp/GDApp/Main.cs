@@ -327,7 +327,11 @@ namespace GDApp
 
         private void InitializeManagers()
         {
-            this.objectManager = new ObjectManager(this, "gameObjects", true);
+            this.physicsManager = new PhysicsManager(this);
+            Components.Add(physicsManager);
+            bool bDebugMode = true; //show wireframe CD-CR surfaces
+
+            this.objectManager = new ObjectManager(this, "gameObjects", bDebugMode);
             Components.Add(this.objectManager);
 
             this.mouseManager = new MouseManager(this, true);
@@ -374,6 +378,7 @@ namespace GDApp
             this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Cross"));
             this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_DeadEnd"));
             this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Puzzle"));
+            this.modelDictionary.Add("potion", Content.Load<Model>("Assets/Models/Guidance/Items/Pickups/m_potion"));
             //Add more models...
             /*
             this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
@@ -753,7 +758,8 @@ namespace GDApp
                 this.modelDictionary["tJunction"],  //3
                 this.modelDictionary["cross"],      //4
                 this.modelDictionary["room"],      //5
-                this.modelDictionary["puzzle"]      //6
+                this.modelDictionary["puzzle"],    //6
+                this.modelDictionary["potion"]
             };
 
             //int[,] modelTypes = 
@@ -807,7 +813,7 @@ namespace GDApp
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(10, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
+            TileGrid tg = new TileGrid(5, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
             tg.generateRandomGrid();
 
             /*
@@ -871,6 +877,11 @@ namespace GDApp
                         this.objectManager.Add(tg.grid[i, j]);
                     }
                 }
+            }
+
+            foreach(DrawnActor3D model in tg.itemList)
+            {
+                this.objectManager.Add(model);
             }
         }
 

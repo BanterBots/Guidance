@@ -993,3 +993,4 @@ C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\JigLibX.dll
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.dll
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb
