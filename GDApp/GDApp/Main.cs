@@ -6,6 +6,7 @@ using JigLibX.Collision;
 using JigLibX.Geometry;
 using System;
 using GDApp._3DTileEngine;
+using Microsoft.Xna.Framework.Audio;
 
 namespace GDApp
 {
@@ -31,6 +32,13 @@ namespace GDApp
         private GenericDictionary<string, RailParameters> railDictionary;
 
         private Vector2 screenCentre;
+
+
+        SoundEffect _bongoBongoLoop;
+        SoundEffectInstance _bongoBongoInstance;
+
+        AudioEmitter _emitter;
+        AudioListener _listener;
 
         //temp vars
         private ModelObject drivableModelObject;
@@ -505,9 +513,9 @@ namespace GDApp
             //    this.textureDictionary["checkerboard"],
             //    this.modelDictionary["box"],
             //    AppData.PlayerMoveKeys, 0.5f, 0.2f, AppData.PlayerMoveSpeed, -AppData.PlayerMoveSpeed, new Vector3(0,2,0));
-            
+
             //this.objectManager.Add(this.playerObject);
-            
+
         }
 
         private void InitializeMaze(int size)
@@ -530,7 +538,7 @@ namespace GDApp
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(5, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
+            TileGrid tg = new TileGrid(9, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
             tg.generateRandomGrid();
 
             for (int i = 0; i < tg.gridSize; i++)
@@ -568,7 +576,7 @@ namespace GDApp
             ModelObject player = new ModelObject(
                 "player", 
                 ActorType.Player, 
-                new Transform3D(new Vector3(-5, 10, 0), Vector3.Right, Vector3.Up), 
+                new Transform3D(new Vector3(-5, 10, 0), new Vector3(0, 0, 0), new Vector3(0.2f, 0.2f, 0.2f), Vector3.Right, Vector3.Up), 
                 texturedModelEffect, 
                 Color.White, 
                 -1,
@@ -579,7 +587,7 @@ namespace GDApp
                 "firstPersControl1",
                 ControllerType.FirstPerson, 
                 AppData.CameraMoveKeys,
-                AppData.CameraMoveSpeed*8, 
+                AppData.CameraMoveSpeed*12, 
                 AppData.CameraStrafeSpeed*2, 
                 AppData.CameraRotationSpeed*15,
                 2f, // radius
@@ -637,6 +645,14 @@ namespace GDApp
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //Sound
+            _bongoBongoLoop = Content.Load<SoundEffect>("Assets/Sound/bongbongoLoop");
+            _bongoBongoInstance = _bongoBongoLoop.CreateInstance();
+            _bongoBongoInstance.IsLooped = true;
+            _bongoBongoInstance.Volume = 0.4f;
+            _bongoBongoInstance.Play();
+
         }
 
         protected override void UnloadContent()
