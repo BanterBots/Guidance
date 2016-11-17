@@ -10,8 +10,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
       <Time>2016-11-07T20:12:10.3674434+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\box_0.xml</Key>
-        <Value>2016-11-16T19:18:02.4826902+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\box_0.xml</Key>
+        <Value>2016-11-16T20:09:39.8147689+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -23,8 +23,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb</Output>
       <Time>2016-11-07T20:12:10.3684458+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\cylinder_0.xml</Key>
-        <Value>2016-11-16T19:18:02.8979653+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\cylinder_0.xml</Key>
+        <Value>2016-11-16T20:09:39.9562691+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -36,8 +36,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb</Output>
       <Time>2016-11-07T20:12:10.3714469+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\dome_0.xml</Key>
-        <Value>2016-11-16T19:18:03.034055+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\dome_0.xml</Key>
+        <Value>2016-11-16T20:09:40.0342683+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -49,8 +49,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb</Output>
       <Time>2016-11-07T20:12:10.3819534+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\hedra_0.xml</Key>
-        <Value>2016-11-16T19:18:03.0995989+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\hedra_0.xml</Key>
+        <Value>2016-11-16T20:09:40.071759+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -62,8 +62,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb</Output>
       <Time>2016-11-07T20:12:10.3829562+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\octahedron_0.xml</Key>
-        <Value>2016-11-16T19:18:03.1671428+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\octahedron_0.xml</Key>
+        <Value>2016-11-16T20:09:40.1052588+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -75,8 +75,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb</Output>
       <Time>2016-11-07T20:12:10.3844598+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\plane_0.xml</Key>
-        <Value>2016-11-16T19:18:03.2667104+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\plane_0.xml</Key>
+        <Value>2016-11-16T20:09:40.1677596+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -88,8 +88,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb</Output>
       <Time>2016-11-07T20:12:10.3854609+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\prism_0.xml</Key>
-        <Value>2016-11-16T19:18:03.3897911+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\prism_0.xml</Key>
+        <Value>2016-11-16T20:09:40.2037285+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -101,8 +101,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb</Output>
       <Time>2016-11-07T20:12:10.3889636+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\sphere_0.xml</Key>
-        <Value>2016-11-16T19:18:03.5113712+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\sphere_0.xml</Key>
+        <Value>2016-11-16T20:09:40.2492284+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -114,8 +114,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb</Output>
       <Time>2016-11-07T20:12:10.3909645+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\spindle_0.xml</Key>
-        <Value>2016-11-16T19:18:03.5984289+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\spindle_0.xml</Key>
+        <Value>2016-11-16T20:09:40.2887634+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -127,8 +127,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb</Output>
       <Time>2016-11-07T20:12:10.3944673+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torus_0.xml</Key>
-        <Value>2016-11-16T19:18:03.6979953+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torus_0.xml</Key>
+        <Value>2016-11-16T20:09:40.3302589+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -140,8 +140,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb</Output>
       <Time>2016-11-07T20:12:10.4009707+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torusknot_0.xml</Key>
-        <Value>2016-11-16T19:18:03.8465928+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torusknot_0.xml</Key>
+        <Value>2016-11-16T20:09:40.4173906+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -153,8 +153,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_corner.xnb</Output>
       <Time>2016-11-07T20:12:10.37545+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_corner_0.xml</Key>
-        <Value>2016-11-16T19:18:03.943658+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_corner_0.xml</Key>
+        <Value>2016-11-16T20:09:40.4596+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -166,8 +166,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Cross.xnb</Output>
       <Time>2016-11-07T20:12:10.3764506+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Cross_0.xml</Key>
-        <Value>2016-11-16T19:18:04.0082012+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Cross_0.xml</Key>
+        <Value>2016-11-16T20:09:40.4929248+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -179,8 +179,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_DeadEnd.xnb</Output>
       <Time>2016-11-07T20:12:10.3779516+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_DeadEnd_0.xml</Key>
-        <Value>2016-11-16T19:18:04.1047168+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_DeadEnd_0.xml</Key>
+        <Value>2016-11-16T20:09:40.5229504+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -192,8 +192,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Straight.xnb</Output>
       <Time>2016-11-07T20:12:10.3794539+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Straight_0.xml</Key>
-        <Value>2016-11-16T19:18:04.186169+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Straight_0.xml</Key>
+        <Value>2016-11-16T20:09:40.5544495+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -205,8 +205,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_tJunction.xnb</Output>
       <Time>2016-11-07T20:12:10.3809528+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Key>
-        <Value>2016-11-16T19:18:04.2792324+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Key>
+        <Value>2016-11-16T20:09:40.5842778+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -218,8 +218,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb</Output>
       <Time>2016-11-15T11:25:45.759312+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner_0.xml</Key>
-        <Value>2016-11-16T19:18:04.3944613+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner_0.xml</Key>
+        <Value>2016-11-16T20:09:40.638299+00:00</Value>
       </Dependency>
       <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -232,8 +232,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb</Output>
       <Time>2016-11-15T11:25:45.7623135+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross_0.xml</Key>
-        <Value>2016-11-16T19:18:07.2528525+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross_0.xml</Key>
+        <Value>2016-11-16T20:09:42.6667082+00:00</Value>
       </Dependency>
       <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -246,8 +246,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb</Output>
       <Time>2016-11-15T11:25:45.7648156+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd_0.xml</Key>
-        <Value>2016-11-16T19:18:07.3228989+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd_0.xml</Key>
+        <Value>2016-11-16T20:09:42.704184+00:00</Value>
       </Dependency>
       <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -260,8 +260,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb</Output>
       <Time>2016-11-15T11:25:45.7683175+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction_0.xml</Key>
-        <Value>2016-11-16T19:18:07.371931+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction_0.xml</Key>
+        <Value>2016-11-16T20:09:42.741214+00:00</Value>
       </Dependency>
       <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -274,8 +274,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb</Output>
       <Time>2016-11-15T11:25:45.7923501+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle_0.xml</Key>
-        <Value>2016-11-16T19:18:07.447481+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle_0.xml</Key>
+        <Value>2016-11-16T20:09:42.91205+00:00</Value>
       </Dependency>
       <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -288,8 +288,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb</Output>
       <Time>2016-11-15T11:25:45.8545214+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room_0.xml</Key>
-        <Value>2016-11-16T19:18:07.5720631+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room_0.xml</Key>
+        <Value>2016-11-16T20:09:42.9510226+00:00</Value>
       </Dependency>
       <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -302,8 +302,8 @@
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb</Output>
       <Time>2016-11-15T11:25:45.9927533+00:00</Time>
       <Dependency>
-        <Key>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight_0.xml</Key>
-        <Value>2016-11-16T19:18:07.6215964+00:00</Value>
+        <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight_0.xml</Key>
+        <Value>2016-11-16T20:09:42.9835476+00:00</Value>
       </Dependency>
       <Request>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>

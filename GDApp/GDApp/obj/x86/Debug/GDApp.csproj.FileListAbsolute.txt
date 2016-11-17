@@ -1,785 +1,5 @@
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Structures\backwall.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Structures\sidewall.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Structures\backwall.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Structures\sidewall.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-E:\2016-17\Semester 1\3DGD\GDApp - Wk4 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl1\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-F:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - CameraManager Methods - v1.1\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-I:\2016-17\Semester 1\3DGD\Labs\Week 5\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp - Wk5 - Cl2 - IController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp - Wk6 - Cl1 - Curve - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-E:\3DGD\Week 6\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp - Wk6 - Cl1 - Curve - v2.0\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-G:\3DGD\Week 6\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp - Wk6 - Cl1 - TrackController - v1.0\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-C:\Users\mcguinnn\Downloads\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-E:\3DGD\Week 6\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-C:\Users\d00163463\Desktop\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.dll
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.xml
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-I:\Year 3\C#\GDApp - Wk6 - Cl2\GDApp - Wk6 - Cl2\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
+I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
+I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
@@ -796,6 +16,13 @@ I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_DeadEnd.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Straight.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_tJunction.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
@@ -825,172 +52,89 @@ I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\T
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.exe
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\JigLibX.dll
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.dll
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.dll
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.xml
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_corner.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Cross.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_DeadEnd.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Straight.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_tJunction.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\JigLibX.dll
-I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.dll
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.pdb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_corner.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Cross.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_DeadEnd.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Straight.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_tJunction.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.exe
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\JigLibX.dll
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.dll
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.pdb
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
-C:\Users\d00167238\Desktop\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\JigLibX.dll
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.dll
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.pdb
-C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb
+I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
+I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cylinder.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\dome.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\hedra.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\octahedron.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\plane.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\prism.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\sphere.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\spindle.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torus.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\torusknot.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_corner.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Cross.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_DeadEnd.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_Straight.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\m_tJunction.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\abstract1.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Abstract\pink_trans1.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence1.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence2.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence3.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Fence\fence4.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\backwall.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Architecture\Walls\sidewall.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\ml.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\foliage.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Ground\grass1.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree1.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree2.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree3.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate1.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Props\Crates\crate2.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\back.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\front.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\ground.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\left.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\right.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Skybox\sky.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Debug\checkerboard.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree4.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Trees\tree5.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub1.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub2.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.exe
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\GDApp.pdb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\JigLibX.dll
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.dll
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\SkinnedModel.pdb
+E:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyReference.cache
+E:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
+E:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb

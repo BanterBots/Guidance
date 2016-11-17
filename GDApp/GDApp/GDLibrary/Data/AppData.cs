@@ -44,14 +44,12 @@ namespace GDLibrary
         #endregion
 
         #region Player
-        public static Keys[] PlayerMoveKeys = { Keys.U, Keys.J, Keys.H, Keys.K };
+        public static Keys[] PlayerMoveKeys = { Keys.U, Keys.J, Keys.H, Keys.K, Keys.Space, Keys.LeftControl };
         public static float PlayerMoveSpeed = 0.1f;
         public static float PlayerStrafeSpeed = 0.07f;
         public static float PlayerRotationSpeed = 0.04f;
-        public static int IndexJump;
-        public static int IndexJumpCrouch;
-
-
+        public static int IndexJump = 4;
+        public static int IndexJumpCrouch = 5;
         #endregion
 
 

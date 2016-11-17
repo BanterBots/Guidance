@@ -7,133 +7,6 @@ using JigLibX.Geometry;
 using System;
 using GDApp._3DTileEngine;
 
-
-/* Version:     3.2
- Description:   Added RailDictionary, RailController and RailParameters. Rail demo in Main::Update on F4 and F5.
-                Called Dispose() on GenericDictionaries used to store assets in Main::UnloadContent().
-                Added EventDispatcher, EventData, CameraEventData, and supporting Event enums.
- Date:          15/11/16
- Author:        NMCG
- Bugs:          4/11/16 - Bug on scale of Box collision primitive.
- To Do:         Override clone method for each controller, controllers for rail, and flight camera types.              
-                Add ObjectManager::Remove().
-                Add SoundManager for 2D and 3D sounds.
-                Add HUDManager to add UI text (e.g. debug information, FPS).
-                Add hierarchy of objects (i.e. Actor2D, DrawnActor2D, ButtonActor2D, TextActor2D) to support 2D UI elements (e.g. button, text, progress control).
- */
-/* Version:     3.1
- Description:   Minor change to Camera3D::Clone(). 
-                Add some "To Do" requirements. 
-                Added folders under Objects to organise 3D and 2D game objects.
- Date:          7/11/16
- Author:        NMCG
- Bugs:          4/11/16 - Bug on scale of Box collision primitive.
- To Do:         Override clone method for each controller, controllers for rail, and flight camera types.
-                Call Dispose() on GenericDictionaries used to store assets in Main::UnloadContent().
-                Add ObjectManager::Remove().
-                Add EventDispatcher and EventData.
-                Add SoundManager for 2D and 3D sounds.
-                Add HUDManager to add UI text (e.g. debug information, FPS).
-                Add hierarchy of objects (i.e. Actor2D, DrawnActor2D, ButtonActor2D, TextActor2D) to support 2D UI elements (e.g. button, text, progress control).
- */
-/* Version:     3.0
- Description:   Added JigLibX collision and physics engine.
- Date:          4/11/16
- Author:        NMCG
- Bugs:          4/11/16 - Bug on scale of Box collision primitive.
- To Do:         Override clone method for each controller, controllers for rail, and flight camera types.
- */
-/* Version:     2.9
- Description:   Added ThirdPersonController, Camera3D::viewport, and split screen demo
-                Added TargetController as a base for any controller (e.g. 3rd Person or Rail) that bases its movement on a target object.
-                Made CameraManager implement IEnumberable to support foreach() loop - see Main::Draw()
- Date:          3/11/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add JigLibX, override clone method for each controller, controllers for rail, and flight camera types.
- */
-/* Version:     2.8
- Description:   Added DriveController as first step towards ThirdPersonController.
-                Added FlightController to allow unconstrained movement.
-                Added PlayStateType to capture play states (Play, Pause, Stop, Reset) for TrackController.
- Date:          28/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for 3rd, rail, and flight camera types.
- */
-/* Version:     2.7
- Description:   Added TrackController and locked Y-movement on FirstPersonController
- Date:          24/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for 3rd, rail, and flight camera types.
- */
-/* Version:     2.6
- Description:   Added Curve folder and containing classes to support TrackCamera.
- Date:          24/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for 3rd, rail, track, flight camera types.
- */
-/* Version:     2.5
- Description:   Added IController functionality to Actor3D and added introductory controller examples. Added Controller class as base class for all controllers 
-				to enable each specific controller to have id and controller type, and access to game handle.
- Date:          21/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for 3rd, rail, track, flight camera types.
- */
-/* Version:     2.4
- Description:   Added helper methods to CameraManager 
-                WORK IN PROGRESS.
- Date:          21/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for drawn actors and camera.
- */
-/* Version:     2.3
- Description:   Added a CameraManager class to support multi-layout. 
-                Added simple 1st Person camera behaviour on Camera3D.
-                WORK IN PROGRESS.
- Date:          17/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for drawn actors and camera.
- */
-/* Version:     2.2
- Description:   WORK IN PROGRESS...TO COMPLETE IN CLASS
-                Begin to refactor Camera2D class to inherit from Actor and use Transform3D and PresentationParameters.
-                Added ModelObject to support rendering of 3DS Max and Maya FBS format models.
-                Added additional static formats to Presentation Parameters.
-                Added Utility folder with some useful classes containing static methods.
- Date:          17/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for drawn actors and camera.
- */
-/* Version:     2.1
- Description:   Adds IVertexData support to PrimitiveObject and TexturedPrimitiveObject
- Date:          14/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Add controllers for drawn actors and camera.
- */
-/* Version:     2.0
- Description:   Begins to define an inheritance hierarchy for actors (i.e. collidable, non-collidable, helpers, and zones) in the game world.
-                Introduce the concept of an IActor and IFilter.
- Date:          13/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         Migrate to IActor based hierarchy and add controllers for drawn actors and camera.
- */
-/* Version:     1.0
- Description:   Illustrate the creation of textured quad objects, texture addressing, render states, and alpha blending
- Date:          7/10/16
- Author:        NMCG
- Bugs:          None
- To Do:         
- */
-
 namespace GDApp
 {
     public class Main : Microsoft.Xna.Framework.Game
@@ -164,7 +37,7 @@ namespace GDApp
         private EventDispatcher eventDispatcher;
 
 
-        ModelObject playerObject;
+        PlayerObject playerObject;
         #endregion
 
         #region Properties
@@ -223,6 +96,7 @@ namespace GDApp
             int width = 1024, height = 768;
             int worldScale = 2000;
 
+
             #region Statics & Graphics
             InitializeStaticReferences();
             InitializeGraphics(width, height);
@@ -254,12 +128,14 @@ namespace GDApp
             InitializeMaze(0);
             #endregion
 
+            InitializeStaticCollidableGround(worldScale);
+
             #region Cameras
             //InitializeCameraTracks();
             InitializeCamera(new Vector3(0, 10, 20), -Vector3.UnitZ, Vector3.UnitY);
             #endregion
 
-            
+            InitializeStaticTriangleMeshObjects();
 
             #region Demo
             //InitializeCurveDemo();
@@ -322,19 +198,26 @@ namespace GDApp
             this.texturedModelEffect = new BasicEffect(graphics.GraphicsDevice);
             //this.texturedModelEffect.VertexColorEnabled = true;
             this.texturedModelEffect.TextureEnabled = true;
+            this.texturedModelEffect.EnableDefaultLighting();
+            this.texturedModelEffect.PreferPerPixelLighting = true;
+            this.texturedModelEffect.SpecularPower = 128;
 
         }
 
         private void InitializeManagers()
         {
+            //CD-CR
             this.physicsManager = new PhysicsManager(this);
             Components.Add(physicsManager);
-            bool bDebugMode = true; //show wireframe CD-CR surfaces
 
+            bool bDebugMode = true; //show wireframe CD-CR surfaces
             this.objectManager = new ObjectManager(this, "gameObjects", bDebugMode);
             Components.Add(this.objectManager);
 
-            this.mouseManager = new MouseManager(this, true);
+            this.objectManager = new ObjectManager(this, "gameObjects", true);
+            Components.Add(this.objectManager);
+
+            this.mouseManager = new MouseManager(this, false);
             this.mouseManager.SetPosition(this.ScreenCentre);
             Components.Add(this.mouseManager);
 
@@ -360,6 +243,12 @@ namespace GDApp
             this.curveDictionary = new GenericDictionary<string, Transform3DCurve>("curve dictionary");
         }
 
+        //Triangle mesh objects wrap a tight collision surface around complex shapes - the downside is that TriangleMeshObjects CANNOT be moved
+        private void InitializeStaticTriangleMeshObjects()
+        {
+            
+        }
+
         private void LoadFonts()
         {
             //to do...
@@ -367,7 +256,7 @@ namespace GDApp
 
         private void LoadModels()
         {
-
+            this.modelDictionary.Add("torus", Content.Load<Model>("Assets/Models/torus"));
 
             this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
 
@@ -380,25 +269,7 @@ namespace GDApp
             this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Puzzle"));
             this.modelDictionary.Add("potion", Content.Load<Model>("Assets/Models/Guidance/Items/Pickups/m_potion"));
             //Add more models...
-            /*
-            this.modelDictionary.Add("box", Content.Load<Model>("Assets/Models/box"));
-            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/m_Corner"));
-            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/m_tJunction"));
-            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/m_Straight"));
-            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/m_Cross"));
-            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/m_DeadEnd"));
-            */
-            /*
-
-            this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Room"));
-            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Corner"));
-            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Junction"));
-            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Straight"));
-            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Cross"));
-            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_DeadEnd"));
-            this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Guidance/TexturedBaseTiles/Tile_Puzzle"));
-            */
-
+            
         }
 
         private void LoadTextures()
@@ -406,8 +277,10 @@ namespace GDApp
 
             this.textureDictionary.Add("egypt",
                 Content.Load<Texture2D>("Assets/Textures/Guide/BaseTile01_Diffuse"));
-
+            
             #region debug
+            this.textureDictionary.Add("ml",
+               Content.Load<Texture2D>("Assets/Textures/Debug/ml"));
             this.textureDictionary.Add("checkerboard",
                 Content.Load<Texture2D>("Assets/Textures/Debug/checkerboard"));
             #endregion 
@@ -429,7 +302,7 @@ namespace GDApp
             this.textureDictionary.Add("skybox_sky",
                 Content.Load<Texture2D>("Assets/Textures/Skybox/sky"));
             #endregion
-
+            
             #region trees & shrubs
             for (int i = 1; i <= 5; i++)
             {
@@ -450,7 +323,6 @@ namespace GDApp
                 this.textureDictionary.Add("fence" + i,
                     Content.Load<Texture2D>("Assets/Textures/Architecture/Fence/fence" + i));
             }
-            #endregion
 
             #region walls
             this.textureDictionary.Add("backwall",
@@ -459,148 +331,26 @@ namespace GDApp
                 Content.Load<Texture2D>("Assets/Textures/Architecture/Walls/sidewall"));
             #endregion
 
-            #region Crate
+            #region boxes
             this.textureDictionary.Add("crate1",
-                Content.Load<Texture2D>("Assets/Textures/Debug/ml"));
-                this.textureDictionary.Add("crate2",
-                Content.Load<Texture2D>("Assets/Textures/Props/Crates/crate2"));
+                   Content.Load<Texture2D>("Assets/Textures/Props/Crates/crate1"));
+            this.textureDictionary.Add("crate2",
+                    Content.Load<Texture2D>("Assets/Textures/Props/Crates/crate2"));
             #endregion
 
-            
+            #endregion
+
+            #region other
+            this.textureDictionary.Add("abstract1",
+            Content.Load<Texture2D>("Assets/Textures/Abstract/abstract1"));
+            #endregion
+
+
         }
 
         private void LoadVertices()
         {
-            //VertexPositionColor[] verticesPositionColor = null;
-            //VertexPositionColorTexture[] verticesPositionColorTexture = null;
-            //IVertexData vertexData = null;
-            //float halfLength = 0.5f;
-
-            //#region Textured Quad
-            //verticesPositionColorTexture = new VertexPositionColorTexture[4];
-
-            ////top left
-            //verticesPositionColorTexture[0] = new VertexPositionColorTexture(
-            //    new Vector3(-halfLength, halfLength, 0), Color.White, new Vector2(0, 0));
-            ////top right
-            //verticesPositionColorTexture[1] = new VertexPositionColorTexture(
-            //new Vector3(halfLength, halfLength, 0), Color.White, new Vector2(1, 0));
-            ////bottom left
-            //verticesPositionColorTexture[2] = new VertexPositionColorTexture(
-            //new Vector3(-halfLength, -halfLength, 0), Color.White, new Vector2(0, 1));
-            ////bottom right
-            //verticesPositionColorTexture[3] = new VertexPositionColorTexture(
-            //new Vector3(halfLength, -halfLength, 0), Color.White, new Vector2(1, 1));
-
-            //vertexData = new VertexData<VertexPositionColorTexture>(verticesPositionColorTexture, Microsoft.Xna.Framework.Graphics.PrimitiveType.TriangleStrip, 2);
-            //this.vertexDictionary.Add("textured_quad", vertexData);
-            //#endregion
-
-            //#region Textured Cube
-            //verticesPositionColorTexture = new VertexPositionColorTexture[36];
-
-            //Vector3 topLeftFront = new Vector3(-halfLength, halfLength, halfLength);
-            //Vector3 topLeftBack = new Vector3(-halfLength, halfLength, -halfLength);
-            //Vector3 topRightFront = new Vector3(halfLength, halfLength, halfLength);
-            //Vector3 topRightBack = new Vector3(halfLength, halfLength, -halfLength);
-
-            //Vector3 bottomLeftFront = new Vector3(-halfLength, -halfLength, halfLength);
-            //Vector3 bottomLeftBack = new Vector3(-halfLength, -halfLength, -halfLength);
-            //Vector3 bottomRightFront = new Vector3(halfLength, -halfLength, halfLength);
-            //Vector3 bottomRightBack = new Vector3(halfLength, -halfLength, -halfLength);
-
-            ////uv coordinates
-            //Vector2 uvTopLeft = new Vector2(0, 0);
-            //Vector2 uvTopRight = new Vector2(1, 0);
-            //Vector2 uvBottomLeft = new Vector2(0, 1);
-            //Vector2 uvBottomRight = new Vector2(1, 1);
-
-
-            ////top - 1 polygon for the top
-            //verticesPositionColorTexture[0] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
-            //verticesPositionColorTexture[1] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[2] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
-
-            //verticesPositionColorTexture[3] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
-            //verticesPositionColorTexture[4] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
-            //verticesPositionColorTexture[5] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
-
-            ////front
-            //verticesPositionColorTexture[6] = new VertexPositionColorTexture(topLeftFront, Color.White, uvBottomLeft);
-            //verticesPositionColorTexture[7] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
-            //verticesPositionColorTexture[8] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
-
-            //verticesPositionColorTexture[9] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[10] = new VertexPositionColorTexture(topRightFront, Color.White, uvBottomRight);
-            //verticesPositionColorTexture[11] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvTopRight);
-
-            ////back
-            //verticesPositionColorTexture[12] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-            //verticesPositionColorTexture[13] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
-            //verticesPositionColorTexture[14] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-
-            //verticesPositionColorTexture[15] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-            //verticesPositionColorTexture[16] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[17] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
-
-            ////left 
-            //verticesPositionColorTexture[18] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[19] = new VertexPositionColorTexture(topLeftFront, Color.White, uvTopRight);
-            //verticesPositionColorTexture[20] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvBottomRight);
-
-            //verticesPositionColorTexture[21] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
-            //verticesPositionColorTexture[22] = new VertexPositionColorTexture(topLeftBack, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[23] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvBottomRight);
-
-            ////right
-            //verticesPositionColorTexture[24] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvBottomLeft);
-            //verticesPositionColorTexture[25] = new VertexPositionColorTexture(topRightFront, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[26] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-
-            //verticesPositionColorTexture[27] = new VertexPositionColorTexture(topRightFront, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[28] = new VertexPositionColorTexture(topRightBack, Color.White, uvTopRight);
-            //verticesPositionColorTexture[29] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-
-            ////bottom
-            //verticesPositionColorTexture[30] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[31] = new VertexPositionColorTexture(bottomRightFront, Color.White, uvTopRight);
-            //verticesPositionColorTexture[32] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-
-            //verticesPositionColorTexture[33] = new VertexPositionColorTexture(bottomLeftFront, Color.White, uvTopLeft);
-            //verticesPositionColorTexture[34] = new VertexPositionColorTexture(bottomRightBack, Color.White, uvBottomRight);
-            //verticesPositionColorTexture[35] = new VertexPositionColorTexture(bottomLeftBack, Color.White, uvBottomLeft);
-
-            //vertexData = new VertexData<VertexPositionColorTexture>(verticesPositionColorTexture, PrimitiveType.TriangleList, 12);
-            //this.vertexDictionary.Add("textured_cube", vertexData);
-            //#endregion
-
-            //#region Wireframe Origin Helper
-            //verticesPositionColor = new VertexPositionColor[6];
-
-            ////x-axis
-            //verticesPositionColor[0] = new VertexPositionColor(new Vector3(-halfLength, 0, 0), Color.Red);
-            //verticesPositionColor[1] = new VertexPositionColor(new Vector3(halfLength, 0, 0), Color.Red);
-            ////y-axis
-            //verticesPositionColor[2] = new VertexPositionColor(new Vector3(0, halfLength, 0), Color.Green);
-            //verticesPositionColor[3] = new VertexPositionColor(new Vector3(0, -halfLength, 0), Color.Green);
-            ////z-axis
-            //verticesPositionColor[4] = new VertexPositionColor(new Vector3(0, 0, halfLength), Color.Blue);
-            //verticesPositionColor[5] = new VertexPositionColor(new Vector3(0, 0, -halfLength), Color.Blue);
-
-            //vertexData = new VertexData<VertexPositionColor>(verticesPositionColor, PrimitiveType.LineList, 3);            
-            //this.vertexDictionary.Add("wireframe_origin_helper", vertexData);
-            //#endregion
-
-            //#region Wireframe Triangle
-            //verticesPositionColor = new VertexPositionColor[3];
-
-            //verticesPositionColor[0] = new VertexPositionColor(new Vector3(0, 1, 0), Color.Red);
-            //verticesPositionColor[1] = new VertexPositionColor(new Vector3(1, 0, 0), Color.Green);
-            //verticesPositionColor[2] = new VertexPositionColor(new Vector3(-1, 0, 0), Color.Blue);
-
-            //vertexData = new VertexData<VertexPositionColor>(verticesPositionColor, PrimitiveType.TriangleStrip, 1);
-            //this.vertexDictionary.Add("wireframe_triangle", vertexData);
-            //#endregion
+            
         }
 
         private void LoadPrimitiveArchetypes()
@@ -721,29 +471,43 @@ namespace GDApp
             //to do...
         }
 
+        private void InitializeStaticCollidableGround(int scale)
+        {
+            //CollidableObject collidableObject = null;
+            //Transform3D transform3D = null;
+            //Texture2D texture = null;
+            
+            //Model model = this.modelDictionary["box"];
+            //texture = this.textureDictionary["grass1"];
+            //transform3D = new Transform3D(new Vector3(-0.5f, 0, 0), new Vector3(0, 0, 0),
+            //    new Vector3(scale, 0.01f, scale), Vector3.UnitX, Vector3.UnitY);
+
+            //collidableObject = new CollidableObject("ground", ActorType.CollidableGround, transform3D, this.texturedModelEffect, Color.White, 1, texture, model);
+            //collidableObject.AddPrimitive(new Box(transform3D.Translation, Matrix.Identity, transform3D.Scale), new MaterialProperties(0.8f, 0.8f, 0.7f));
+            //collidableObject.Enable(true, 1); //change to false, see what happens.
+            //this.objectManager.Add(collidableObject);
+        }
+
         private void InitializeModels()
         {
-            Transform3D transform = new Transform3D(
-                new Vector3(10, 15, 0),
-                new Vector3(0, 0, 0), new Vector3(0.1f, 0.1f, 0.1f),
-                Vector3.UnitX, Vector3.UnitY);
+            //Transform3D transform = new Transform3D(
+            //    new Vector3(0, 2, 0),
+            //    new Vector3(0, 0, 0), new Vector3(0.2f, 0.2f, 0.2f),
+            //    Vector3.UnitX, Vector3.UnitY);
 
-            this.playerObject = new ModelObject(
-                "box",
-                ActorType.Pickup, transform,
-                this.texturedModelEffect, Color.White, 1,
-                this.textureDictionary["checkerboard"],
-                this.modelDictionary["box"]);
-
-            this.objectManager.Add(this.playerObject);
-
-            this.playerObject.AttachController(new DriveController(
-                "dc1", 
-                ControllerType.Drive, 
-                AppData.PlayerMoveKeys, 
-                AppData.PlayerMoveSpeed, 
-                AppData.PlayerStrafeSpeed, 
-                AppData.PlayerRotationSpeed));
+            //this.playerObject = new PlayerObject(
+            //    "box",
+            //    ActorType.Pickup,
+            //    transform,
+            //    this.texturedModelEffect,
+            //    Color.White,
+            //    0.6f,
+            //    this.textureDictionary["checkerboard"],
+            //    this.modelDictionary["box"],
+            //    AppData.PlayerMoveKeys, 0.5f, 0.2f, AppData.PlayerMoveSpeed, -AppData.PlayerMoveSpeed, new Vector3(0,2,0));
+            
+            //this.objectManager.Add(this.playerObject);
+            
         }
 
         private void InitializeMaze(int size)
@@ -762,112 +526,13 @@ namespace GDApp
                 this.modelDictionary["potion"]
             };
 
-            //int[,] modelTypes = 
-            //{
-            //    {5, 1, 2, 0, 1, 3, 3, 2},
-            //    {0, 2, 3, 0, 3, 4, 2, 1},
-            //    {3, 3, 4, 0, 3, 4, 1, 3},
-            //    {1, 0, 4, 1, 5, 1, 0, 3},
-            //    {2, 3, 2, 0, 3, 2, 2, 3},
-            //    {2, 2, 0, 2, 3, 0, 4, 3},
-            //    {1, 5, 3, 2, 3, 3, 3, 2},
-            //    {2, 2, 0, 1, 2, 2, 1, 5}
-            //};
-
-            //int[,] modelRotations =
-            //{
-            //    {0,-1, 2,-1, 1, 2, 2, 2},
-            //    {2,-1, 1,-1, 2, 0, 1, 0},
-            //    {-1,0, 0, 1,-1, 0, 1, 1},
-            //    {0,-1, 0, 1, 0, 0,-1, 1},
-            //    {0, 2, 1,-1, 2, 1,-1, 1},
-            //    {-1,1, 2,-1, 1,-1, 0, 1},
-            //    {0, 0, 0, 1,-1, 2, 0, 1},
-            //    {0, 1,-1, 1, 1, 0, 1, 0}
-            //};
-
-            int[,] modelTypes =
-          {
-                {0, 1, 2, 3, 4, 5, 3, 2},
-                {0, 2, 3, 0, 3, 4, 2, 1},
-                {3, 3, 4, 0, 3, 4, 1, 3},
-                {1, 0, 4, 1, 5, 1, 0, 3},
-                {2, 3, 2, 0, 3, 2, 2, 3},
-                {2, 2, 0, 2, 3, 0, 4, 3},
-                {1, 5, 3, 2, 3, 3, 3, 2},
-                {2, 2, 0, 1, 2, 2, 1, 5}
-            };
-
-            int[,] modelRotations =
-            {
-                {0, 0, 0, 0, 0, 2, 2, 2},
-                {2,-1, 1,-1, 2, 0, 1, 0},
-                {-1,0, 0, 1,-1, 0, 1, 1},
-                {0,-1, 0, 1, 0, 0,-1, 1},
-                {0, 2, 1,-1, 2, 1,-1, 1},
-                {-1,1, 2,-1, 1,-1, 0, 1},
-                {0, 0, 0, 1,-1, 2, 0, 1},
-                {0, 1,-1, 1, 1, 0, 1, 0}
-            };
-
+            
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
             TileGrid tg = new TileGrid(5, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
             tg.generateRandomGrid();
 
-            /*
-            for (int i = 0; i < tg.gridSize; i++)
-            {
-                for (int j = 0; j < tg.gridSize; j++)
-                {
-                    // Creating the Model
-                    //mazeObject = new ModelObject("maze(" + i + "," + j + ")",
-                    //ActorType.Pickups, transform,
-                    //this.texturedModelEffect, Color.White, 1,
-                    //this.textureDictionary["crate1"],
-                    //mazeTiles[tileLocations[tileNumber]]);
-
-                    // Creating Transform
-
-
-                    
-
-                    // this below transform is currently useless because a ModelTileObject creates its own transform from the parameters, which should be handled by the TileGridCreator
-                    transform = new Transform3D(
-                        new Vector3(xTile, 0, zTile),
-                        new Vector3(0, modelRotations[i,j], 0),
-                        new Vector3(0.1f, 0.1f, 0.1f),
-                        Vector3.UnitX,
-                        Vector3.UnitY);
-
-                    //hardcoded shit
-                    int x = xTile;
-                    int y = zTile;
-                    int type = 0;
-
-                    // Have to make a Tile class that is a kind of copy of the modelobject class, not inherited from it
-                    ModelTileObject mazeObject = new ModelTileObject(
-                        "maze(" + i + "," + j + ")",
-                        ActorType.Pickups, 
-                        transform,
-                        this.texturedModelEffect,
-                        Color.White,
-                        1,
-                        this.textureDictionary["crate1"],
-                        this.mazeTiles[modelTypes[i,j]],
-                        x,
-                        y,
-                        type,
-                        modelRotations[i,j],
-                        tg.tileSize);
-
-                    this.objectManager.Add(mazeObject);
-                    xTile ++;
-                }
-                xTile = 0;
-                zTile ++;
-            }*/
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -895,17 +560,34 @@ namespace GDApp
             cameraLayout = "1x1";
 
             #region First Person Camera
-            transform = new Transform3D(new Vector3(0, 10, 100), -Vector3.UnitZ, Vector3.UnitY);
+            transform = new Transform3D(new Vector3(0, 15, 0), -Vector3.UnitZ, Vector3.UnitY);
             camera = new Camera3D("Static", ActorType.Camera, transform,
                 ProjectionParameters.StandardMediumSixteenNine,
                 new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
+
             camera.AttachController(new FirstPersonController("firstPersControl1",
             ControllerType.FirstPerson, AppData.CameraMoveKeys,
-            AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
+            AppData.CameraMoveSpeed/2, AppData.CameraStrafeSpeed/2, AppData.CameraRotationSpeed));
+
+            
+
+            //camera.AttachController(new ThirdPersonController("thirdPersControl1", ControllerType.ThirdPerson,
+            //    this.playerObject, 2,
+            //    AppData.CameraThirdPersonScrollSpeedDistanceMultiplier/2,
+            //    160,
+            //    AppData.CameraThirdPersonScrollSpeedElevatationMultiplier/2,
+            //    AppData.CameraLerpSpeedSlow));
+
             //add the new camera to the approriate K, V pair in the camera manager dictionary i.e. where key is "1x2"
             this.cameraManager.Add(cameraLayout, camera);
             #endregion
             #endregion
+
+           // ProjectionParameters pm = Matrix.CreateOrthographic(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, )
+                
+            //ViewPort projection = Matrix.CreateOrthographicOffCenter(-GraphicsDevice.Viewport.Width/2f, GraphicsDevice.Viewport.Width/2f, -GraphicsDevice.Viewport.Height/2f, GraphicsDevice.Viewport.Height/2f, 1, 10000);
+            Matrix projection = Matrix.CreateOrthographic(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, 1.0f, 500.0f);
+
 
             #region Layout Map
             cameraLayout = "Map";
@@ -914,6 +596,10 @@ namespace GDApp
             camera = new Camera3D("Static", ActorType.Camera, transform,
                 ProjectionParameters.StandardMediumSixteenNine,
                 new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
+
+            camera.ProjectionParameters.Projection = projection;
+
+           // camera.Viewport.
             //camera.AttachController(new FirstPersonController("firstPersControl1",
             //ControllerType.FirstPerson, AppData.CameraMoveKeys,
             //AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
@@ -925,22 +611,6 @@ namespace GDApp
 
             this.cameraManager.SetActiveCameraLayout("1x1");
 
-            //Transform3D transform = new Transform3D(position, look, up);
-            //Camera3D camera1 = new Camera3D("camera1", ActorType.Camera, transform,
-            //    ProjectionParameters.StandardMediumSixteenNine);
-
-            // Below camera angle looks down on the grid
-            //camera1.transform = new Transform3D(new Vector3(300, -1000, 300), Vector3.Down, Vector3.Forward); 
-
-            // Below camera angle has x:0, y:0 at the top left.
-            //camera1.transform = new Transform3D(new Vector3(400, 1200, -100), Vector3.Down, -1 * Vector3.Right);
-
-            // camera1.AttachController(new ThirdPersonController("tpc1", ControllerType.ThirdPerson,
-            //      this.playerObject, 10, 165));
-
-            //camera1.AttachController(new FirstPersonMazeController("fpc1", ControllerType.FirstPerson, AppData.CameraMoveKeys, AppData.CameraMoveSpeed, AppData.CameraStrafeSpeed, AppData.CameraRotationSpeed));
-            //this.cameraManager.Add("1x1", camera1);
-            //this.cameraManager.SetActiveCameraLayout("1x1");
         }
 
         protected override void LoadContent()
@@ -981,7 +651,7 @@ namespace GDApp
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
             foreach (Camera3D camera in this.cameraManager)
             {
                 //set the viewport based on the current camera

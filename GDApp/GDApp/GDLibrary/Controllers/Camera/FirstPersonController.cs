@@ -29,7 +29,6 @@ namespace GDLibrary
             Vector2 mouseDelta = game.MouseManager.GetDeltaFromCentre();
             mouseDelta *= gameTime.ElapsedGameTime.Milliseconds;
             mouseDelta *= this.RotationSpeed;
-
             parentActor.Transform3D.RotateBy(new Vector3(-mouseDelta, 0));
 
         }
