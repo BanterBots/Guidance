@@ -3,11 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Corner</Name>
     <Identity>
-<<<<<<< HEAD
       <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_corner.FBX</SourceFilename>
-=======
-      <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_corner.FBX</SourceFilename>
->>>>>>> Notbroken
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>

@@ -88,7 +88,7 @@ namespace GDLibrary
             //forward/backward
             if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexMoveForward]))
             {
-                this.CharacterBody.Velocity += this.Transform3D.Look * 1 * gameTime.ElapsedGameTime.Milliseconds;
+                this.CharacterBody.Position += this.Transform3D.Look * 1 * gameTime.ElapsedGameTime.Milliseconds;
             }
             else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexMoveBackward]))
             {
@@ -114,7 +114,7 @@ namespace GDLibrary
             }
 
             //update the camera position to reflect the collision skin position
-            this.Transform3D.Translation = this.CharacterBody.Position;
+            this.Transform3D.Translation = this.CharacterBody.Position;//+this.CharacterBody.Velocity;
         }
 
         //Do we want to detect if the player object collides with something?

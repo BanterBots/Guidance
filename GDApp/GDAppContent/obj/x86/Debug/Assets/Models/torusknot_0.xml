@@ -3,11 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>knot</Name>
     <Identity>
-<<<<<<< HEAD
       <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\torusknot.FBX</SourceFilename>
-=======
-      <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\torusknot.FBX</SourceFilename>
->>>>>>> Notbroken
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>2.54 0 0 0 0 7.19523466E-16 -2.54 0 0 2.54 7.19523466E-16 0 -5.28111172 0 1.75888491 1</Transform>

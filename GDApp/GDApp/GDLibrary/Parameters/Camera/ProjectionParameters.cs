@@ -103,6 +103,10 @@ namespace GDLibrary
                 }
                 return this.projection;
             }
+            set
+            {
+                    this.projection = value;
+            }
         }
         #endregion
 

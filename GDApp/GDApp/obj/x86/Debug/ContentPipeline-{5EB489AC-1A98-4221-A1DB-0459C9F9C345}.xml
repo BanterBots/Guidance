@@ -11,7 +11,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\box_0.xml</Key>
-        <Value>2016-11-15T20:19:32.6653541+00:00</Value>
+        <Value>2016-11-16T20:09:39.8147689+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -24,7 +24,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\cylinder_0.xml</Key>
-        <Value>2016-11-15T20:19:32.7988536+00:00</Value>
+        <Value>2016-11-16T20:09:39.9562691+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -37,7 +37,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\dome_0.xml</Key>
-        <Value>2016-11-15T20:19:32.8733526+00:00</Value>
+        <Value>2016-11-16T20:09:40.0342683+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -50,7 +50,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\hedra_0.xml</Key>
-        <Value>2016-11-15T20:19:32.9128785+00:00</Value>
+        <Value>2016-11-16T20:09:40.071759+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -63,7 +63,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\octahedron_0.xml</Key>
-        <Value>2016-11-15T20:19:32.9640679+00:00</Value>
+        <Value>2016-11-16T20:09:40.1052588+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -76,7 +76,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\plane_0.xml</Key>
-        <Value>2016-11-15T20:19:33.0560989+00:00</Value>
+        <Value>2016-11-16T20:09:40.1677596+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -89,7 +89,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\prism_0.xml</Key>
-        <Value>2016-11-15T20:19:33.1465344+00:00</Value>
+        <Value>2016-11-16T20:09:40.2037285+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -102,7 +102,7 @@
       <Time>2016-10-13T14:31:22+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\sphere_0.xml</Key>
-        <Value>2016-11-15T20:19:33.217557+00:00</Value>
+        <Value>2016-11-16T20:09:40.2492284+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Time>2016-10-13T14:31:24+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\spindle_0.xml</Key>
-        <Value>2016-11-15T20:19:33.259059+00:00</Value>
+        <Value>2016-11-16T20:09:40.2887634+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -128,7 +128,7 @@
       <Time>2016-10-13T14:31:24+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torus_0.xml</Key>
-        <Value>2016-11-15T20:19:33.3015271+00:00</Value>
+        <Value>2016-11-16T20:09:40.3302589+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -141,7 +141,7 @@
       <Time>2016-10-13T14:31:24+01:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\torusknot_0.xml</Key>
-        <Value>2016-11-15T20:19:33.3961798+00:00</Value>
+        <Value>2016-11-16T20:09:40.4173906+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -154,7 +154,7 @@
       <Time>2016-11-01T16:06:23.1144835+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_corner_0.xml</Key>
-        <Value>2016-11-15T20:19:33.4555328+00:00</Value>
+        <Value>2016-11-16T20:09:40.4596+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -167,7 +167,7 @@
       <Time>2016-11-01T16:06:23.1184834+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Cross_0.xml</Key>
-        <Value>2016-11-15T20:19:33.520676+00:00</Value>
+        <Value>2016-11-16T20:09:40.4929248+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -180,7 +180,7 @@
       <Time>2016-11-01T16:06:23.121483+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_DeadEnd_0.xml</Key>
-        <Value>2016-11-15T20:19:33.6071195+00:00</Value>
+        <Value>2016-11-16T20:09:40.5229504+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -193,7 +193,7 @@
       <Time>2016-11-01T16:06:23.1259559+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_Straight_0.xml</Key>
-        <Value>2016-11-15T20:19:33.6784132+00:00</Value>
+        <Value>2016-11-16T20:09:40.5544495+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -206,7 +206,7 @@
       <Time>2016-11-01T16:06:23.129484+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\m_tJunction_0.xml</Key>
-        <Value>2016-11-15T20:19:33.7300039+00:00</Value>
+        <Value>2016-11-16T20:09:40.5842778+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -219,7 +219,7 @@
       <Time>2016-11-15T19:34:47.4824863+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Corner_0.xml</Key>
-        <Value>2016-11-15T20:19:33.7759954+00:00</Value>
+        <Value>2016-11-16T20:09:40.638299+00:00</Value>
       </Dependency>
       <Request>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -233,7 +233,7 @@
       <Time>2016-11-15T19:34:47.4859556+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Cross_0.xml</Key>
-        <Value>2016-11-15T20:19:35.6978438+00:00</Value>
+        <Value>2016-11-16T20:09:42.6667082+00:00</Value>
       </Dependency>
       <Request>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -247,7 +247,7 @@
       <Time>2016-11-15T19:34:47.4894861+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_DeadEnd_0.xml</Key>
-        <Value>2016-11-15T20:19:35.7353481+00:00</Value>
+        <Value>2016-11-16T20:09:42.704184+00:00</Value>
       </Dependency>
       <Request>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -261,7 +261,7 @@
       <Time>2016-11-15T19:34:47.4944895+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction_0.xml</Key>
-        <Value>2016-11-15T20:19:35.7713148+00:00</Value>
+        <Value>2016-11-16T20:09:42.741214+00:00</Value>
       </Dependency>
       <Request>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -275,7 +275,7 @@
       <Time>2016-11-15T19:34:47.4983193+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle_0.xml</Key>
-        <Value>2016-11-15T20:19:35.8073143+00:00</Value>
+        <Value>2016-11-16T20:09:42.91205+00:00</Value>
       </Dependency>
       <Request>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -289,7 +289,7 @@
       <Time>2016-11-15T19:34:47.5018192+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room_0.xml</Key>
-        <Value>2016-11-15T20:19:35.8448145+00:00</Value>
+        <Value>2016-11-16T20:09:42.9510226+00:00</Value>
       </Dependency>
       <Request>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -303,7 +303,7 @@
       <Time>2016-11-15T19:34:47.5053272+00:00</Time>
       <Dependency>
         <Key>I:\Projects\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight_0.xml</Key>
-        <Value>2016-11-15T20:19:35.881338+00:00</Value>
+        <Value>2016-11-16T20:09:42.9835476+00:00</Value>
       </Dependency>
       <Request>I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb</Request>
     </Item>

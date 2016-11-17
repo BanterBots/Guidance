@@ -9,7 +9,7 @@ using JigLibX.Collision;
 
 namespace GDApp._3DTileEngine
 {
-    public class ModelTileObject : TriangleMeshObject, GDLibrary.DrawnActor3D, ICloneable
+    public class ModelTileObject : TriangleMeshObject, ICloneable
     {
 
         #region Variables
@@ -68,7 +68,15 @@ namespace GDApp._3DTileEngine
             this.modelNo = modelNo;
 
             InitializeBoneTransforms();
+            InitializeCollision();
         }
+
+        private void InitializeCollision()
+        {
+            this.Enable(true, 1);
+            this.ActorType = ActorType.Pickup;
+        }
+
 
         private void InitializeBoneTransforms()
         {

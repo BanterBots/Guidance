@@ -34,7 +34,7 @@ namespace GDLibrary
             this.Collision = new CollisionSkin(Body);
             this.Body.ExternalData = this;
             this.Body.CollisionSkin = this.Collision;
-            Capsule capsule = new Capsule(Vector3.Zero, Matrix.CreateRotationX(MathHelper.PiOver2), radius, height);
+            Capsule capsule = new Capsule(transform.Translation, Matrix.CreateRotationX(MathHelper.PiOver2), radius, height);
             this.Collision.AddPrimitive(capsule, (int)MaterialTable.MaterialID.NormalSmooth);
         }
 

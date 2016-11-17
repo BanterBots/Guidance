@@ -3,11 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Puzzle</Name>
     <Identity>
-<<<<<<< HEAD
       <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.FBX</SourceFilename>
-=======
-      <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.FBX</SourceFilename>
->>>>>>> Notbroken
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -33,11 +29,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>04 - Default</Name>
       <Identity>
-<<<<<<< HEAD
         <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.FBX</SourceFilename>
-=======
-        <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.FBX</SourceFilename>
->>>>>>> Notbroken
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

@@ -3,11 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Cross</Name>
     <Identity>
-<<<<<<< HEAD
       <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_Cross.FBX</SourceFilename>
-=======
-      <SourceFilename>C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_Cross.FBX</SourceFilename>
->>>>>>> Notbroken
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
