@@ -26,11 +26,12 @@ namespace GDLibrary
 
         public override void HandleMouseInput(GameTime gameTime, Actor3D parentActor)
         {
+            /*
             Vector2 mouseDelta = game.MouseManager.GetDeltaFromCentre();
             mouseDelta *= gameTime.ElapsedGameTime.Milliseconds;
             mouseDelta *= this.RotationSpeed;
             parentActor.Transform3D.RotateBy(new Vector3(-mouseDelta, 0));
-
+            */
         }
 
         public override void HandleKeyboardInput(GameTime gameTime, Actor3D parentActor)
@@ -48,6 +49,17 @@ namespace GDLibrary
                              * this.MoveSpeed * parentActor.Transform3D.Look;
             }
 
+
+            if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeLeft]))
+            {
+                parentActor.Transform3D.RotateAroundYBy(gameTime.ElapsedGameTime.Milliseconds * this.RotationSpeed);
+            }
+            else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeRight]))
+            {
+                parentActor.Transform3D.RotateAroundYBy(-gameTime.ElapsedGameTime.Milliseconds * this.RotationSpeed);
+            }
+
+            /*
             if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeLeft]))
             {
                 parentActor.Transform3D.TranslateIncrement
@@ -60,6 +72,7 @@ namespace GDLibrary
                     += gameTime.ElapsedGameTime.Milliseconds
                              * this.StrafeSpeed * parentActor.Transform3D.Right;
             }
+            */
 
             //prevent movement up or down
                 parentActor.Transform3D.TranslateIncrementY = 0;

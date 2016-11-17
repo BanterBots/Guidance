@@ -86,6 +86,7 @@
     <Compile Include="3DTileEngine\TileGrid.cs" />
     <Compile Include="GDLibrary\Camera\Camera3D.cs" />
     <Compile Include="GDLibrary\Controllers\Base\Controller.cs" />
+    <Compile Include="GDLibrary\Controllers\Camera\CollidableFirstPersonController.cs" />
     <Compile Include="GDLibrary\Controllers\Camera\FirstPersonController.cs" />
     <Compile Include="GDLibrary\Controllers\Camera\RailController.cs" />
     <Compile Include="GDLibrary\Controllers\Camera\ThirdPersonController.cs" />

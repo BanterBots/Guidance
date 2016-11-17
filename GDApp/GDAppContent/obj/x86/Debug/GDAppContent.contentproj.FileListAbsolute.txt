@@ -1,2 +1,3 @@
 I:\Projects\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 E:\Projects\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+C:\Users\ciara_000\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache

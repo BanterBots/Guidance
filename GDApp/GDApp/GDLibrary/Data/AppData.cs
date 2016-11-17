@@ -21,10 +21,14 @@ namespace GDLibrary
         #region Common
         public static int IndexMoveForward = 0;
         public static int IndexMoveBackward = 1;
-        public static int IndexStrafeLeft = 2;
-        public static int IndexStrafeRight = 3;
         public static int IndexRotateLeft = 2;
         public static int IndexRotateRight = 3;
+        public static int IndexMoveJump = 4;
+        public static int IndexMoveCrouch = 5;
+        public static int IndexStrafeLeft = 6;
+        public static int IndexStrafeRight = 7;
+        public static int IndexJump = -1;
+        public static int IndexJumpCrouch = -1;
         #endregion
         
         #region Camera
@@ -32,7 +36,14 @@ namespace GDLibrary
         public static float CameraMoveSpeed = 0.1f;
         public static float CameraStrafeSpeed = 0.07f;
 
-        public static Keys[] CameraMoveKeys = { Keys.W, Keys.S, Keys.A, Keys.D };
+        public static float CameraJumpHeight = 10;
+        public static float CollidableCameraRotationSpeed = 0.05f;
+        public static float CollidableCameraMoveSpeed = 0.5f;
+        public static float CollidableCameraStrafeSpeed = 0.4f;
+
+
+        public static Keys[] CameraMoveKeys = { Keys.W, Keys.S, Keys.A, Keys.D, 
+                                         Keys.Space, Keys.C, Keys.LeftShift, Keys.RightShift};
         public static Keys[] CameraMoveKeys_Alt1 = { Keys.T, Keys.G, Keys.F, Keys.H };
 
         public static float CameraLerpSpeedSlow = 0.05f;
@@ -44,12 +55,10 @@ namespace GDLibrary
         #endregion
 
         #region Player
-        public static Keys[] PlayerMoveKeys = { Keys.U, Keys.J, Keys.H, Keys.K, Keys.Space, Keys.LeftControl };
+        public static Keys[] PlayerMoveKeys = { Keys.U, Keys.J, Keys.H, Keys.K };
         public static float PlayerMoveSpeed = 0.1f;
         public static float PlayerStrafeSpeed = 0.07f;
         public static float PlayerRotationSpeed = 0.04f;
-        public static int IndexJump = 4;
-        public static int IndexJumpCrouch = 5;
         #endregion
 
 

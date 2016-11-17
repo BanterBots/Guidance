@@ -79,16 +79,20 @@ namespace GDApp._3DTileEngine
                 grid = new ModelTileObject[gridSize,gridSize];
                 itemList = new List<DrawnActor3D>();
 
-                //  Create hardcoded start and finish
-                createTileAt(0, 0, 0, 0);
-                createTileAt(gridSize - 1, gridSize - 1, 0, 2);
+                
+                
 
                 // Hardcoded item
-                createPotionAt(0, 0);
+                //createPotionAt(0, 0);
+  
 
                 // Create two random chains that link with start and finish
                 createRandomChainAt(0, 1, 3);      
                 createRandomChainAt(gridSize - 1, gridSize - 2, 1);
+
+                //  Create hardcoded start and finish
+                createTileAt(0, 0, 0, 0);
+                createTileAt(gridSize - 1, gridSize - 1, 0, 2);
 
 
                 regenCoords.Add(new Integer3(gridSize - 1, gridSize - 2, 1));

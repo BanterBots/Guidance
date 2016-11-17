@@ -560,14 +560,35 @@ namespace GDApp
             cameraLayout = "1x1";
 
             #region First Person Camera
-            transform = new Transform3D(new Vector3(0, 15, 0), -Vector3.UnitZ, Vector3.UnitY);
+            transform = new Transform3D(new Vector3(0, 20, 0), -Vector3.UnitZ, Vector3.UnitY);
             camera = new Camera3D("Static", ActorType.Camera, transform,
                 ProjectionParameters.StandardMediumSixteenNine,
                 new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
 
-            camera.AttachController(new FirstPersonController("firstPersControl1",
-            ControllerType.FirstPerson, AppData.CameraMoveKeys,
-            AppData.CameraMoveSpeed/2, AppData.CameraStrafeSpeed/2, AppData.CameraRotationSpeed));
+            ModelObject player = new ModelObject(
+                "player", 
+                ActorType.Player, 
+                new Transform3D(new Vector3(-5, 10, 0), Vector3.Right, Vector3.Up), 
+                texturedModelEffect, 
+                Color.White, 
+                -1,
+                textureDictionary["ml"], 
+                modelDictionary["box"]);
+            
+            camera.AttachController(new CollidableFirstPersonController(
+                "firstPersControl1",
+                ControllerType.FirstPerson, 
+                AppData.CameraMoveKeys,
+                AppData.CameraMoveSpeed*8, 
+                AppData.CameraStrafeSpeed*2, 
+                AppData.CameraRotationSpeed*15,
+                2f, // radius
+                20f, // height
+                10f,// acceleration
+                2f, // deceleration
+                1,  // mass
+                new Vector3(0,10,0),
+                player));
 
             
 

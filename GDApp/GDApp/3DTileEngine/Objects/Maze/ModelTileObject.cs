@@ -5,10 +5,11 @@ using System.Text;
 using GDLibrary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using JigLibX.Collision;
 
 namespace GDApp._3DTileEngine
 {
-    public class ModelTileObject : GDLibrary.DrawnActor3D, ICloneable
+    public class ModelTileObject :  TriangleMeshObject, ICloneable
     {
 
         #region Variables
@@ -56,7 +57,8 @@ namespace GDApp._3DTileEngine
         #endregion
 
         public ModelTileObject(string id, ActorType actorType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model, int modelNo,
-                    int x, int y) : base(id, actorType, transform, effect, color, alpha)
+                    int x, int y) : base(id, actorType, transform, effect, color, alpha, texture, model, new MaterialProperties(0.2f, 0.8f, 0.7f))
+
         {
             this.texture = texture;
             this.model = model;
@@ -65,6 +67,13 @@ namespace GDApp._3DTileEngine
             this.modelNo = modelNo;
 
             InitializeBoneTransforms();
+            InitializeCollision();
+        }
+
+        private void InitializeCollision()
+        {
+            this.Enable(true, 1);
+            this.ActorType = ActorType.Pickup;
         }
 
         private void InitializeBoneTransforms()
