@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_DeadEnd</Name>
     <Identity>
-      <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_DeadEnd.FBX</SourceFilename>
+      <SourceFilename>D:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\m_DeadEnd.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>

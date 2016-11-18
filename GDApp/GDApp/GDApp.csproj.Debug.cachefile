@@ -21,6 +21,7 @@ Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Junction.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Puzzle.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Room.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\Tile_Straight.xnb
+Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb
 Content\Assets\Textures\Abstract\abstract1.xnb
 Content\Assets\Textures\Abstract\pink.xnb
 Content\Assets\Textures\Abstract\pink_trans1.xnb
@@ -53,9 +54,8 @@ Content\Assets\Textures\Foliage\Shrubs\shrub3.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse.xnb
 Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_DiffuseLayout.xnb
 Content\Assets\Textures\Guide\BaseTile01_Diffuse.xnb
-Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
-Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb
-Content\Assets\Sound\bongbongoLoop.xnb
 Content\Assets\Textures\Guide\FlatColourTexture.xnb
 Content\Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture.xnb
+Content\Assets\Sound\bongbongoLoop.xnb
+Content\Assets\Models\Guidance\TexturedBaseTiles\BaseTile01_Diffuse_0.xnb
 Content\Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture_0.xnb
