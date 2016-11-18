@@ -37,17 +37,17 @@ namespace GDLibrary
             }
         }
         #endregion
-        
+
         public Actor(string id, ActorType actorType)
         {
             this.id = id;
             this.actorType = actorType;
         }
         public virtual void Update(GameTime gameTime)
-        {           
+        {
         }
         public virtual void Draw(GameTime gameTime)
-        {       
+        {
         }
 
         public virtual Matrix GetWorldMatrix()
@@ -58,6 +58,11 @@ namespace GDLibrary
         public object Clone()
         {
             return this.MemberwiseClone(); //deep because all variables are either C# types, structs, or enums
+        }
+
+        public virtual bool Remove()
+        {
+            return false; //see implementation in child classes e.g. ModelObject
         }
     }
 }

@@ -74,6 +74,16 @@ namespace GDLibrary
             }
             */
 
+            //rotate left/right
+            if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexRotateLeft]))
+            {
+                parentActor.Transform3D.RotateAroundYBy(this.RotationSpeed * gameTime.ElapsedGameTime.Milliseconds);
+            }
+            else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexRotateRight]))
+            {
+                parentActor.Transform3D.RotateAroundYBy(-this.RotationSpeed * gameTime.ElapsedGameTime.Milliseconds);
+            }
+
             //prevent movement up or down
                 parentActor.Transform3D.TranslateIncrementY = 0;
 

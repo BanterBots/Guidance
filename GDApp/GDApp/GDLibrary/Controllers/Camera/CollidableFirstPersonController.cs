@@ -45,14 +45,14 @@ namespace GDLibrary
 
         public override void HandleMouseInput(GameTime gameTime, Actor3D parentActor)
         {
-            /*
-            if ((parentActor != null) && (parentActor != null))
-            {
-                Camera3D camera = parentActor as Camera3D;
-                Vector2 mouseDelta = game.MouseManager.GetDeltaFromPosition(camera.ViewportCentre);
-                parentActor.Transform3D.RotateBy(new Vector3(-mouseDelta * gameTime.ElapsedGameTime.Milliseconds * 0.01f, 0));
-            }
-            */
+            
+            //if ((parentActor != null) && (parentActor != null))
+            //{
+            //    Camera3D camera = parentActor as Camera3D;
+            //    Vector2 mouseDelta = game.MouseManager.GetDeltaFromPosition(camera.ViewportCentre);
+            //    parentActor.Transform3D.RotateBy(new Vector3(-mouseDelta * gameTime.ElapsedGameTime.Milliseconds * 0.01f, 0));
+            //}
+            
         }
 
         public override void HandleKeyboardInput(GameTime gameTime, Actor3D parentActor)
@@ -89,6 +89,20 @@ namespace GDLibrary
                 }
 
                 //strafe left/right
+                //if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeLeft]))
+                //{
+                //    parentActor.Transform3D.TranslateIncrement
+                //        += -gameTime.ElapsedGameTime.Milliseconds
+                //                 * this.StrafeSpeed * parentActor.Transform3D.Right;
+                //}
+                //else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeRight]))
+                //{
+                //    parentActor.Transform3D.TranslateIncrement
+                //        += gameTime.ElapsedGameTime.Milliseconds
+                //                 * this.StrafeSpeed * parentActor.Transform3D.Right;
+                //}
+
+                //rotate left/right
                 if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexRotateLeft]))
                 {
                     parentActor.Transform3D.RotateAroundYBy(this.RotationSpeed * gameTime.ElapsedGameTime.Milliseconds);
@@ -97,10 +111,10 @@ namespace GDLibrary
                 {
                     parentActor.Transform3D.RotateAroundYBy(-this.RotationSpeed * gameTime.ElapsedGameTime.Milliseconds);
                 }
-                else //decelerate to zero when not pressed
-                {
-                    this.playerObject.CharacterBody.DesiredVelocity = Vector3.Zero;
-                }
+                //else //decelerate to zero when not pressed
+                //{
+                //    this.playerObject.CharacterBody.DesiredVelocity = Vector3.Zero;
+                //}
 
                 //update the camera position to reflect the collision skin position
                 parentActor.Transform3D.Translation = this.playerObject.CharacterBody.Position;

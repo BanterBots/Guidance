@@ -216,3 +216,5 @@ C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
 C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Sound\bongbongoLoop.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Sound\bongbongoLoop.xnb

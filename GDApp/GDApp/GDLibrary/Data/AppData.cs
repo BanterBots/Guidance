@@ -42,8 +42,16 @@ namespace GDLibrary
         public static float CollidableCameraStrafeSpeed = 0.4f;
 
 
-        public static Keys[] CameraMoveKeys = { Keys.W, Keys.S, Keys.A, Keys.D, 
-                                         Keys.Space, Keys.C, Keys.LeftShift, Keys.RightShift};
+        public static Keys[] CameraMoveKeys = { 
+                                                Keys.W,             //0
+                                                Keys.S,             //1
+                                                Keys.A,             //2
+                                                Keys.D,             //3
+                                                Keys.Space,         //4
+                                                Keys.C,             //5
+                                                Keys.LeftShift,     //6
+                                                Keys.RightShift     //7
+                                              };
         public static Keys[] CameraMoveKeys_Alt1 = { Keys.T, Keys.G, Keys.F, Keys.H };
 
         public static float CameraLerpSpeedSlow = 0.05f;

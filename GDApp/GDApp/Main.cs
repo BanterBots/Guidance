@@ -29,11 +29,13 @@ namespace GDApp
         private GenericDictionary<string, Model> modelDictionary;
         private GenericDictionary<string, SpriteFont> fontDictionary;
         private GenericDictionary<string, Transform3DCurve> curveDictionary;
-        private GenericDictionary<string, RailParameters> railDictionary;
+        //private GenericDictionary<string, RailParameters> railDictionary;
 
         private Vector2 screenCentre;
 
 
+
+        //Sound
         SoundEffect _bongoBongoLoop;
         SoundEffectInstance _bongoBongoInstance;
 
@@ -41,11 +43,11 @@ namespace GDApp
         AudioListener _listener;
 
         //temp vars
-        private ModelObject drivableModelObject;
-        private EventDispatcher eventDispatcher;
+        //private ModelObject drivableModelObject;
+        //private EventDispatcher eventDispatcher;
 
 
-        PlayerObject playerObject;
+        //PlayerObject playerObject;
         #endregion
 
         #region Properties
@@ -128,7 +130,7 @@ namespace GDApp
 
             //InitializeHelperObjects();
             //InitializeWireframeObjects();
-            //InitializeSkyAndGround(worldScale);
+            //InitializeSkyAndGround(worldScale*2);
             //InitializeProps(); //cubes etc
             //InitializeFoliage(); //trees and shrubs etc
             InitializeArchitecture(); //walls and buildings etc
@@ -139,38 +141,12 @@ namespace GDApp
             InitializeStaticCollidableGround(worldScale);
 
             #region Cameras
-            //InitializeCameraTracks();
             InitializeCamera(new Vector3(0, 10, 20), -Vector3.UnitZ, Vector3.UnitY);
             #endregion
 
             InitializeStaticTriangleMeshObjects();
 
-            #region Demo
-            //InitializeCurveDemo();
-            #endregion
             base.Initialize();
-        }
-
-        private void InitializeCameraTracks()
-        {
-            Transform3DCurve curve = null;
-
-            #region Curve1
-            curve = new Transform3DCurve(CurveLoopType.Oscillate);  
-            curve.Add(new Vector3(0, 10, 200),
-                    -Vector3.UnitZ, Vector3.UnitY, 0);
-
-            curve.Add(new Vector3(0, 10, 20),
-                   -Vector3.UnitZ, Vector3.UnitX, 2);
-
-            this.curveDictionary.Add("room_action1", curve);
-            #endregion
-
-        }
-
-        private void InitializeCurveDemo()
-        {
-            
         }
 
         private void InitializeStaticReferences()
@@ -218,9 +194,9 @@ namespace GDApp
             this.physicsManager = new PhysicsManager(this);
             Components.Add(physicsManager);
 
-            bool bDebugMode = true; //show wireframe CD-CR surfaces
-            this.objectManager = new ObjectManager(this, "gameObjects", bDebugMode);
-            Components.Add(this.objectManager);
+            //bool bDebugMode = true; //show wireframe CD-CR surfaces
+            //this.objectManager = new ObjectManager(this, "gameObjects", bDebugMode);
+            //Components.Add(this.objectManager);
 
             this.objectManager = new ObjectManager(this, "gameObjects", true);
             Components.Add(this.objectManager);
@@ -412,7 +388,7 @@ namespace GDApp
             archTexturedPrimitiveObject = this.objectDictionary["textured_quad"] as TexturedPrimitiveObject;
             archTexturedPrimitiveObject.Transform3D.Scale *= worldScale;
             #endregion
-            /*
+            
             #region Grass
             cloneTexturedPrimitiveObject = (TexturedPrimitiveObject)archTexturedPrimitiveObject.Clone();
             cloneTexturedPrimitiveObject.ID = "ground";
@@ -421,7 +397,7 @@ namespace GDApp
             cloneTexturedPrimitiveObject.Texture = this.textureDictionary["grass1"];
             this.objectManager.Add(cloneTexturedPrimitiveObject);
             #endregion
-    */
+    
             #region Skybox
             //back
             cloneTexturedPrimitiveObject = (TexturedPrimitiveObject)archTexturedPrimitiveObject.Clone();
@@ -564,11 +540,11 @@ namespace GDApp
             Camera3D camera = null;
             string cameraLayout = "";
 
-            #region Layout 1x1
-            cameraLayout = "1x1";
+            #region Layout Collision First Person
+            cameraLayout = "Collision";
 
             #region First Person Camera
-            transform = new Transform3D(new Vector3(0, 20, 0), -Vector3.UnitZ, Vector3.UnitY);
+            transform = new Transform3D(new Vector3(0, 15, 0), -Vector3.UnitZ, Vector3.UnitY);
             camera = new Camera3D("Static", ActorType.Camera, transform,
                 ProjectionParameters.StandardMediumSixteenNine,
                 new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
@@ -612,6 +588,26 @@ namespace GDApp
             #endregion
             #endregion
 
+            #region Layout Non Collision
+            cameraLayout = "NoCollision";
+
+            #region First Person Camera - No Collision
+            transform = new Transform3D(new Vector3(0, 15, 0), -Vector3.UnitZ, Vector3.UnitY);
+            camera = new Camera3D("NoCol", ActorType.Camera, transform,
+                ProjectionParameters.StandardMediumSixteenNine,
+                new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
+
+            camera.AttachController(new FirstPersonController(
+                "firstPersNoCol",
+                ControllerType.FirstPerson,
+                AppData.CameraMoveKeys,
+                AppData.CameraMoveSpeed*0.5f,
+                AppData.CameraStrafeSpeed,
+                AppData.CameraRotationSpeed*20));
+
+            this.cameraManager.Add(cameraLayout, camera);
+            #endregion
+            #endregion
            // ProjectionParameters pm = Matrix.CreateOrthographic(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, )
                 
             //ViewPort projection = Matrix.CreateOrthographicOffCenter(-GraphicsDevice.Viewport.Width/2f, GraphicsDevice.Viewport.Width/2f, -GraphicsDevice.Viewport.Height/2f, GraphicsDevice.Viewport.Height/2f, 1, 10000);
@@ -638,7 +634,7 @@ namespace GDApp
             #endregion
             #endregion
 
-            this.cameraManager.SetActiveCameraLayout("1x1");
+            this.cameraManager.SetActiveCameraLayout("Collision");
 
         }
 
@@ -668,21 +664,26 @@ namespace GDApp
 
         protected override void Update(GameTime gameTime)
         {
-            demoCameraLayoutSwitching();
+            cameraLayoutSwitching();
             base.Update(gameTime);
         }
 
-        private void demoCameraLayoutSwitching()
+        private void cameraLayoutSwitching()
         {
             if (this.keyboardManager.IsKeyDown(Keys.F1))
             {
-                this.cameraManager.SetActiveCameraLayout("1x1");
-                Window.Title = "1x1 Camera Layout [FirstPerson]";
+                this.cameraManager.SetActiveCameraLayout("Collision");
+                Window.Title = "1x1 Camera Layout [FirstPerson with Collision]";
             }
             else if (this.keyboardManager.IsKeyDown(Keys.F2))
             {
                 this.cameraManager.SetActiveCameraLayout("Map");
                 Window.Title = "Map Camera Layout [MapView]";
+            }
+            else if (this.keyboardManager.IsKeyDown(Keys.F3))
+            {
+                this.cameraManager.SetActiveCameraLayout("NoCollision");
+                Window.Title = "Map Camera Layout [FirstPerson No Collision]";
             }
         }
 
