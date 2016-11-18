@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Potion</Name>
     <Identity>
-      <SourceFilename>I:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
+      <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -867,7 +867,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>01 - Default</Name>
       <Identity>
-        <SourceFilename>I:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
+        <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -881,7 +881,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>03 - Default</Name>
       <Identity>
-        <SourceFilename>I:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
+        <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -895,7 +895,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>02 - Default</Name>
       <Identity>
-        <SourceFilename>I:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
+        <SourceFilename>E:\Projects\Guidance\GDApp\GDAppContent\Assets\Models\Guidance\Items\Pickups\m_potion.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

@@ -194,11 +194,8 @@ namespace GDApp
             this.physicsManager = new PhysicsManager(this);
             Components.Add(physicsManager);
 
-            //bool bDebugMode = true; //show wireframe CD-CR surfaces
-            //this.objectManager = new ObjectManager(this, "gameObjects", bDebugMode);
-            //Components.Add(this.objectManager);
-
-            this.objectManager = new ObjectManager(this, "gameObjects", true);
+            bool bDebugMode = false; //show wireframe CD-CR surfaces
+            this.objectManager = new ObjectManager(this, "gameObjects", bDebugMode);
             Components.Add(this.objectManager);
 
             this.mouseManager = new MouseManager(this, false);

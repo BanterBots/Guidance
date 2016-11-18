@@ -218,3 +218,13 @@ I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\It
 I:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Sound\bongbongoLoop.xnb
 E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb
 E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Sound\bongbongoLoop.xnb
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.dll
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.xml
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
