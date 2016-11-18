@@ -17,7 +17,7 @@ namespace GDLibrary
 
             if (parentActor != null)
             {
-                float sinTime = (float)Math.Sin(MathHelper.ToRadians(100 * (float)gameTime.TotalGameTime.TotalSeconds));
+                float sinTime = (float)Math.Sin(MathHelper.ToRadians(300 * (float)gameTime.TotalGameTime.TotalSeconds));
 
                 sinTime *= 0.5f; //-0.5f -> + 0.5f
                 sinTime += 0.5f; //0 -> 1
@@ -25,7 +25,7 @@ namespace GDLibrary
                 //calculate the new translation by adding to the original translation
                 parentActor.Transform3D.Translation =
                    parentActor.Transform3D.OriginalTransform3D.Translation
-                           + sinTime * Vector3.UnitX * 100;
+                           + sinTime * Vector3.UnitY * 5;
             }
 
         }

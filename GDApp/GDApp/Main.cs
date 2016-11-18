@@ -15,7 +15,7 @@ namespace GDApp
         #region Variables
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        private BasicEffect wireframeEffect, texturedPrimitiveEffect, texturedModelEffect;
+        private BasicEffect wireframeEffect, texturedPrimitiveEffect, texturedModelEffect, propModelEffect;
 
         private ObjectManager objectManager;
         private MouseManager mouseManager;
@@ -186,6 +186,26 @@ namespace GDApp
             this.texturedModelEffect.PreferPerPixelLighting = true;
             this.texturedModelEffect.SpecularPower = 128;
 
+
+            this.propModelEffect = new BasicEffect(graphics.GraphicsDevice);
+            this.propModelEffect.TextureEnabled = true;
+            this.propModelEffect.EnableDefaultLighting();
+            this.propModelEffect.DirectionalLight1.Enabled = true;
+            this.propModelEffect.DirectionalLight2.Enabled = true;
+            this.propModelEffect.DirectionalLight0.Enabled = false;
+
+            this.propModelEffect.AmbientLightColor = new Vector3(.6f, .6f, .6f);
+
+            this.propModelEffect.DirectionalLight1.DiffuseColor = new Vector3(.1f, .1f, .1f);
+            this.propModelEffect.DirectionalLight2.DiffuseColor = new Vector3(.1f, .1f, .1f);
+
+            this.propModelEffect.DirectionalLight1.Direction = Vector3.Forward;
+            this.propModelEffect.DirectionalLight2.Direction = Vector3.Right;
+            
+
+            this.propModelEffect.SpecularPower = 2048;
+            this.propModelEffect.DiffuseColor = new Vector3(.9f, .9f, .9f);
+            this.propModelEffect.SpecularColor = new Vector3(.9f, .9f, .9f);
         }
 
         private void InitializeManagers()
@@ -194,7 +214,7 @@ namespace GDApp
             this.physicsManager = new PhysicsManager(this);
             Components.Add(physicsManager);
 
-            bool bDebugMode = false; //show wireframe CD-CR surfaces
+            bool bDebugMode = true; //show wireframe CD-CR surfaces
             this.objectManager = new ObjectManager(this, "gameObjects", bDebugMode);
             Components.Add(this.objectManager);
 
@@ -258,7 +278,11 @@ namespace GDApp
 
             this.textureDictionary.Add("egypt",
                 Content.Load<Texture2D>("Assets/Textures/Guide/BaseTile01_Diffuse"));
+
+            this.textureDictionary.Add("redPotion",
+                Content.Load<Texture2D>("Assets/Textures/Guide/FlatColourTexture"));
             
+
             #region debug
             this.textureDictionary.Add("ml",
                Content.Load<Texture2D>("Assets/Textures/Debug/ml"));
@@ -511,7 +535,7 @@ namespace GDApp
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(9, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"]);
+            TileGrid tg = new TileGrid(9, 76.25f, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
             tg.generateRandomGrid();
 
             for (int i = 0; i < tg.gridSize; i++)
@@ -524,6 +548,7 @@ namespace GDApp
                     }
                 }
             }
+            tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
 
             foreach(DrawnActor3D model in tg.itemList)
             {

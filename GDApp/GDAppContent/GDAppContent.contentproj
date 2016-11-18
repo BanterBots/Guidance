@@ -326,6 +326,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Sound\bongbongoLoop.wav">
+      <Name>bongbongoLoop</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Textures\Guide\FlatColourTexture.png">
+      <Name>FlatColourTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Models\Guidance\Items\Pickups\m_potion.FBX">
       <Name>m_potion</Name>
       <Importer>FbxImporter</Importer>
@@ -333,10 +347,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Sound\bongbongoLoop.wav">
-      <Name>bongbongoLoop</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
+    <Compile Include="Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture.png">
+      <Name>FlatColourTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

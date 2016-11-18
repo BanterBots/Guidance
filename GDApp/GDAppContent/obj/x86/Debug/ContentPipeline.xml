@@ -779,11 +779,12 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\Pickups\m_potion.xnb</Output>
-      <Time>2016-11-17T20:12:30.8074331+00:00</Time>
+      <Time>2016-11-18T12:48:36.7874885+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Guidance\Items\Pickups\m_potion_0.xml</Key>
-        <Value>2016-11-18T09:07:01.7609234+00:00</Value>
+        <Value>2016-11-18T12:48:41.4945716+00:00</Value>
       </Dependency>
+      <Request>E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture_0.xnb</Request>
     </Item>
     <Item>
       <Source>Assets\Sound\bongbongoLoop.wav</Source>
@@ -799,7 +800,41 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Guidance\Items\Pickups\m_potion_0.xml</Output>
-      <Time>2016-11-17T20:12:30.8074331+00:00</Time>
+      <Time>2016-11-18T12:48:36.7874885+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\Guide\FlatColourTexture.png</Source>
+      <Name>Assets\Textures\Guide\FlatColourTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Guide\FlatColourTexture.xnb</Output>
+      <Time>2016-11-18T12:45:28.8143725+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture.png</Source>
+      <Name>Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture.xnb</Output>
+      <Time>2016-11-18T12:48:58.9714899+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>E:\Projects\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Guidance\Items\ModelTextures\FlatColourTexture_0.xnb</Output>
+      <Time>2016-11-18T12:48:58.9714899+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

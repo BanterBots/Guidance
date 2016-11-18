@@ -17,7 +17,7 @@ namespace GDApp._3DTileEngine
 
         // Size of our grid, and size of each tile
         public int gridSize;
-        public int tileSize;
+        public float tileSize;
         
         // Graphical data
         public BasicEffect effect;
@@ -36,11 +36,14 @@ namespace GDApp._3DTileEngine
 
         // RNG
         Random random = new Random();
+
+        //Potions
+
         #endregion
 
         #region Constructors
         // Hardcoded maze
-        public TileGrid(int gridSize, int tileSize, Model[] models, BasicEffect effect, Texture2D texture, int[,] modelTypes, int[,] modelRotations)
+        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, int[,] modelTypes, int[,] modelRotations, Texture2D potionTexture)
         {
             this.gridSize = gridSize;
             this.tileSize = tileSize;
@@ -54,7 +57,7 @@ namespace GDApp._3DTileEngine
         }
 
         // Random maze
-        public TileGrid(int gridSize, int tileSize, Model[] models, BasicEffect effect, Texture2D texture)
+        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
         {
             this.gridSize = gridSize;
             this.tileSize = tileSize;
@@ -83,7 +86,7 @@ namespace GDApp._3DTileEngine
                 
 
                 // Hardcoded item
-                //createPotionAt(0, 0);
+                
   
 
                 // Create two random chains that link with start and finish
@@ -637,12 +640,12 @@ namespace GDApp._3DTileEngine
             grid[x, y] = mazeObject;
         }
 
-        private void createPotionAt(int x, int y)
+        public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex)
         {
             CollidableObject collidableObject = null;
 
             Transform3D transform = new Transform3D(
-                new Vector3(x * tileSize, 0, y * (-1) * tileSize),
+                new Vector3(x * tileSize, 4, y * (-1) * tileSize),
                 new Vector3(0, 0 * -90, 0),
                 new Vector3(0.1f, 0.1f, 0.1f),
                 Vector3.UnitX,
@@ -655,13 +658,16 @@ namespace GDApp._3DTileEngine
                effect,
                Color.White,
                1,
-               null,
+               potionTex,
                models[7],
                new MaterialProperties(0.2f, 0.8f, 0.7f));
 
             collidableObject.Enable(true, 1);
             collidableObject.ActorType = ActorType.Pickup;
 
+
+            collidableObject.AttachController(new TranslationLerpController("updown",ControllerType.LerpTranslation));
+            collidableObject.AttachController(new RotationController("rotate", ControllerType.LerpRotation,new Vector3(0,0.1f,0)));
             itemList.Add(collidableObject);
         }
     }
