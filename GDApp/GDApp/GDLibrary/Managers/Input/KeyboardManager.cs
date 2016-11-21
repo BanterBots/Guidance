@@ -2,12 +2,11 @@
 Function: 		Provide keyboard input functions
 Author: 		NMCG
 Version:		1.0
-Date Updated:	26/9/16
+Date Updated:	26/1/16
 Bugs:			None
 Fixes:			None
 */
 
-using GDApp;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
@@ -25,7 +24,7 @@ namespace GDLibrary
         #region Properties
         #endregion
 
-        public KeyboardManager(Main game)
+        public KeyboardManager(Game game)
             : base(game)
         {
             // TODO: Construct any child components here

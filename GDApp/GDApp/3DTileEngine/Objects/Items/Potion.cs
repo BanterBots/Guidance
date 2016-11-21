@@ -8,9 +8,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace GDApp._3DTileEngine.Objects.Items
 {
-    class Potion : GDLibrary.CollidableObject
+    class Potion : CollidableObject
     {
-        public Potion(string id, ActorType actorType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model) : base(id, actorType, transform, effect, color, alpha, texture, model)
+        public Potion(string id, ObjectType objectType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model) : base(id, objectType, transform, effect, texture, model, color, alpha)
         {
         }
     }

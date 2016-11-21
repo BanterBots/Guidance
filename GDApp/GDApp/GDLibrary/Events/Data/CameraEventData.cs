@@ -33,7 +33,7 @@ namespace GDLibrary
         }
         #endregion
 
-        public CameraEventData(string id, object sender, EventActionType eventType, 
+        public CameraEventData(string id, object sender, EventType eventType, 
                                 EventCategoryType eventCategoryType, string cameraLayout, string cameraID)
             : base(id, sender, eventType, eventCategoryType)
         {

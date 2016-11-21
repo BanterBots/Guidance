@@ -56,8 +56,8 @@ namespace GDApp._3DTileEngine
         }
         #endregion
 
-        public ModelTileObject(string id, ActorType actorType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model, int modelNo,
-                    int x, int y) : base(id, actorType, transform, effect, color, alpha, texture, model, new MaterialProperties(0.2f, 0.8f, 0.7f))
+        public ModelTileObject(string id, ObjectType objectType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model, int modelNo,
+                    int x, int y) : base(id, objectType, transform, effect, texture, model, color, alpha, new MaterialProperties(0.2f, 0.8f, 0.7f))
 
         {
             this.texture = texture;
@@ -73,7 +73,7 @@ namespace GDApp._3DTileEngine
         private void InitializeCollision()
         {
             this.Enable(true, 1);
-            this.ActorType = ActorType.Pickup;
+            this.ObjectType = ObjectType.CollidableProp;
         }
 
         private void InitializeBoneTransforms()
@@ -86,6 +86,7 @@ namespace GDApp._3DTileEngine
             }
         }
 
+        /*
         public override void Draw(GameTime gameTime)
         {
             this.Effect.View = game.CameraManager.ActiveCamera.View;
@@ -109,6 +110,11 @@ namespace GDApp._3DTileEngine
             }
 
             base.Draw(gameTime);
+        }*/
+
+        public object Clone()
+        {
+            throw new NotImplementedException();
         }
     }
 }

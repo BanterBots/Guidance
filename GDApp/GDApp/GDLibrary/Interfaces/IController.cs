@@ -1,11 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
-using GDApp;
 
 namespace GDLibrary
 {
     public interface IController
     {
-        void Update(GameTime gameTime, IActor actor);
-        string GetID();
+        string GetName();
+        Actor GetParentActor();
+        void SetParentActor(Actor parentActor);
+
+        void Update(GameTime gameTime);
+        object Clone();
     }
 }

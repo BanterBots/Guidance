@@ -1,43 +1,26 @@
-﻿/*
+﻿using System;
+using Microsoft.Xna.Framework;
+
+/*
 Function: 		Encapsulates the projection matrix specific parameters for the camera class
 Author: 		NMCG
 Version:		1.0
-Date Updated:	1/10/16
+Date Updated:	1/1/16
 Bugs:			None
 Fixes:			None
 */
-
-using System;
-using Microsoft.Xna.Framework;
 
 namespace GDLibrary
 {
     public class ProjectionParameters : ICloneable
     {
-        #region Statics
-        public static ProjectionParameters StandardMediumFourThree
-           = new ProjectionParameters(MathHelper.PiOver2, 4.0f / 3, 1, 1000);
-        public static ProjectionParameters StandardMediumSixteenTen
-            = new ProjectionParameters(MathHelper.PiOver2, 16.0f / 10, 1, 1000);
-
-
-        public static ProjectionParameters StandardMediumSixteenNine
-            = new ProjectionParameters(MathHelper.PiOver4, 16.0f/9, 1, 1000);
-
-        public static ProjectionParameters StandardShallowFourThree
-            = new ProjectionParameters(MathHelper.PiOver2, 4.0f / 3, 1, 500);
-        public static ProjectionParameters StandardShallowSixteenTen
-            = new ProjectionParameters(MathHelper.PiOver2, 16.0f / 10, 1, 500);
-        public static ProjectionParameters StandardShallowSixteenNine
-            = new ProjectionParameters(MathHelper.PiOver2, 16.0f / 9, 1, 500);
-
-        #endregion
-
         #region Fields
+        public static ProjectionParameters StandardMediumFourThree = new ProjectionParameters(MathHelper.ToRadians(60), 4.0f / 3, 1, 1000);
+
         private float fieldOfView, aspectRatio, nearClipPlane, farClipPlane;
         private Matrix projection;
-        private ProjectionParameters originalProjectionParameters;
         private bool isDirty;
+        private float originalFOV, originalAspectRatio, originalNearClipPlane, originalFarClipPlane;
         #endregion
 
         #region Properties
@@ -103,31 +86,24 @@ namespace GDLibrary
                 }
                 return this.projection;
             }
-            set
-            {
-                    this.projection = value;
-            }
         }
         #endregion
 
-        public ProjectionParameters(
-            float fieldOfView, float aspectRatio,
+        public ProjectionParameters(float fieldOfView, float aspectRatio,
             float nearClipPlane, float farClipPlane)
         {
-            this.FOV = fieldOfView;
-            this.AspectRatio = aspectRatio;
-            this.NearClipPlane = nearClipPlane;
-            this.FarClipPlane = farClipPlane;
-
-            this.originalProjectionParameters = (ProjectionParameters)this.Clone();
+            this.FOV = this.originalFOV = fieldOfView;
+            this.AspectRatio = this.originalAspectRatio = aspectRatio;
+            this.NearClipPlane = this.originalNearClipPlane = nearClipPlane;
+            this.FarClipPlane = this.originalFarClipPlane = farClipPlane;
         }
 
         public void Reset()
         {
-            this.FOV = this.originalProjectionParameters.FOV;
-            this.AspectRatio = this.originalProjectionParameters.AspectRatio;
-            this.NearClipPlane = this.originalProjectionParameters.NearClipPlane;
-            this.FarClipPlane = this.originalProjectionParameters.FarClipPlane;
+            this.FOV = this.originalFOV;
+            this.AspectRatio = this.originalAspectRatio;
+            this.NearClipPlane = this.originalNearClipPlane;
+            this.FarClipPlane = this.originalFarClipPlane;
         }
 
         public object Clone() //deep copy
@@ -152,8 +128,9 @@ namespace GDLibrary
             hash = hash * 31 + this.FOV.GetHashCode();
             hash = hash * 17 + this.AspectRatio.GetHashCode();
             hash = hash * 13 + this.NearClipPlane.GetHashCode();
-            hash = hash * 51 + this.FarClipPlane.GetHashCode();
             return hash;
         }
+
+
     }
 }

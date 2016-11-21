@@ -3,7 +3,7 @@
     public class EventData
     {
         #region Fields
-        private EventActionType eventType;
+        private EventType eventType;
         private EventCategoryType eventCategoryType;
         private object sender;
         private string id;
@@ -32,7 +32,7 @@
                 this.sender = value;
             }
         }
-        public EventActionType EventType
+        public EventType EventType
         {
             get
             {
@@ -56,7 +56,7 @@
         }
         #endregion
 
-        public EventData(string id, object sender, EventActionType eventType, EventCategoryType eventCategoryType)
+        public EventData(string id, object sender, EventType eventType, EventCategoryType eventCategoryType)
         {
             this.id = id;                           //id of sender
             this.sender = sender;                   //object reference of sender

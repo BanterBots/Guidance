@@ -6,79 +6,47 @@ namespace GDLibrary
     {
         #region Fields
         private RailParameters railParameters;
-        private bool bFirstUpdate = true;
-        private float lerpSpeed;
-        private Vector3 oldCameraToTarget;
         #endregion
 
         #region Properties
-        public RailParameters RailParameters
-        {
-            get
-            {
-                return this.railParameters;
-            }
-            set
-            {
-                this.railParameters = value;
-            }
-        }
-        public bool FirstUpdate
-        {
-            get
-            {
-                return this.bFirstUpdate;
-            }
-            set
-            {
-                this.bFirstUpdate = value;
-            }
-        }
         #endregion
 
-        public RailController(string id, ControllerType controllerType, IActor targetActor, 
-                                RailParameters railParameters, float lerpSpeed)
-            : base(id, controllerType, targetActor)
+        public RailController(string id, Actor parentActor, Actor targetActor, 
+                                RailParameters railParameters)
+            : base(id, parentActor, targetActor)
         {
             this.railParameters = railParameters;
-            this.lerpSpeed = lerpSpeed;
+
+            //set the initial position of the camera
+            this.ParentActor.Transform3D.Translation = railParameters.MidPoint;
         }
 
-        public override void Update(GameTime gameTime, IActor actor)
+        public override void Update(GameTime gameTime)
         {
-            Actor3D parentActor = actor as Actor3D;
-            DrawnActor3D targetDrawnActor = this.TargetActor as DrawnActor3D;
-
-            if(this.bFirstUpdate)
-            {
-                //set the initial position of the camera
-                parentActor.Transform3D.Translation = railParameters.MidPoint;
-                this.bFirstUpdate = false;
-            }
-
             //get look vector to target
-            Vector3 cameraToTarget = MathUtility.GetNormalizedObjectToTargetVector(parentActor.Transform3D, targetDrawnActor.Transform3D);
+            Vector3 cameraToTarget = CameraUtility.GetCameraToTarget(this.TargetActor.Transform3D, this.ParentActor.Transform3D);
 
             //new position for camera if it is positioned between start and the end points of the rail
-            Vector3 projectedCameraPosition = parentActor.Transform3D.Translation
+            Vector3 projectedCameraPosition = this.ParentActor.Transform3D.Translation
                 + Vector3.Dot(cameraToTarget, railParameters.Look) * railParameters.Look * gameTime.ElapsedGameTime.Milliseconds;
 
             //do not allow the camera to move outside the rail
             if (railParameters.InsideRail(projectedCameraPosition))
-                parentActor.Transform3D.Translation = projectedCameraPosition;
+                this.ParentActor.Transform3D.Translation = projectedCameraPosition;
 
             //set the camera to look at the object
-            parentActor.Transform3D.Look = cameraToTarget;
+            this.ParentActor.Transform3D.Look = cameraToTarget;
 
-            //set the camera to look at the target object
-            parentActor.Transform3D.Look = Vector3.Lerp(this.oldCameraToTarget, cameraToTarget, lerpSpeed);
-
-            //store old values for lerp
-            this.oldCameraToTarget = cameraToTarget;
-
+            //bug - set the up vector???
         }
 
 
-        //add clone...
+        public override object Clone()
+        {
+            return new RailController("clone - " + this.ID,
+                this.ParentActor, //shallow - reset normally
+                this.TargetActor,//shallow - cloned rail should have same target
+                this.railParameters); //shallow - change to deep - add Clone()
+        }
     }
 }

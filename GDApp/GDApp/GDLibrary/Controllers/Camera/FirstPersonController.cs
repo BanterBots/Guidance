@@ -1,99 +1,126 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GDApp;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 namespace GDLibrary
 {
-    //allows movement in any XZ direction (i.e. y is set to zero to prevent flight)
-    public class FirstPersonController : UserInputController
+    public class FirstPersonController : Controller
     {
-        #region Variables
+        private float moveSpeed, strafeSpeed, rotationSpeed;
+        private Keys[] moveKeys;
+        #region Fields
         #endregion
 
         #region Properties
+        public Keys[] MoveKeys
+        {
+            get
+            {
+                return this.moveKeys;
+            }
+            set
+            {
+                this.moveKeys = value;
+            }
+        }
+        public float RotationSpeed
+        {
+            get
+            {
+                return this.rotationSpeed;
+            }
+            set
+            {
+                this.rotationSpeed = (value > 0) ? value : 0.1f;
+            }
+        }
+        public float MoveSpeed
+        {
+            get
+            {
+                return this.moveSpeed;
+            }
+            set
+            {
+                this.moveSpeed = (value > 0) ? value : 0.1f;
+            }
+        }
+        public float StrafeSpeed
+        {
+            get
+            {
+                return this.strafeSpeed;
+            }
+            set
+            {
+                this.strafeSpeed = (value > 0) ? value : 0.1f;
+            }
+        }
         #endregion
 
-        public FirstPersonController(string id,
-            ControllerType controllerType, Keys[] moveKeys,
-            float moveSpeed, float strafeSpeed, float rotationSpeed)
-            : base(id, controllerType, moveKeys, moveSpeed, strafeSpeed, rotationSpeed)
+        public FirstPersonController(string id, Actor parentActor,
+            Keys[] moveKeys, float moveSpeed, float strafeSpeed, float rotationSpeed)
+            : base(id, parentActor)
         {
+            this.MoveKeys = moveKeys;
+            this.MoveSpeed = moveSpeed;
+            this.StrafeSpeed = strafeSpeed;
+            this.RotationSpeed = rotationSpeed;
         }
 
-        public override void Update(GameTime gameTime, IActor actor)
+        public override void Update(GameTime gameTime)
         {
-            base.Update(gameTime, actor);
+            HandleKeyboardInput(gameTime);
+            HandleMouseInput(gameTime);
         }
 
-        public override void HandleMouseInput(GameTime gameTime, Actor3D parentActor)
+        public virtual void HandleMouseInput(GameTime gameTime)
         {
-            /*
-            Vector2 mouseDelta = game.MouseManager.GetDeltaFromCentre();
+            Vector2 mouseDelta = game.MouseManager.GetDeltaFromPosition(game.ScreenCentre);
             mouseDelta *= gameTime.ElapsedGameTime.Milliseconds;
-            mouseDelta *= this.RotationSpeed;
-            parentActor.Transform3D.RotateBy(new Vector3(-mouseDelta, 0));
-            */
+            mouseDelta *= 0.01f;
+            this.ParentActor.Transform3D.RotateBy(new Vector3(-mouseDelta, 0));
+
         }
 
-        public override void HandleKeyboardInput(GameTime gameTime, Actor3D parentActor)
+        public virtual void HandleKeyboardInput(GameTime gameTime)
         {
-            if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexMoveForward]))
+            if (game.KeyboardManager.IsKeyDown(this.moveKeys[KeyData.KeysIndexRotateLeft]))
             {
-                parentActor.Transform3D.TranslateIncrement
-                    = gameTime.ElapsedGameTime.Milliseconds
-                             * this.MoveSpeed * parentActor.Transform3D.Look;
+                float speedMultiplier = this.strafeSpeed * gameTime.ElapsedGameTime.Milliseconds;
+                this.ParentActor.Transform3D.TranslateBy(-this.ParentActor.Transform3D.Right, speedMultiplier);
             }
-            else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexMoveBackward]))
+            else if (game.KeyboardManager.IsKeyDown(this.moveKeys[KeyData.KeysIndexRotateRight]))
             {
-                parentActor.Transform3D.TranslateIncrement
-                    += -gameTime.ElapsedGameTime.Milliseconds
-                             * this.MoveSpeed * parentActor.Transform3D.Look;
+                float speedMultiplier = this.strafeSpeed * gameTime.ElapsedGameTime.Milliseconds;
+                this.ParentActor.Transform3D.TranslateBy(this.ParentActor.Transform3D.Right, speedMultiplier);
             }
-
-
-            if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeLeft]))
+            
+            if (game.KeyboardManager.IsKeyDown(this.moveKeys[KeyData.KeysIndexMoveForward]))
             {
-                parentActor.Transform3D.RotateAroundYBy(gameTime.ElapsedGameTime.Milliseconds * this.RotationSpeed);
+                Vector3 temp = this.ParentActor.Transform3D.Look;
+                temp.Y = 0;
+                float speedMultiplier = this.moveSpeed * gameTime.ElapsedGameTime.Milliseconds;
+                this.ParentActor.Transform3D.TranslateBy(temp, speedMultiplier);
             }
-            else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeRight]))
+            else if (game.KeyboardManager.IsKeyDown(this.moveKeys[KeyData.KeysIndexMoveBackward]))
             {
-                parentActor.Transform3D.RotateAroundYBy(-gameTime.ElapsedGameTime.Milliseconds * this.RotationSpeed);
-            }
-
-            /*
-            if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeLeft]))
-            {
-                parentActor.Transform3D.TranslateIncrement
-                    += -gameTime.ElapsedGameTime.Milliseconds
-                             * this.StrafeSpeed * parentActor.Transform3D.Right;
-            }
-            else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexStrafeRight]))
-            {
-                parentActor.Transform3D.TranslateIncrement
-                    += gameTime.ElapsedGameTime.Milliseconds
-                             * this.StrafeSpeed * parentActor.Transform3D.Right;
-            }
-            */
-
-            //rotate left/right
-            if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexRotateLeft]))
-            {
-                parentActor.Transform3D.RotateAroundYBy(this.RotationSpeed * gameTime.ElapsedGameTime.Milliseconds);
-            }
-            else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[AppData.IndexRotateRight]))
-            {
-                parentActor.Transform3D.RotateAroundYBy(-this.RotationSpeed * gameTime.ElapsedGameTime.Milliseconds);
-            }
-
-            //prevent movement up or down
-                parentActor.Transform3D.TranslateIncrementY = 0;
-
-            if (parentActor.Transform3D.TranslateIncrement != Vector3.Zero)
-            {
-                parentActor.Transform3D.TranslateBy(parentActor.Transform3D.TranslateIncrement);
-                parentActor.Transform3D.TranslateIncrement = Vector3.Zero;
+                Vector3 temp = this.ParentActor.Transform3D.Look;
+                temp.Y = 0;
+                float speedMultiplier = this.moveSpeed * gameTime.ElapsedGameTime.Milliseconds;
+                this.ParentActor.Transform3D.TranslateBy(-temp, speedMultiplier);
             }
         }
 
-        //add clone...
+
+        public override object Clone()
+        {
+            return new FirstPersonController("clone - " + this.ID,
+                this.ParentActor, //shallow - reference
+                this.moveKeys, //shallow - reference
+                this.moveSpeed, //primitive so a simple copy
+                this.strafeSpeed, //primitive so a simple copy
+                this.rotationSpeed); //primitive so a simple copy
+        }
     }
 }

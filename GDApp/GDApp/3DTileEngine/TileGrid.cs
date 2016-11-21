@@ -13,7 +13,7 @@ namespace GDApp._3DTileEngine
         #region Properties
         // Grid that holds all tiles
         public ModelTileObject[,] grid;
-        public List<DrawnActor3D> itemList;
+        public List<ModelObject> itemList;
 
         // Size of our grid, and size of each tile
         public int gridSize;
@@ -28,7 +28,7 @@ namespace GDApp._3DTileEngine
         public int[] tileInfo;
 
         // Generation settings
-        private int minTiles = 20;
+        private int minTiles = 5;
         private int tiles = 0;
 
         // Regeneration list
@@ -80,7 +80,7 @@ namespace GDApp._3DTileEngine
                 regenCoords = new List<Integer3>();
                 tiles = 0;
                 grid = new ModelTileObject[gridSize,gridSize];
-                itemList = new List<DrawnActor3D>();
+                itemList = new List<ModelObject>();
 
                 
                 
@@ -124,7 +124,7 @@ namespace GDApp._3DTileEngine
 
                     grid[x, y] = mazeObject = new ModelTileObject(
                         "maze(" + x + "," + y + ")",
-                        ActorType.Pickup,
+                        ObjectType.CollidableGround,
                         transform,
                         effect,
                         Color.White,
@@ -624,7 +624,7 @@ namespace GDApp._3DTileEngine
 
             ModelTileObject mazeObject = new ModelTileObject(
                "maze(" + x + "," + y + ")",
-               ActorType.CollidableGround,
+               ObjectType.CollidableGround,
                transform,
                effect,
                Color.White,
@@ -653,21 +653,23 @@ namespace GDApp._3DTileEngine
 
             collidableObject = new TriangleMeshObject(
                "maze(" + x + "," + y + ")",
-               ActorType.CollidableProp,
+               ObjectType.CollidableProp,
                transform,
                effect,
-               Color.White,
-               1,
                potionTex,
                models[7],
+               Color.White,
+               1,
                new MaterialProperties(0.2f, 0.8f, 0.7f));
 
             collidableObject.Enable(true, 1);
-            collidableObject.ActorType = ActorType.Pickup;
+            collidableObject.ObjectType = ObjectType.Pickup;
 
+            /*
+            collidableObject.AddController(new TranslationLerpController("updown",ControllerType.LerpTranslation));
+            collidableObject.AddController(new RotationController("rotate", ControllerType.LerpRotation,new Vector3(0,0.1f,0)));
+            */
 
-            collidableObject.AttachController(new TranslationLerpController("updown",ControllerType.LerpTranslation));
-            collidableObject.AttachController(new RotationController("rotate", ControllerType.LerpRotation,new Vector3(0,0.1f,0)));
             itemList.Add(collidableObject);
         }
     }
