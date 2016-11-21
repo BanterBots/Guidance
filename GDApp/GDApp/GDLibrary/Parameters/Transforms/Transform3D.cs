@@ -141,6 +141,13 @@ namespace GDLibrary
                 return this.originalLook;
             }
         }
+        public Vector3 OriginalTranslation
+        {
+            get
+            {
+                return this.originalTranslation;
+            }
+        }
         #endregion
 
         //used by the camera

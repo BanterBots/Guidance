@@ -665,10 +665,9 @@ namespace GDApp._3DTileEngine
             collidableObject.Enable(true, 1);
             collidableObject.ObjectType = ObjectType.Pickup;
 
-            /*
-            collidableObject.AddController(new TranslationLerpController("updown",ControllerType.LerpTranslation));
-            collidableObject.AddController(new RotationController("rotate", ControllerType.LerpRotation,new Vector3(0,0.1f,0)));
-            */
+            
+            collidableObject.AddController(new PotionController("updown", collidableObject, new Vector3(0, 0.1f, 0)));
+            
 
             itemList.Add(collidableObject);
         }

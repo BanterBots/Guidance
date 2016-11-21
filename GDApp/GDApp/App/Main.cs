@@ -4,6 +4,7 @@ using GDLibrary;
 using JigLibX.Collision;
 using JigLibX.Geometry;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
@@ -394,6 +395,13 @@ namespace GDApp
 
         //temp demo vars
         private MoveableModelObject playerActor;
+
+        //Sound
+        SoundEffect _bongoBongoLoop;
+        SoundEffectInstance _bongoBongoInstance;
+
+        AudioEmitter _emitter;
+        AudioListener _listener;
         #endregion
 
         #region Properties
@@ -571,6 +579,12 @@ namespace GDApp
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            //Sound
+            _bongoBongoLoop = Content.Load<SoundEffect>("Assets/Audio/bongbongoLoop");
+            _bongoBongoInstance = _bongoBongoLoop.CreateInstance();
+            _bongoBongoInstance.IsLooped = true;
+            _bongoBongoInstance.Volume = 0.4f;
+            _bongoBongoInstance.Play();
         }
         protected override void UnloadContent()
         {
@@ -925,7 +939,7 @@ namespace GDApp
                 KeyData.MoveKeys,
                 GameData.CameraMoveSpeed * 6,
                 GameData.CameraStrafeSpeed * 6,
-                GameData.CameraRotationSpeed * 15,
+                GameData.CameraRotationSpeed * 20,
                 1f, // radius
                 20f, // height
                 10f,// acceleration
@@ -946,7 +960,7 @@ namespace GDApp
             cloneFixedCamera.Transform3D = transform;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
-
+            
             #region Nialls Stuff
             /*
                        #region Collidable First Person Camera
@@ -1574,7 +1588,7 @@ namespace GDApp
  
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
             this.graphics.GraphicsDevice.Viewport = this.cameraManager.ActiveCamera.Viewport;
             base.Draw(gameTime);
 

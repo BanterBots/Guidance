@@ -130,12 +130,14 @@
     <Compile Include="GDLibrary\Cameras\PawnCamera3D.cs" />
     <Compile Include="GDLibrary\Controllers\Camera\SecurityController.cs" />
     <Compile Include="GDLibrary\Controllers\Camera\ThirdPersonController.cs" />
+    <Compile Include="GDLibrary\Controllers\Object\PotionController.cs" />
     <Compile Include="GDLibrary\Controllers\Physics\PhysicsController.cs" />
     <Compile Include="GDLibrary\Controllers\TargetController.cs" />
     <Compile Include="GDLibrary\Controllers\Text\TextRendererController.cs" />
     <Compile Include="GDLibrary\Controllers\Video\Video3DController.cs" />
     <Compile Include="GDLibrary\Debug\PhysicsDebugDrawer.cs" />
     <Compile Include="GDLibrary\Enums\BillboardType.cs" />
+    <Compile Include="GDLibrary\Enums\ControllerType.cs" />
     <Compile Include="GDLibrary\Enums\OrientationType.cs" />
     <Compile Include="GDLibrary\Events\Data\CameraEventData.cs" />
     <Compile Include="GDLibrary\Enums\EventCategoryType.cs" />

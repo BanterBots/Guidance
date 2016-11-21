@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Room</Name>
     <Identity>
-      <SourceFilename>C:\Users\ciara_000\Desktop\GDApp - 20 -  Animation\GDApp\GDAppContent\Assets\Models\Maze\Tile_Puzzle.FBX</SourceFilename>
+      <SourceFilename>I:\Projects\WIP\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Puzzle.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -29,7 +29,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>04 - Default</Name>
       <Identity>
-        <SourceFilename>C:\Users\ciara_000\Desktop\GDApp - 20 -  Animation\GDApp\GDAppContent\Assets\Models\Maze\Tile_Puzzle.FBX</SourceFilename>
+        <SourceFilename>I:\Projects\WIP\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Puzzle.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
