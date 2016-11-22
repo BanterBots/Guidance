@@ -42,21 +42,6 @@ namespace GDApp._3DTileEngine
         #endregion
 
         #region Constructors
-        // Hardcoded maze
-        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, int[,] modelTypes, int[,] modelRotations, Texture2D potionTexture)
-        {
-            this.gridSize = gridSize;
-            this.tileSize = tileSize;
-            this.models = models;
-            this.texture = texture;
-            this.effect = effect;
-            this.grid = new ModelTileObject[gridSize, gridSize];
-
-            initializeInfo();
-            generateGridFromArrays(modelTypes, modelRotations);
-        }
-
-        // Random maze
         public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
         {
             this.gridSize = gridSize;
@@ -66,7 +51,6 @@ namespace GDApp._3DTileEngine
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
             initializeInfo();
-            generateRandomGrid();
         }
         #endregion
 
@@ -106,7 +90,7 @@ namespace GDApp._3DTileEngine
         #endregion
 
         #region Input Gen
-        private void generateGridFromArrays(int[,] modelTypes, int[,] modelRotations)
+        public void generateGridFromArrays(int[,] modelTypes, int[,] modelRotations)
         {
             Transform3D transform;
             ModelTileObject mazeObject;
@@ -115,25 +99,27 @@ namespace GDApp._3DTileEngine
             {
                 for (int y = 0; y < gridSize; y++)
                 {
-                    transform = new Transform3D(
-                        new Vector3(x * tileSize, 0, y * tileSize),
-                        new Vector3(0, modelRotations[x, y] * 90, 0),
-                        new Vector3(0.1f, 0.1f, 0.1f),
-                        Vector3.UnitX,
-                        Vector3.UnitY);
+                    if(modelTypes[x,y] != 3){
+                        transform = new Transform3D(
+                       new Vector3(x * tileSize, 0, - 1 * y * tileSize),
+                       new Vector3(0, modelRotations[x, y] * 90, 0),
+                       new Vector3(0.1f, 0.1f, 0.1f),
+                       Vector3.UnitX,
+                       Vector3.UnitY);
 
-                    grid[x, y] = mazeObject = new ModelTileObject(
-                        "maze(" + x + "," + y + ")",
-                        ObjectType.CollidableGround,
-                        transform,
-                        effect,
-                        Color.White,
-                        1,
-                        texture,
-                        models[modelTypes[x, y]],
-                        modelTypes[x, y],
-                        x,
-                        y);
+                        grid[x, y] = mazeObject = new ModelTileObject(
+                            "maze(" + x + "," + y + ")",
+                            ObjectType.CollidableGround,
+                            transform,
+                            effect,
+                            Color.White,
+                            1,
+                            texture,
+                            models[modelTypes[x, y]],
+                            modelTypes[x, y],
+                            x,
+                            y);
+                    }
                 }
             }
         }

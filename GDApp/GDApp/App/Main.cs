@@ -622,7 +622,8 @@ namespace GDApp
             #region Collidable
             // GUIDANCE
             int size = 0;
-            InitializeMaze(size);
+            //InitializeMaze(size);
+            InitializeIntro();
 
             InitializeStaticCollidableGround(worldScale);
             InitializeStaticTriangleMeshObjects();
@@ -637,6 +638,7 @@ namespace GDApp
             InitializeUI();
         }
 
+        
         protected override void Initialize()
         {
 
@@ -666,6 +668,45 @@ namespace GDApp
 
             base.Initialize();
         }
+        
+        /*
+        protected override void Initialize()
+        {
+
+
+
+
+            InitializeEventDispatcher();
+            InitializeStatics();
+            IntializeGraphics(1024, 768);
+
+            // reordered for intro
+            InitializeDictionaries();
+            InitalizeModels();
+            InitalizeTextures();
+            InitializeManagers();
+            InitializeIntro();
+
+            
+            InitializeFonts();
+            InitializeVideos();
+            InitializeVertexData();
+            InitializeEffects();
+
+            //pulling out load game allows us to reload from the menu to restart, if we lose
+            LoadGame();
+
+            #region Event Handling
+            this.eventDispatcher.MainMenuChanged += new EventDispatcher.MainMenuEventHandler(eventDispatcher_MainMenuChanged);
+            #endregion
+
+            #region Demos
+            demoPathFinding();
+            #endregion
+
+            base.Initialize();
+        }
+        */
 
         private void InitializeEventDispatcher()
         {
@@ -780,6 +821,41 @@ namespace GDApp
 
             this.trackDictionary.Add("puke", cameraTrack);
             */
+        }
+
+        private void InitializeIntro()
+        {
+            Model[] mazeTiles = new Model[]{
+                this.modelDictionary["straight"],   //0
+                this.modelDictionary["corner"],     //1
+                this.modelDictionary["cross"],      //2
+            };
+
+            // 3 for null model
+            int[,] modelTypes = {
+            {1, 1, 3, 3},
+            {1, 1, 1, 3},
+            {3, 1, 2, 1},
+            {3, 1, 1, 3}};
+
+            int[,] modelRotations = {
+            {0, 3, 1, 1},
+            {1, 3, 0, 1},
+            {1, 1, 1, 3},
+            {1, 0, 2, 1}};
+
+            TileGrid tg = new TileGrid(4, 76.20f, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            tg.generateGridFromArrays(modelTypes, modelRotations);
+            for (int i = 0; i < tg.gridSize; i++)
+            {
+                for (int j = 0; j < tg.gridSize; j++)
+                {
+                    if (tg.grid[i, j] != null)
+                    {
+                        this.objectManager.Add(tg.grid[i, j]);
+                    }
+                }
+            }
         }
 
         private void InitializeDictionaries()
@@ -929,7 +1005,19 @@ namespace GDApp
             #endregion
 
             string cameraLayoutName = "FirstPersonMazeCamera";
-          
+
+            #region Intro Camera
+            clonePawnCamera = (PawnCamera3D)pawnCameraArchetype.Clone();
+            clonePawnCamera.ID = "Rail Camera";
+            clonePawnCamera.AddController(new RailController(
+                clonePawnCamera + " controller",
+                clonePawnCamera,
+                clonePawnCamera,
+                new RailParameters(clonePawnCamera.ID + " Parameters", new Vector3(2,2,2), new Vector3(5,5,5))));
+
+            this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
+            #endregion
+
             #region FPS Camera
             clonePawnCamera = (PawnCamera3D)pawnCameraArchetype.Clone();
             clonePawnCamera.ID = "Collidable Maze Cam";

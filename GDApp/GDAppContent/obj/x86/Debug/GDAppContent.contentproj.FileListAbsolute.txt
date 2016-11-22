@@ -53,3 +53,5 @@ E:\GDApp - 20\GDApp - 20\GDApp\GDAppContent\obj\x86\Debug\Assets\Audio\Demo2DSou
 F:\GDApp - 20\GDApp - 20\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 C:\Users\ciara_000\Desktop\GDApp - 20 -  Animation\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 I:\Projects\WIP\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+C:\Users\d00167238\Desktop\Guidance\GDApp\GDAppContent\obj\x86\Debug\Assets\Audio\Demo2DSound.xml

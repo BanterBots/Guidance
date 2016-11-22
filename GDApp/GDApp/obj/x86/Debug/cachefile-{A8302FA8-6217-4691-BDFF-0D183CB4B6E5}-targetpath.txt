@@ -70,6 +70,7 @@ Content\Assets\Models\Maze\Tile_Puzzle.xnb
 Content\Assets\Models\Maze\Tile_Room.xnb
 Content\Assets\Models\Maze\Tile_Straight.xnb
 Content\Assets\Audio\boing.xnb
+Content\Assets\Audio\bongbongoLoop.xnb
 Content\Assets\Video\sample.xnb
 Content\Assets\Video\sample.wmv
 Content\Assets\Effects\Billboard.xnb
@@ -81,7 +82,6 @@ Content\Assets\Models\old\Animated\pants_0.xnb
 Content\Assets\Models\old\Animated\upBodyC_0.xnb
 Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb
 Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb
-Content\Assets\Audio\bongbongoLoop.xnb
 Content\Assets\Audio\Demo2DSound.xgs
 Content\Assets\Audio\WaveBank1.xwb
 Content\Assets\Audio\SoundBank1.xsb
