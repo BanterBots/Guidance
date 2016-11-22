@@ -79,6 +79,8 @@ namespace GDLibrary
 
             //show the menu
             ShowMenu();
+
+
         }
         public override void Initialize()
         {
@@ -290,6 +292,8 @@ namespace GDLibrary
             else if (name.Equals(MenuData.StringMenuVolumeMute))
             {
                 //publish an event to be received by the sound manager
+
+                
             }
             else if (name.Equals(MenuData.StringMenuBack))
             {
@@ -325,9 +329,8 @@ namespace GDLibrary
             RemoveAll();
             //add the appropriate items
             Add(menuPlay);
-            Add(menuRestart);
             Add(menuAudio);
-            Add(menuControls);
+            //Add(menuControls);
             Add(menuExit);
             //set the background texture
             currentMenuTextureIndex = MenuData.TextureIndexMainMenu;

@@ -42,20 +42,6 @@ namespace GDApp._3DTileEngine
         #endregion
 
         #region Constructors
-        // Hardcoded maze
-        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, int[,] modelTypes, int[,] modelRotations, Texture2D potionTexture)
-        {
-            this.gridSize = gridSize;
-            this.tileSize = tileSize;
-            this.models = models;
-            this.texture = texture;
-            this.effect = effect;
-            this.grid = new ModelTileObject[gridSize, gridSize];
-
-            initializeInfo();
-            generateGridFromArrays(modelTypes, modelRotations);
-        }
-
         // Random maze
         public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
         {
@@ -66,7 +52,6 @@ namespace GDApp._3DTileEngine
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
             initializeInfo();
-            generateRandomGrid();
         }
         #endregion
 

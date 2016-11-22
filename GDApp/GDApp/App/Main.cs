@@ -829,7 +829,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = true;
+            bool bDebugMode = false;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);

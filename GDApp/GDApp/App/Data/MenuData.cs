@@ -8,21 +8,21 @@ namespace GDLibrary
     {
         #region Main Menu Strings
         //all the strings shown to the user through the menu
-        public static String Game_Title = "Space Invaders";
-        public static String Menu_Play = "Play";
-        public static string StringMenuRestart = "Restart";
-        public static String StringMenuSave = "Save";
-        public static String StringMenuAudio = "Audio";
-        public static String StringMenuControls = "Controls";
-        public static String StringMenuExit = "Exit";
+        public static String Game_Title = "Guidance";
+        public static String Menu_Play = "Play"; //"Play"
+        public static string StringMenuRestart = "Restart"; //"Restart"
+        public static String StringMenuSave = "Save";   //"Save"
+        public static String StringMenuAudio = "Options";   //"Options"
+        public static String StringMenuControls = "Controls";   //"Controls"
+        public static String StringMenuExit = "Exit";   //"Exit"
 
-        public static String StringMenuVolumeUp = "Volume Up";
-        public static String StringMenuVolumeDown = "Volume Down";
-        public static string StringMenuVolumeMute = "Mute On/Off";
-        public static String StringMenuBack = "Back";
+        public static String StringMenuVolumeUp = "+";  //"+"
+        public static String StringMenuVolumeDown = "-";    //"-"
+        public static string StringMenuVolumeMute = "Mute On/Off";  //"Mute On/Off"
+        public static String StringMenuBack = "Back";   //"Back"
 
-        public static string StringMenuExitYes = "Yes";
-        public static string StringMenuExitNo = "No";
+        public static string StringMenuExitYes = "Yes"; //"Yes"
+        public static string StringMenuExitNo = "No";   //"No"
         #endregion
 
         #region Colours, Padding, Texture transparency , Array Indices and Bounds
@@ -40,19 +40,19 @@ namespace GDLibrary
         public static int TextureIndexExitMenu = 3;
 
         //bounding rectangles used to detect mouse over
-        public static Rectangle BoundsMenuPlay = new Rectangle(50, 50, 70, 40); //x, y, width, height
-        public static Rectangle BoundsMenuRestart = new Rectangle(50, 100, 120, 40);
-        public static Rectangle BoundsMenuAudio = new Rectangle(50, 150, 90, 40);
-        public static Rectangle BoundsMenuControls = new Rectangle(50, 200, 140, 40);
-        public static Rectangle BoundsMenuExit = new Rectangle(50, 250, 70, 40);
+        public static Rectangle BoundsMenuPlay = new Rectangle(370, 250, 290, 110); //x, y, width, height
+        public static Rectangle BoundsMenuRestart = new Rectangle(50, 100, 290, 110);
+        public static Rectangle BoundsMenuAudio = new Rectangle(370, 410, 290, 110);
+        public static Rectangle BoundsMenuControls = new Rectangle(50, 200, 290, 110);
+        public static Rectangle BoundsMenuExit = new Rectangle(370, 575, 290, 110);
 
-        public static Rectangle BoundsMenuBack = new Rectangle(50, 50, 70, 40);
-        public static Rectangle BoundsMenuVolumeUp = new Rectangle(50, 100, 150, 40);
-        public static Rectangle BoundsMenuVolumeDown = new Rectangle(50, 150, 190, 40);
-        public static Rectangle BoundsMenuVolumeMute = new Rectangle(50, 200, 190, 40);
+        public static Rectangle BoundsMenuBack = new Rectangle(370, 575, 290, 110);
+        public static Rectangle BoundsMenuVolumeUp = new Rectangle(690, 250, 140, 100);
+        public static Rectangle BoundsMenuVolumeDown = new Rectangle(220, 250, 140, 100);
+        public static Rectangle BoundsMenuVolumeMute = new Rectangle(370, 410, 290, 110);
 
-        public static Rectangle BoundsMenuExitYes = new Rectangle(400, 500, 50, 40);
-        public static Rectangle BoundsMenuExitNo = new Rectangle(600, 500, 35, 40);
+        public static Rectangle BoundsMenuExitYes = new Rectangle(157, 250, 220, 100);
+        public static Rectangle BoundsMenuExitNo = new Rectangle(650, 250, 220, 100);
         #endregion
 
         #region UI Menu
