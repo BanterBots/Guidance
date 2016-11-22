@@ -1,5 +1,6 @@
 using GDApp._3DTileEngine;
 using GDApp.GDLibrary;
+using GDApp.Sockets;
 using GDLibrary;
 using JigLibX.Collision;
 using JigLibX.Geometry;
@@ -363,6 +364,9 @@ namespace GDApp
     public class Main : Microsoft.Xna.Framework.Game
     {
         #region Fields
+        /**
+        *   GRAPHICS
+        **/
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private BasicEffect primitiveEffect;
@@ -375,6 +379,9 @@ namespace GDApp
         private Vector2 screenCentre;
         private Microsoft.Xna.Framework.Rectangle screenRectangle;
 
+        /**
+        *   MANAGERS
+        **/
         private CameraManager cameraManager;
         private KeyboardManager keyboardManager;
         private MouseManager mouseManager;
@@ -384,6 +391,9 @@ namespace GDApp
         private UIManager uiManager;
         private MenuManager menuManager;
 
+        /**
+        *   DICTIONARIES
+        **/
         private GenericDictionary<string, Video> videoDictionary;
         private GenericDictionary<string, IVertexData> vertexDictionary;
         private GenericDictionary<string, Texture2D> textureDictionary;
@@ -396,7 +406,9 @@ namespace GDApp
         //temp demo vars
         private MoveableModelObject playerActor;
 
-        //Sound
+        /**
+        *   SOUND
+        **/
         SoundEffect _bongoBongoLoop;
         SoundEffectInstance _bongoBongoInstance;
 
@@ -639,6 +651,7 @@ namespace GDApp
 
         protected override void Initialize()
         {
+            startServer();
 
             InitializeEventDispatcher();
             InitializeStatics();
@@ -1563,6 +1576,20 @@ namespace GDApp
         }
 
         #endregion
+
+        #region Networking
+        private void startClient()
+        {
+            AsynchronousClient guider = new AsynchronousClient();
+            AsynchronousClient.start();
+        }
+
+        private void startServer()
+        {
+            AsynchronousSocketListener runner = new AsynchronousSocketListener();
+            AsynchronousSocketListener.start();
+        }
+        #endregion  
 
         #region Update & Draw
         protected override void Update(GameTime gameTime)
