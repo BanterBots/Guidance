@@ -396,12 +396,12 @@ namespace GDApp
         //temp demo vars
         private MoveableModelObject playerActor;
 
-        //Sound
-        SoundEffect _bongoBongoLoop;
-        SoundEffectInstance _bongoBongoInstance;
+        ////Sound
+        //SoundEffect _bongoBongoLoop;
+        //SoundEffectInstance _bongoBongoInstance;
 
-        AudioEmitter _emitter;
-        AudioListener _listener;
+        //AudioEmitter _emitter;
+        //AudioListener _listener;
         #endregion
 
         #region Properties
@@ -494,6 +494,25 @@ namespace GDApp
                 Exit();
             else if (eventData.EventType == EventType.OnRestart)
                 this.LoadGame();
+            else if (eventData.EventType == EventType.OnVolumeUp)
+            {
+                if (this.soundManager.Volume < 1f)
+                    this.soundManager.ChangeVolume(0.05f, "Music");
+            }
+            else if (eventData.EventType == EventType.OnVolumeDown)
+            {
+                if (this.soundManager.Volume > 0f)
+                    this.soundManager.ChangeVolume(-0.05f, "Music");
+            }
+                
+            //else if (eventData.EventType == EventType.OnMute)
+            //    this.soundManager.StopCue("bongobongoLoop", AudioStopOptions.Immediate);
+        }
+
+        private void eventDispatcher_PickupChanged(EventData eventData)
+        {
+            if (eventData.EventType == EventType.OnPickup)
+                this.soundManager.Play3DCue("boing", new AudioEmitter());
         }
         #endregion
 
@@ -579,12 +598,12 @@ namespace GDApp
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //Sound
-            _bongoBongoLoop = Content.Load<SoundEffect>("Assets/Audio/bongbongoLoop");
-            _bongoBongoInstance = _bongoBongoLoop.CreateInstance();
-            _bongoBongoInstance.IsLooped = true;
-            _bongoBongoInstance.Volume = 0.4f;
-            _bongoBongoInstance.Play();
+            ////Sound
+            //_bongoBongoLoop = Content.Load<SoundEffect>("Assets/Audio/bongbongoLoop");
+            //_bongoBongoInstance = _bongoBongoLoop.CreateInstance();
+            //_bongoBongoInstance.IsLooped = true;
+            //_bongoBongoInstance.Volume = 0.4f;
+            //_bongoBongoInstance.Play();
         }
         protected override void UnloadContent()
         {
@@ -635,6 +654,7 @@ namespace GDApp
             InitializeCameraTracks();
             InitializeCameras();
             InitializeUI();
+            this.soundManager.PlayCue("bongobongoLoop");
         }
 
         protected override void Initialize()
@@ -658,6 +678,7 @@ namespace GDApp
 
             #region Event Handling
             this.eventDispatcher.MainMenuChanged += new EventDispatcher.MainMenuEventHandler(eventDispatcher_MainMenuChanged);
+            this.eventDispatcher.PickupChanged += new EventDispatcher.PickupEventHandler(eventDispatcher_PickupChanged);
             #endregion
 
             #region Demos
@@ -666,6 +687,8 @@ namespace GDApp
 
             base.Initialize();
         }
+
+        
 
         private void InitializeEventDispatcher()
         {
@@ -1452,32 +1475,36 @@ namespace GDApp
                 Vector3 pos, normal;
 
                 Actor pickedActor = this.mouseManager.GetPickedObject(
-                   this.cameraManager.ActiveCamera, 5 /*5 == how far from 1st Person collidable to start testing for collisions - should always exceed capsule collision skin radius*/,
+                   this.cameraManager.ActiveCamera, 3 /*5 == how far from 1st Person collidable to start testing for collisions - should always exceed capsule collision skin radius*/,
                    1000, out pos, out normal);
 
                 if (pickedActor != null)
                 {
-                    ModelObject nextPickedModelObject = pickedActor as ModelObject;
-                    nextPickedModelObject.OriginalAlpha = 1;
-                    nextPickedModelObject.OriginalColor = Color.White;
-
-                    if (nextPickedModelObject != lastPickedModelObject)
+                    if (pickedActor.ObjectType == ObjectType.Pickup)
                     {
-                        //set the last back to original color
-                        if (this.lastPickedModelObject != null)
+                        ModelObject nextPickedModelObject = pickedActor as ModelObject;
+                        nextPickedModelObject.OriginalAlpha = 1;
+                        nextPickedModelObject.OriginalColor = Color.White;
+                        
+                        if (nextPickedModelObject != lastPickedModelObject)
                         {
-                            this.lastPickedModelObject.Color =
-                                this.lastPickedModelObject.OriginalColor;
-                            this.lastPickedModelObject.Alpha =
-                                this.lastPickedModelObject.OriginalAlpha;
+                            //set the last back to original color
+                            if (this.lastPickedModelObject != null)
+                            {
+                                this.lastPickedModelObject.Color =
+                                    this.lastPickedModelObject.OriginalColor;
+                                this.lastPickedModelObject.Alpha =
+                                    this.lastPickedModelObject.OriginalAlpha;
+                            }
+
+                            //set next to picked color
+                            nextPickedModelObject.Color = Color.Red;
+                            nextPickedModelObject.Alpha = 0.5f;
+                            EventDispatcher.Publish(new EventData("pickup event", this, EventType.OnPickup, EventCategoryType.Pickup));
                         }
 
-                        //set next to picked color
-                        nextPickedModelObject.Color = Color.Red;
-                        nextPickedModelObject.Alpha = 0.5f;
+                        this.lastPickedModelObject = nextPickedModelObject;
                     }
-
-                    this.lastPickedModelObject = nextPickedModelObject;
                 }
             }
         }
@@ -1487,6 +1514,7 @@ namespace GDApp
 
         private void demoSoundManager()
         {
+            
             if (this.keyboardManager.IsFirstKeyPress(Keys.B))
             {
                 //Notice that the cue name is taken from inside SoundBank1
