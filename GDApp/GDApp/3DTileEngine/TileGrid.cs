@@ -630,19 +630,24 @@ namespace GDApp._3DTileEngine
             tiles++;
             grid[x, y] = mazeObject;
 
-            transform.Translation = new Vector3(transform.Translation.X, transform.Translation.Y+200, transform.Translation.Z);
-            transform.Scale *= this.tileSize;
+            //transform.Translation = new Vector3(transform.Translation.X, transform.Translation.Y+200, transform.Translation.Z);
+            //transform.Scale *= this.tileSize;
+
+            Transform3D mapTransform = new Transform3D(transform.Translation, transform.Rotation, transform.Scale, transform.Look, transform.Up);
+            mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + 80, mapTransform.Translation.Z);
+            mapTransform.Scale = new Vector3(mapTransform.Scale.X*100, mapTransform.Scale.Y, mapTransform.Scale.Z*100);
+
             //2D Map
             ModelObject mapPiece = new ModelObject(
                "mazeMap(" + x + "," + y + ")",
                ObjectType.Prop,
-               transform,
+               mapTransform,
                effect,
                UITiles[model],
-               models[7],
+               models[8],
                Color.White,
                1);
-
+            itemList.Add(mapPiece);
             //random items
             int randPotion = random.Next(1, 40);
             if(randPotion == 1)

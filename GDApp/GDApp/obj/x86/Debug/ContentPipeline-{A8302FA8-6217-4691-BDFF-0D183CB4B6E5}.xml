@@ -1065,7 +1065,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\corner2D.xnb</Output>
-      <Time>2016-11-24T21:15:39.7560527+00:00</Time>
+      <Time>2016-11-24T21:59:04.6868173+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\cross2D.png</Source>
@@ -1074,7 +1074,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\cross2D.xnb</Output>
-      <Time>2016-11-24T21:14:41.4234916+00:00</Time>
+      <Time>2016-11-24T21:59:26.4450773+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\deadEnd2D.png</Source>
@@ -1083,7 +1083,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\deadEnd2D.xnb</Output>
-      <Time>2016-11-24T21:16:06.3015449+00:00</Time>
+      <Time>2016-11-24T21:58:32.1189692+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\straight2D.png</Source>
@@ -1092,7 +1092,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\straight2D.xnb</Output>
-      <Time>2016-11-24T21:15:54.3073826+00:00</Time>
+      <Time>2016-11-24T21:58:45.7612914+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\temp.png</Source>
@@ -1101,7 +1101,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\temp.xnb</Output>
-      <Time>2016-11-24T21:14:10.4584722+00:00</Time>
+      <Time>2016-11-24T21:59:34.3857118+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\tJunc2D.png</Source>
@@ -1110,7 +1110,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\tJunc2D.xnb</Output>
-      <Time>2016-11-24T21:14:59.9441881+00:00</Time>
+      <Time>2016-11-24T21:59:16.5795396+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
