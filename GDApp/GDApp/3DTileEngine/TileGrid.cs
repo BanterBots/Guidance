@@ -640,7 +640,7 @@ namespace GDApp._3DTileEngine
             Transform3D transform = new Transform3D(
                 new Vector3(x * tileSize, 4, y * (-1) * tileSize),
                 new Vector3(0, 0 * -90, 0),
-                new Vector3(0.1f, 0.1f, 0.1f),
+                new Vector3(0.08f, 0.08f, 0.08f),
                 Vector3.UnitX,
                 Vector3.UnitY);
 
@@ -672,9 +672,9 @@ namespace GDApp._3DTileEngine
             //no mass so we disable material properties
             potionZone.AddPrimitive(
                 new Box(
-                    new Vector3(transform.Translation.X, transform.Translation.Y+40, transform.Translation.Z), 
+                    new Vector3(transform.Translation.X, transform.Translation.Y +300, transform.Translation.Z), 
                     Matrix.Identity, 
-                    new Vector3(transform.Scale.X*150, transform.Scale.Y*200, transform.Scale.Z*150)));
+                    new Vector3(transform.Scale.X*300, transform.Scale.Y*150, transform.Scale.Z*300)));
             //enabled by default
             potionZone.Enable(true);
             itemList.Add(potionZone);

@@ -1049,6 +1049,15 @@
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\Tile_Straight_0.xml</Output>
       <Time>2016-11-24T17:24:45.9013988+00:00</Time>
     </Item>
+    <Item>
+      <Source>Assets\Textures\Game\Maze\ground.png</Source>
+      <Name>Assets\Textures\Game\Maze\ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\ground.xnb</Output>
+      <Time>2016-11-24T20:01:41.6502834+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{A8302FA8-6217-4691-BDFF-0D183CB4B6E5}</ContentProjectGUID>

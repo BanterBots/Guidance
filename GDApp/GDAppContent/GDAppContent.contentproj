@@ -240,7 +240,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Textures\Game\Items\" />
-    <Folder Include="Assets\Textures\Game\Maze\" />
     <Folder Include="Assets\Textures\Game\old\Debug\" />
   </ItemGroup>
   <ItemGroup>
@@ -481,6 +480,13 @@
       <Name>bongbongoLoop</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Textures\Game\Maze\ground.png">
+      <Name>ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

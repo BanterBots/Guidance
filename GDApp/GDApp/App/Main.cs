@@ -402,6 +402,17 @@ namespace GDApp
 
         //AudioEmitter _emitter;
         //AudioListener _listener;
+
+        Vector2 positionOffset = new Vector2(0, 25);
+        Color debugColor = Color.Red;
+        SpriteFont debugFont = null;
+        private Effect animatedModelEffect;
+        private float mazeWidth = 0;
+        private float mazeHeight = 0;
+        private float tileGridSize = 76.20f;
+        private int width = 1024;
+        private int height = 768;
+
         #endregion
 
         #region Properties
@@ -523,12 +534,14 @@ namespace GDApp
         {
             if (eventData.EventType == EventType.OnZoneEnter)
             {
+                eventData.Reference.Alpha = 0.8f;
                 if (keyboardManager.IsKeyDown(Keys.E))
                     pickUpPotion(eventData.Reference);
             }
             else if (eventData.EventType == EventType.OnZoneExit)
             {
-                //do something
+                if(eventData.Reference!=null)
+                    eventData.Reference.Alpha = 1f;
             }
 
         }
@@ -680,7 +693,7 @@ namespace GDApp
 
             InitializeEventDispatcher();
             InitializeStatics();
-            IntializeGraphics(1024, 768);
+            IntializeGraphics(this.width, this.height);   //IntializeGraphics(1024, 768);
 
             InitializeDictionaries();
             InitializeFonts();
@@ -1058,7 +1071,9 @@ namespace GDApp
 
             this.mazeHeight /= 2;
             this.mazeHeight *= this.tileGridSize; //halfway point down the maze
-            return new Vector3(this.mazeWidth, 1000, -this.mazeHeight);
+
+
+            return new Vector3(this.mazeWidth, 600, -this.mazeHeight);
         }
         #endregion
 
@@ -1205,14 +1220,18 @@ namespace GDApp
             Texture2D texture = null;
 
             Model model = this.modelDictionary["cube"];
-            texture = this.textureDictionary["grass1"];
-            transform3D = new Transform3D(new Vector3(0, -5, 0), new Vector3(0, 0, 0),
-                new Vector3(scale, 1, scale), Vector3.UnitX, Vector3.UnitY);
+            texture = this.textureDictionary["ml"];
+            Vector3 location = new Vector3(304.8f, -5, -304.8f);
+            //location = positionMapCamera();
+            //float locX = location.X, locZ = location.Z;
+
+            transform3D = new Transform3D(location, new Vector3(0, 0, 0),
+                new Vector3(this.mazeWidth*this.tileGridSize, 1, this.mazeHeight * this.tileGridSize), Vector3.UnitX, Vector3.UnitY);
 
             collidableObject = new CollidableObject("ground", ObjectType.CollidableGround, transform3D, this.texturedModelEffect, texture, model, Color.White, 1);
             collidableObject.AddPrimitive(new Box(transform3D.Translation, Matrix.Identity, transform3D.Scale), new MaterialProperties(0.8f, 0.8f, 0.7f));
             collidableObject.Enable(true, 1); //change to false, see what happens.
-            this.objectManager.Add(collidableObject);
+            //this.objectManager.Add(collidableObject);
             
         }
 
@@ -1577,14 +1596,7 @@ namespace GDApp
         }
 
 
-        Vector2 positionOffset = new Vector2(0, 25);
-        Color debugColor = Color.Red;
-        SpriteFont debugFont = null;
-        private Effect animatedModelEffect;
-        private float mazeWidth = 0;
-        private float mazeHeight = 0;
-        private float tileGridSize = 76.20f;
-
+        
         private void drawDebugInfo()
         {
             //draw debug text after base.Draw() otherwise it will be behind the scene!

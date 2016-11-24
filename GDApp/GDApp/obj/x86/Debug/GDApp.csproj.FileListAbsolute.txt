@@ -2804,3 +2804,4 @@ D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyRefere
 D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
 D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
+D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\ground.xnb
