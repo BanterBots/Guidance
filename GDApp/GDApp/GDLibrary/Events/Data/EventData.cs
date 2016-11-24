@@ -1,4 +1,6 @@
-﻿namespace GDLibrary
+﻿using System;
+
+namespace GDLibrary
 {
     public class EventData
     {
@@ -7,6 +9,7 @@
         private EventCategoryType eventCategoryType;
         private object sender;
         private string id;
+        private DrawnActor reference = null;
         #endregion
 
         #region Properties
@@ -54,6 +57,17 @@
                 this.eventCategoryType = value;
             }
         }
+        public DrawnActor Reference
+        {
+            get
+            {
+                return this.reference;
+            }
+            set
+            {
+                this.reference = value;
+            }
+        }
         #endregion
 
         public EventData(string id, object sender, EventType eventType, EventCategoryType eventCategoryType)
@@ -62,6 +76,15 @@
             this.sender = sender;                   //object reference of sender
             this.eventType = eventType;             //is it play, mute, volume, zone?   
             this.eventCategoryType = eventCategoryType; //where did it originate? ui, menu, video
+        }
+
+        public EventData(string id, object sender, EventType eventType, EventCategoryType eventCategoryType, DrawnActor reference)
+        {
+            this.id = id;                           //id of sender
+            this.sender = sender;                   //object reference of sender
+            this.eventType = eventType;             //is it play, mute, volume, zone?   
+            this.eventCategoryType = eventCategoryType; //where did it originate? ui, menu, video
+            this.reference = reference;
         }
 
         public override bool Equals(object obj)

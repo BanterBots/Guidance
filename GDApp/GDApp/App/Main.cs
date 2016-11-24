@@ -512,7 +512,25 @@ namespace GDApp
         private void eventDispatcher_PickupChanged(EventData eventData)
         {
             if (eventData.EventType == EventType.OnPickup)
-                this.soundManager.Play3DCue("boing", new AudioEmitter());
+            {
+                //this.soundManager.Play3DCue("boing", new AudioEmitter());
+                //eventData.Reference.Remove();
+            }
+                
+        }
+
+        private void eventDispatcher_ZoneChanged(EventData eventData)
+        {
+            if (eventData.EventType == EventType.OnZoneEnter)
+            {
+                if (keyboardManager.IsKeyDown(Keys.E))
+                    pickUpPotion(eventData.Reference);
+            }
+            else if (eventData.EventType == EventType.OnZoneExit)
+            {
+
+            }
+
         }
         #endregion
 
@@ -679,6 +697,7 @@ namespace GDApp
             #region Event Handling
             this.eventDispatcher.MainMenuChanged += new EventDispatcher.MainMenuEventHandler(eventDispatcher_MainMenuChanged);
             this.eventDispatcher.PickupChanged += new EventDispatcher.PickupEventHandler(eventDispatcher_PickupChanged);
+            this.eventDispatcher.ZoneChanged += new EventDispatcher.ZoneEventHandler(eventDispatcher_ZoneChanged);
             #endregion
 
             #region Demos
@@ -852,7 +871,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = false;
+            bool bDebugMode = true;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);
@@ -1156,7 +1175,7 @@ namespace GDApp
             }
             tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
 
-            foreach (ModelObject model in tg.itemList)
+            foreach (DrawnActor model in tg.itemList)
             {
                 this.objectManager.Add(model);
             }
@@ -1465,48 +1484,50 @@ namespace GDApp
             */
         }
 
-        ModelObject lastPickedModelObject;
+        
+
+        //ModelObject lastPickedModelObject;
         private void demoMousePicking()
         {
-            mouseManager.IsVisible = true;
-            if ((this.cameraManager.ActiveCamera != null)
-                && (this.mouseManager.IsLeftButtonClicked()))
-            {
-                Vector3 pos, normal;
+            //mouseManager.IsVisible = true;
+            //if ((this.cameraManager.ActiveCamera != null)
+            //    && (this.mouseManager.IsLeftButtonClicked()))
+            //{
+            //    Vector3 pos, normal;
 
-                Actor pickedActor = this.mouseManager.GetPickedObject(
-                   this.cameraManager.ActiveCamera, 3 /*5 == how far from 1st Person collidable to start testing for collisions - should always exceed capsule collision skin radius*/,
-                   1000, out pos, out normal);
+            //    Actor pickedActor = this.mouseManager.GetPickedObject(
+            //       this.cameraManager.ActiveCamera, 3 /*5 == how far from 1st Person collidable to start testing for collisions - should always exceed capsule collision skin radius*/,
+            //       1000, out pos, out normal);
 
-                if (pickedActor != null)
-                {
-                    if (pickedActor.ObjectType == ObjectType.Pickup)
-                    {
-                        ModelObject nextPickedModelObject = pickedActor as ModelObject;
-                        nextPickedModelObject.OriginalAlpha = 1;
-                        nextPickedModelObject.OriginalColor = Color.White;
+            //    if (pickedActor != null)
+            //    {
+            //        if (pickedActor.ObjectType == ObjectType.Pickup)
+            //        {
+            //            ModelObject nextPickedModelObject = pickedActor as ModelObject;
+            //            nextPickedModelObject.OriginalAlpha = 1;
+            //            nextPickedModelObject.OriginalColor = Color.White;
                         
-                        if (nextPickedModelObject != lastPickedModelObject)
-                        {
-                            //set the last back to original color
-                            if (this.lastPickedModelObject != null)
-                            {
-                                this.lastPickedModelObject.Color =
-                                    this.lastPickedModelObject.OriginalColor;
-                                this.lastPickedModelObject.Alpha =
-                                    this.lastPickedModelObject.OriginalAlpha;
-                            }
+            //            if (nextPickedModelObject != lastPickedModelObject)
+            //            {
+            //                //set the last back to original color
+            //                if (this.lastPickedModelObject != null)
+            //                {
+            //                    this.lastPickedModelObject.Color =
+            //                        this.lastPickedModelObject.OriginalColor;
+            //                    this.lastPickedModelObject.Alpha =
+            //                        this.lastPickedModelObject.OriginalAlpha;
+            //                }
 
-                            //set next to picked color
-                            nextPickedModelObject.Color = Color.Red;
-                            nextPickedModelObject.Alpha = 0.5f;
-                            EventDispatcher.Publish(new EventData("pickup event", this, EventType.OnPickup, EventCategoryType.Pickup));
-                        }
+            //                //set next to picked color
+            //                nextPickedModelObject.Color = Color.Red;
+            //                nextPickedModelObject.Alpha = 0.5f;
+            //                EventDispatcher.Publish(new EventData("pickup event", this, EventType.OnPickup, EventCategoryType.Pickup));
+            //            }
 
-                        this.lastPickedModelObject = nextPickedModelObject;
-                    }
-                }
-            }
+            //            this.lastPickedModelObject = nextPickedModelObject;
+            //        }
+            //    }
+            //}
         }
 
 
@@ -1591,6 +1612,15 @@ namespace GDApp
         }
 
         #endregion
+
+
+        private void pickUpPotion(DrawnActor potion)
+        {
+            this.soundManager.Play3DCue("boing", new AudioEmitter());
+            potion.Remove();
+            //start effect
+        }
+
 
         #region Update & Draw
         protected override void Update(GameTime gameTime)

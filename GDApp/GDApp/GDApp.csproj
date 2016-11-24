@@ -171,6 +171,7 @@
     <Compile Include="GDLibrary\Objects\Collidable\Static\TriangleMeshObject.cs" />
     <Compile Include="GDLibrary\Objects\Collidable\Zones\AlarmZoneObject.cs" />
     <Compile Include="GDLibrary\Objects\Collidable\Zones\CameraZoneObject.cs" />
+    <Compile Include="GDLibrary\Objects\Collidable\Zones\PotionZoneObject.cs" />
     <Compile Include="GDLibrary\Objects\Collidable\Zones\ZoneObject.cs" />
     <Compile Include="GDLibrary\Objects\Collidable\Player\CharacterObject.cs" />
     <Compile Include="GDLibrary\Objects\Collidable\Player\PlayerObject.cs" />
