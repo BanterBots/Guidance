@@ -1058,6 +1058,60 @@
       <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\ground.xnb</Output>
       <Time>2016-11-24T20:01:41.6502834+00:00</Time>
     </Item>
+    <Item>
+      <Source>Assets\Textures\Game\Maze\corner2D.png</Source>
+      <Name>Assets\Textures\Game\Maze\corner2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\corner2D.xnb</Output>
+      <Time>2016-11-24T21:15:39.7560527+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\Game\Maze\cross2D.png</Source>
+      <Name>Assets\Textures\Game\Maze\cross2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\cross2D.xnb</Output>
+      <Time>2016-11-24T21:14:41.4234916+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\Game\Maze\deadEnd2D.png</Source>
+      <Name>Assets\Textures\Game\Maze\deadEnd2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\deadEnd2D.xnb</Output>
+      <Time>2016-11-24T21:16:06.3015449+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\Game\Maze\straight2D.png</Source>
+      <Name>Assets\Textures\Game\Maze\straight2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\straight2D.xnb</Output>
+      <Time>2016-11-24T21:15:54.3073826+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\Game\Maze\temp.png</Source>
+      <Name>Assets\Textures\Game\Maze\temp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\temp.xnb</Output>
+      <Time>2016-11-24T21:14:10.4584722+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\Game\Maze\tJunc2D.png</Source>
+      <Name>Assets\Textures\Game\Maze\tJunc2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\tJunc2D.xnb</Output>
+      <Time>2016-11-24T21:14:59.9441881+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{A8302FA8-6217-4691-BDFF-0D183CB4B6E5}</ContentProjectGUID>

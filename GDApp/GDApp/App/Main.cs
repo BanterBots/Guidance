@@ -574,6 +574,12 @@ namespace GDApp
             //UI
             this.textureDictionary.Add("white", Content.Load<Texture2D>("Assets\\Textures\\UI\\white"));
             this.textureDictionary.Add("mouseicons", Content.Load<Texture2D>("Assets/Textures/UI/mouseicons"));
+            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/Maze/corner2D"));
+            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/Maze/straight2D"));
+            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/Maze/cross2D"));
+            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/Maze/tJunc2D"));
+            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/Maze/deadEnd2D"));
+            this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/Maze/temp"));
 
             //billboards
             //this.textureDictionary.Add("billboardtexture", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/billboardtexture"));
@@ -884,7 +890,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = true;
+            bool bDebugMode = false;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);
@@ -1183,13 +1189,24 @@ namespace GDApp
                 this.modelDictionary["cross"],      //4
                 this.modelDictionary["room"],      //5
                 this.modelDictionary["puzzle"],    //6
-                this.modelDictionary["potion"]
+                this.modelDictionary["potion"],
+                this.modelDictionary["cube"]
             };
 
-
+            Texture2D[] UITiles = new Texture2D[]
+            {
+                this.textureDictionary["deadEnd2D"],
+                this.textureDictionary["straight2D"],
+                this.textureDictionary["corner2D"],
+                this.textureDictionary["tJunc2D"],
+                this.textureDictionary["cross2D"],
+                this.textureDictionary["room2D"],
+                this.textureDictionary["room2D"],
+            };
+            
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            TileGrid tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"], UITiles);
             tg.generateRandomGrid();
             for (int i = 0; i < tg.gridSize; i++)
             {

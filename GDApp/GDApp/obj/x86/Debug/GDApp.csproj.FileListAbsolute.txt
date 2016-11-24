@@ -2805,3 +2805,9 @@ D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimePr
 D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
 D:\PROJECTS\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
 D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\ground.xnb
+D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\corner2D.xnb
+D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\cross2D.xnb
+D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\deadEnd2D.xnb
+D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\straight2D.xnb
+D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\temp.xnb
+D:\PROJECTS\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\tJunc2D.xnb

@@ -39,13 +39,15 @@ namespace GDApp._3DTileEngine
         Random random = new Random();
         private Texture2D potionTexture;
 
+        public Texture2D[] UITiles;
+
         //Potions
 
         #endregion
 
         #region Constructors
         // Random maze
-        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
+        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture, Texture2D[] UITiles)
         {
             this.gridSize = gridSize;
             this.tileSize = tileSize;
@@ -54,6 +56,7 @@ namespace GDApp._3DTileEngine
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
             this.potionTexture = potionTexture;
+            this.UITiles = UITiles;
             initializeInfo();
         }
         #endregion
@@ -626,6 +629,19 @@ namespace GDApp._3DTileEngine
             mazeObject.rotation = rotation;
             tiles++;
             grid[x, y] = mazeObject;
+
+            transform.Translation = new Vector3(transform.Translation.X, transform.Translation.Y+200, transform.Translation.Z);
+            transform.Scale *= this.tileSize;
+            //2D Map
+            ModelObject mapPiece = new ModelObject(
+               "mazeMap(" + x + "," + y + ")",
+               ObjectType.Prop,
+               transform,
+               effect,
+               UITiles[model],
+               models[7],
+               Color.White,
+               1);
 
             //random items
             int randPotion = random.Next(1, 40);
