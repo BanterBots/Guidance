@@ -412,6 +412,7 @@ namespace GDApp
         private float tileGridSize = 76.20f;
         private int width = 1024;
         private int height = 768;
+        private TileGrid tg;
 
         #endregion
 
@@ -1079,7 +1080,7 @@ namespace GDApp
             this.mazeHeight *= this.tileGridSize; //halfway point down the maze
 
 
-            return new Vector3(this.mazeWidth, 600, -this.mazeHeight);
+            return new Vector3(this.mazeWidth, 1000, -this.mazeHeight);
         }
         #endregion
 
@@ -1193,21 +1194,13 @@ namespace GDApp
                 this.modelDictionary["cube"]
             };
 
-            Texture2D[] UITiles = new Texture2D[]
-            {
-                this.textureDictionary["deadEnd2D"],
-                this.textureDictionary["straight2D"],
-                this.textureDictionary["corner2D"],
-                this.textureDictionary["tJunc2D"],
-                this.textureDictionary["cross2D"],
-                this.textureDictionary["room2D"],
-                this.textureDictionary["room2D"],
-            };
+            
             
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"], UITiles);
-            tg.generateRandomGrid();
+            this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            this.tg.generateRandomGrid();
+            
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -1663,32 +1656,82 @@ namespace GDApp
         #endregion
 
 
-        private void pickUpPotion(DrawnActor potion)
+        private void make2DMazeMap(TileGrid tg)
         {
-            this.soundManager.Play3DCue("boing", new AudioEmitter());
-            potion.Remove();
-            //start effect
-        }
+            BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
+
+            //archetype - clone from this
+            billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+                Transform3D.Zero, //transform reset in clones
+                this.vertexDictionary["texturedquad"],
+                this.billboardEffect, Color.White, 1,
+                this.textureDictionary["white"],
+                BillboardType.Normal); //texture reset in clones
 
 
-        #region Update & Draw
-        protected override void Update(GameTime gameTime)
-        {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
+            Texture2D[] UITiles = new Texture2D[]
+            {
+                this.textureDictionary["deadEnd2D"],
+                this.textureDictionary["straight2D"],
+                this.textureDictionary["corner2D"],
+                this.textureDictionary["tJunc2D"],
+                this.textureDictionary["cross2D"],
+                this.textureDictionary["room2D"],
+                this.textureDictionary["room2D"],
+            };
 
-            #region Demos
-            /*
-            demoTextToTextureAndVideo();
-            demoCameraTrack(gameTime);
-            */
-            demoCameraLayout();
+            for (int i = 0; i < tg.gridSize; i++)
+            {
+                for (int j = 0; j < tg.gridSize; j++)
+                {
+                    if (tg.grid[i, j] != null)
+                    {
+                        ModelTileObject mto = tg.grid[i,j];
+                        
+                        Transform3D mapTransform = new Transform3D(mto.Transform3D.Translation, mto.Transform3D.Rotation, mto.Transform3D.Scale, mto.Transform3D.Look, mto.Transform3D.Up);
+                        mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + this.tileGridSize, mapTransform.Translation.Z);
+                        mapTransform.Scale = new Vector3(mapTransform.Scale.X * 500 , mapTransform.Scale.Y * 500 , 1);
+                        mapTransform.Rotation = new Vector3(-90, mto.Transform3D.Rotation.Y, mto.Transform3D.Rotation.Z);
+
+                        int modelNum = mto.modelNo;
+
+                        mapPiece = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
+                        mapPiece.BillboardType = BillboardType.Spherical;
+                        mapPiece.Transform3D = mapTransform;
+                        mapPiece.Texture = UITiles[modelNum];
+                        this.objectManager.Add(mapPiece);
+                        
+                   }
+               }
+           }
+       }
+       private void pickUpPotion(DrawnActor potion)
+       {
+           this.soundManager.Play3DCue("boing", new AudioEmitter());
+           potion.Remove();
+           //start effect
+       }
+
+
+       #region Update & Draw
+       protected override void Update(GameTime gameTime)
+       {
+           // Allows the game to exit
+           if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+               this.Exit();
+
+           #region Demos
+           /*
+           demoTextToTextureAndVideo();
+           demoCameraTrack(gameTime);
+           */
+                        demoCameraLayout();
             demoSoundManager();
             demoMousePicking();
             
             #endregion
-
+            if(keyboardManager.IsFirstKeyPress(Keys.R))
+                make2DMazeMap(tg);
             base.Update(gameTime);
         }
 

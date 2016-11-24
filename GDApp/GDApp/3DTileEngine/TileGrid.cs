@@ -38,8 +38,7 @@ namespace GDApp._3DTileEngine
         // RNG
         Random random = new Random();
         private Texture2D potionTexture;
-
-        public Texture2D[] UITiles;
+        
 
         //Potions
 
@@ -47,7 +46,7 @@ namespace GDApp._3DTileEngine
 
         #region Constructors
         // Random maze
-        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture, Texture2D[] UITiles)
+        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
         {
             this.gridSize = gridSize;
             this.tileSize = tileSize;
@@ -56,7 +55,6 @@ namespace GDApp._3DTileEngine
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
             this.potionTexture = potionTexture;
-            this.UITiles = UITiles;
             initializeInfo();
         }
         #endregion
@@ -633,21 +631,7 @@ namespace GDApp._3DTileEngine
             //transform.Translation = new Vector3(transform.Translation.X, transform.Translation.Y+200, transform.Translation.Z);
             //transform.Scale *= this.tileSize;
 
-            Transform3D mapTransform = new Transform3D(transform.Translation, transform.Rotation, transform.Scale, transform.Look, transform.Up);
-            mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + 80, mapTransform.Translation.Z);
-            mapTransform.Scale = new Vector3(mapTransform.Scale.X*100, mapTransform.Scale.Y, mapTransform.Scale.Z*100);
-
-            //2D Map
-            ModelObject mapPiece = new ModelObject(
-               "mazeMap(" + x + "," + y + ")",
-               ObjectType.Prop,
-               mapTransform,
-               effect,
-               UITiles[model],
-               models[8],
-               Color.White,
-               1);
-            itemList.Add(mapPiece);
+           
             //random items
             int randPotion = random.Next(1, 40);
             if(randPotion == 1)
