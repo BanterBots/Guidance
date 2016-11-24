@@ -528,7 +528,7 @@ namespace GDApp
             }
             else if (eventData.EventType == EventType.OnZoneExit)
             {
-
+                //do something
             }
 
         }
@@ -972,6 +972,8 @@ namespace GDApp
 
             string cameraLayoutName = "FirstPersonMazeCamera";
           
+
+
             #region FPS Camera
             clonePawnCamera = (PawnCamera3D)pawnCameraArchetype.Clone();
             clonePawnCamera.ID = "Collidable Maze Cam";
@@ -990,10 +992,12 @@ namespace GDApp
                 new Vector3(0,0,0)));
             this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
             #endregion
+            
 
             #region Maze Camera
             transform = new Transform3D(
-                new Vector3(300, 1000, -500), 
+                //new Vector3(300, 1000, -500), 
+                positionMapCamera(),
                 Vector3.Down, 
                 -1 * Vector3.Right);
 
@@ -1045,6 +1049,16 @@ namespace GDApp
             #endregion
 
             this.cameraManager.SetCameraLayout("FirstPersonMazeCamera");
+        }
+
+        private Vector3 positionMapCamera()
+        {
+            this.mazeWidth /= 2; 
+            this.mazeWidth *= this.tileGridSize; //halfway point across the maze
+
+            this.mazeHeight /= 2;
+            this.mazeHeight *= this.tileGridSize; //halfway point down the maze
+            return new Vector3(this.mazeWidth, 1000, -this.mazeHeight);
         }
         #endregion
 
@@ -1160,9 +1174,8 @@ namespace GDApp
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(9, 76.20f, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            TileGrid tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
             tg.generateRandomGrid();
-
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -1170,6 +1183,10 @@ namespace GDApp
                     if (tg.grid[i, j] != null)
                     {
                         this.objectManager.Add(tg.grid[i, j]);
+                        if (i > this.mazeWidth)
+                            this.mazeWidth = i;
+                        if (j > this.mazeHeight)
+                            this.mazeHeight = j;
                     }
                 }
             }
@@ -1564,6 +1581,9 @@ namespace GDApp
         Color debugColor = Color.Red;
         SpriteFont debugFont = null;
         private Effect animatedModelEffect;
+        private float mazeWidth = 0;
+        private float mazeHeight = 0;
+        private float tileGridSize = 76.20f;
 
         private void drawDebugInfo()
         {
