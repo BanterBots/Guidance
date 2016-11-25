@@ -14,6 +14,7 @@ namespace GDApp._3DTileEngine
 
         #region Variables
         private Texture2D texture;
+        public Model collisionModel;
         private Model model;
         private Matrix[] boneTransforms;
         public int modelNo;
@@ -70,6 +71,21 @@ namespace GDApp._3DTileEngine
             InitializeCollision();
         }
 
+        public ModelTileObject(string id, ObjectType objectType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model, Model collisionModel, int modelNo,
+             int x, int y) : base(id, objectType, transform, effect, texture, model, collisionModel, color, alpha, new MaterialProperties(0.2f, 0.8f, 0.7f))
+
+        {
+            this.texture = texture;
+            this.model = model;
+            this.collisionModel = collisionModel;
+            this.x = x;
+            this.y = y;
+            this.modelNo = modelNo;
+
+            InitializeBoneTransforms();
+            InitializeCollision();
+        }
+
         private void InitializeCollision()
         {
             this.Enable(true, 1);
@@ -79,7 +95,12 @@ namespace GDApp._3DTileEngine
         private void InitializeBoneTransforms()
         {
             //load bone transforms and copy transfroms to transform array (transforms)
-            if (this.model != null)
+            if(this.collisionModel != null)
+            {
+                this.boneTransforms = new Matrix[this.collisionModel.Bones.Count];
+                collisionModel.CopyAbsoluteBoneTransformsTo(this.boneTransforms);
+            }
+            else if (this.model != null)
             {
                 this.boneTransforms = new Matrix[this.model.Bones.Count];
                 model.CopyAbsoluteBoneTransformsTo(this.boneTransforms);

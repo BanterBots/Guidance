@@ -24,6 +24,7 @@ namespace GDApp._3DTileEngine
         public BasicEffect effect;
         public Texture2D texture;
         public Model[] models;
+        public Model[] collisionModels;
 
         // Directional data
         public int[] tileInfo;
@@ -45,12 +46,25 @@ namespace GDApp._3DTileEngine
         #endregion
 
         #region Constructors
-        // Random maze
+        // Random maze with collision off models
         public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
         {
             this.gridSize = gridSize;
             this.tileSize = tileSize;
             this.models = models;
+            this.texture = texture;
+            this.effect = effect;
+            this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionTexture = potionTexture;
+            initializeInfo();
+        }
+        // Random maze with different collision models
+        public TileGrid(int gridSize, float tileSize, Model[] models, Model[] collisionModels, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
+        {
+            this.gridSize = gridSize;
+            this.tileSize = tileSize;
+            this.models = models;
+            this.collisionModels = collisionModels;
             this.texture = texture;
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
@@ -620,6 +634,7 @@ namespace GDApp._3DTileEngine
                1,
                texture,
                models[model],
+               collisionModels[model],
                model,
                x,
                y);

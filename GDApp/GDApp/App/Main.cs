@@ -602,13 +602,22 @@ namespace GDApp
         private void InitalizeModels()
         {
             // GUIDANCE MODELS
-            this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Maze/Tile_Room"));
-            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Maze/Tile_Corner"));
-            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Maze/Tile_Junction"));
-            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Maze/Tile_Straight"));
-            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Maze/Tile_Cross"));
-            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Maze/Tile_DeadEnd"));
-            this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Maze/Tile_Puzzle"));
+            this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Maze/m_Room01"));
+            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Maze/m_Corner01"));
+            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Maze/m_Junction01"));
+            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Maze/m_Straight01"));
+            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Maze/m_Cross01"));
+            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Maze/m_DeadEnd01"));
+            this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Maze/m_Puzzle01"));
+
+            this.modelDictionary.Add("room_Col", Content.Load<Model>("Assets/Models/Maze/m_Room01_Col"));
+            this.modelDictionary.Add("corner_Col", Content.Load<Model>("Assets/Models/Maze/m_Corner01_Col"));
+            this.modelDictionary.Add("tJunction_Col", Content.Load<Model>("Assets/Models/Maze/m_Junction01_Col"));
+            this.modelDictionary.Add("straight_Col", Content.Load<Model>("Assets/Models/Maze/m_Straight01_Col"));
+            this.modelDictionary.Add("cross_Col", Content.Load<Model>("Assets/Models/Maze/m_Cross01_Col"));
+            this.modelDictionary.Add("deadEnd_Col", Content.Load<Model>("Assets/Models/Maze/m_DeadEnd01_Col"));
+            this.modelDictionary.Add("puzzle_Col", Content.Load<Model>("Assets/Models/Maze/m_Puzzle01_Col"));
+
             this.modelDictionary.Add("potion", Content.Load<Model>("Assets/Models/Items/m_potion"));
 
             this.modelDictionary.Add("cube", Content.Load<Model>("Assets\\Models\\cube"));
@@ -1005,10 +1014,10 @@ namespace GDApp
                 GameData.CameraStrafeSpeed * 6,
                 GameData.CameraRotationSpeed * 20,
                 1f, // radius
-                20f, // height
+                15f, // height
                 10f,// acceleration
                 2f, // deceleration
-                1,  // mass
+                20,  // mass
                 new Vector3(0,0,0)));
             this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
             #endregion
@@ -1194,11 +1203,20 @@ namespace GDApp
                 this.modelDictionary["cube"]
             };
 
-            
-            
+            Model[] collisionTiles = new Model[]{
+                this.modelDictionary["deadEnd_Col"],    //0
+                this.modelDictionary["straight_Col"],   //1
+                this.modelDictionary["corner_Col"],     //2
+                this.modelDictionary["tJunction_Col"],  //3
+                this.modelDictionary["cross_Col"],      //4
+                this.modelDictionary["room_Col"],      //5
+                this.modelDictionary["puzzle_Col"]    //6
+            };
+
+
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
             this.tg.generateRandomGrid();
             make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
@@ -1221,6 +1239,9 @@ namespace GDApp
             {
                 this.objectManager.Add(model);
             }
+            
+
+
         }
 
         private void InitializeStaticCollidableGround(int scale)
@@ -1231,17 +1252,23 @@ namespace GDApp
 
             Model model = this.modelDictionary["cube"];
             texture = this.textureDictionary["ml"];
-            Vector3 location = new Vector3(304.8f, -5, -304.8f);
+            Vector3 location = new Vector3(290f, -0.2f, -290f);
             //location = positionMapCamera();
             //float locX = location.X, locZ = location.Z;
 
-            transform3D = new Transform3D(location, new Vector3(0, 0, 0),
-                new Vector3(this.mazeWidth*this.tileGridSize, 1, this.mazeHeight * this.tileGridSize), Vector3.UnitX, Vector3.UnitY);
+            transform3D = new Transform3D(
+                location, 
+                new Vector3(0, 0, 0),
+                new Vector3(this.mazeWidth*(this.tileGridSize+7), 0.2f, this.mazeHeight * (this.tileGridSize+7)), 
+                Vector3.UnitX, 
+                Vector3.UnitY);
 
+           
             collidableObject = new CollidableObject("ground", ObjectType.CollidableGround, transform3D, this.texturedModelEffect, texture, model, Color.White, 1);
             collidableObject.AddPrimitive(new Box(transform3D.Translation, Matrix.Identity, transform3D.Scale), new MaterialProperties(0.8f, 0.8f, 0.7f));
             collidableObject.Enable(true, 1); //change to false, see what happens.
-            //this.objectManager.Add(collidableObject);
+
+            this.objectManager.Add(collidableObject);
             
         }
 
