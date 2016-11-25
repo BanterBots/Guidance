@@ -240,7 +240,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Textures\Game\Items\" />
-    <Folder Include="Assets\Textures\Game\Maze\" />
     <Folder Include="Assets\Textures\Game\old\Debug\" />
   </ItemGroup>
   <ItemGroup>
@@ -481,6 +480,45 @@
       <Name>bongbongoLoop</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Textures\Game\Maze\ground.png">
+      <Name>ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Textures\Game\Maze\corner2D.png">
+      <Name>corner2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\Game\Maze\cross2D.png">
+      <Name>cross2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\Game\Maze\deadEnd2D.png">
+      <Name>deadEnd2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\Game\Maze\straight2D.png">
+      <Name>straight2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\Game\Maze\temp.png">
+      <Name>temp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\Game\Maze\tJunc2D.png">
+      <Name>tJunc2D</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

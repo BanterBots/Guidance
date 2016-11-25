@@ -411,9 +411,24 @@ namespace GDApp
         **/
         SoundEffect _bongoBongoLoop;
         SoundEffectInstance _bongoBongoInstance;
+        ////Sound
+        //SoundEffect _bongoBongoLoop;
+        //SoundEffectInstance _bongoBongoInstance;
 
-        AudioEmitter _emitter;
-        AudioListener _listener;
+        //AudioEmitter _emitter;
+        //AudioListener _listener;
+
+        Vector2 positionOffset = new Vector2(0, 25);
+        Color debugColor = Color.Red;
+        SpriteFont debugFont = null;
+        private Effect animatedModelEffect;
+        private float mazeWidth = 0;
+        private float mazeHeight = 0;
+        private float tileGridSize = 76.20f;
+        private int width = 1024;
+        private int height = 768;
+        private TileGrid tg;
+
         #endregion
 
         #region Properties
@@ -506,6 +521,45 @@ namespace GDApp
                 Exit();
             else if (eventData.EventType == EventType.OnRestart)
                 this.LoadGame();
+            else if (eventData.EventType == EventType.OnVolumeUp)
+            {
+                if (this.soundManager.Volume < 1f)
+                    this.soundManager.ChangeVolume(0.05f, "Music");
+            }
+            else if (eventData.EventType == EventType.OnVolumeDown)
+            {
+                if (this.soundManager.Volume > 0f)
+                    this.soundManager.ChangeVolume(-0.05f, "Music");
+            }
+                
+            //else if (eventData.EventType == EventType.OnMute)
+            //    this.soundManager.StopCue("bongobongoLoop", AudioStopOptions.Immediate);
+        }
+
+        private void eventDispatcher_PickupChanged(EventData eventData)
+        {
+            if (eventData.EventType == EventType.OnPickup)
+            {
+                //this.soundManager.Play3DCue("boing", new AudioEmitter());
+                //eventData.Reference.Remove();
+            }
+                
+        }
+
+        private void eventDispatcher_ZoneChanged(EventData eventData)
+        {
+            if (eventData.EventType == EventType.OnZoneEnter)
+            {
+                eventData.Reference.Alpha = 0.8f;
+                if (keyboardManager.IsKeyDown(Keys.E))
+                    pickUpPotion(eventData.Reference);
+            }
+            else if (eventData.EventType == EventType.OnZoneExit)
+            {
+                if(eventData.Reference!=null)
+                    eventData.Reference.Alpha = 1f;
+            }
+
         }
         #endregion
 
@@ -536,6 +590,12 @@ namespace GDApp
             //UI
             this.textureDictionary.Add("white", Content.Load<Texture2D>("Assets\\Textures\\UI\\white"));
             this.textureDictionary.Add("mouseicons", Content.Load<Texture2D>("Assets/Textures/UI/mouseicons"));
+            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/corner2D"));
+            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/straight2D"));
+            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/cross2D"));
+            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/tJunc2D"));
+            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/deadEnd2D"));
+            this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/temp"));
 
             //billboards
             //this.textureDictionary.Add("billboardtexture", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/billboardtexture"));
@@ -591,12 +651,12 @@ namespace GDApp
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //Sound
-            _bongoBongoLoop = Content.Load<SoundEffect>("Assets/Audio/bongbongoLoop");
-            _bongoBongoInstance = _bongoBongoLoop.CreateInstance();
-            _bongoBongoInstance.IsLooped = true;
-            _bongoBongoInstance.Volume = 0.4f;
-            _bongoBongoInstance.Play();
+            ////Sound
+            //_bongoBongoLoop = Content.Load<SoundEffect>("Assets/Audio/bongbongoLoop");
+            //_bongoBongoInstance = _bongoBongoLoop.CreateInstance();
+            //_bongoBongoInstance.IsLooped = true;
+            //_bongoBongoInstance.Volume = 0.4f;
+            //_bongoBongoInstance.Play();
         }
         protected override void UnloadContent()
         {
@@ -647,6 +707,7 @@ namespace GDApp
             InitializeCameraTracks();
             InitializeCameras();
             InitializeUI();
+            this.soundManager.PlayCue("bongobongoLoop");
         }
 
         protected override void Initialize()
@@ -655,7 +716,7 @@ namespace GDApp
 
             InitializeEventDispatcher();
             InitializeStatics();
-            IntializeGraphics(1024, 768);
+            IntializeGraphics(this.width, this.height);   //IntializeGraphics(1024, 768);
 
             InitializeDictionaries();
             InitializeFonts();
@@ -671,6 +732,8 @@ namespace GDApp
 
             #region Event Handling
             this.eventDispatcher.MainMenuChanged += new EventDispatcher.MainMenuEventHandler(eventDispatcher_MainMenuChanged);
+            this.eventDispatcher.PickupChanged += new EventDispatcher.PickupEventHandler(eventDispatcher_PickupChanged);
+            this.eventDispatcher.ZoneChanged += new EventDispatcher.ZoneEventHandler(eventDispatcher_ZoneChanged);
             #endregion
 
             #region Demos
@@ -679,6 +742,8 @@ namespace GDApp
 
             base.Initialize();
         }
+
+        
 
         private void InitializeEventDispatcher()
         {
@@ -943,6 +1008,8 @@ namespace GDApp
 
             string cameraLayoutName = "FirstPersonMazeCamera";
           
+
+
             #region FPS Camera
             clonePawnCamera = (PawnCamera3D)pawnCameraArchetype.Clone();
             clonePawnCamera.ID = "Collidable Maze Cam";
@@ -961,10 +1028,12 @@ namespace GDApp
                 new Vector3(0,0,0)));
             this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
             #endregion
+            
 
             #region Maze Camera
             transform = new Transform3D(
-                new Vector3(300, 1000, -500), 
+                //new Vector3(300, 1000, -500), 
+                positionMapCamera(),
                 Vector3.Down, 
                 -1 * Vector3.Right);
 
@@ -1016,6 +1085,18 @@ namespace GDApp
             #endregion
 
             this.cameraManager.SetCameraLayout("FirstPersonMazeCamera");
+        }
+
+        private Vector3 positionMapCamera()
+        {
+            this.mazeWidth /= 2; 
+            this.mazeWidth *= this.tileGridSize; //halfway point across the maze
+
+            this.mazeHeight /= 2;
+            this.mazeHeight *= this.tileGridSize; //halfway point down the maze
+
+
+            return new Vector3(this.mazeWidth, 1000, -this.mazeHeight);
         }
         #endregion
 
@@ -1125,15 +1206,17 @@ namespace GDApp
                 this.modelDictionary["cross"],      //4
                 this.modelDictionary["room"],      //5
                 this.modelDictionary["puzzle"],    //6
-                this.modelDictionary["potion"]
+                this.modelDictionary["potion"],
+                this.modelDictionary["cube"]
             };
 
-
+            
+            
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            TileGrid tg = new TileGrid(9, 76.20f, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
-            tg.generateRandomGrid();
-
+            this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            this.tg.generateRandomGrid();
+            
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -1141,12 +1224,16 @@ namespace GDApp
                     if (tg.grid[i, j] != null)
                     {
                         this.objectManager.Add(tg.grid[i, j]);
+                        if (i > this.mazeWidth)
+                            this.mazeWidth = i;
+                        if (j > this.mazeHeight)
+                            this.mazeHeight = j;
                     }
                 }
             }
             tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
 
-            foreach (ModelObject model in tg.itemList)
+            foreach (DrawnActor model in tg.itemList)
             {
                 this.objectManager.Add(model);
             }
@@ -1159,14 +1246,18 @@ namespace GDApp
             Texture2D texture = null;
 
             Model model = this.modelDictionary["cube"];
-            texture = this.textureDictionary["grass1"];
-            transform3D = new Transform3D(new Vector3(0, -5, 0), new Vector3(0, 0, 0),
-                new Vector3(scale, 1, scale), Vector3.UnitX, Vector3.UnitY);
+            texture = this.textureDictionary["ml"];
+            Vector3 location = new Vector3(304.8f, -5, -304.8f);
+            //location = positionMapCamera();
+            //float locX = location.X, locZ = location.Z;
+
+            transform3D = new Transform3D(location, new Vector3(0, 0, 0),
+                new Vector3(this.mazeWidth*this.tileGridSize, 1, this.mazeHeight * this.tileGridSize), Vector3.UnitX, Vector3.UnitY);
 
             collidableObject = new CollidableObject("ground", ObjectType.CollidableGround, transform3D, this.texturedModelEffect, texture, model, Color.White, 1);
             collidableObject.AddPrimitive(new Box(transform3D.Translation, Matrix.Identity, transform3D.Scale), new MaterialProperties(0.8f, 0.8f, 0.7f));
             collidableObject.Enable(true, 1); //change to false, see what happens.
-            this.objectManager.Add(collidableObject);
+            //this.objectManager.Add(collidableObject);
             
         }
 
@@ -1455,44 +1546,50 @@ namespace GDApp
             */
         }
 
-        ModelObject lastPickedModelObject;
+        
+
+        //ModelObject lastPickedModelObject;
         private void demoMousePicking()
         {
-            mouseManager.IsVisible = true;
-            if ((this.cameraManager.ActiveCamera != null)
-                && (this.mouseManager.IsLeftButtonClicked()))
-            {
-                Vector3 pos, normal;
+            //mouseManager.IsVisible = true;
+            //if ((this.cameraManager.ActiveCamera != null)
+            //    && (this.mouseManager.IsLeftButtonClicked()))
+            //{
+            //    Vector3 pos, normal;
 
-                Actor pickedActor = this.mouseManager.GetPickedObject(
-                   this.cameraManager.ActiveCamera, 5 /*5 == how far from 1st Person collidable to start testing for collisions - should always exceed capsule collision skin radius*/,
-                   1000, out pos, out normal);
+            //    Actor pickedActor = this.mouseManager.GetPickedObject(
+            //       this.cameraManager.ActiveCamera, 3 /*5 == how far from 1st Person collidable to start testing for collisions - should always exceed capsule collision skin radius*/,
+            //       1000, out pos, out normal);
 
-                if (pickedActor != null)
-                {
-                    ModelObject nextPickedModelObject = pickedActor as ModelObject;
-                    nextPickedModelObject.OriginalAlpha = 1;
-                    nextPickedModelObject.OriginalColor = Color.White;
+            //    if (pickedActor != null)
+            //    {
+            //        if (pickedActor.ObjectType == ObjectType.Pickup)
+            //        {
+            //            ModelObject nextPickedModelObject = pickedActor as ModelObject;
+            //            nextPickedModelObject.OriginalAlpha = 1;
+            //            nextPickedModelObject.OriginalColor = Color.White;
+                        
+            //            if (nextPickedModelObject != lastPickedModelObject)
+            //            {
+            //                //set the last back to original color
+            //                if (this.lastPickedModelObject != null)
+            //                {
+            //                    this.lastPickedModelObject.Color =
+            //                        this.lastPickedModelObject.OriginalColor;
+            //                    this.lastPickedModelObject.Alpha =
+            //                        this.lastPickedModelObject.OriginalAlpha;
+            //                }
 
-                    if (nextPickedModelObject != lastPickedModelObject)
-                    {
-                        //set the last back to original color
-                        if (this.lastPickedModelObject != null)
-                        {
-                            this.lastPickedModelObject.Color =
-                                this.lastPickedModelObject.OriginalColor;
-                            this.lastPickedModelObject.Alpha =
-                                this.lastPickedModelObject.OriginalAlpha;
-                        }
+            //                //set next to picked color
+            //                nextPickedModelObject.Color = Color.Red;
+            //                nextPickedModelObject.Alpha = 0.5f;
+            //                EventDispatcher.Publish(new EventData("pickup event", this, EventType.OnPickup, EventCategoryType.Pickup));
+            //            }
 
-                        //set next to picked color
-                        nextPickedModelObject.Color = Color.Red;
-                        nextPickedModelObject.Alpha = 0.5f;
-                    }
-
-                    this.lastPickedModelObject = nextPickedModelObject;
-                }
-            }
+            //            this.lastPickedModelObject = nextPickedModelObject;
+            //        }
+            //    }
+            //}
         }
 
 
@@ -1500,6 +1597,7 @@ namespace GDApp
 
         private void demoSoundManager()
         {
+            
             if (this.keyboardManager.IsFirstKeyPress(Keys.B))
             {
                 //Notice that the cue name is taken from inside SoundBank1
@@ -1524,11 +1622,7 @@ namespace GDApp
         }
 
 
-        Vector2 positionOffset = new Vector2(0, 25);
-        Color debugColor = Color.Red;
-        SpriteFont debugFont = null;
-        private Effect animatedModelEffect;
-
+        
         private void drawDebugInfo()
         {
             //draw debug text after base.Draw() otherwise it will be behind the scene!
@@ -1593,22 +1687,106 @@ namespace GDApp
 
         #region Update & Draw
         protected override void Update(GameTime gameTime)
-        {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
 
-            #region Demos
-            /*
-            demoTextToTextureAndVideo();
-            demoCameraTrack(gameTime);
-            */
-            demoCameraLayout();
+        private void make2DMazeMap(TileGrid tg)
+        {
+            BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
+
+            //archetype - clone from this
+            billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+                Transform3D.Zero, //transform reset in clones
+                this.vertexDictionary["texturedquad"],
+                this.billboardEffect, Color.White, 1,
+                this.textureDictionary["white"],
+                BillboardType.Normal); //texture reset in clones
+
+
+            Texture2D[] UITiles = new Texture2D[]
+            {
+                this.textureDictionary["deadEnd2D"],
+                this.textureDictionary["straight2D"],
+                this.textureDictionary["corner2D"],
+                this.textureDictionary["tJunc2D"],
+                this.textureDictionary["cross2D"],
+                this.textureDictionary["room2D"],
+                this.textureDictionary["room2D"],
+            };
+
+            Transform3D mapTransform;
+            for (int i = 0; i < tg.gridSize; i++)
+            {
+                for (int j = 0; j < tg.gridSize; j++)
+                {
+                    if (tg.grid[i, j] != null)
+                    {
+                        ModelTileObject mto = tg.grid[i,j];
+                        
+                        //Transform3D mapTransform = new Transform3D(mto.Transform3D.Translation, mto.Transform3D.Rotation, mto.Transform3D.Scale, mto.Transform3D.Look, mto.Transform3D.Up);
+                        //mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + this.tileGridSize, mapTransform.Translation.Z);
+                        //mapTransform.Scale = new Vector3(mapTransform.Scale.X * 500 , mapTransform.Scale.Y * 500 , 1);
+                        //mapTransform.Rotation = new Vector3(-90, mto.Transform3D.Rotation.Y, mto.Transform3D.Rotation.Z);
+
+                        int modelNum = mto.modelNo;
+                        int rotation = mto.rotation;
+                        Vector2 pos = new Vector2(i, j);
+                        create2DTile(modelNum, rotation, pos, UITiles[modelNum]);
+                   }
+               }
+           }
+       }
+
+        private void create2DTile(int modelNum, int rotation, Vector2 pos, Texture2D tile)
+        {
+            float tileSize = this.tileGridSize;
+            
+
+            Transform3D transform = new Transform3D(
+                new Vector3(pos.X * tileSize, 80, pos.Y * (-1) * tileSize),
+                new Vector3(-90, rotation * -90, 0),
+                //rotation * -90
+                new Vector3(this.tileGridSize, this.tileGridSize, 0),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            BillboardPrimitiveObject billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+            transform, //transform reset in clones
+            this.vertexDictionary["texturedquad"],
+            this.billboardEffect, 
+            Color.White, 1,
+            tile,
+            BillboardType.Normal); //texture reset in clones
+
+
+            objectManager.Add(billboardArchetypeObject);
+        }
+
+       private void pickUpPotion(DrawnActor potion)
+       {
+           this.soundManager.Play3DCue("boing", new AudioEmitter());
+           potion.Remove();
+           //start effect
+       }
+
+
+       #region Update & Draw
+       protected override void Update(GameTime gameTime)
+       {
+           // Allows the game to exit
+           if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+               this.Exit();
+
+           #region Demos
+           /*
+           demoTextToTextureAndVideo();
+           demoCameraTrack(gameTime);
+           */
+                        demoCameraLayout();
             demoSoundManager();
             demoMousePicking();
             
             #endregion
-
+            if(keyboardManager.IsFirstKeyPress(Keys.R))
+                make2DMazeMap(tg);
             base.Update(gameTime);
         }
 

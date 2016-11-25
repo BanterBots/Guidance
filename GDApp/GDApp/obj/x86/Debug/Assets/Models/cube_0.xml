@@ -3,7 +3,11 @@
   <Asset Type="Graphics:MeshContent">
     <Name>pCube1</Name>
     <Identity>
+<<<<<<< HEAD
       <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\cube.fbx</SourceFilename>
+=======
+      <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\cube.fbx</SourceFilename>
+>>>>>>> Ported-engine
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -26,7 +30,11 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>lambert1</Name>
       <Identity>
+<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\cube.fbx</SourceFilename>
+=======
+        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\cube.fbx</SourceFilename>
+>>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

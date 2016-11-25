@@ -284,16 +284,18 @@ namespace GDLibrary
             else if (name.Equals(MenuData.StringMenuVolumeUp))
             {
                 //publish an event to be received by the sound manager
+                EventDispatcher.Publish(new EventData("menu event", this, EventType.OnVolumeUp, EventCategoryType.MainMenu));
             }
             else if (name.Equals(MenuData.StringMenuVolumeDown))
             {
+                EventDispatcher.Publish(new EventData("menu event", this, EventType.OnVolumeDown, EventCategoryType.MainMenu));
                 //publish an event to be received by the sound manager
             }
             else if (name.Equals(MenuData.StringMenuVolumeMute))
             {
                 //publish an event to be received by the sound manager
+                EventDispatcher.Publish(new EventData("menu event", this, EventType.OnMute, EventCategoryType.MainMenu));
 
-                
             }
             else if (name.Equals(MenuData.StringMenuBack))
             {

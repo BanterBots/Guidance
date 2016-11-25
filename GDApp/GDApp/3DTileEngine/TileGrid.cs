@@ -1,6 +1,7 @@
 ﻿using GDApp._3DTileEngine.Objects.Items;
 using GDLibrary;
 using JigLibX.Collision;
+using JigLibX.Geometry;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -13,7 +14,7 @@ namespace GDApp._3DTileEngine
         #region Properties
         // Grid that holds all tiles
         public ModelTileObject[,] grid;
-        public List<ModelObject> itemList;
+        public List<DrawnActor> itemList;
 
         // Size of our grid, and size of each tile
         public int gridSize;
@@ -36,6 +37,8 @@ namespace GDApp._3DTileEngine
 
         // RNG
         Random random = new Random();
+        private Texture2D potionTexture;
+        
 
         //Potions
 
@@ -51,6 +54,7 @@ namespace GDApp._3DTileEngine
             this.texture = texture;
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionTexture = potionTexture;
             initializeInfo();
         }
         #endregion
@@ -65,7 +69,7 @@ namespace GDApp._3DTileEngine
                 regenCoords = new List<Integer3>();
                 tiles = 0;
                 grid = new ModelTileObject[gridSize,gridSize];
-                itemList = new List<ModelObject>();
+                itemList = new List<DrawnActor>();
 
                 
                 
@@ -623,38 +627,62 @@ namespace GDApp._3DTileEngine
             mazeObject.rotation = rotation;
             tiles++;
             grid[x, y] = mazeObject;
+
+            //transform.Translation = new Vector3(transform.Translation.X, transform.Translation.Y+200, transform.Translation.Z);
+            //transform.Scale *= this.tileSize;
+
+           
+            //random items
+            int randPotion = random.Next(1, 40);
+            if(randPotion == 1)
+                createPotionAt(x, y, effect, this.potionTexture);
         }
 
         public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex)
         {
-            CollidableObject collidableObject = null;
+            ModelObject potion = null;
 
             Transform3D transform = new Transform3D(
                 new Vector3(x * tileSize, 4, y * (-1) * tileSize),
                 new Vector3(0, 0 * -90, 0),
-                new Vector3(0.1f, 0.1f, 0.1f),
+                new Vector3(0.08f, 0.08f, 0.08f),
                 Vector3.UnitX,
                 Vector3.UnitY);
 
-            collidableObject = new TriangleMeshObject(
+            potion = new ModelObject(
                "maze(" + x + "," + y + ")",
-               ObjectType.CollidableProp,
+               ObjectType.Pickup,
                transform,
                effect,
                potionTex,
                models[7],
                Color.White,
-               1,
-               new MaterialProperties(0.2f, 0.8f, 0.7f));
-
-            collidableObject.Enable(true, 1);
-            collidableObject.ObjectType = ObjectType.Pickup;
-
-            
-            collidableObject.AddController(new PotionController("updown", collidableObject, new Vector3(0, 0.1f, 0)));
+               1);
             
 
-            itemList.Add(collidableObject);
+            potion.AddController(new PotionController("updown", potion, new Vector3(0, 0.1f, 0)));
+            itemList.Add(potion);
+            
+            PotionZoneObject potionZone = new PotionZoneObject(
+                "potionZone(" + x + "," + y + ")", 
+                ObjectType.CollidableTriggerZone, 
+                transform, 
+                effect, 
+                Color.White, 
+                0, 
+                null, 
+                false,
+                potion);
+
+            //no mass so we disable material properties
+            potionZone.AddPrimitive(
+                new Box(
+                    new Vector3(transform.Translation.X, transform.Translation.Y +300, transform.Translation.Z), 
+                    Matrix.Identity, 
+                    new Vector3(transform.Scale.X*300, transform.Scale.Y*150, transform.Scale.Z*300)));
+            //enabled by default
+            potionZone.Enable(true);
+            itemList.Add(potionZone);
         }
     }
 }

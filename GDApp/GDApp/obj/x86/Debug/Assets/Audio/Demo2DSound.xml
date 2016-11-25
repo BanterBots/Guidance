@@ -9,8 +9,8 @@
     Windows Bank Path Edited = 0;
     Seek Tables = 1;
     Compression Preset Name = &lt;none&gt;;
-    Bank Last Revised Low = 1439872788;
-    Bank Last Revised High = 30430317;
+    Bank Last Revised Low = 1836740428;
+    Bank Last Revised High = 30557460;
 
     Wave
     {
@@ -30,8 +30,31 @@
             Loop Region Offset = 0;
             Loop Region Length = 0;
             File Type = 1;
-            Last Modified Low = 3805660051;
-            Last Modified High = 30430316;
+            Last Modified Low = 1835722874;
+            Last Modified High = 30557243;
+        }
+    }
+
+    Wave
+    {
+        Name = bongbongoLoop;
+        File = bongbongoLoop.wav;
+        Build Settings Last Modified Low = 3885344906;
+        Build Settings Last Modified High = 30557459;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 5644800;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1965128784;
+            Last Modified High = 30557245;
         }
     }
 }

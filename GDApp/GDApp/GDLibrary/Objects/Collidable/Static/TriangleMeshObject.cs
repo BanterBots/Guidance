@@ -21,11 +21,37 @@ namespace GDLibrary
     public class TriangleMeshObject : CollidableObject
     {
         #region Variables
+        Model collisionModel;
         #endregion
 
         #region Properties
-     
+        public Model CollisionModel
+        {
+            get
+            {
+                return collisionModel;
+            }
+            set
+            {
+                collisionModel = value;
+            }
+        }
         #endregion
+
+        public TriangleMeshObject(string id, ObjectType objectType, Transform3D transform,
+            Effect effect, Texture2D texture, Model model, Model collisionModel, Color color, float alpha,
+            MaterialProperties materialProperties)
+            : base(id, objectType, transform, effect, texture, model, color, alpha)
+        {
+            this.collisionModel = collisionModel;
+
+
+            //get the primitive mesh which forms the skin
+            TriangleMesh triangleMesh = GetTriangleMesh(this.collisionModel, this.Transform3D);
+
+            //add the primitive mesh to the collision skin
+            this.Body.CollisionSkin.AddPrimitive(triangleMesh, materialProperties);
+        }
 
         public TriangleMeshObject(string id, ObjectType objectType, Transform3D transform, 
             Effect effect, Texture2D texture, Model model, Color color, float alpha,

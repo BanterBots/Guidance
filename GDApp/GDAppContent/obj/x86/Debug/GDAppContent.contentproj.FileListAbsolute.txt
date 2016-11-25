@@ -55,4 +55,9 @@ C:\Users\ciara_000\Desktop\GDApp - 20 -  Animation\GDApp\GDAppContent\obj\x86\De
 I:\Projects\WIP\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 E:\Projects\WIP\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 E:\Projects\WIP\Guidance\GDApp\GDAppContent\obj\x86\Debug\Assets\Audio\Demo2DSound.xml
+<<<<<<< HEAD
 C:\Users\ciara_000\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+=======
+C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+D:\PROJECTS\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+>>>>>>> Ported-engine

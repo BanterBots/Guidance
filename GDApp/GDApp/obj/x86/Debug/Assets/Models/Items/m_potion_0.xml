@@ -3,7 +3,11 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Circle.001</Name>
     <Identity>
+<<<<<<< HEAD
       <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+=======
+      <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+>>>>>>> Ported-engine
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -845,7 +849,11 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>07 - Default</Name>
       <Identity>
+<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+=======
+        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+>>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
