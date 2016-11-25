@@ -1680,6 +1680,7 @@ namespace GDApp
                 this.textureDictionary["room2D"],
             };
 
+            Transform3D mapTransform;
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -1688,23 +1689,45 @@ namespace GDApp
                     {
                         ModelTileObject mto = tg.grid[i,j];
                         
-                        Transform3D mapTransform = new Transform3D(mto.Transform3D.Translation, mto.Transform3D.Rotation, mto.Transform3D.Scale, mto.Transform3D.Look, mto.Transform3D.Up);
-                        mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + this.tileGridSize, mapTransform.Translation.Z);
-                        mapTransform.Scale = new Vector3(mapTransform.Scale.X * 500 , mapTransform.Scale.Y * 500 , 1);
-                        mapTransform.Rotation = new Vector3(-90, mto.Transform3D.Rotation.Y, mto.Transform3D.Rotation.Z);
+                        //Transform3D mapTransform = new Transform3D(mto.Transform3D.Translation, mto.Transform3D.Rotation, mto.Transform3D.Scale, mto.Transform3D.Look, mto.Transform3D.Up);
+                        //mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + this.tileGridSize, mapTransform.Translation.Z);
+                        //mapTransform.Scale = new Vector3(mapTransform.Scale.X * 500 , mapTransform.Scale.Y * 500 , 1);
+                        //mapTransform.Rotation = new Vector3(-90, mto.Transform3D.Rotation.Y, mto.Transform3D.Rotation.Z);
 
                         int modelNum = mto.modelNo;
-
-                        mapPiece = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-                        mapPiece.BillboardType = BillboardType.Spherical;
-                        mapPiece.Transform3D = mapTransform;
-                        mapPiece.Texture = UITiles[modelNum];
-                        this.objectManager.Add(mapPiece);
-                        
+                        int rotation = mto.rotation;
+                        Vector2 pos = new Vector2(i, j);
+                        create2DTile(modelNum, rotation, pos, UITiles[modelNum]);
                    }
                }
            }
        }
+
+        private void create2DTile(int modelNum, int rotation, Vector2 pos, Texture2D tile)
+        {
+            float tileSize = this.tileGridSize;
+            
+
+            Transform3D transform = new Transform3D(
+                new Vector3(pos.X * tileSize, 80, pos.Y * (-1) * tileSize),
+                new Vector3(-90, rotation * -90, 0),
+                //rotation * -90
+                new Vector3(this.tileGridSize, this.tileGridSize, 0),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            BillboardPrimitiveObject billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+            transform, //transform reset in clones
+            this.vertexDictionary["texturedquad"],
+            this.billboardEffect, 
+            Color.White, 1,
+            tile,
+            BillboardType.Normal); //texture reset in clones
+
+
+            objectManager.Add(billboardArchetypeObject);
+        }
+
        private void pickUpPotion(DrawnActor potion)
        {
            this.soundManager.Play3DCue("boing", new AudioEmitter());
