@@ -575,13 +575,14 @@ namespace GDApp
             //UI
             this.textureDictionary.Add("white", Content.Load<Texture2D>("Assets\\Textures\\UI\\white"));
             this.textureDictionary.Add("mouseicons", Content.Load<Texture2D>("Assets/Textures/UI/mouseicons"));
-            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/corner2D"));
-            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/straight2D"));
-            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/cross2D"));
-            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/tJunc2D"));
-            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/deadEnd2D"));
-            this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/temp"));
-
+            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Corner"));
+            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Hall"));
+            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Cross"));
+            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Junction"));
+            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_End"));
+            this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTilesBlank01"));
+            this.textureDictionary.Add("emptySpace", Content.Load<Texture2D>("Assets/Textures/UI/MazeTilesBlank01"));
+            this.textureDictionary.Add("playerArrow", Content.Load<Texture2D>("Assets/Textures/UI/PlayerArrow"));
             //billboards
             //this.textureDictionary.Add("billboardtexture", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/billboardtexture"));
             //this.textureDictionary.Add("snow1", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/snow1"));
@@ -991,7 +992,17 @@ namespace GDApp
             #endregion
 
             string cameraLayoutName = "FirstPersonMazeCamera";
-          
+            Transform3D arrowTransform = new Transform3D(new Vector3(0, 90, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/5, this.tileGridSize/5, 0), - Vector3.UnitZ, Vector3.UnitY);
+
+            BillboardPrimitiveObject playerArrow = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+            arrowTransform, //transform reset in clones
+            this.vertexDictionary["texturedquad"],
+            this.billboardEffect,
+            Color.White, 1,
+            this.textureDictionary["playerArrow"],
+            BillboardType.Normal);
+
+            this.objectManager.Add(playerArrow);
 
 
             #region FPS Camera
@@ -1010,7 +1021,12 @@ namespace GDApp
                 2f, // deceleration
                 1,  // mass
                 new Vector3(0,0,0)));
+
+
+            playerArrow.AddController(new PlayerArrowController("playerArrow", playerArrow, clonePawnCamera));
             this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
+
+
             #endregion
             
 
@@ -1677,7 +1693,7 @@ namespace GDApp
                 this.textureDictionary["tJunc2D"],
                 this.textureDictionary["cross2D"],
                 this.textureDictionary["room2D"],
-                this.textureDictionary["room2D"]
+                this.textureDictionary["emptySpace"]
             };
 
             //Transform3D mapTransform;
