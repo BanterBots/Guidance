@@ -1200,7 +1200,7 @@ namespace GDApp
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
             this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
             this.tg.generateRandomGrid();
-            
+            make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -1677,18 +1677,18 @@ namespace GDApp
                 this.textureDictionary["tJunc2D"],
                 this.textureDictionary["cross2D"],
                 this.textureDictionary["room2D"],
-                this.textureDictionary["room2D"],
+                this.textureDictionary["room2D"]
             };
 
-            Transform3D mapTransform;
+            //Transform3D mapTransform;
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
                 {
                     if (tg.grid[i, j] != null)
                     {
-                        ModelTileObject mto = tg.grid[i,j];
-                        
+                        ModelTileObject mto = tg.grid[i, j];
+
                         //Transform3D mapTransform = new Transform3D(mto.Transform3D.Translation, mto.Transform3D.Rotation, mto.Transform3D.Scale, mto.Transform3D.Look, mto.Transform3D.Up);
                         //mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + this.tileGridSize, mapTransform.Translation.Z);
                         //mapTransform.Scale = new Vector3(mapTransform.Scale.X * 500 , mapTransform.Scale.Y * 500 , 1);
@@ -1697,24 +1697,41 @@ namespace GDApp
                         int modelNum = mto.modelNo;
                         int rotation = mto.rotation;
                         Vector2 pos = new Vector2(i, j);
-                        create2DTile(modelNum, rotation, pos, UITiles[modelNum]);
-                   }
-               }
-           }
-       }
+                        create2DTile(rotation, pos, UITiles[modelNum]);
+                    }
+                    else
+                    {
+                        create2DTile(0, new Vector2(i, j), UITiles[6]);
+                    }
+                }
+            }
 
-        private void create2DTile(int modelNum, int rotation, Vector2 pos, Texture2D tile)
+
+        }
+
+        private void create2DTile(int rotation, Vector2 pos, Texture2D tile)
         {
             float tileSize = this.tileGridSize;
-            
+            float xTranslationRot = 0, yTranslationRot = 0;
+            if (rotation == 0)
+                yTranslationRot = -1 * tileSize;
+            else if (rotation == 1)
+                xTranslationRot = tileSize;
+            else if (rotation == 2)
+                yTranslationRot = tileSize;
+            else if (rotation == -1)
+                xTranslationRot = -1 * tileSize;
+
+            //Based on rotation, tiles move. Must account for that.
 
             Transform3D transform = new Transform3D(
-                new Vector3(pos.X * tileSize, 80, pos.Y * (-1) * tileSize),
+                new Vector3((pos.X * tileSize) - (xTranslationRot), 80, (pos.Y * (-1) * tileSize) - (yTranslationRot)),
                 new Vector3(-90, rotation * -90, 0),
                 //rotation * -90
                 new Vector3(this.tileGridSize, this.tileGridSize, 0),
                 Vector3.UnitX,
                 Vector3.UnitY);
+
 
             BillboardPrimitiveObject billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
             transform, //transform reset in clones
@@ -1753,8 +1770,8 @@ namespace GDApp
             demoMousePicking();
             
             #endregion
-            if(keyboardManager.IsFirstKeyPress(Keys.R))
-                make2DMazeMap(tg);
+            //if(keyboardManager.IsFirstKeyPress(Keys.R))
+            //    make2DMazeMap(tg);
             base.Update(gameTime);
         }
 

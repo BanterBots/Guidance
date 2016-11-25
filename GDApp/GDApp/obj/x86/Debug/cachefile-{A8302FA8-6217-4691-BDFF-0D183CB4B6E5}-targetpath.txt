@@ -48,6 +48,12 @@ Content\Assets\Models\old\Animated\upBodyC.xnb
 Content\Assets\Models\ModelTextures\FlatColourTexture.xnb
 Content\Assets\Models\Maze\BaseTile01_Diffuse.xnb
 Content\Assets\Textures\Game\Maze\ground.xnb
+Content\Assets\Textures\Game\Maze\corner2D.xnb
+Content\Assets\Textures\Game\Maze\cross2D.xnb
+Content\Assets\Textures\Game\Maze\deadEnd2D.xnb
+Content\Assets\Textures\Game\Maze\straight2D.xnb
+Content\Assets\Textures\Game\Maze\temp.xnb
+Content\Assets\Textures\Game\Maze\tJunc2D.xnb
 Content\Assets\Models\box.xnb
 Content\Assets\Models\old\cylinder.xnb
 Content\Assets\Models\old\dome.xnb
@@ -83,12 +89,6 @@ Content\Assets\Models\old\Animated\pants_0.xnb
 Content\Assets\Models\old\Animated\upBodyC_0.xnb
 Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb
 Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb
-corner2D.xnb
-cross2D.xnb
-deadEnd2D.xnb
-straight2D.xnb
-temp.xnb
-tJunc2D.xnb
 Content\Assets\Audio\Demo2DSound.xgs
 Content\Assets\Audio\WaveBank1.xwb
 Content\Assets\Audio\SoundBank1.xsb
