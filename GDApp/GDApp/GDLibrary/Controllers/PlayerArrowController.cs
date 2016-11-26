@@ -16,24 +16,84 @@ namespace GDLibrary
 
         public override void Update(GameTime gameTime)
         {
+            //float size = this.ParentActor.Transform3D.Scale.X;
+            //float height = this.ParentActor.Transform3D.Translation.Y;
+
+            //Vector3 rotation = this.target.Transform3D.Rotation;
+            //rotation.X = -90;
+            //this.ParentActor.Transform3D.Rotation = rotation;
+
+            //float xOffset = (float)Math.Sin(MathHelper.ToRadians(rotation.X));
+            //float yOffset = (float)Math.Sin(MathHelper.ToRadians(rotation.Y));
+            //float zOffset = (float)Math.Sin(MathHelper.ToRadians(rotation.Z));
+
+            //Vector3 translation = this.target.Transform3D.Translation;
+            ////translation.X -= xOffset * size;
+            //translation.Y = height;
+            //translation.Z -= yOffset * size;
+            //this.ParentActor.Transform3D.Translation = translation;
+
             float size = this.ParentActor.Transform3D.Scale.X;
-            float height = this.ParentActor.Transform3D.Translation.Y;
 
             Vector3 rotation = this.target.Transform3D.Rotation;
             rotation.X = -90;
             this.ParentActor.Transform3D.Rotation = rotation;
 
-            float xOffset = (float)Math.Sin(MathHelper.ToRadians(rotation.X));
-            float yOffset = (float)Math.Sin(MathHelper.ToRadians(rotation.Y));
-            float zOffset = (float)Math.Sin(MathHelper.ToRadians(rotation.Z));
+
+            float xOffset = 0, yOffset = 0;
+            float newRotation = rotation.Y;
+
+            int dir = 0;
+            if (newRotation < 0)
+            {
+                dir = -1;
+            }
+            else
+            {
+                dir = 1;
+            }
+
+            newRotation = newRotation * dir; // make it positive
+            newRotation = newRotation % 360;
+            if (newRotation > 0 && newRotation <= 90)        // between 0-90
+            {
+                yOffset = (-1 * size) * (newRotation / 90);
+                xOffset = (-1 * size) * ((90-newRotation)/90);
+            }
+
+            else if (newRotation > 90 && newRotation <= 180)   // between 90-180
+            {
+                xOffset = (size) * ((newRotation - 90) / 90);
+                yOffset = (-1 * size) * ((180 - newRotation) / 90);
+            }
+
+            else if (newRotation > 180 && newRotation <= 270)   // between 180-270
+            {
+                yOffset = (size) * ((newRotation - 180) / 90);
+                xOffset = (size) * ((270 - newRotation) / 90);
+            }
+
+            else if (newRotation > 270 && newRotation <= 360 || newRotation == 0) // between 270-360
+            {
+                xOffset = (-1 * size) * ((newRotation - 270) / 90);
+                yOffset = (size) * ((360 - newRotation) / 90);
+            }
+
+            xOffset *= dir;
+            yOffset *= dir;
+
+
+            //this.ParentActor.Transform3D.Translation = new Vector3(translation.X + offsetX * size, translation.Y, translation.Z + offsetY * size);
 
             Vector3 translation = this.target.Transform3D.Translation;
-            //translation.X -= xOffset * size;
-            translation.Y = height;
-            translation.Z -= yOffset * size;
+
+            translation.X += xOffset;
+            translation.Z += yOffset;
+            translation.Y = 100;
+
+
             this.ParentActor.Transform3D.Translation = translation;
 
-            
         }
     }
 }
