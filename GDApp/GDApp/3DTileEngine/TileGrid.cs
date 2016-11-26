@@ -60,6 +60,15 @@ namespace GDApp._3DTileEngine
         #endregion
 
         #region Maze Creation
+        #region Debug Maze
+        public void generateDebugMaze()
+        {
+            createTileAt(0, 0, 2, 0);
+            createTileAt(0, 1, 2, 1);
+            createTileAt(1, 0, 2, 3);
+            createTileAt(1, 1, 2, 2);
+        }
+        #endregion
         #region Random Gen
         public void generateRandomGrid()
         {
@@ -633,9 +642,12 @@ namespace GDApp._3DTileEngine
 
            
             //random items
+            /*
             int randPotion = random.Next(1, 40);
             if(randPotion == 1)
                 createPotionAt(x, y, effect, this.potionTexture);
+            */
+            
         }
 
         public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex)
