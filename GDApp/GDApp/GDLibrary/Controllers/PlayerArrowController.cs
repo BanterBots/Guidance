@@ -58,21 +58,25 @@ namespace GDLibrary
             if (newRotation > 0 && newRotation <= 90)        // between 0-90
             {
                 yOffset = (-1 * size) * (newRotation / 90);
+                xOffset = (-1 * size) * ((90-newRotation)/90);
             }
 
             else if (newRotation > 90 && newRotation <= 180)   // between 90-180
             {
                 xOffset = (size) * ((newRotation - 90) / 90);
+                yOffset = (-1 * size) * ((180 - newRotation) / 90);
             }
 
             else if (newRotation > 180 && newRotation <= 270)   // between 180-270
             {
                 yOffset = (size) * ((newRotation - 180) / 90);
+                xOffset = (size) * ((270 - newRotation) / 90);
             }
 
             else if (newRotation > 270 && newRotation <= 360 || newRotation == 0) // between 270-360
             {
                 xOffset = (-1 * size) * ((newRotation - 270) / 90);
+                yOffset = (size) * ((360 - newRotation) / 90);
             }
 
             xOffset *= dir;
