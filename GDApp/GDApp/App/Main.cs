@@ -590,13 +590,14 @@ namespace GDApp
             //UI
             this.textureDictionary.Add("white", Content.Load<Texture2D>("Assets\\Textures\\UI\\white"));
             this.textureDictionary.Add("mouseicons", Content.Load<Texture2D>("Assets/Textures/UI/mouseicons"));
-            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/corner2D"));
-            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/straight2D"));
-            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/cross2D"));
-            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/tJunc2D"));
-            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/deadEnd2D"));
-            this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/temp"));
-
+            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Corner"));
+            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Hall"));
+            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Cross"));
+            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_Junction"));
+            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTiles_End"));
+            this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/UI/MazeTilesBlank01"));
+            this.textureDictionary.Add("emptySpace", Content.Load<Texture2D>("Assets/Textures/UI/MazeTilesBlank01"));
+            this.textureDictionary.Add("playerArrow", Content.Load<Texture2D>("Assets/Textures/UI/PlayerArrow"));
             //billboards
             //this.textureDictionary.Add("billboardtexture", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/billboardtexture"));
             //this.textureDictionary.Add("snow1", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/snow1"));
@@ -617,13 +618,22 @@ namespace GDApp
         private void InitalizeModels()
         {
             // GUIDANCE MODELS
-            this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Maze/Tile_Room"));
-            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Maze/Tile_Corner"));
-            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Maze/Tile_Junction"));
-            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Maze/Tile_Straight"));
-            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Maze/Tile_Cross"));
-            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Maze/Tile_DeadEnd"));
-            this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Maze/Tile_Puzzle"));
+            this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Maze/m_Room01"));
+            this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Maze/m_Corner01"));
+            this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Maze/m_Junction01"));
+            this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Maze/m_Straight01"));
+            this.modelDictionary.Add("cross", Content.Load<Model>("Assets/Models/Maze/m_Cross01"));
+            this.modelDictionary.Add("deadEnd", Content.Load<Model>("Assets/Models/Maze/m_DeadEnd01"));
+            this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Maze/m_Puzzle01"));
+
+            this.modelDictionary.Add("room_Col", Content.Load<Model>("Assets/Models/Maze/m_Room01_Col"));
+            this.modelDictionary.Add("corner_Col", Content.Load<Model>("Assets/Models/Maze/m_Corner01_Col"));
+            this.modelDictionary.Add("tJunction_Col", Content.Load<Model>("Assets/Models/Maze/m_Junction01_Col"));
+            this.modelDictionary.Add("straight_Col", Content.Load<Model>("Assets/Models/Maze/m_Straight01_Col"));
+            this.modelDictionary.Add("cross_Col", Content.Load<Model>("Assets/Models/Maze/m_Cross01_Col"));
+            this.modelDictionary.Add("deadEnd_Col", Content.Load<Model>("Assets/Models/Maze/m_DeadEnd01_Col"));
+            this.modelDictionary.Add("puzzle_Col", Content.Load<Model>("Assets/Models/Maze/m_Puzzle01_Col"));
+
             this.modelDictionary.Add("potion", Content.Load<Model>("Assets/Models/Items/m_potion"));
 
             this.modelDictionary.Add("cube", Content.Load<Model>("Assets\\Models\\cube"));
@@ -1007,7 +1017,17 @@ namespace GDApp
             #endregion
 
             string cameraLayoutName = "FirstPersonMazeCamera";
-          
+            Transform3D arrowTransform = new Transform3D(new Vector3(0, 90, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/5, this.tileGridSize/5, 0), - Vector3.UnitZ, Vector3.UnitY);
+
+            BillboardPrimitiveObject playerArrow = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+            arrowTransform, //transform reset in clones
+            this.vertexDictionary["texturedquad"],
+            this.billboardEffect,
+            Color.White, 1,
+            this.textureDictionary["playerArrow"],
+            BillboardType.Normal);
+
+            this.objectManager.Add(playerArrow);
 
 
             #region FPS Camera
@@ -1021,12 +1041,17 @@ namespace GDApp
                 GameData.CameraStrafeSpeed * 6,
                 GameData.CameraRotationSpeed * 20,
                 1f, // radius
-                20f, // height
+                15f, // height
                 10f,// acceleration
                 2f, // deceleration
-                1,  // mass
+                20,  // mass
                 new Vector3(0,0,0)));
+
+
+            playerArrow.AddController(new PlayerArrowController("playerArrow", playerArrow, clonePawnCamera));
             this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
+
+
             #endregion
             
 
@@ -1210,13 +1235,22 @@ namespace GDApp
                 this.modelDictionary["cube"]
             };
 
-            
-            
+            Model[] collisionTiles = new Model[]{
+                this.modelDictionary["deadEnd_Col"],    //0
+                this.modelDictionary["straight_Col"],   //1
+                this.modelDictionary["corner_Col"],     //2
+                this.modelDictionary["tJunction_Col"],  //3
+                this.modelDictionary["cross_Col"],      //4
+                this.modelDictionary["room_Col"],      //5
+                this.modelDictionary["puzzle_Col"]    //6
+            };
+
+
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
             this.tg.generateRandomGrid();
-            
+            make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -1237,6 +1271,9 @@ namespace GDApp
             {
                 this.objectManager.Add(model);
             }
+            
+
+
         }
 
         private void InitializeStaticCollidableGround(int scale)
@@ -1247,17 +1284,23 @@ namespace GDApp
 
             Model model = this.modelDictionary["cube"];
             texture = this.textureDictionary["ml"];
-            Vector3 location = new Vector3(304.8f, -5, -304.8f);
+            Vector3 location = new Vector3(290f, -0.2f, -290f);
             //location = positionMapCamera();
             //float locX = location.X, locZ = location.Z;
 
-            transform3D = new Transform3D(location, new Vector3(0, 0, 0),
-                new Vector3(this.mazeWidth*this.tileGridSize, 1, this.mazeHeight * this.tileGridSize), Vector3.UnitX, Vector3.UnitY);
+            transform3D = new Transform3D(
+                location, 
+                new Vector3(0, 0, 0),
+                new Vector3(this.mazeWidth*(this.tileGridSize+7), 0.2f, this.mazeHeight * (this.tileGridSize+7)), 
+                Vector3.UnitX, 
+                Vector3.UnitY);
 
+           
             collidableObject = new CollidableObject("ground", ObjectType.CollidableGround, transform3D, this.texturedModelEffect, texture, model, Color.White, 1);
             collidableObject.AddPrimitive(new Box(transform3D.Translation, Matrix.Identity, transform3D.Scale), new MaterialProperties(0.8f, 0.8f, 0.7f));
             collidableObject.Enable(true, 1); //change to false, see what happens.
-            //this.objectManager.Add(collidableObject);
+
+            this.objectManager.Add(collidableObject);
             
         }
 
@@ -1709,18 +1752,18 @@ namespace GDApp
                 this.textureDictionary["tJunc2D"],
                 this.textureDictionary["cross2D"],
                 this.textureDictionary["room2D"],
-                this.textureDictionary["room2D"],
+                this.textureDictionary["emptySpace"]
             };
 
-            Transform3D mapTransform;
+            //Transform3D mapTransform;
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
                 {
                     if (tg.grid[i, j] != null)
                     {
-                        ModelTileObject mto = tg.grid[i,j];
-                        
+                        ModelTileObject mto = tg.grid[i, j];
+
                         //Transform3D mapTransform = new Transform3D(mto.Transform3D.Translation, mto.Transform3D.Rotation, mto.Transform3D.Scale, mto.Transform3D.Look, mto.Transform3D.Up);
                         //mapTransform.Translation = new Vector3(mapTransform.Translation.X, mapTransform.Translation.Y + this.tileGridSize, mapTransform.Translation.Z);
                         //mapTransform.Scale = new Vector3(mapTransform.Scale.X * 500 , mapTransform.Scale.Y * 500 , 1);
@@ -1729,24 +1772,41 @@ namespace GDApp
                         int modelNum = mto.modelNo;
                         int rotation = mto.rotation;
                         Vector2 pos = new Vector2(i, j);
-                        create2DTile(modelNum, rotation, pos, UITiles[modelNum]);
-                   }
-               }
-           }
-       }
+                        create2DTile(rotation, pos, UITiles[modelNum]);
+                    }
+                    else
+                    {
+                        create2DTile(0, new Vector2(i, j), UITiles[6]);
+                    }
+                }
+            }
 
-        private void create2DTile(int modelNum, int rotation, Vector2 pos, Texture2D tile)
+
+        }
+
+        private void create2DTile(int rotation, Vector2 pos, Texture2D tile)
         {
             float tileSize = this.tileGridSize;
-            
+            float xTranslationRot = 0, yTranslationRot = 0;
+            if (rotation == 0)
+                yTranslationRot = -1 * tileSize;
+            else if (rotation == 1)
+                xTranslationRot = tileSize;
+            else if (rotation == 2)
+                yTranslationRot = tileSize;
+            else if (rotation == -1)
+                xTranslationRot = -1 * tileSize;
+
+            //Based on rotation, tiles move. Must account for that.
 
             Transform3D transform = new Transform3D(
-                new Vector3(pos.X * tileSize, 80, pos.Y * (-1) * tileSize),
+                new Vector3((pos.X * tileSize) - (xTranslationRot), 80, (pos.Y * (-1) * tileSize) - (yTranslationRot)),
                 new Vector3(-90, rotation * -90, 0),
                 //rotation * -90
                 new Vector3(this.tileGridSize, this.tileGridSize, 0),
                 Vector3.UnitX,
                 Vector3.UnitY);
+
 
             BillboardPrimitiveObject billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
             transform, //transform reset in clones
@@ -1785,8 +1845,8 @@ namespace GDApp
             demoMousePicking();
             
             #endregion
-            if(keyboardManager.IsFirstKeyPress(Keys.R))
-                make2DMazeMap(tg);
+            //if(keyboardManager.IsFirstKeyPress(Keys.R))
+            //    make2DMazeMap(tg);
             base.Update(gameTime);
         }
 
