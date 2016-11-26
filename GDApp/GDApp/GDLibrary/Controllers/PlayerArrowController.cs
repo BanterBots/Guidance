@@ -16,6 +16,7 @@ namespace GDLibrary
 
         public override void Update(GameTime gameTime)
         {
+
             //float size = this.ParentActor.Transform3D.Scale.X;
             //float height = this.ParentActor.Transform3D.Translation.Y;
 
@@ -58,7 +59,7 @@ namespace GDLibrary
             if (newRotation > 0 && newRotation <= 90)        // between 0-90
             {
                 yOffset = (-1 * size) * (newRotation / 90);
-                xOffset = (-1 * size) * ((90-newRotation)/90);
+                xOffset = (-1 * size) * ((90 - newRotation) / 90);
             }
 
             else if (newRotation > 90 && newRotation <= 180)   // between 90-180
