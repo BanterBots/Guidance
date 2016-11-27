@@ -83,6 +83,7 @@ namespace GDApp._3DTileEngine
             createTileAt(1, 1, 2, 2);
         }
         #endregion
+
         #region Random Gen
         public void generateRandomGrid()
         {
@@ -94,24 +95,20 @@ namespace GDApp._3DTileEngine
                 grid = new ModelTileObject[gridSize,gridSize];
                 itemList = new List<DrawnActor>();
 
-                
-                
+
+
 
                 // Hardcoded item
-                
-  
+
+
 
                 // Create two random chains that link with start and finish
-                createRandomChainAt(0, 1, 3);      
-                createRandomChainAt(gridSize - 1, gridSize - 2, 1);
-
-                //  Create hardcoded start and finish
-                createTileAt(0, 0, 0, 0);
                 createTileAt(gridSize - 1, gridSize - 1, 0, 2);
-
-
+                createTileAt(0, 0, 0, 0);
+                createRandomChainAt(0, 1, 3);
+                createRandomChainAt(gridSize - 1, gridSize - 2, 1);
                 regenCoords.Add(new Integer3(gridSize - 1, gridSize - 2, 1));
-           }
+            }
             
             regenerateGaps();
         }
@@ -190,7 +187,7 @@ namespace GDApp._3DTileEngine
             /**
             *   1) We check if this tile already exists
             **/
-
+            
             if (grid[x,y] != null)
             {
                 return false;
@@ -294,7 +291,21 @@ namespace GDApp._3DTileEngine
                 /**
                 *   5) We compare the possible directions and the directions of our model + rotations.
                 **/
+
+                // NON RANDOM ROTATION
                 int rotation = -1;
+                
+                // RANDOM ROTATION
+                //int rotation = random.Next(-1, 4);
+                //possibleDirs = rotateDirs(possibleDirs, rotation);
+                //if(rotation > 2)
+                //{
+                //    rotation = rotation - 4;
+                //}
+                //if(rotation > 6)
+                //{
+                //    rotation = rotation - 8;
+                //}
 
                 for (int otries = 0; otries < 4; otries++)
                 {
@@ -308,7 +319,7 @@ namespace GDApp._3DTileEngine
                     else
                     {
                         possibleDirs = rotateDirs(possibleDirs);
-                        System.Console.Write("Rotating");
+                        //System.Console.Write("Rotating");
                         rotation++;
                     }
                 }
@@ -404,9 +415,9 @@ namespace GDApp._3DTileEngine
         private int randomTile()
         {
             int modelNumber = -1;
-            int rand = random.Next(1, 110);
+            int rand = random.Next(1, 50);
 
-            if(rand > 60)
+            if(rand > 30)
             {
                 modelNumber = 4;
             }
@@ -425,7 +436,7 @@ namespace GDApp._3DTileEngine
             }
             else
             {
-                modelNumber = 3;
+                modelNumber = 1;
             }
             //else if (rand > 5)
            // {
@@ -469,6 +480,29 @@ namespace GDApp._3DTileEngine
                 newBits += 2;
             }
             return newBits;
+        }
+
+        private int rotateDirs(int dirs, int times)
+        {
+            if(times == -1)
+            {
+                return dirs;
+            }
+            else if(times == 0){
+                dirs = rotateDirs(dirs);
+            }
+            else if (times == 1)
+            {
+                dirs = rotateDirs(dirs);
+                dirs = rotateDirs(dirs);
+            }
+            else if (times == 2)
+            {
+                dirs = rotateDirs(dirs);
+                dirs = rotateDirs(dirs);
+                dirs = rotateDirs(dirs);
+            }
+            return dirs;
         }
 
         private bool compareDirs(int allowedDirs, int possibleDirs, int originDir)
@@ -587,20 +621,20 @@ namespace GDApp._3DTileEngine
 
         private void genRandomTile(int x, int y, int requiredDirs, int originDir)
         {
-            System.Console.WriteLine("Required direction: " + requiredDirs);
+            //System.Console.WriteLine("Required direction: " + requiredDirs);
             int possibleDirs = 0;
             int modelNumber = 0;
             bool created = false;
 
             for (int tries = 0; tries < tileInfo.Length; tries++)
             {
-                System.Console.WriteLine("Trying model no: " + modelNumber);
+                //System.Console.WriteLine("Trying model no: " + modelNumber);
                 int rotation = -1;
                 possibleDirs = tileInfo[modelNumber];
 
                 for (int rotations = 0; rotations < 4; rotations++)
                 {
-                    System.Console.WriteLine("Possible directions: " + possibleDirs + "\n");
+                    //System.Console.WriteLine("Possible directions: " + possibleDirs + "\n");
                     if (requiredDirs == possibleDirs)
                     {
                         createTileAt(x, y, modelNumber, rotation);
@@ -625,6 +659,32 @@ namespace GDApp._3DTileEngine
         #endregion
 
         // This function is used to create all tiles
+        public ModelTileObject createFreeTileAt(int x, int y, int z, int model, int rotation)
+        {
+            Transform3D transform = new Transform3D(
+                new Vector3(x, y, z),
+                new Vector3(0, rotation * -90, 0),
+                new Vector3(0.1f, 0.1f, 0.1f),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            ModelTileObject mazeObject = new ModelTileObject(
+               "maze(" + x + "," + y + ")",
+               ObjectType.CollidableGround,
+               transform,
+               effect,
+               Color.White,
+               1,
+               texture,
+               models[model],
+               collisionModels[model],
+               model,
+               x,
+               y);
+
+            return mazeObject;
+        }
+
         private void createTileAt(int x, int y, int model, int rotation)
         {
             Transform3D transform = new Transform3D(

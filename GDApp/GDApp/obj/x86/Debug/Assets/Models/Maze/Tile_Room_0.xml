@@ -3,15 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Puzzle</Name>
     <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Room.FBX</SourceFilename>
-=======
-      <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Room.FBX</SourceFilename>
->>>>>>> Ported-engine
-=======
-      <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Room.FBX</SourceFilename>
->>>>>>> Ported-engine
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -37,15 +29,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>04 - Default</Name>
       <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Room.FBX</SourceFilename>
-=======
-        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Room.FBX</SourceFilename>
->>>>>>> Ported-engine
-=======
-        <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_Room.FBX</SourceFilename>
->>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

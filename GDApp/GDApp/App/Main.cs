@@ -575,7 +575,7 @@ namespace GDApp
             this.textureDictionary.Add("egypt", Content.Load<Texture2D>("Assets/Models/Maze/BaseTile01_Diffuse"));
             this.textureDictionary.Add("redPotion", Content.Load<Texture2D>("Assets/Models/ModelTextures/FlatColourTexture"));
            
-            //this.textureDictionary.Add("crate1", Content.Load<Texture2D>("Assets\\Textures\\Game\\Props\\Crates\\crate1"));
+            this.textureDictionary.Add("crate", Content.Load<Texture2D>("Assets\\Textures\\Game\\old\\Props\\Crates\\crate2"));
             //this.textureDictionary.Add("back", Content.Load<Texture2D>("Assets\\Textures\\Game\\Skybox\\back"));
             //this.textureDictionary.Add("sky", Content.Load<Texture2D>("Assets\\Textures\\Game\\Skybox\\sky"));
             //this.textureDictionary.Add("left", Content.Load<Texture2D>("Assets\\Textures\\Game\\Skybox\\left"));
@@ -1017,18 +1017,19 @@ namespace GDApp
             #endregion
 
             string cameraLayoutName = "FirstPersonMazeCamera";
-            Transform3D arrowTransform = new Transform3D(new Vector3(0, 90, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/5, this.tileGridSize/5, 0), - Vector3.UnitZ, Vector3.UnitY);
 
+            #region Player Arrow
+            Transform3D arrowTransform = new Transform3D(new Vector3(0, 90, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/5, this.tileGridSize/5, 0), - Vector3.UnitZ, Vector3.UnitY);
             BillboardPrimitiveObject playerArrow = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
-            arrowTransform, //transform reset in clones
-            this.vertexDictionary["texturedquad"],
-            this.billboardEffect,
-            Color.White, 1,
-            this.textureDictionary["playerArrow"],
-            BillboardType.Normal);
+                arrowTransform, //transform reset in clones
+                this.vertexDictionary["texturedquad"],
+                this.billboardEffect,
+                Color.White, 1,
+                this.textureDictionary["playerArrow"],
+                BillboardType.Normal);
 
             this.objectManager.Add(playerArrow);
-
+            #endregion Player Arrow
 
             #region FPS Camera
             clonePawnCamera = (PawnCamera3D)pawnCameraArchetype.Clone();
@@ -1054,7 +1055,6 @@ namespace GDApp
 
             #endregion
             
-
             #region Maze Camera
             transform = new Transform3D(
                 //new Vector3(300, 1000, -500), 
@@ -1067,7 +1067,19 @@ namespace GDApp
             cloneFixedCamera.Transform3D = transform;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
-            
+
+            #region New UI Camera
+            transform = new Transform3D(
+                new Vector3(100, 100, 100),
+                new Vector3(0, -0.9f, 1),
+                new Vector3(0, 1, 0));
+
+            cloneFixedCamera = (Camera3D)fixedCameraArchetype.Clone();
+            cloneFixedCamera.ID = "New UI Cam";
+            cloneFixedCamera.Transform3D = transform;
+            this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
+            #endregion
+
             #region Nialls Stuff
             /*
                        #region Collidable First Person Camera
@@ -1266,6 +1278,34 @@ namespace GDApp
                 }
             }
             tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
+
+            ModelTileObject mazePeice = tg.createFreeTileAt(100, 74, 90, 6, 1);
+            this.objectManager.Add(mazePeice);
+
+            BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
+
+            //archetype - clone from this
+
+
+            int tableHeight = 15;
+            int tableWidth = 20;
+            Transform3D tableTransform = new Transform3D(
+               new Vector3(100, 90, 123),
+               new Vector3(-90, 0, 0),
+               new Vector3(tableWidth, tableHeight, 0),
+               Vector3.UnitX,
+               Vector3.UnitY);
+
+            BillboardPrimitiveObject table = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+                tableTransform, //transform reset in clones
+                this.vertexDictionary["texturedquad"],
+                this.billboardEffect,
+                Color.White, 1,
+                this.textureDictionary["crate"],
+                BillboardType.Normal);
+        
+            objectManager.Add(table);
+
 
             foreach (DrawnActor model in tg.itemList)
             {
@@ -1728,9 +1768,6 @@ namespace GDApp
         }
         #endregion  
 
-        #region Update & Draw
-        protected override void Update(GameTime gameTime)
-
         private void make2DMazeMap(TileGrid tg)
         {
             BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
@@ -1787,6 +1824,7 @@ namespace GDApp
         private void create2DTile(int rotation, Vector2 pos, Texture2D tile)
         {
             float tileSize = this.tileGridSize;
+            Console.WriteLine(rotation);
             float xTranslationRot = 0, yTranslationRot = 0;
             if (rotation == 0)
                 yTranslationRot = -1 * tileSize;
@@ -1800,10 +1838,10 @@ namespace GDApp
             //Based on rotation, tiles move. Must account for that.
 
             Transform3D transform = new Transform3D(
-                new Vector3((pos.X * tileSize) - (xTranslationRot), 80, (pos.Y * (-1) * tileSize) - (yTranslationRot)),
+                new Vector3((pos.X * tileSize) - (xTranslationRot), 100, (pos.Y * (-1) * tileSize) - (yTranslationRot)),
                 new Vector3(-90, rotation * -90, 0),
                 //rotation * -90
-                new Vector3(this.tileGridSize, this.tileGridSize, 0),
+                new Vector3(tileSize, tileSize, 0),
                 Vector3.UnitX,
                 Vector3.UnitY);
 

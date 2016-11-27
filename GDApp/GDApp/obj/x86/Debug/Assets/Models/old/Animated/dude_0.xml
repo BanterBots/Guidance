@@ -3,15 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
-=======
-      <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
-=======
-      <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -18437,15 +18429,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>character_anim:headM</Name>
       <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
-=======
-        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
-=======
-        <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -18479,15 +18463,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>character_anim:jacketM</Name>
       <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
-=======
-        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
-=======
-        <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -18521,15 +18497,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>character_anim:pantsM</Name>
       <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
-=======
-        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
-=======
-        <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -18563,15 +18531,7 @@
     <Resource ID="#Resource4" Type="Graphics:BasicMaterialContent">
       <Name>character_anim:upBodyM</Name>
       <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
-=======
-        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
-=======
-        <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -18605,15 +18565,7 @@
     <Resource ID="#Resource5" Type="Graphics:BasicMaterialContent">
       <Name>character_anim:eyeBallM</Name>
       <Identity>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
-=======
-        <SourceFilename>C:\Users\Siobhan\Desktop\College\UDP\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
-=======
-        <SourceFilename>D:\PROJECTS\Guidance\GDApp\GDAppContent\Assets\Models\old\Animated\dude.fbx</SourceFilename>
->>>>>>> Ported-engine
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

@@ -1,2 +1,0 @@
-E:\Projects\WIP\Guidance\GDApp\GDAppContent\obj\x86\Release\Assets\Audio\Demo2DSound.xml
-E:\Projects\WIP\Guidance\GDApp\GDAppContent\obj\x86\Release\GDAppContent.contentprojResolveAssemblyReference.cache
