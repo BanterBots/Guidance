@@ -87,27 +87,28 @@ namespace GDApp._3DTileEngine
         #region Random Gen
         public void generateRandomGrid()
         {
-            while (tiles < minTiles)
+            while (tiles < 1)
             {
                 // Reset values upon failed generation
                 regenCoords = new List<Integer3>();
                 tiles = 0;
                 grid = new ModelTileObject[gridSize,gridSize];
                 itemList = new List<DrawnActor>();
+      
+                // START TILES
+                createTileAt(0, 0, 5, 0);
+                createTileAt(0, 1, 1, 0);
 
+                // END TILES
+                createTileAt(gridSize - 1, gridSize - 1, 5, 2);
+                createTileAt(gridSize - 1, gridSize - 2, 1, 2);
 
+                // RANDOM CHAINS
+                createRandomChainAt(0, 2, 3);
+                createRandomChainAt(gridSize - 1, gridSize - 3, 1);
 
-
-                // Hardcoded item
-
-
-
-                // Create two random chains that link with start and finish
-                createTileAt(gridSize - 1, gridSize - 1, 0, 2);
-                createTileAt(0, 0, 0, 0);
-                createRandomChainAt(0, 1, 3);
-                createRandomChainAt(gridSize - 1, gridSize - 2, 1);
-                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 2, 1));
+                // REGENERATE EXIT
+                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 3, 1));
             }
             
             regenerateGaps();
@@ -293,22 +294,23 @@ namespace GDApp._3DTileEngine
                 **/
 
                 // NON RANDOM ROTATION
-                int rotation = -1;
+                //int rotation = -1;
                 
                 // RANDOM ROTATION
-                //int rotation = random.Next(-1, 4);
-                //possibleDirs = rotateDirs(possibleDirs, rotation);
-                //if(rotation > 2)
-                //{
-                //    rotation = rotation - 4;
-                //}
-                //if(rotation > 6)
-                //{
-                //    rotation = rotation - 8;
-                //}
+                int rotation = random.Next(-1, 3);
+                possibleDirs = rotateDirs(possibleDirs, rotation);
 
                 for (int otries = 0; otries < 4; otries++)
                 {
+                    if (rotation > 6)
+                    {
+                        rotation = rotation - 8;
+                    }
+                    if (rotation > 2)
+                    {
+                        rotation = rotation - 4;
+                    }
+
                     if (compareDirs(allowedDirs, possibleDirs, originDir))
                     {
                         createTileAt(x, y, modelNumber, rotation);
@@ -338,46 +340,58 @@ namespace GDApp._3DTileEngine
 
                 if (isBitSet(possibleDirs, 2))      // If we can go south...
                 {
-                    if(grid[x + 1, y] == null)
+                    if (x+1 >= 0 && y >= 0)
                     {
-                        createRandomChainAt(x + 1, y, 4);           // We create a new chain heading with north as origin
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x + 1, y, 4)); // Regenerate tile to the south
+                        if (grid[x + 1, y] == null)
+                        {
+                            createRandomChainAt(x + 1, y, 4);           // We create a new chain heading with north as origin
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x + 1, y, 4)); // Regenerate tile to the south
+                        }
                     }
                 }
                 if (isBitSet(possibleDirs, 3))      // If we can go west...
-                {
-                    if (grid[x, y - 1] == null)
+                {  
+                    if(x >= 0 && y-1 >= 0)
                     {
-                        createRandomChainAt(x, y - 1, 1);           // We create a new chain heading east
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x, y - 1, 1)); // Regenerate tile to the west
+                        if (grid[x, y - 1] == null)
+                        {
+                            createRandomChainAt(x, y - 1, 1);           // We create a new chain heading east
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x, y - 1, 1)); // Regenerate tile to the west
+                        }
                     }
                 }
                 if (isBitSet(possibleDirs, 4))      // If we can go north...
                 {
-                    if (grid[x - 1, y] == null)
+                    if (x-1 >= 0 && y >= 0)
                     {
-                        createRandomChainAt(x - 1, y, 2);           // We create a new chain heading north with south (2) as origin
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x - 1, y, 2)); // Regenerate the tile to the north
+                        if (grid[x - 1, y] == null)
+                        {
+                            createRandomChainAt(x - 1, y, 2);           // We create a new chain heading north with south (2) as origin
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x - 1, y, 2)); // Regenerate the tile to the north
+                        }
                     }
                 }              
                 if (isBitSet(possibleDirs, 1))      // If we can go east...
                 {
-                    if (grid[x, y + 1] == null)
+                    if (x >= 0 && y+1 >= 0)
                     {
-                        createRandomChainAt(x, y + 1, 3);           // We create a new chain heading east with west (3) as origin
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x, y + 1, 3)); // Regenerate the tile to the east
+                        if (grid[x, y + 1] == null)
+                        {
+                            createRandomChainAt(x, y + 1, 3);           // We create a new chain heading east with west (3) as origin
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x, y + 1, 3)); // Regenerate the tile to the east
+                        }
                     }
                 }
                 return true;
@@ -658,7 +672,7 @@ namespace GDApp._3DTileEngine
         }
         #endregion
 
-        // This function is used to create all tiles
+        #region Objects In Maze Creation
         public ModelTileObject createFreeTileAt(int x, int y, int z, int model, int rotation)
         {
             Transform3D transform = new Transform3D(
@@ -725,6 +739,28 @@ namespace GDApp._3DTileEngine
             
         }
 
+        public void createDoorAt(int x, int y, IVertexData data)
+        {
+            Transform3D transform = new Transform3D(
+               new Vector3(x * tileSize , 0, (y * (-1) * tileSize) - (tileSize / 2)),
+               new Vector3(0, 0, 0),
+               new Vector3(10f, 30f, 10f),
+               Vector3.UnitX,
+               Vector3.UnitY);
+
+            TexturedPrimitiveObject door = new TexturedPrimitiveObject(
+               "maze(" + x + "," + y + ")",
+               ObjectType.Pickup,
+               transform,
+               data,
+               effect,
+               Color.White,
+               1,
+               this.potionTexture);
+
+            itemList.Add(door);
+        }
+
         public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex)
         {
             ModelObject potion = null;
@@ -771,5 +807,6 @@ namespace GDApp._3DTileEngine
             potionZone.Enable(true);
             itemList.Add(potionZone);
         }
+        #endregion
     }
 }

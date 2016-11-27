@@ -1272,6 +1272,7 @@ namespace GDApp
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
             this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
             this.tg.generateRandomGrid();
+            this.tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
             make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
             {
