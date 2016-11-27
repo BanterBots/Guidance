@@ -599,13 +599,13 @@ namespace GDApp
             //this.textureDictionary.Add("emptySpace", Content.Load<Texture2D>("Assets/Textures/UI/MazeTilesBlank01"));
             //this.textureDictionary.Add("playerArrow", Content.Load<Texture2D>("Assets/Textures/UI/PlayerArrow"));
 
-            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/corner2D"));
-            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/straight2D"));
-            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/cross2D"));
-            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/tJunc2D"));
-            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/deadend2D"));
+            this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/UI/map_corner"));
+            this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/UI/map_straight"));
+            this.textureDictionary.Add("cross2D", Content.Load<Texture2D>("Assets/Textures/UI/map_cross"));
+            this.textureDictionary.Add("tJunc2D", Content.Load<Texture2D>("Assets/Textures/UI/map_t"));
+            this.textureDictionary.Add("deadEnd2D", Content.Load<Texture2D>("Assets/Textures/UI/map_deadend"));
             this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/temp"));
-            this.textureDictionary.Add("emptySpace", Content.Load<Texture2D>("Assets/Textures/Game/Maze/ground"));
+            this.textureDictionary.Add("emptySpace", Content.Load<Texture2D>("Assets/Textures/UI/map_blank"));
             this.textureDictionary.Add("playerArrow", Content.Load<Texture2D>("Assets/Textures/UI/PlayerArrow"));
             //billboards
             //this.textureDictionary.Add("billboardtexture", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/billboardtexture"));

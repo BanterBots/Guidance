@@ -506,60 +506,6 @@
       <Time>2016-11-27T21:28:05.8244019+00:00</Time>
     </Item>
     <Item>
-      <Source>Assets\Textures\UI\MazeTilesBlank01.png</Source>
-      <Name>Assets\Textures\UI\MazeTilesBlank01</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\MazeTilesBlank01.xnb</Output>
-      <Time>2016-11-26T22:29:24.3462668+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Assets\Textures\UI\MazeTiles_Corner.png</Source>
-      <Name>Assets\Textures\UI\MazeTiles_Corner</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\MazeTiles_Corner.xnb</Output>
-      <Time>2016-11-26T00:05:06.5766543+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Assets\Textures\UI\MazeTiles_Cross.png</Source>
-      <Name>Assets\Textures\UI\MazeTiles_Cross</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\MazeTiles_Cross.xnb</Output>
-      <Time>2016-11-26T00:05:06.5786573+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Assets\Textures\UI\MazeTiles_End.png</Source>
-      <Name>Assets\Textures\UI\MazeTiles_End</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\MazeTiles_End.xnb</Output>
-      <Time>2016-11-26T00:05:06.5796546+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Assets\Textures\UI\MazeTiles_Hall.png</Source>
-      <Name>Assets\Textures\UI\MazeTiles_Hall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\MazeTiles_Hall.xnb</Output>
-      <Time>2016-11-26T00:05:06.626383+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Assets\Textures\UI\MazeTiles_Junction.png</Source>
-      <Name>Assets\Textures\UI\MazeTiles_Junction</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\MazeTiles_Junction.xnb</Output>
-      <Time>2016-11-26T00:05:06.6273862+00:00</Time>
-    </Item>
-    <Item>
       <Source>Assets\Textures\UI\PlayerArrow.png</Source>
       <Name>Assets\Textures\UI\PlayerArrow</Name>
       <Importer>TextureImporter</Importer>
@@ -1183,6 +1129,60 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\Tile_Straight_0.xml</Output>
       <Time>2016-11-21T10:46:05.1574178+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\UI\map_blank.png</Source>
+      <Name>Assets\Textures\UI\map_blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_blank.xnb</Output>
+      <Time>2016-11-27T23:07:46.4554854+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\UI\map_corner.png</Source>
+      <Name>Assets\Textures\UI\map_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_corner.xnb</Output>
+      <Time>2016-11-27T23:07:59.7908053+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\UI\map_cross.png</Source>
+      <Name>Assets\Textures\UI\map_cross</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_cross.xnb</Output>
+      <Time>2016-11-27T23:13:41.0157502+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\UI\map_deadend.png</Source>
+      <Name>Assets\Textures\UI\map_deadend</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_deadend.xnb</Output>
+      <Time>2016-11-27T23:18:49.0589134+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\UI\map_straight.png</Source>
+      <Name>Assets\Textures\UI\map_straight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_straight.xnb</Output>
+      <Time>2016-11-27T23:17:37.7206031+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Textures\UI\map_t.png</Source>
+      <Name>Assets\Textures\UI\map_t</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_t.xnb</Output>
+      <Time>2016-11-27T23:12:19.1462124+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
