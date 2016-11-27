@@ -148,6 +148,7 @@
     <Compile Include="GDLibrary\Enums\EventType.cs" />
     <Compile Include="GDLibrary\Events\Data\TextEventData.cs" />
     <Compile Include="GDLibrary\Events\Data\VideoEventData.cs" />
+    <Compile Include="GDLibrary\Graphics\TargetedGraphicsDeviceManager.cs" />
     <Compile Include="GDLibrary\Interfaces\Controller.cs" />
     <Compile Include="GDLibrary\Interfaces\IController.cs" />
     <Compile Include="GDLibrary\Cameras\Old\TrackCamera3D.cs" />

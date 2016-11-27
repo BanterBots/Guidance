@@ -109,7 +109,7 @@ namespace GDApp._3DTileEngine
         #endregion
 
         #region Input Gen
-        private void generateGridFromArrays(int[,] modelTypes, int[,] modelRotations)
+        public void generateGridFromArrays(int[,] modelTypes, int[,] modelRotations)
         {
             Transform3D transform;
             ModelTileObject mazeObject;
@@ -698,6 +698,13 @@ namespace GDApp._3DTileEngine
             //enabled by default
             potionZone.Enable(true);
             itemList.Add(potionZone);
+        }
+
+        internal string mazeToString()
+        {
+            string mazeString = this.itemList.ToString();
+
+            return mazeString;
         }
     }
 }

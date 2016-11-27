@@ -78,7 +78,7 @@ namespace GDLibrary
             this.textureRectangle.Inflate(-textureBorderPadding.X, -textureBorderPadding.Y);
 
             //show the menu
-            ShowMenu();
+            //ShowMenu();
 
 
         }

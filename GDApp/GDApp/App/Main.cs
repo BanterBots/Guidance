@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 #region Update Log
 /* To Do: 
@@ -363,7 +364,7 @@ namespace GDApp
     public class Main : Microsoft.Xna.Framework.Game
     {
         #region Fields
-        GraphicsDeviceManager graphics;
+        TargetedGraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private BasicEffect primitiveEffect;
         private BasicEffect texturedPrimitiveEffect;
@@ -413,6 +414,9 @@ namespace GDApp
         private int width = 1024;
         private int height = 768;
         private TileGrid tg;
+        private int monitorIndex;
+        private LocalDataStoreSlot slot;
+        private List<DrawnActor> itemList;
 
         #endregion
 
@@ -493,9 +497,17 @@ namespace GDApp
         #region Constructors
         public Main()
         {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
         }
+
+        public Main(int monitorIndex) : this()
+        {
+            graphics = new TargetedGraphicsDeviceManager(this, monitorIndex);
+            Content.RootDirectory = "Content";
+            this.monitorIndex = monitorIndex;
+            
+        }
+
+        
         #endregion
 
         #region Event Handling
@@ -677,25 +689,31 @@ namespace GDApp
         #region Initialize Core
         private void LoadGame()
         {
-            //remove anything from a previous run in object and ui manager
-            this.objectManager.Clear();
-            this.uiManager.Clear();
+            
 
-            //setup the world and all its objects
-            int worldScale = 1000;
-            #region Non Collidable Primitives
-            InitializeSkyBox(worldScale);
-            InitializeNonCollidablePrimitives();
-            InitializeNonCollidableBillboards();
- 
-            #endregion
+                //remove anything from a previous run in object and ui manager
+                this.objectManager.Clear();
+                this.uiManager.Clear();
 
-            #region Non Collidable Models
-            InitializeNonCollidableModels();
+                //setup the world and all its objects
+                int worldScale = 1000;
+                #region Non Collidable Primitives
+                InitializeSkyBox(worldScale);
+                InitializeNonCollidablePrimitives();
+                InitializeNonCollidableBillboards();
+
+                #endregion
+
+                #region Non Collidable Models
+                InitializeNonCollidableModels();
 
             #endregion
 
             #region Collidable
+            if (this.monitorIndex == 1)
+            {
+                this.soundManager.PlayCue("bongobongoLoop"); 
+            }
             // GUIDANCE
             int size = 0;
             InitializeMaze(size);
@@ -709,9 +727,11 @@ namespace GDApp
             #endregion
 
             InitializeCameraTracks();
-            InitializeCameras();
-            InitializeUI();
-            this.soundManager.PlayCue("bongobongoLoop");
+                InitializeCameras();
+                InitializeUI();
+            
+               
+             
         }
 
         protected override void Initialize()
@@ -1058,9 +1078,20 @@ namespace GDApp
             cloneFixedCamera = (Camera3D)fixedCameraArchetype.Clone();
             cloneFixedCamera.ID = "Top Maze Cam";
             cloneFixedCamera.Transform3D = transform;
+            cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThreeOrtho;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
-            
+
+            #region SplitScreen
+
+
+
+
+
+            #endregion
+
+
+
             #region Nialls Stuff
             /*
                        #region Collidable First Person Camera
@@ -1242,8 +1273,10 @@ namespace GDApp
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
             this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            
             this.tg.generateRandomGrid();
-            make2DMazeMap(tg);
+                
+            //make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -1258,7 +1291,11 @@ namespace GDApp
                     }
                 }
             }
-            tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
+            
+
+
+
+            //tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
 
             foreach (DrawnActor model in tg.itemList)
             {
@@ -1268,7 +1305,7 @@ namespace GDApp
 
 
         }
-
+        
         private void InitializeStaticCollidableGround(int scale)
         {
             CollidableObject collidableObject = null;
@@ -1653,8 +1690,12 @@ namespace GDApp
 
         private void demoCameraLayout()
         {
-            if (this.keyboardManager.IsFirstKeyPress(Keys.F1))
-                this.cameraManager.CycleCamera();      
+            //if (this.keyboardManager.IsFirstKeyPress(Keys.F1))
+            //    this.cameraManager.CycleCamera();      
+            if (this.monitorIndex == 1)
+                this.cameraManager.ActiveCameraIndex = 0;
+            else
+                this.cameraManager.ActiveCameraIndex = 1;
         }
 
 
@@ -1808,8 +1849,12 @@ namespace GDApp
        #region Update & Draw
        protected override void Update(GameTime gameTime)
        {
-           // Allows the game to exit
-           if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            // full screen
+            //if (!graphics.IsFullScreen)
+            //    graphics.ToggleFullScreen();
+
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                this.Exit();
 
            #region Demos
@@ -1817,7 +1862,7 @@ namespace GDApp
            demoTextToTextureAndVideo();
            demoCameraTrack(gameTime);
            */
-                        demoCameraLayout();
+            demoCameraLayout();
             demoSoundManager();
             demoMousePicking();
             

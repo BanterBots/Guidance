@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace GDApp
 {
@@ -10,7 +11,34 @@ namespace GDApp
         /// </summary>
         static void Main(string[] args)
         {
-            using (Main game = new Main())
+            ThreadStart runLeftSideDelegate = new ThreadStart(RunLeftSide);
+            Thread runLeftSideThread = new Thread(runLeftSideDelegate);
+            runLeftSideThread.IsBackground = false;
+            runLeftSideThread.Start();
+
+            ThreadStart runRightSideDelegate = new ThreadStart(RunRightSide);
+            Thread runRightSideThread = new Thread(runRightSideDelegate);
+            runRightSideThread.IsBackground = false;
+            runRightSideThread.Start();
+
+            runLeftSideThread.Join();
+            runRightSideThread.Join();
+        }
+
+        static void RunLeftSide()
+        {
+            int index = 1;
+            
+            using (Main game = new GDApp.Main(index))
+            {
+                game.Run();
+            }
+        }
+
+        static void RunRightSide()
+        {
+            int index = 2;
+            using (Main game = new GDApp.Main(index))
             {
                 game.Run();
             }
