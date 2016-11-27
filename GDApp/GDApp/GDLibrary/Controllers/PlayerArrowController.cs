@@ -16,6 +16,7 @@ namespace GDLibrary
 
         public override void Update(GameTime gameTime)
         {
+
             //float size = this.ParentActor.Transform3D.Scale.X;
             //float height = this.ParentActor.Transform3D.Translation.Y;
 
