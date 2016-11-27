@@ -1046,21 +1046,22 @@ namespace GDApp
 
 
             #endregion
-            
+
 
             #region Maze Camera
             transform = new Transform3D(
                 //new Vector3(300, 1000, -500), 
                 positionMapCamera(),
-                Vector3.Down, 
+                Vector3.Down,
                 -1 * Vector3.Right);
 
             cloneFixedCamera = (Camera3D)fixedCameraArchetype.Clone();
             cloneFixedCamera.ID = "Top Maze Cam";
             cloneFixedCamera.Transform3D = transform;
+            cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThreeOrtho;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
-            
+
             #region Nialls Stuff
             /*
                        #region Collidable First Person Camera

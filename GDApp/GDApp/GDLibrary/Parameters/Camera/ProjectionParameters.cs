@@ -16,11 +16,14 @@ namespace GDLibrary
     {
         #region Fields
         public static ProjectionParameters StandardMediumFourThree = new ProjectionParameters(MathHelper.ToRadians(60), 4.0f / 3, 1, 1000);
-
+        public static ProjectionParameters StandardMediumFourThreeOrtho = new ProjectionParameters(1200, 900, 1, 1000, false);
         private float fieldOfView, aspectRatio, nearClipPlane, farClipPlane;
         private Matrix projection;
         private bool isDirty;
         private float originalFOV, originalAspectRatio, originalNearClipPlane, originalFarClipPlane;
+        private float width, height;
+        private float originalWidth, originalHeight;
+        private bool isPerspective;
         #endregion
 
         #region Properties
@@ -79,10 +82,19 @@ namespace GDLibrary
             {
                 if (this.isDirty)
                 {
-                    this.projection = Matrix.CreatePerspectiveFieldOfView(
-                        this.fieldOfView, this.aspectRatio,
-                        this.nearClipPlane, this.farClipPlane);
-                    this.isDirty = false; 
+                    if (isPerspective == true)
+                    {
+                        this.projection = Matrix.CreatePerspectiveFieldOfView(
+                            this.fieldOfView, this.aspectRatio,
+                            this.nearClipPlane, this.farClipPlane);
+                        this.isDirty = false;
+                    }
+                    else
+                    {
+                        this.projection = Matrix.CreateOrthographic(
+                            this.width, this.height, this.nearClipPlane, this.farClipPlane);
+                        this.isDirty = false;
+                    }
                 }
                 return this.projection;
             }
@@ -96,7 +108,19 @@ namespace GDLibrary
             this.AspectRatio = this.originalAspectRatio = aspectRatio;
             this.NearClipPlane = this.originalNearClipPlane = nearClipPlane;
             this.FarClipPlane = this.originalFarClipPlane = farClipPlane;
+            this.isPerspective = true;
         }
+
+        public ProjectionParameters(float width, float height, float nearClipPlane, float farClipPlane, bool isPerspective)
+        {
+            this.width = this.originalWidth = width;
+            this.height = this.originalHeight = height;
+            this.NearClipPlane = this.originalNearClipPlane = nearClipPlane;
+            this.FarClipPlane = this.originalFarClipPlane = farClipPlane;
+            this.isPerspective = false;
+        }
+
+
 
         public void Reset()
         {
