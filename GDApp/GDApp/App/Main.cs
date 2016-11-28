@@ -945,7 +945,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = true;
+            bool bDebugMode = false;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);
@@ -978,12 +978,10 @@ namespace GDApp
         {
             // GUIDANCE EFFECTS
             this.texturedModelEffect = new BasicEffect(graphics.GraphicsDevice);
-            //this.texturedModelEffect.VertexColorEnabled = true;
             this.texturedModelEffect.TextureEnabled = true;
-            this.texturedModelEffect.EnableDefaultLighting();
-            this.texturedModelEffect.PreferPerPixelLighting = true;
-            this.texturedModelEffect.SpecularPower = 128;
-
+            //this.texturedModelEffect.EnableDefaultLighting();
+            //this.texturedModelEffect.DirectionalLight1.Enabled = true;
+            //this.texturedModelEffect.DirectionalLight2.Enabled = true;
 
             this.propModelEffect = new BasicEffect(graphics.GraphicsDevice);
             this.propModelEffect.TextureEnabled = true;
@@ -1014,9 +1012,7 @@ namespace GDApp
             this.texturedPrimitiveEffect.VertexColorEnabled = true;
             this.texturedPrimitiveEffect.TextureEnabled = true;*/
 
-            this.texturedModelEffect = new BasicEffect(graphics.GraphicsDevice);
-           // this.texturedModelEffect.VertexColorEnabled = true; 
-            this.texturedModelEffect.TextureEnabled = true;
+            
 
             //used for billboards
             this.billboardEffect = Content.Load<Effect>("Assets/Effects/Billboard");
@@ -1082,8 +1078,10 @@ namespace GDApp
 
 
             #endregion
-            
+
             #region Maze Camera
+            /*
+            
             transform = new Transform3D(
                 //new Vector3(300, 1000, -500), 
                 positionMapCamera(),
@@ -1095,17 +1093,34 @@ namespace GDApp
             cloneFixedCamera.Transform3D = transform;
             cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThreeOrtho;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
+            
+             */
             #endregion
 
             #region New UI Camera
+            //transform = new Transform3D(
+            //    new Vector3(100, 100, 100),
+            //    new Vector3(0, -0.9f, 1),
+            //    new Vector3(0, 1, 0));
+
+            float xLoc = (0 + tg.tileSize / 4);
+            float yLoc = (0 - tg.tileSize / 4);
+
+
             transform = new Transform3D(
-                new Vector3(100, 100, 100),
-                new Vector3(0, -0.9f, 1),
+                new Vector3(xLoc + 5, 135, yLoc + 10),
+                new Vector3(-0.6f, -0.8f, 0),
                 new Vector3(0, 1, 0));
+
+            //transform = new Transform3D(
+            //    new Vector3(0,80,0),
+            //    Vector3.Down,
+            //    -1 * Vector3.Right);
 
             cloneFixedCamera = (Camera3D)fixedCameraArchetype.Clone();
             cloneFixedCamera.ID = "New UI Cam";
             cloneFixedCamera.Transform3D = transform;
+            cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThree;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
 
@@ -1161,8 +1176,9 @@ namespace GDApp
             this.mazeHeight /= 2;
             this.mazeHeight *= this.tileGridSize; //halfway point down the maze
 
-
+            // old camera
             return new Vector3(this.mazeWidth, 1000, -this.mazeHeight);
+            //return new Vector3(this.mazeWidth, 200, -this.mazeHeight);
         }
         #endregion
 
@@ -1309,7 +1325,16 @@ namespace GDApp
             }
             tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
 
-            ModelTileObject mazePeice = tg.createFreeTileAt(100, 74, 90, 6, 1);
+        
+            // MAP CENTER
+            //int xLoc = (int)((tg.tileSize * tg.gridSize / 2) - tg.tileSize/2);
+            //int yLoc = (int)(-(tg.tileSize * tg.gridSize / 2) + tg.tileSize/2);
+
+            // MAP TOP LEFT CORNER
+            int xLoc = (int)(0 + tg.tileSize/4);
+            int yLoc = (int)(0 - tg.tileSize / 4);
+
+            ModelTileObject mazePeice = tg.createFreeTileAt(xLoc, 100, yLoc + 10, 6, 2);
             this.objectManager.Add(mazePeice);
 
             BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
@@ -1317,10 +1342,10 @@ namespace GDApp
             //archetype - clone from this
 
 
-            int tableHeight = 15;
-            int tableWidth = 20;
+            int tableHeight = 30;
+            int tableWidth = 30;
             Transform3D tableTransform = new Transform3D(
-               new Vector3(100, 90, 123),
+               new Vector3(8, 114, 20),
                new Vector3(-90, 0, 0),
                new Vector3(tableWidth, tableHeight, 0),
                Vector3.UnitX,
@@ -1853,7 +1878,7 @@ namespace GDApp
 
         private void create2DTile(int rotation, Vector2 pos, Texture2D tile)
         {
-            float tileSize = this.tileGridSize;
+            float tileSize = this.tileGridSize/32;
             Console.WriteLine(rotation);
             float xTranslationRot = 0, yTranslationRot = 0;
             if (rotation == 0)
@@ -1868,7 +1893,7 @@ namespace GDApp
             //Based on rotation, tiles move. Must account for that.
 
             Transform3D transform = new Transform3D(
-                new Vector3((pos.X * tileSize) - (xTranslationRot), 100, (pos.Y * (-1) * tileSize) - (yTranslationRot)),
+                new Vector3((pos.X * tileSize) - (xTranslationRot), 115, (pos.Y * (-1) * tileSize) - (yTranslationRot)),
                 new Vector3(-90, rotation * -90, 0),
                 //rotation * -90
                 new Vector3(tileSize, tileSize, 0),
