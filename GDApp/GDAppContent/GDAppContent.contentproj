@@ -522,36 +522,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Textures\UI\MazeTilesBlank01.png">
-      <Name>MazeTilesBlank01</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Assets\Textures\UI\MazeTiles_Corner.png">
-      <Name>MazeTiles_Corner</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Assets\Textures\UI\MazeTiles_Cross.png">
-      <Name>MazeTiles_Cross</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Assets\Textures\UI\MazeTiles_End.png">
-      <Name>MazeTiles_End</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Assets\Textures\UI\MazeTiles_Hall.png">
-      <Name>MazeTiles_Hall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Assets\Textures\UI\MazeTiles_Junction.png">
-      <Name>MazeTiles_Junction</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Assets\Textures\UI\PlayerArrow.png">
       <Name>PlayerArrow</Name>
       <Importer>TextureImporter</Importer>
@@ -559,6 +529,40 @@
     </Compile>
     <Compile Include="Assets\Textures\UI\PotionGeneric.png">
       <Name>PotionGeneric</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Textures\UI\map_blank.png">
+      <Name>map_blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\UI\map_corner.png">
+      <Name>map_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Textures\UI\map_cross.png">
+      <Name>map_cross</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\UI\map_deadend.png">
+      <Name>map_deadend</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\UI\map_straight.png">
+      <Name>map_straight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Textures\UI\map_t.png">
+      <Name>map_t</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
