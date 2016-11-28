@@ -7,33 +7,21 @@ using JigLibX.Collision;
 
 namespace GDLibrary
 {
-    public class PotionZoneObject : ZoneObject
+    public class StartZoneObject : ZoneObject
     {
-        
+
         #region Variables
-        private DrawnActor potion;
         #endregion
 
         #region Properties
-        public DrawnActor Potion
-        {
-            get
-            {
-                return this.potion;
-            }
-            set
-            {
-                this.potion = value;
-            }
-        }
         #endregion
 
-        public PotionZoneObject(string id, ObjectType objectType, Transform3D transform,
+        public StartZoneObject(string id, ObjectType objectType, Transform3D transform,
             Effect effect, Color color, float alpha,
-            CollidableObject targetObject, bool isImpenetrable, DrawnActor potion)
+            CollidableObject targetObject, bool isImpenetrable)
             : base(id, objectType, transform, effect, color, alpha, targetObject, isImpenetrable)
         {
-            this.potion = potion;
+            
         }
 
         public override bool HandleCollision(CollisionSkin collider, CollisionSkin collidee)
@@ -41,7 +29,7 @@ namespace GDLibrary
             if (collidee.Owner.ExternalData is PlayerObject)
             {
                 PlayerObject playerObject = collidee.Owner.ExternalData as PlayerObject;
-                EventDispatcher.Publish(new EventData("potion", this, EventType.OnZoneEnter, EventCategoryType.Zone, potion));
+                EventDispatcher.Publish(new EventData("start", this, EventType.OnZoneExit, EventCategoryType.Zone));
             }
 
             return base.HandleCollision(collider, collidee);

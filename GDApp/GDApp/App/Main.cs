@@ -548,19 +548,38 @@ namespace GDApp
 
         private void eventDispatcher_ZoneChanged(EventData eventData)
         {
-            if (eventData.EventType == EventType.OnZoneEnter)
+            if (eventData.ID == "potion")
             {
-                eventData.Reference.Alpha = 0.8f;
-                if (keyboardManager.IsKeyDown(Keys.E))
-                    pickUpPotion(eventData.Reference);
+                if (eventData.EventType == EventType.OnZoneEnter)
+                {
+                    eventData.Reference.Alpha = 0.8f;
+                    if (keyboardManager.IsKeyDown(Keys.E))
+                        pickUpPotion(eventData.Reference);
+                }
+                else if (eventData.EventType == EventType.OnZoneExit)
+                {
+                    if (eventData.Reference != null)
+                        eventData.Reference.Alpha = 1f;
+                }
             }
-            else if (eventData.EventType == EventType.OnZoneExit)
+            else if (eventData.ID == "start")
             {
-                if(eventData.Reference!=null)
-                    eventData.Reference.Alpha = 1f;
+                if (eventData.EventType == EventType.OnZoneExit)
+                {
+                    closeStartDoor();
+                }
             }
-
+            else if (eventData.ID == "end")
+            {
+                if (eventData.EventType == EventType.OnZoneEnter)
+                {
+                    finishGame();
+                }
+            }
         }
+
+        
+
         #endregion
 
         #region Load Assets
@@ -926,7 +945,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = false;
+            bool bDebugMode = true;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);
@@ -1876,9 +1895,20 @@ namespace GDApp
            //start effect
        }
 
+        private void closeStartDoor()
+        {
+            this.soundManager.Play3DCue("boing", new AudioEmitter());
+            //close Door
+        }
+        private void finishGame()
+        {
+            this.soundManager.Play3DCue("boing", new AudioEmitter());
+            //End Game Stuff
+        }
 
-       #region Update & Draw
-       protected override void Update(GameTime gameTime)
+
+        #region Update & Draw
+        protected override void Update(GameTime gameTime)
        {
            // Allows the game to exit
            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)

@@ -96,11 +96,11 @@ namespace GDApp._3DTileEngine
                 itemList = new List<DrawnActor>();
       
                 // START TILES
-                createTileAt(0, 0, 5, 0);
+                createStartTileAt(0, 0, 5, 0);
                 createTileAt(0, 1, 1, 0);
 
                 // END TILES
-                createTileAt(gridSize - 1, gridSize - 1, 5, 2);
+                createEndTileAt(gridSize - 1, gridSize - 1, 5, 2);
                 createTileAt(gridSize - 1, gridSize - 2, 1, 2);
 
                 // RANDOM CHAINS
@@ -729,14 +729,84 @@ namespace GDApp._3DTileEngine
             //transform.Translation = new Vector3(transform.Translation.X, transform.Translation.Y+200, transform.Translation.Z);
             //transform.Scale *= this.tileSize;
 
-           
+
             //random items
             /*
             int randPotion = random.Next(1, 40);
             if(randPotion == 1)
                 createPotionAt(x, y, effect, this.potionTexture);
             */
-            
+
+        }
+
+        private void createEndTileAt(int x, int y, int model, int rotation)
+        {
+            createTileAt(x, y, model, rotation);
+
+            float newX = x * tileSize;
+            float newZ = y * tileSize * (-1);
+
+            Transform3D transform = new Transform3D(
+                new Vector3(newX, 0, newZ),
+                new Vector3(0, rotation * -90, 0),
+                new Vector3(30, 15, 30),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            EndZoneObject endZone = new EndZoneObject(
+                "potionZone(" + x + "," + y + ")",
+                ObjectType.CollidableTriggerZone,
+                transform,
+                effect,
+                Color.White,
+                0,
+                null,
+                false);
+            newX += 200;
+            //no mass so we disable material properties
+            endZone.AddPrimitive(
+                new Box(
+                    new Vector3(0, 0, -60),
+                    Matrix.Identity,
+                    new Vector3(40, 15, 40)));
+            //enabled by default
+            endZone.Enable(true);
+            itemList.Add(endZone);
+        }
+
+        private void createStartTileAt(int x, int y, int model, int rotation)
+        {
+            createTileAt(x, y, model, rotation);
+
+            float newX = x * tileSize;
+            float newZ = y * tileSize * (-1);
+
+            Transform3D transform = new Transform3D(
+                new Vector3(0, 0, -60),
+                new Vector3(0, rotation * -90, 0),
+                new Vector3(30, 15, 30),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            StartZoneObject startZone = new StartZoneObject(
+                "potionZone(" + x + "," + y + ")",
+                ObjectType.CollidableTriggerZone,
+                transform,
+                effect,
+                Color.White,
+                0,
+                null,
+                false);
+            newX += 200;
+            //no mass so we disable material properties
+            startZone.AddPrimitive(
+                new Box(
+                    new Vector3(0, 0, -60),
+                    Matrix.Identity,
+                    new Vector3(30, 15, 5)));
+            //enabled by default
+            startZone.Enable(true);
+            itemList.Add(startZone);
         }
 
         public void createDoorAt(int x, int y, IVertexData data)
