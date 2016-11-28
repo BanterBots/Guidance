@@ -760,7 +760,7 @@ namespace GDApp
             InitializeCameraTracks();
             InitializeCameras();
             InitializeUI();
-            this.soundManager.PlayCue("bongobongoLoop");
+            //this.soundManager.PlayCue("bongobongoLoop");
         }
 
         protected override void Initialize()
@@ -1024,10 +1024,10 @@ namespace GDApp
             this.primitiveEffect = new BasicEffect(graphics.GraphicsDevice);
             this.primitiveEffect.VertexColorEnabled = true;
 
-            /*
+            
             this.texturedPrimitiveEffect = new BasicEffect(graphics.GraphicsDevice);
             this.texturedPrimitiveEffect.VertexColorEnabled = true;
-            this.texturedPrimitiveEffect.TextureEnabled = true;*/
+            this.texturedPrimitiveEffect.TextureEnabled = true;
 
             
 
@@ -1074,14 +1074,13 @@ namespace GDApp
             string cameraLayoutName = "FirstPersonMazeCamera";
 
             #region Player Arrow
-            Transform3D arrowTransform = new Transform3D(new Vector3(0, 0, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/32, this.tileGridSize/32, 0), - Vector3.UnitZ, Vector3.UnitY);
-            BillboardPrimitiveObject playerArrow = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+            Transform3D arrowTransform = new Transform3D(new Vector3(0, 0, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/(3*32), this.tileGridSize/(3*32), 0), - Vector3.UnitZ, Vector3.UnitY);
+            TexturedPrimitiveObject playerArrow = new TexturedPrimitiveObject("arrow", ObjectType.Decorator,
                 arrowTransform, //transform reset in clones
                 this.vertexDictionary["texturedquad"],
-                this.billboardEffect,
+                this.texturedPrimitiveEffect,
                 Color.White, 1,
-                this.textureDictionary["playerArrow"],
-                BillboardType.Normal);
+                this.textureDictionary["playerArrow"]);
 
             this.objectManager.Add(playerArrow);
             #endregion Player Arrow
@@ -1900,6 +1899,7 @@ namespace GDApp
         }
         #endregion  
 
+        #region Game Stuff
         private void make2DMazeMap(TileGrid tg)
         {
             BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
@@ -2007,7 +2007,7 @@ namespace GDApp
             this.soundManager.Play3DCue("boing", new AudioEmitter());
             //End Game Stuff
         }
-
+        #endregion
 
         #region Update & Draw
         protected override void Update(GameTime gameTime)
