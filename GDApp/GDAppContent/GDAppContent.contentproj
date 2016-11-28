@@ -544,8 +544,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Textures\UI\map_cross.png">
       <Name>map_cross</Name>
       <Importer>TextureImporter</Importer>
