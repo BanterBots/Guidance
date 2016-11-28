@@ -1122,7 +1122,7 @@ namespace GDApp
                 clonePawnCamera + " controller",
                 clonePawnCamera,
                 KeyData.MoveKeys,
-                GameData.CameraMoveSpeed * 6,
+                GameData.PlayerMoveSpeed,
                 GameData.CameraStrafeSpeed * 6,
                 GameData.CameraRotationSpeed * 20,
                 1f, // radius
@@ -1192,7 +1192,7 @@ namespace GDApp
                 clonePawnCamera + " controller",
                 clonePawnCamera,
                 KeyData.MoveKeys,
-                GameData.CameraMoveSpeed * 6,
+                GameData.PlayerMoveSpeed,
                 GameData.CameraStrafeSpeed * 6,
                 GameData.CameraRotationSpeed * 20,
                 1f, // radius
@@ -2020,13 +2020,30 @@ namespace GDApp
             objectManager.Add(billboardArchetypeObject);
         }
 
-       private void pickUpPotion(DrawnActor potion)
+       private void pickUpPotion(DrawnActor p)
        {
-           this.soundManager.Play3DCue("boing", new AudioEmitter());
-           potion.Remove();
-           EventDispatcher.Publish(new EventData("potionEffect", this, EventType.OnPickup, EventCategoryType.Pickup));
-           //start effect
-       }
+            PotionObject potion = p as PotionObject;
+            if (potion.PotionType == PotionType.speed)
+                this.speed = true;
+            else if (potion.PotionType == PotionType.slow)
+                this.slow = true;
+            else if (potion.PotionType == PotionType.reverse)
+                this.reverse = true;
+            else if (potion.PotionType == PotionType.mapSpin)
+                this.mapSpin = true;
+            else if (potion.PotionType == PotionType.lessTime)
+                this.lessTime = true;
+            else if (potion.PotionType == PotionType.extraTime)
+                this.extraTime = true;
+            else if (potion.PotionType == PotionType.blackout)
+                this.blackout = true;
+            else if (potion.PotionType == PotionType.flip)
+                this.flip = true;
+            this.soundManager.Play3DCue("boing", new AudioEmitter());
+            p.Remove();
+            //EventDispatcher.Publish(new EventData("potionEffect", this, EventType.OnPickup, EventCategoryType.Pickup));
+            //start effect
+        }
 
         private void closeStartDoor()
         {
@@ -2069,7 +2086,7 @@ namespace GDApp
             if (speed == true)
                 changeSpeed(1.5f, gameTime);
             if (slow == true)
-                changeSpeed(0.5f, gameTime);
+                changeSpeed(-0.5f, gameTime);
             if (reverse == true)
                 reverseControls(gameTime);
             if (flip == true)
@@ -2089,26 +2106,26 @@ namespace GDApp
             //Change Players Speed by the passed in value for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
-                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
                 
-                this.tempValue = GameData.CameraMoveSpeed; //store old value
+                this.tempValue = GameData.PlayerMoveSpeed; //store old value
 
                 //Static Change
-                GameData.CameraMoveSpeed += GameData.CameraMoveSpeed * v; //Change Camera Move Speed
+                GameData.PlayerMoveSpeed += GameData.PlayerMoveSpeed * v; //Change Camera Move Speed
             }
             else //when timer is running
             {
-                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime)
+                if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime)
                 {
                     //Dynamic Change
                 }
                 else
                 {
                     //Revert Change
-                    GameData.CameraMoveSpeed = this.tempValue;
-
+                    GameData.PlayerMoveSpeed = this.tempValue;
+                    soundManager.Play3DCue("boing", new AudioEmitter());
                     //reset bools
                     if (v > 0)
                         speed = false;
@@ -2123,7 +2140,7 @@ namespace GDApp
             //Change key bindings so forward is backwards, left is right and vice-versa
             if (this.timerRunning == false) //if it isn't currently running
             {
-                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
                 
@@ -2131,7 +2148,7 @@ namespace GDApp
             }
             else //when timer is running
             {
-                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
                 }
@@ -2150,7 +2167,7 @@ namespace GDApp
             //Rotate Player Camera 180 degrees for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
-                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
 
@@ -2158,7 +2175,7 @@ namespace GDApp
             }
             else //when timer is running
             {
-                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
                 }
@@ -2188,7 +2205,7 @@ namespace GDApp
             //Black out Map screen for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
-                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
 
@@ -2196,7 +2213,7 @@ namespace GDApp
             }
             else //when timer is running
             {
-                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
                 }
@@ -2215,7 +2232,7 @@ namespace GDApp
             //Spin Map Screen for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
-                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
 
@@ -2223,7 +2240,7 @@ namespace GDApp
             }
             else //when timer is running
             {
-                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
                 }

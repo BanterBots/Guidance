@@ -57,13 +57,13 @@ namespace GDLibrary
             {
                 Vector3 restrictedLook = this.ParentActor.Transform3D.Look;
                 restrictedLook.Y = 0;
-                this.playerObject.CharacterBody.Velocity += restrictedLook * this.MoveSpeed * gameTime.ElapsedGameTime.Milliseconds;
+                this.playerObject.CharacterBody.Velocity += restrictedLook * GameData.PlayerMoveSpeed * gameTime.ElapsedGameTime.Milliseconds;
             }
             else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[KeyData.KeysIndexMoveBackward]))
             {
                 Vector3 restrictedLook = this.ParentActor.Transform3D.Look;
                 restrictedLook.Y = 0;
-                this.playerObject.CharacterBody.Velocity -= restrictedLook * this.MoveSpeed * gameTime.ElapsedGameTime.Milliseconds;
+                this.playerObject.CharacterBody.Velocity -= restrictedLook * GameData.PlayerMoveSpeed * gameTime.ElapsedGameTime.Milliseconds;
             }
             else //decelerate to zero when not pressed
             {
