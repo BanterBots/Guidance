@@ -87,14 +87,13 @@ namespace GDApp._3DTileEngine
         #region Random Gen
         public void generateRandomGrid()
         {
-            while (tiles < 1)
+            while (tiles < minTiles)
             {
-                // Reset values upon failed generation
                 regenCoords = new List<Integer3>();
                 tiles = 0;
-                grid = new ModelTileObject[gridSize,gridSize];
+                grid = new ModelTileObject[gridSize, gridSize];
                 itemList = new List<DrawnActor>();
-      
+
                 // START TILES
                 createStartTileAt(0, 0, 5, 0);
                 createTileAt(0, 1, 1, 0);
@@ -109,9 +108,48 @@ namespace GDApp._3DTileEngine
 
                 // REGENERATE EXIT
                 regenCoords.Add(new Integer3(gridSize - 1, gridSize - 3, 1));
+
+                if (tiles < minTiles)
+                {
+                    clean();
+                }
             }
             
             regenerateGaps();
+            InitializeCollisions();
+        }
+
+        private void clean()
+        { 
+            // Reset values upon failed generation
+
+            for (int i = 0; i < gridSize; i++)
+            {
+                for (int j = 0; j < gridSize; j++)
+                {
+                    if (grid[i, j] != null)
+                    {
+                        grid[i, j].Remove();
+                    }
+                }
+            }
+            foreach(DrawnActor da in itemList){
+                da.Remove();
+            }
+        }
+
+        private void InitializeCollisions()
+        {
+            for (int i = 0; i < gridSize; i++)
+            {
+                for (int j = 0; j < gridSize; j++)
+                {
+                    if (grid[i, j] != null)
+                    {
+                        grid[i, j].InitializeCollision();
+                    }
+                }
+            }
         }
         #endregion
 
@@ -725,18 +763,6 @@ namespace GDApp._3DTileEngine
             mazeObject.rotation = rotation;
             tiles++;
             grid[x, y] = mazeObject;
-
-            //transform.Translation = new Vector3(transform.Translation.X, transform.Translation.Y+200, transform.Translation.Z);
-            //transform.Scale *= this.tileSize;
-
-
-            //random items
-            /*
-            int randPotion = random.Next(1, 40);
-            if(randPotion == 1)
-                createPotionAt(x, y, effect, this.potionTexture);
-            */
-
         }
 
         private void createEndTileAt(int x, int y, int model, int rotation)

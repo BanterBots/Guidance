@@ -750,7 +750,7 @@ namespace GDApp
 
         protected override void Initialize()
         {
-            startServer();
+            //startServer();
 
             InitializeEventDispatcher();
             InitializeStatics();

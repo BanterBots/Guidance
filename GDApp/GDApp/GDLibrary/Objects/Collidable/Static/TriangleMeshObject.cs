@@ -109,6 +109,17 @@ namespace GDLibrary
             this.Body.EnableBody();
         }
 
+        public override void Remove()
+        {
+            this.Collision.RemoveAllPrimitives();
+            this.Body.DisableBody();
+
+            this.Body = null;
+            this.Collision = null;
+
+            base.Remove();
+        }
+
         public void ExtractData(List<Vector3> vertices, List<TriangleVertexIndices> indices, Model model)
         {
             Matrix[] bones_ = new Matrix[model.Bones.Count];

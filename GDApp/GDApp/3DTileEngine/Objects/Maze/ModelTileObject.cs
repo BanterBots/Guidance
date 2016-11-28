@@ -68,7 +68,6 @@ namespace GDApp._3DTileEngine
             this.modelNo = modelNo;
 
             InitializeBoneTransforms();
-            InitializeCollision();
         }
 
         public ModelTileObject(string id, ObjectType objectType, Transform3D transform, BasicEffect effect, Color color, float alpha, Texture2D texture, Model model, Model collisionModel, int modelNo,
@@ -83,10 +82,9 @@ namespace GDApp._3DTileEngine
             this.modelNo = modelNo;
 
             InitializeBoneTransforms();
-            InitializeCollision();
         }
 
-        private void InitializeCollision()
+        public void InitializeCollision()
         {
             this.Enable(true, 1);
             this.ObjectType = ObjectType.CollidableProp;
