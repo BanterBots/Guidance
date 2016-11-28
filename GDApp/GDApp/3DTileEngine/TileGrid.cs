@@ -857,7 +857,7 @@ namespace GDApp._3DTileEngine
             itemList.Add(door);
         }
 
-        public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex)
+        public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex, PotionType potionType)
         {
             ModelObject potion = null;
 
@@ -868,7 +868,7 @@ namespace GDApp._3DTileEngine
                 Vector3.UnitX,
                 Vector3.UnitY);
 
-            potion = new ModelObject(
+            potion = new PotionObject(
                "maze(" + x + "," + y + ")",
                ObjectType.Pickup,
                transform,
@@ -876,7 +876,8 @@ namespace GDApp._3DTileEngine
                potionTex,
                models[7],
                Color.White,
-               1);
+               1,
+               potionType);
             
 
             potion.AddController(new PotionController("updown", potion, new Vector3(0, 0.1f, 0)));

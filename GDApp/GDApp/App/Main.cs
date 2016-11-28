@@ -430,6 +430,20 @@ namespace GDApp
         private int height = 617; //768
         private TileGrid tg;
 
+        private bool speed = false,
+            slow = false, 
+            reverse = false, 
+            flip = false, 
+            extraTime = false, 
+            lessTime = false, 
+            blackout = false, 
+            mapSpin = false;
+
+        private float startTime = 0;
+        private float endTime;
+        private bool timerRunning = false;
+        private float tempValue;
+
         #endregion
 
         #region Properties
@@ -553,10 +567,26 @@ namespace GDApp
 
         private void eventDispatcher_PickupChanged(EventData eventData)
         {
-            if (eventData.EventType == EventType.OnPickup)
+            
+            if (eventData.ID == "potionEffect")
             {
-                //this.soundManager.Play3DCue("boing", new AudioEmitter());
-                //eventData.Reference.Remove();
+                PotionObject potion = eventData.Reference as PotionObject;
+                if (potion.PotionType == PotionType.speed)
+                    this.speed = true;
+                else if (potion.PotionType == PotionType.slow)
+                    this.slow = true;
+                else if (potion.PotionType == PotionType.reverse)
+                    this.reverse = true;
+                else if (potion.PotionType == PotionType.mapSpin)
+                    this.mapSpin = true;
+                else if (potion.PotionType == PotionType.lessTime)
+                    this.lessTime = true;
+                else if (potion.PotionType == PotionType.extraTime)
+                    this.extraTime = true;
+                else if (potion.PotionType == PotionType.blackout)
+                    this.blackout = true;
+                else if (potion.PotionType == PotionType.flip)
+                    this.flip = true;
             }
                 
         }
@@ -1399,7 +1429,7 @@ namespace GDApp
                     }
                 }
             }
-            tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"]);
+            tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"], PotionType.slow);
 
         
             // MAP CENTER
@@ -1994,6 +2024,7 @@ namespace GDApp
        {
            this.soundManager.Play3DCue("boing", new AudioEmitter());
            potion.Remove();
+           EventDispatcher.Publish(new EventData("potionEffect", this, EventType.OnPickup, EventCategoryType.Pickup));
            //start effect
        }
 
@@ -2015,7 +2046,8 @@ namespace GDApp
            // Allows the game to exit
            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                this.Exit();
-
+           //run potion effects when needed
+            gameEffects(gameTime);
            #region Demos
            /*
            demoTextToTextureAndVideo();
@@ -2024,14 +2056,189 @@ namespace GDApp
                         demoCameraLayout();
             demoSoundManager();
             demoMousePicking();
+
             
             #endregion
             //if(keyboardManager.IsFirstKeyPress(Keys.R))
             //    make2DMazeMap(tg);
             base.Update(gameTime);
         }
+        #region Potion Effects
+        private void gameEffects(GameTime gameTime)
+        {
+            if (speed == true)
+                changeSpeed(1.5f, gameTime);
+            if (slow == true)
+                changeSpeed(0.5f, gameTime);
+            if (reverse == true)
+                reverseControls(gameTime);
+            if (flip == true)
+                flipCamera(gameTime);
+            if (extraTime == true)
+                addExtraTime(5000);
+            if (lessTime == true)
+                addExtraTime(-5000);
+            if (blackout == true)
+                blackOutMap(gameTime);
+            if (mapSpin == true)
+                spinMap(gameTime);
+        }
 
- 
+        private void changeSpeed(float v, GameTime gameTime)
+        {
+            //Change Players Speed by the passed in value for x number of seconds
+            if (this.timerRunning == false) //if it isn't currently running
+            {
+                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.endTime = this.startTime + 5000; //5 second timer
+                this.timerRunning = true; //set timer to running
+                
+                this.tempValue = GameData.CameraMoveSpeed; //store old value
+
+                //Static Change
+                GameData.CameraMoveSpeed += GameData.CameraMoveSpeed * v; //Change Camera Move Speed
+            }
+            else //when timer is running
+            {
+                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime)
+                {
+                    //Dynamic Change
+                }
+                else
+                {
+                    //Revert Change
+                    GameData.CameraMoveSpeed = this.tempValue;
+
+                    //reset bools
+                    if (v > 0)
+                        speed = false;
+                    else
+                        slow = false;
+                }
+            }
+        }
+
+        private void reverseControls(GameTime gameTime)
+        {
+            //Change key bindings so forward is backwards, left is right and vice-versa
+            if (this.timerRunning == false) //if it isn't currently running
+            {
+                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.endTime = this.startTime + 5000; //5 second timer
+                this.timerRunning = true; //set timer to running
+                
+                //Static Change
+            }
+            else //when timer is running
+            {
+                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                {
+                    //Dynamic Change
+                }
+                else
+                {
+                    //Revert Change
+                    
+                    //reset bools
+                    reverse = false;
+                }
+            }
+        }
+
+        private void flipCamera(GameTime gameTime)
+        {
+            //Rotate Player Camera 180 degrees for x number of seconds
+            if (this.timerRunning == false) //if it isn't currently running
+            {
+                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.endTime = this.startTime + 5000; //5 second timer
+                this.timerRunning = true; //set timer to running
+
+                //Static Change
+            }
+            else //when timer is running
+            {
+                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                {
+                    //Dynamic Change
+                }
+                else
+                {
+                    //Revert Change
+
+                    //reset bools
+                    flip = false;
+                }
+            }
+        }
+
+        private void addExtraTime(int v)
+        {
+            //Add/Remove x miliseconds to Level Timer
+
+            //reset bools
+            if(v>0)
+                extraTime = false;
+            else
+                lessTime = false;
+        }
+
+        private void blackOutMap(GameTime gameTime)
+        {
+            //Black out Map screen for x number of seconds
+            if (this.timerRunning == false) //if it isn't currently running
+            {
+                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.endTime = this.startTime + 5000; //5 second timer
+                this.timerRunning = true; //set timer to running
+
+                //Static Change
+            }
+            else //when timer is running
+            {
+                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                {
+                    //Dynamic Change
+                }
+                else
+                {
+                    //Revert Change
+
+                    //reset bools
+                    blackout = false;
+                }
+            }
+        }
+
+        private void spinMap(GameTime gameTime)
+        {
+            //Spin Map Screen for x number of seconds
+            if (this.timerRunning == false) //if it isn't currently running
+            {
+                this.startTime = (float)gameTime.ElapsedGameTime.TotalMilliseconds; //get start time
+                this.endTime = this.startTime + 5000; //5 second timer
+                this.timerRunning = true; //set timer to running
+
+                //Static Change
+            }
+            else //when timer is running
+            {
+                if ((float)gameTime.ElapsedGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                {
+                    //Dynamic Change
+                }
+                else
+                {
+                    //Revert Change
+
+                    //reset bools
+                    mapSpin = false;
+                }
+            }
+        }
+
+        #endregion
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
