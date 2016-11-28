@@ -27,6 +27,17 @@ namespace GDLibrary
         #endregion
 
         #region Properties
+        public Rectangle TextureRectangle
+        {
+            get
+            {
+                return textureRectangle;
+            }
+            set
+            {
+                textureRectangle = value;
+            }
+        }
         public Color MenuTextureBlendColor
         {
             get
@@ -72,7 +83,7 @@ namespace GDLibrary
             this.menuItemList = new List<MenuItem>();
                
             //set the texture background to occupy the entire screen dimension, less any padding
-            this.textureRectangle = game.ScreenRectangle;
+            this.textureRectangle = game.MenuRectangleB;
 
             //deflate the texture rectangle by the padding required
             this.textureRectangle.Inflate(-textureBorderPadding.X, -textureBorderPadding.Y);

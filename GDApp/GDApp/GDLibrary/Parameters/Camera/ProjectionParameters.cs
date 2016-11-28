@@ -16,6 +16,7 @@ namespace GDLibrary
     {
         #region Fields
         public static ProjectionParameters StandardMediumFourThree = new ProjectionParameters(MathHelper.ToRadians(60), 4.0f / 3, 1, 1000);
+        public static ProjectionParameters StandardMedium169 = new ProjectionParameters(MathHelper.ToRadians(60), 16.0f / 9, 1, 1000);
         public static ProjectionParameters StandardMediumFourThreeOrtho = new ProjectionParameters(1200, 900, 1, 1000, false);
         private float fieldOfView, aspectRatio, nearClipPlane, farClipPlane;
         private Matrix projection;

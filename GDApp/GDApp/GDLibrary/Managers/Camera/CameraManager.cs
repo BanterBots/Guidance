@@ -2,10 +2,11 @@
 using Microsoft.Xna.Framework;
 using GDApp;
 using System;
+using System.Collections;
 
 namespace GDLibrary
 {
-    public class CameraManager : GameComponent
+    public class CameraManager : GameComponent, IEnumerable<Camera3D>
     {
         #region Fields
         private Dictionary<string, List<Camera3D>> cameraDictionary;
@@ -200,6 +201,17 @@ namespace GDLibrary
                 }
             }
             base.Update(gameTime);
+        }
+
+        public IEnumerator<Camera3D> GetEnumerator()
+        {
+            return this.activeCameraList.GetEnumerator();
+
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

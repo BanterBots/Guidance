@@ -378,7 +378,8 @@ namespace GDApp
 
         private Vector2 screenCentre;
         private Microsoft.Xna.Framework.Rectangle screenRectangle;
-
+        private Microsoft.Xna.Framework.Rectangle menuRectangleA;
+        private Microsoft.Xna.Framework.Rectangle menuRectangleB;
         /**
         *   MANAGERS
         **/
@@ -425,13 +426,27 @@ namespace GDApp
         private float mazeWidth = 0;
         private float mazeHeight = 0;
         private float tileGridSize = 76.20f;
-        private int width = 1024;
-        private int height = 768;
+        private int width = 1920; //2048
+        private int height = 617; //768
         private TileGrid tg;
 
         #endregion
 
         #region Properties
+        public Microsoft.Xna.Framework.Rectangle MenuRectangleA
+        {
+            get
+            {
+                return menuRectangleA;
+            }
+        }
+        public Microsoft.Xna.Framework.Rectangle MenuRectangleB
+        {
+            get
+            {
+                return menuRectangleB;
+            }
+        }
         public Microsoft.Xna.Framework.Rectangle ScreenRectangle
         {
             get
@@ -917,6 +932,8 @@ namespace GDApp
             this.graphics.PreferredBackBufferHeight = height;
             this.screenCentre = new Vector2(width/2, height/2);
             this.screenRectangle = new Microsoft.Xna.Framework.Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+            this.menuRectangleA = new Microsoft.Xna.Framework.Rectangle(0, 0, (width / 28) * 16, height);
+            this.menuRectangleB = new Microsoft.Xna.Framework.Rectangle(0, 0, (width / 28) * 12, height);
             this.graphics.ApplyChanges();
         }
 
@@ -1033,8 +1050,22 @@ namespace GDApp
             PawnCamera3D pawnCameraArchetype = new PawnCamera3D("pawn camera archetype",
                 ObjectType.PawnCamera,
                 pawnTransform,
-                ProjectionParameters.StandardMediumFourThree, 
+                ProjectionParameters.StandardMediumFourThree,
                 this.graphics.GraphicsDevice.Viewport);
+
+
+            PawnCamera3D leftCameraArchetype = new PawnCamera3D("left camera archetype",
+                ObjectType.PawnCamera,
+                pawnTransform,
+                ProjectionParameters.StandardMedium169,
+                new Viewport(0,0, (this.graphics.GraphicsDevice.Viewport.Width / 28) * 16, this.graphics.GraphicsDevice.Viewport.Height));
+
+
+            PawnCamera3D rightCameraArchetype = new PawnCamera3D("right camera archetype",
+                ObjectType.PawnCamera,
+                pawnTransform,
+                ProjectionParameters.StandardMediumFourThree,
+                new Viewport((this.graphics.GraphicsDevice.Viewport.Width / 28) * 16, 0, (this.graphics.GraphicsDevice.Viewport.Width / 28) * 12, this.graphics.GraphicsDevice.Viewport.Height));
 
             Camera3D fixedCameraArchetype = new Camera3D("fixed camera archetype", ObjectType.FixedCamera);
 
@@ -1043,7 +1074,7 @@ namespace GDApp
             string cameraLayoutName = "FirstPersonMazeCamera";
 
             #region Player Arrow
-            Transform3D arrowTransform = new Transform3D(new Vector3(0, 90, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/5, this.tileGridSize/5, 0), - Vector3.UnitZ, Vector3.UnitY);
+            Transform3D arrowTransform = new Transform3D(new Vector3(0, 0, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/32, this.tileGridSize/32, 0), - Vector3.UnitZ, Vector3.UnitY);
             BillboardPrimitiveObject playerArrow = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
                 arrowTransform, //transform reset in clones
                 this.vertexDictionary["texturedquad"],
@@ -1124,6 +1155,52 @@ namespace GDApp
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
 
+            cameraLayoutName = "splitScreen";
+            #region Left Camera
+            clonePawnCamera = (PawnCamera3D)leftCameraArchetype.Clone();
+            clonePawnCamera.ID = "Collidable Maze Cam";
+            clonePawnCamera.AddController(new CollidableFirstPersonController(
+                clonePawnCamera + " controller",
+                clonePawnCamera,
+                KeyData.MoveKeys,
+                GameData.CameraMoveSpeed * 6,
+                GameData.CameraStrafeSpeed * 6,
+                GameData.CameraRotationSpeed * 20,
+                1f, // radius
+                15f, // height
+                10f,// acceleration
+                2f, // deceleration
+                20,  // mass
+                new Vector3(0, 0, 0)));
+
+
+            playerArrow.AddController(new PlayerArrowController("playerArrow", playerArrow, clonePawnCamera));
+            this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
+
+
+            #endregion
+
+            #region Right Camera
+            xLoc = (0 + tg.tileSize / 4);
+            yLoc = (0 - tg.tileSize / 4);
+
+
+            transform = new Transform3D(
+                new Vector3(xLoc + 5, 135, yLoc + 10),
+                new Vector3(-0.6f, -0.8f, 0),
+                new Vector3(0, 1, 0));
+            
+
+            cloneFixedCamera = (Camera3D)rightCameraArchetype.Clone();
+            cloneFixedCamera.ID = "New UI Cam";
+            cloneFixedCamera.Transform3D = transform;
+            cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThree;
+            this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
+            #endregion
+
+
+
+
             #region Nialls Stuff
             /*
                        #region Collidable First Person Camera
@@ -1165,7 +1242,7 @@ namespace GDApp
                        */
             #endregion
 
-            this.cameraManager.SetCameraLayout("FirstPersonMazeCamera");
+            this.cameraManager.SetCameraLayout("splitScreen");
         }
 
         private Vector3 positionMapCamera()
@@ -1958,10 +2035,22 @@ namespace GDApp
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-            this.graphics.GraphicsDevice.Viewport = this.cameraManager.ActiveCamera.Viewport;
-            base.Draw(gameTime);
 
-            if(this.menuManager.Pause)
+            foreach (Camera3D camera in cameraManager)
+            {
+                if (camera.ProjectionParameters.AspectRatio == 4.0f / 3)
+                    menuManager.TextureRectangle = this.menuRectangleB;
+                else
+                    menuManager.TextureRectangle = this.menuRectangleA;
+                //set the viewport based on the current camera
+                graphics.GraphicsDevice.Viewport = camera.Viewport;
+                base.Draw(gameTime);
+
+                //set which is the active camera (remember that our objects use the CameraManager::ActiveCamera property to access View and Projection for rendering
+                this.cameraManager.ActiveCameraIndex++;
+            }
+
+            if (this.menuManager.Pause)
                 drawDebugInfo();
         }
         #endregion
