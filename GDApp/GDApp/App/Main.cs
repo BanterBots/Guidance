@@ -1,6 +1,5 @@
 using GDApp._3DTileEngine;
 using GDApp.GDLibrary;
-using GDApp.Sockets;
 using GDLibrary;
 using JigLibX.Collision;
 using JigLibX.Geometry;
@@ -11,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 #region Update Log
 /* To Do: 
@@ -423,13 +423,19 @@ namespace GDApp
         Color debugColor = Color.Red;
         SpriteFont debugFont = null;
         private Effect animatedModelEffect;
+        //private Effect texturedModelEffect;
         private float mazeWidth = 0;
         private float mazeHeight = 0;
         private float tileGridSize = 76.20f;
         private int width = 1920; //2048
         private int height = 617; //768
-        private TileGrid tg;
+        
 
+        // NETWORK
+        static float[] xy = new float[2] { 0, 0 };
+        static private TileGrid tg;
+
+        // MAZE TIMERS
         private bool speed = false,
             slow = false, 
             reverse = false, 
@@ -791,6 +797,8 @@ namespace GDApp
             InitializeCameras();
             InitializeUI();
             //this.soundManager.PlayCue("bongobongoLoop");
+
+            initializeServer();
         }
 
         protected override void Initialize()
@@ -1114,10 +1122,10 @@ namespace GDApp
 
             this.objectManager.Add(playerArrow);
             #endregion Player Arrow
-
+            
             #region FPS Camera
             clonePawnCamera = (PawnCamera3D)pawnCameraArchetype.Clone();
-            clonePawnCamera.ID = "Collidable Maze Cam";
+            clonePawnCamera.ID = "cam";
             clonePawnCamera.AddController(new CollidableFirstPersonController(
                 clonePawnCamera + " controller",
                 clonePawnCamera,
@@ -1187,7 +1195,7 @@ namespace GDApp
             cameraLayoutName = "splitScreen";
             #region Left Camera
             clonePawnCamera = (PawnCamera3D)leftCameraArchetype.Clone();
-            clonePawnCamera.ID = "Collidable Maze Cam";
+            clonePawnCamera.ID = "cam";
             clonePawnCamera.AddController(new CollidableFirstPersonController(
                 clonePawnCamera + " controller",
                 clonePawnCamera,
@@ -1411,9 +1419,9 @@ namespace GDApp
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            this.tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
-            this.tg.generateRandomGrid();
-            this.tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
+            tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            tg.generateRandomGrid();
+            tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
             make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
             {
@@ -1922,10 +1930,47 @@ namespace GDApp
             AsynchronousClient.start();
         }
 
-        private void startServer()
+        static private void StartServer()
         {
+            int size = tg.gridSize;
+            Integer2[,] modelandrotation = new Integer2[size, size];
+
+            for(int i = 0; i < size; i++)
+            {
+                for(int j = 0; j < size; j++)
+                {
+                    if(tg.grid[i,j] != null)
+                    {
+                        modelandrotation[i, j] = new Integer2(tg.grid[i, j].modelNo, tg.grid[i, j].rotation); 
+                    }
+                }
+            }
+
             AsynchronousSocketListener runner = new AsynchronousSocketListener();
-            AsynchronousSocketListener.start();
+            AsynchronousSocketListener.start(modelandrotation, xy);
+        }
+
+        static private void UpdateServer()
+        {
+            AsynchronousSocketListener.update(xy);
+        }
+
+        static private void initializeServer()
+        {
+            ThreadStart runServerDelegate = new ThreadStart(StartServer);
+            Thread runServerThread = new Thread(runServerDelegate);
+            runServerThread.IsBackground = true;
+            runServerThread.Start();
+            //runServerThread.Join();
+        }
+
+        static private void updateServer()
+        {
+            ThreadStart updateServerDelegate = new ThreadStart(UpdateServer);
+            Thread updateServerThread = new Thread(updateServerDelegate);
+            updateServerThread.IsBackground = true;
+            updateServerThread.Start();
+            updateServerThread.Join();
         }
         #endregion  
 
@@ -2074,10 +2119,21 @@ namespace GDApp
             demoSoundManager();
             demoMousePicking();
 
-            
+
             #endregion
             //if(keyboardManager.IsFirstKeyPress(Keys.R))
             //    make2DMazeMap(tg);
+
+            Camera3D cam;
+            int index;
+            CameraManager.FindCameraBy("splitScreen", "cam", out cam, out index);
+            if(cam != null)
+            {
+                Vector3 pos = cam.Transform3D.Translation;
+                xy[0] = pos.X;
+                xy[1] = pos.Z;
+                updateServer();
+            }
             base.Update(gameTime);
         }
         #region Potion Effects
