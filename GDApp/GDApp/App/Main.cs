@@ -1912,12 +1912,6 @@ namespace GDApp
         #endregion
 
         #region Networking
-        private void startClient()
-        {
-            AsynchronousClient guider = new AsynchronousClient();
-            AsynchronousClient.start();
-        }
-
         static private void StartServer()
         {
             int size = tg.gridSize;
