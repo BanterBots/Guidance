@@ -554,7 +554,21 @@ namespace GDApp
                 if (this.soundManager.Volume > 0f)
                     this.soundManager.ChangeVolume(-0.05f, "Music");
             }
-                
+            else if (eventData.EventType == EventType.OnSplitScreen)
+            {
+                this.cameraManager.SetCameraLayout("splitScreen");
+            }
+            else if (eventData.EventType == EventType.OnHost)
+            {
+                //Set parameters for Hosting
+                this.cameraManager.SetCameraLayout("FirstPerson");
+            }
+            else if (eventData.EventType == EventType.OnClient)
+            {
+                //Set Parameters for being Client
+                this.cameraManager.SetCameraLayout("MazeCamera");
+            }
+
             //else if (eventData.EventType == EventType.OnMute)
             //    this.soundManager.StopCue("bongobongoLoop", AudioStopOptions.Immediate);
         }
@@ -1097,7 +1111,7 @@ namespace GDApp
 
             #endregion
 
-            string cameraLayoutName = "FirstPersonMazeCamera";
+            string cameraLayoutName = "FirstPerson";
 
             #region Player Arrow
             Transform3D arrowTransform = new Transform3D(new Vector3(0, 0, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/(3*32), this.tileGridSize/(3*32), 0), - Vector3.UnitZ, Vector3.UnitY);
@@ -1134,6 +1148,8 @@ namespace GDApp
 
 
             #endregion
+
+            cameraLayoutName = "MazeCamera";
 
             #region Maze Camera
             /*
@@ -1267,7 +1283,7 @@ namespace GDApp
                        */
             #endregion
 
-            this.cameraManager.SetCameraLayout("FirstPersonMazeCamera");
+            this.cameraManager.SetCameraLayout("splitScreen");
         }
 
         private Vector3 positionMapCamera()
@@ -2111,7 +2127,7 @@ namespace GDApp
 
             Camera3D cam;
             int index;
-            CameraManager.FindCameraBy("FirstPersonMazeCamera", "cam", out cam, out index);
+            CameraManager.FindCameraBy("FirstPerson", "cam", out cam, out index);
             if(cam != null)
             {
                 Vector3 pos = cam.Transform3D.Translation;

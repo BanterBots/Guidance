@@ -90,6 +90,9 @@ namespace GDLibrary
 
         //text renderer event
         OnTextRender,
+        OnSplitScreen,
+        OnHost,
+        OnClient,
 
         //all other events...
 

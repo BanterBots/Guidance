@@ -21,9 +21,14 @@ namespace GDLibrary
         private MenuItem menuPlay, menuRestart, menuExit, menuAudio, menuControls;
         private MenuItem menuVolumeUp, menuVolumeDown, menuVolumeMute, menuBack;
         private MenuItem menuExitYes, menuExitNo;
+        private MenuItem menuSplitScreen;
 
         protected int currentMenuTextureIndex = 0; //0 = main, 1 = volume
         private bool bPaused;
+        private MenuItem menuOnline;
+        private MenuItem menuHost;
+        private MenuItem menuClient;
+
         #endregion
 
         #region Properties
@@ -207,6 +212,26 @@ namespace GDLibrary
             EventDispatcher.Publish(new EventData("menu event", this, EventType.OnExit, EventCategoryType.MainMenu));
         }
 
+        private void SetToSplitScreen()
+        {
+            //generate an event to set Camera to Splitscreen
+            EventDispatcher.Publish(new EventData("menu event", this, EventType.OnSplitScreen, EventCategoryType.MainMenu));
+
+        }
+
+        private void SetToHost()
+        {
+            //generate an event to set camera to FirstPerson and to act as host
+            EventDispatcher.Publish(new EventData("menu event", this, EventType.OnHost, EventCategoryType.MainMenu));
+
+        }
+
+        private void SetToClient()
+        {
+            //generate an event to set camera to Map and to act as client
+            EventDispatcher.Publish(new EventData("menu event", this, EventType.OnClient, EventCategoryType.MainMenu));
+
+        }
         //iterate through each menu item and see if it is "highlighted" or "highlighted and clicked upon"
         private void ProcessMenuItemList()
         {
@@ -250,6 +275,15 @@ namespace GDLibrary
               MenuData.BoundsMenuControls, MenuData.ColorMenuInactive, MenuData.ColorMenuActive);
             this.menuExit = new MenuItem(MenuData.StringMenuExit, MenuData.StringMenuExit,
                 MenuData.BoundsMenuExit, MenuData.ColorMenuInactive, MenuData.ColorMenuActive);
+            this.menuSplitScreen = new MenuItem(MenuData.StringMenuSplitScreen, MenuData.StringMenuSplitScreen,
+                MenuData.BoundsMenuSplitScreen, MenuData.ColorMenuInactive, MenuData.ColorMenuActive);
+            this.menuOnline = new MenuItem(MenuData.StringMenuOnline, MenuData.StringMenuOnline,
+                MenuData.BoundsMenuOnline, MenuData.ColorMenuInactive, MenuData.ColorMenuActive);
+            this.menuHost = new MenuItem(MenuData.StringMenuHost, MenuData.StringMenuHost,
+                 MenuData.BoundsMenuHost, MenuData.ColorMenuInactive, MenuData.ColorMenuActive);
+            this.menuClient = new MenuItem(MenuData.StringMenuClient, MenuData.StringMenuClient,
+                   MenuData.BoundsMenuClient, MenuData.ColorMenuInactive, MenuData.ColorMenuActive);
+
 
             //second menu - audio settings
             this.menuVolumeUp = new MenuItem(MenuData.StringMenuVolumeUp, MenuData.StringMenuVolumeUp,
@@ -275,6 +309,21 @@ namespace GDLibrary
             if (name.Equals(MenuData.Menu_Play))
             {
                 HideMenu();
+            }
+            else if (name.Equals(MenuData.StringMenuSplitScreen))
+            {
+                SetToSplitScreen();
+            }
+            else if (name.Equals(MenuData.StringMenuOnline))
+            {
+                ShowOnlineMenu();
+            }
+            else if (name.Equals(MenuData.StringMenuHost))
+            {
+                SetToHost();
+            }
+            else if (name.Equals(MenuData.StringMenuClient))
+            {SetToClient();
             }
             else if (name.Equals(MenuData.StringMenuRestart))
             {
@@ -324,6 +373,16 @@ namespace GDLibrary
             //add your new menu actions here...
         }
 
+        private void ShowOnlineMenu()
+        {
+            RemoveAll();
+
+            Add(menuHost);
+            Add(menuClient);
+            Add(menuBack);
+            currentMenuTextureIndex = MenuData.TextureIndexMainMenu;
+        }
+
         private void ShowControlsMenuScreen()
         {
             //remove any items in the menu
@@ -343,6 +402,8 @@ namespace GDLibrary
             //add the appropriate items
             Add(menuPlay);
             Add(menuAudio);
+            Add(menuSplitScreen);
+            Add(menuOnline);
             //Add(menuControls);
             Add(menuExit);
             //set the background texture
