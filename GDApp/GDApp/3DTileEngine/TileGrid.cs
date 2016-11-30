@@ -14,6 +14,7 @@ namespace GDApp._3DTileEngine
         #region Properties
         // Grid that holds all tiles
         public ModelTileObject[,] grid;
+        public PotionObject[,] potionGrid;
         public List<DrawnActor> itemList;
 
         // Size of our grid, and size of each tile
@@ -39,7 +40,8 @@ namespace GDApp._3DTileEngine
         // RNG
         Random random = new Random();
         private Texture2D potionTexture;
-        
+        private int totalPotions = 0;
+
 
         //Potions
 
@@ -55,6 +57,7 @@ namespace GDApp._3DTileEngine
             this.texture = texture;
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionGrid = new PotionObject[gridSize, gridSize];
             this.potionTexture = potionTexture;
             initializeInfo();
         }
@@ -68,6 +71,7 @@ namespace GDApp._3DTileEngine
             this.texture = texture;
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionGrid = new PotionObject[gridSize, gridSize];
             this.potionTexture = potionTexture;
             initializeInfo();
         }
@@ -766,7 +770,7 @@ namespace GDApp._3DTileEngine
 
             Random rand = new Random();
             int potionTypeRandom = rand.Next(1,121);
-            int potionRandom = rand.Next(1, 8);
+            int potionRandom = rand.Next(1, 40);
             PotionType currentType = PotionType.speed;
             if (potionTypeRandom > 105)
                 currentType = PotionType.speed;
@@ -784,9 +788,19 @@ namespace GDApp._3DTileEngine
                 currentType = PotionType.reverse;
             else if (potionTypeRandom > 0)
                 currentType = PotionType.mapSpin;
-            
-            if(potionRandom == 5)
-                createPotionAt(x, y, effect, potionTexture, currentType);
+            if (x == 0 && y == 0)
+            {
+                //startRoom
+            }
+            else if (x == (gridSize - 1) && y == (gridSize - 1))
+            {
+                //endRoom
+            }
+            else
+            {
+                if (potionRandom < 20 && this.totalPotions < 10 && x % 2 == 0 && y % 2 == 0)
+                    createPotionAt(x, y, effect, potionTexture, currentType);
+            }
         }
 
         private void createEndTileAt(int x, int y, int model, int rotation)
@@ -881,31 +895,54 @@ namespace GDApp._3DTileEngine
             itemList.Add(door);
         }
 
+        public int setModelIndex(PotionType potionType)
+        {
+            if (potionType == PotionType.speed)
+                return 15;  //red
+            else if (potionType == PotionType.slow)
+                return 13;  //pink
+            else if (potionType == PotionType.reverse)
+                return 10;   //brown
+            else if (potionType == PotionType.mapSpin)
+                return 16;  //yellow
+            else if (potionType == PotionType.lessTime)
+                return 9;   //blue
+            else if (potionType == PotionType.flip)
+                return 12;  //orange
+            else if (potionType == PotionType.extraTime)
+                return 11;  //green
+            else if (potionType == PotionType.blackout)
+                return 14;  //purple
+            else
+                return 8; //empty
+        }
         public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex, PotionType potionType)
         {
-            ModelObject potion = null;
-
-            Transform3D transform = new Transform3D(
+            PotionObject potion = null;
+            int potionModelIndex = setModelIndex(potionType);
+            
+                Transform3D transform = new Transform3D(
                 new Vector3(x * tileSize, 4, y * (-1) * tileSize),
                 new Vector3(0, 0 * -90, 0),
-                new Vector3(0.08f, 0.08f, 0.08f),
+                new Vector3(0.05f, 0.05f, 0.05f),
                 Vector3.UnitX,
                 Vector3.UnitY);
 
             potion = new PotionObject(
-               "maze(" + x + "," + y + ")",
+               "potion(" + x + "," + y + ")",
                ObjectType.Pickup,
                transform,
                effect,
                potionTex,
-               models[7],
+               models[potionModelIndex],
                Color.White,
                1,
                potionType);
-            
+
+            potionGrid[x, y] = potion;
 
             potion.AddController(new PotionController("updown", potion, new Vector3(0, 0.1f, 0)));
-            itemList.Add(potion);
+            itemList.Add(potionGrid[x, y]);
             
             PotionZoneObject potionZone = new PotionZoneObject(
                 "potionZone(" + x + "," + y + ")", 
@@ -927,6 +964,8 @@ namespace GDApp._3DTileEngine
             //enabled by default
             potionZone.Enable(true);
             itemList.Add(potionZone);
+
+            this.totalPotions++;
         }
         #endregion
     }

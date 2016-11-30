@@ -250,3 +250,15 @@ D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.csprojResolveAssemblyRef
 D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.exe
 D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\GDApp.pdb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_BluePotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_BrownPotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_EmptyPotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_GreenPotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_OrangePotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_PinkPotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_PurplePotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_RedPotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_StoneDoor.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_YellowPotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\potionIcon.xnb

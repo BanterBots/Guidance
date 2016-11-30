@@ -86,9 +86,9 @@ namespace GDLibrary
 
             Vector3 translation = this.target.Transform3D.Translation;
 
-            translation.X += xOffset;
-            translation.Z += yOffset;
-            translation.Y = 116*32;
+            //translation.X += xOffset;
+            //translation.Z += yOffset;
+            translation.Y = 115.01f*32;
 
 
             this.ParentActor.Transform3D.Translation = translation/32;

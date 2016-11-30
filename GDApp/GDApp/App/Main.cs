@@ -437,7 +437,7 @@ namespace GDApp
         private float endTime;
         private bool timerRunning = false;
         private float tempValue;
-
+        private TexturedPrimitiveObject[,] activePotionIcons;
         #endregion
 
         #region Properties
@@ -670,6 +670,7 @@ namespace GDApp
             //this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/temp"));
             //this.textureDictionary.Add("emptySpace", Content.Load<Texture2D>("Assets/Textures/Game/Maze/temp"));
             //this.textureDictionary.Add("playerArrow", Content.Load<Texture2D>("Assets/Textures/UI/PlayerArrow"));
+            this.textureDictionary.Add("potionIcon", Content.Load<Texture2D>("Assets/Textures/UI/potionIcon"));
 
             this.textureDictionary.Add("corner2D", Content.Load<Texture2D>("Assets/Textures/UI/map_corner"));
             this.textureDictionary.Add("straight2D", Content.Load<Texture2D>("Assets/Textures/UI/map_straight"));
@@ -715,7 +716,18 @@ namespace GDApp
             this.modelDictionary.Add("deadEnd_Col", Content.Load<Model>("Assets/Models/Maze/m_DeadEnd01_Col"));
             this.modelDictionary.Add("puzzle_Col", Content.Load<Model>("Assets/Models/Maze/m_Puzzle01_Col"));
 
-            this.modelDictionary.Add("potion", Content.Load<Model>("Assets/Models/Items/m_potion"));
+            this.modelDictionary.Add("oldPotion", Content.Load<Model>("Assets/Models/Items/m_potion"));
+            this.modelDictionary.Add("bluePotion", Content.Load<Model>("Assets/Models/Items/m_BluePotion"));
+            this.modelDictionary.Add("brownPotion", Content.Load<Model>("Assets/Models/Items/m_BrownPotion"));
+            this.modelDictionary.Add("emptyPotion", Content.Load<Model>("Assets/Models/Items/m_EmptyPotion"));
+            this.modelDictionary.Add("greenPotion", Content.Load<Model>("Assets/Models/Items/m_GreenPotion"));
+            this.modelDictionary.Add("orangePotion", Content.Load<Model>("Assets/Models/Items/m_OrangePotion"));
+            this.modelDictionary.Add("pinkPotion", Content.Load<Model>("Assets/Models/Items/m_PinkPotion"));
+            this.modelDictionary.Add("redPotion", Content.Load<Model>("Assets/Models/Items/m_RedPotion"));
+            this.modelDictionary.Add("yellowPotion", Content.Load<Model>("Assets/Models/Items/m_YellowPotion"));
+            this.modelDictionary.Add("purplePotion", Content.Load<Model>("Assets/Models/Items/m_PurplePotion"));
+            this.modelDictionary.Add("stoneDoor", Content.Load<Model>("Assets/Models/Items/m_StoneDoor"));
+
 
             this.modelDictionary.Add("cube", Content.Load<Model>("Assets\\Models\\cube"));
             
@@ -1406,8 +1418,17 @@ namespace GDApp
                 this.modelDictionary["cross"],      //4
                 this.modelDictionary["room"],      //5
                 this.modelDictionary["puzzle"],    //6
-                this.modelDictionary["potion"],
-                this.modelDictionary["cube"]
+                this.modelDictionary["cube"],           //7
+                this.modelDictionary["emptyPotion"],    //8
+                this.modelDictionary["bluePotion"],     //9
+                this.modelDictionary["brownPotion"],    //10
+                this.modelDictionary["greenPotion"],    //11
+                this.modelDictionary["orangePotion"],   //12
+                this.modelDictionary["pinkPotion"],     //13
+                this.modelDictionary["purplePotion"],   //14
+                this.modelDictionary["redPotion"],      //15
+                this.modelDictionary["yellowPotion"],   //16
+                this.modelDictionary["stoneDoor"]       //17
             };
 
             Model[] collisionTiles = new Model[]{
@@ -1416,8 +1437,8 @@ namespace GDApp
                 this.modelDictionary["corner_Col"],     //2
                 this.modelDictionary["tJunction_Col"],  //3
                 this.modelDictionary["cross_Col"],      //4
-                this.modelDictionary["room_Col"],      //5
-                this.modelDictionary["puzzle_Col"]    //6
+                this.modelDictionary["room_Col"],       //5
+                this.modelDictionary["puzzle_Col"],     //6
             };
 
 
@@ -1996,7 +2017,7 @@ namespace GDApp
                 this.textureDictionary["room2D"],
                 this.textureDictionary["emptySpace"]
             };
-
+            this.activePotionIcons = new TexturedPrimitiveObject[tg.gridSize, tg.gridSize];
             //Transform3D mapTransform;
             for (int i = 0; i < tg.gridSize; i++)
             {
@@ -2015,6 +2036,23 @@ namespace GDApp
                         int rotation = mto.rotation;
                         Vector2 pos = new Vector2(i, j);
                         create2DTile(rotation, pos, UITiles[modelNum]);
+                        if(tg.potionGrid[i,j]!=null)
+                        {
+                            Transform3D potionTransform = new Transform3D(
+                                new Vector3(i * (this.tileGridSize / 32), 115, -j * (this.tileGridSize / 32)), 
+                                new Vector3(-90, 90, 0), 
+                                new Vector3(this.tileGridSize / (2 * 32), this.tileGridSize / (2 * 32), 0), 
+                                -Vector3.UnitZ, Vector3.UnitY);
+
+                            TexturedPrimitiveObject potionIcon = new TexturedPrimitiveObject("potion(" + i + "," + j + ")", ObjectType.Decorator,
+                                potionTransform, //transform reset in clones
+                                this.vertexDictionary["texturedquad"],
+                                this.texturedPrimitiveEffect,
+                                Color.White, 1,
+                                this.textureDictionary["potionIcon"]);
+                            this.activePotionIcons[i, j] = potionIcon;
+                            objectManager.Add(potionIcon);
+                        }
                     }
                     else
                     {
@@ -2086,7 +2124,19 @@ namespace GDApp
                    this.flip = true;
                this.soundManager.Play3DCue("boing", new AudioEmitter());
                p.Remove();
-           }
+
+                for (int i = 0; i < tg.gridSize; i++)
+                {
+                    for (int j = 0; j < tg.gridSize; j++)
+                    {
+                        if (activePotionIcons[i, j] != null)
+                        {
+                            if (p.ID == activePotionIcons[i, j].ID)
+                                activePotionIcons[i, j].Remove();
+                        }
+                    }
+                }
+            }
             //EventDispatcher.Publish(new EventData("potionEffect", this, EventType.OnPickup, EventCategoryType.Pickup));
             //start effect
         }
