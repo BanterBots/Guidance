@@ -763,6 +763,30 @@ namespace GDApp._3DTileEngine
             mazeObject.rotation = rotation;
             tiles++;
             grid[x, y] = mazeObject;
+
+            Random rand = new Random();
+            int potionTypeRandom = rand.Next(1,121);
+            int potionRandom = rand.Next(1, 8);
+            PotionType currentType = PotionType.speed;
+            if (potionTypeRandom > 105)
+                currentType = PotionType.speed;
+            else if (potionTypeRandom > 90)
+                currentType = PotionType.slow;
+            else if (potionTypeRandom > 75)
+                currentType = PotionType.extraTime;
+            else if (potionTypeRandom > 60)
+                currentType = PotionType.lessTime;
+            else if (potionTypeRandom > 45)
+                currentType = PotionType.flip;
+            else if (potionTypeRandom > 30)
+                currentType = PotionType.blackout;
+            else if (potionTypeRandom > 15)
+                currentType = PotionType.reverse;
+            else if (potionTypeRandom > 0)
+                currentType = PotionType.mapSpin;
+            
+            if(potionRandom == 5)
+                createPotionAt(x, y, effect, potionTexture, currentType);
         }
 
         private void createEndTileAt(int x, int y, int model, int rotation)

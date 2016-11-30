@@ -3,7 +3,11 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Plane001</Name>
     <Identity>
+<<<<<<< Updated upstream
       <SourceFilename>C:\Users\d00167238\Guidance\GDApp\GDAppContent\Assets\Models\old\landscape2.6.FBX</SourceFilename>
+=======
+      <SourceFilename>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\old\landscape2.6.FBX</SourceFilename>
+>>>>>>> Stashed changes
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>

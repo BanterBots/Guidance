@@ -7,13 +7,13 @@ namespace GDLibrary
 {
     public enum PotionType : sbyte
     {
-        speed,
-        slow,
-        reverse,
-        flip,
-        extraTime,
-        lessTime,
-        blackout,
-        mapSpin
+        speed,      //red
+        slow,       //pink
+        reverse,    //dark-blue
+        flip,       //orange
+        extraTime,  //green
+        lessTime,   //yellow
+        blackout,   //purple
+        mapSpin     //brown
     }
 }

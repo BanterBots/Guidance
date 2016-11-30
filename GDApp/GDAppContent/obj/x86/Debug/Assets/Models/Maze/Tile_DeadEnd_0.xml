@@ -3,7 +3,11 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Cross004</Name>
     <Identity>
+<<<<<<< Updated upstream
       <SourceFilename>C:\Users\d00167238\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_DeadEnd.FBX</SourceFilename>
+=======
+      <SourceFilename>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_DeadEnd.FBX</SourceFilename>
+>>>>>>> Stashed changes
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -29,7 +33,11 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>04 - Default</Name>
       <Identity>
+<<<<<<< Updated upstream
         <SourceFilename>C:\Users\d00167238\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_DeadEnd.FBX</SourceFilename>
+=======
+        <SourceFilename>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Maze\Tile_DeadEnd.FBX</SourceFilename>
+>>>>>>> Stashed changes
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

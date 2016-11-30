@@ -407,18 +407,6 @@ namespace GDApp
         //temp demo vars
         private MoveableModelObject playerActor;
 
-        /**
-        *   SOUND
-        **/
-        SoundEffect _bongoBongoLoop;
-        SoundEffectInstance _bongoBongoInstance;
-        ////Sound
-        //SoundEffect _bongoBongoLoop;
-        //SoundEffectInstance _bongoBongoInstance;
-
-        //AudioEmitter _emitter;
-        //AudioListener _listener;
-
         Vector2 positionOffset = new Vector2(0, 25);
         Color debugColor = Color.Red;
         SpriteFont debugFont = null;
@@ -2067,25 +2055,28 @@ namespace GDApp
 
        private void pickUpPotion(DrawnActor p)
        {
-            PotionObject potion = p as PotionObject;
-            if (potion.PotionType == PotionType.speed)
-                this.speed = true;
-            else if (potion.PotionType == PotionType.slow)
-                this.slow = true;
-            else if (potion.PotionType == PotionType.reverse)
-                this.reverse = true;
-            else if (potion.PotionType == PotionType.mapSpin)
-                this.mapSpin = true;
-            else if (potion.PotionType == PotionType.lessTime)
-                this.lessTime = true;
-            else if (potion.PotionType == PotionType.extraTime)
-                this.extraTime = true;
-            else if (potion.PotionType == PotionType.blackout)
-                this.blackout = true;
-            else if (potion.PotionType == PotionType.flip)
-                this.flip = true;
-            this.soundManager.Play3DCue("boing", new AudioEmitter());
-            p.Remove();
+           if (p != null)
+           {
+               PotionObject potion = p as PotionObject;
+               if (potion.PotionType == PotionType.speed)
+                   this.speed = true;
+               else if (potion.PotionType == PotionType.slow)
+                   this.slow = true;
+               else if (potion.PotionType == PotionType.reverse)
+                   this.reverse = true;
+               else if (potion.PotionType == PotionType.mapSpin)
+                   this.mapSpin = true;
+               else if (potion.PotionType == PotionType.lessTime)
+                   this.lessTime = true;
+               else if (potion.PotionType == PotionType.extraTime)
+                   this.extraTime = true;
+               else if (potion.PotionType == PotionType.blackout)
+                   this.blackout = true;
+               else if (potion.PotionType == PotionType.flip)
+                   this.flip = true;
+               this.soundManager.Play3DCue("boing", new AudioEmitter());
+               p.Remove();
+           }
             //EventDispatcher.Publish(new EventData("potionEffect", this, EventType.OnPickup, EventCategoryType.Pickup));
             //start effect
         }

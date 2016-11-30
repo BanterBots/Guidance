@@ -7,8 +7,13 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Fonts\debug.xnb</Output>
       <Time>2016-11-30T11:43:53.9155921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Fonts\debug.xnb</Output>
+      <Time>2016-11-30T11:42:14.5616061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Fonts\UI.spritefont</Source>
@@ -16,8 +21,13 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Fonts\UI.xnb</Output>
       <Time>2016-11-30T11:43:53.9545921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Fonts\UI.xnb</Output>
+      <Time>2016-11-30T11:42:14.5906061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Fonts\menu.spritefont</Source>
@@ -25,8 +35,13 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Fonts\menu.xnb</Output>
       <Time>2016-11-30T11:43:53.9515921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Fonts\menu.xnb</Output>
+      <Time>2016-11-30T11:42:14.5896061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Abstract\abstract1.jpg</Source>
@@ -34,8 +49,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\abstract1.xnb</Output>
       <Time>2016-11-30T11:43:55.1185921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\abstract1.xnb</Output>
+      <Time>2016-11-30T11:42:15.0986061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Abstract\pink.jpg</Source>
@@ -43,8 +63,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\pink.xnb</Output>
       <Time>2016-11-30T11:43:55.1245921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\pink.xnb</Output>
+      <Time>2016-11-30T11:42:15.1046061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Abstract\pink_trans1.png</Source>
@@ -52,8 +77,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\pink_trans1.xnb</Output>
       <Time>2016-11-30T11:43:55.1295921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\pink_trans1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1076061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence1.jpg</Source>
@@ -61,8 +91,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence1.xnb</Output>
       <Time>2016-11-30T11:43:55.1395921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1146061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence2.jpg</Source>
@@ -70,8 +105,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence2.xnb</Output>
       <Time>2016-11-30T11:43:55.1455921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence2.xnb</Output>
+      <Time>2016-11-30T11:42:15.1196061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence3.jpg</Source>
@@ -79,8 +119,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence3.xnb</Output>
       <Time>2016-11-30T11:43:55.1525921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence3.xnb</Output>
+      <Time>2016-11-30T11:42:15.1256061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence4.png</Source>
@@ -88,8 +133,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence4.xnb</Output>
       <Time>2016-11-30T11:43:55.1645921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence4.xnb</Output>
+      <Time>2016-11-30T11:42:15.1376061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Structures\backwall.jpg</Source>
@@ -97,8 +147,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Structures\backwall.xnb</Output>
       <Time>2016-11-30T11:43:55.1735921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Structures\backwall.xnb</Output>
+      <Time>2016-11-30T11:42:15.1436061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Structures\sidewall.jpg</Source>
@@ -106,8 +161,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Structures\sidewall.xnb</Output>
       <Time>2016-11-30T11:43:55.1795921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Structures\sidewall.xnb</Output>
+      <Time>2016-11-30T11:42:15.1476061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\alarm1.png</Source>
@@ -115,8 +175,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\alarm1.xnb</Output>
       <Time>2016-11-30T11:43:55.1835921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\alarm1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1496061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\alarm2.png</Source>
@@ -124,8 +189,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\alarm2.xnb</Output>
       <Time>2016-11-30T11:43:55.1865921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\alarm2.xnb</Output>
+      <Time>2016-11-30T11:42:15.1506061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\billboardtexture.jpg</Source>
@@ -133,8 +203,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\billboardtexture.xnb</Output>
       <Time>2016-11-30T11:43:55.1925921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\billboardtexture.xnb</Output>
+      <Time>2016-11-30T11:42:15.1546061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\chevron1.png</Source>
@@ -142,8 +217,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\chevron1.xnb</Output>
       <Time>2016-11-30T11:43:55.2295921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\chevron1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1556061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\chevron2.png</Source>
@@ -151,8 +231,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\chevron2.xnb</Output>
       <Time>2016-11-30T11:43:55.2335921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\chevron2.xnb</Output>
+      <Time>2016-11-30T11:42:15.1576061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\snow1.png</Source>
@@ -160,8 +245,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\snow1.xnb</Output>
       <Time>2016-11-30T11:43:55.2375921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\snow1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1586061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\welcome.png</Source>
@@ -169,8 +259,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\welcome.xnb</Output>
       <Time>2016-11-30T11:43:55.2405921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\welcome.xnb</Output>
+      <Time>2016-11-30T11:42:15.1596061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Debug\Textures\ml.png</Source>
@@ -178,8 +273,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Textures\ml.xnb</Output>
       <Time>2016-11-30T11:43:53.9225921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Textures\ml.xnb</Output>
+      <Time>2016-11-30T11:42:14.5666061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Debug\Textures\slj.jpg</Source>
@@ -187,8 +287,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Textures\slj.xnb</Output>
       <Time>2016-11-30T11:43:53.9295921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Textures\slj.xnb</Output>
+      <Time>2016-11-30T11:42:14.5716061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Ground\foliage.png</Source>
@@ -196,8 +301,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Ground\foliage.xnb</Output>
       <Time>2016-11-30T11:43:55.2475921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Ground\foliage.xnb</Output>
+      <Time>2016-11-30T11:42:15.1626061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Ground\grass1.jpg</Source>
@@ -205,8 +315,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Ground\grass1.xnb</Output>
       <Time>2016-11-30T11:43:55.2555921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Ground\grass1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1686061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Trees\tree1.png</Source>
@@ -214,8 +329,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree1.xnb</Output>
       <Time>2016-11-30T11:43:55.2605921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1706061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Trees\tree2.png</Source>
@@ -223,8 +343,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree2.xnb</Output>
       <Time>2016-11-30T11:43:55.2635921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree2.xnb</Output>
+      <Time>2016-11-30T11:42:15.1726061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Trees\tree3.png</Source>
@@ -232,8 +357,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree3.xnb</Output>
       <Time>2016-11-30T11:43:55.2685921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree3.xnb</Output>
+      <Time>2016-11-30T11:42:15.1756061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Props\Crates\crate1.jpg</Source>
@@ -241,8 +371,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\Crates\crate1.xnb</Output>
       <Time>2016-11-30T11:43:55.2775921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\Crates\crate1.xnb</Output>
+      <Time>2016-11-30T11:42:15.1816061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Props\Crates\crate2.jpg</Source>
@@ -250,8 +385,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\Crates\crate2.xnb</Output>
       <Time>2016-11-30T11:43:55.2835921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\Crates\crate2.xnb</Output>
+      <Time>2016-11-30T11:42:15.1866061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\back.bmp</Source>
@@ -259,8 +399,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\back.xnb</Output>
       <Time>2016-11-30T11:43:55.2985921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\back.xnb</Output>
+      <Time>2016-11-30T11:42:15.1966061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\front.bmp</Source>
@@ -268,8 +413,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\front.xnb</Output>
       <Time>2016-11-30T11:43:55.3095921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\front.xnb</Output>
+      <Time>2016-11-30T11:42:15.2066061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\ground2.bmp</Source>
@@ -277,8 +427,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\ground2.xnb</Output>
       <Time>2016-11-30T11:43:55.3195921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\ground2.xnb</Output>
+      <Time>2016-11-30T11:42:15.2166061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\left.bmp</Source>
@@ -286,8 +441,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\left.xnb</Output>
       <Time>2016-11-30T11:43:55.3295921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\left.xnb</Output>
+      <Time>2016-11-30T11:42:15.2256061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\right.bmp</Source>
@@ -295,8 +455,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\right.xnb</Output>
       <Time>2016-11-30T11:43:55.3405921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\right.xnb</Output>
+      <Time>2016-11-30T11:42:15.2356061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\sky.bmp</Source>
@@ -304,8 +469,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\sky.xnb</Output>
       <Time>2016-11-30T11:43:55.3505921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\sky.xnb</Output>
+      <Time>2016-11-30T11:42:15.2446061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\white.png</Source>
@@ -313,8 +483,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\white.xnb</Output>
       <Time>2016-11-30T11:43:56.0685921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\white.xnb</Output>
+      <Time>2016-11-30T11:42:15.5166061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\audiomenu.png</Source>
@@ -322,8 +497,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\audiomenu.xnb</Output>
       <Time>2016-11-30T11:43:55.5025921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\audiomenu.xnb</Output>
+      <Time>2016-11-30T11:42:15.3036061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\exitmenu.png</Source>
@@ -331,8 +511,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\exitmenu.xnb</Output>
       <Time>2016-11-30T11:43:55.5795921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\exitmenu.xnb</Output>
+      <Time>2016-11-30T11:42:15.3326061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\exitmenuwithtrans.png</Source>
@@ -340,8 +525,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\exitmenuwithtrans.xnb</Output>
       <Time>2016-11-30T11:43:55.6035921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\exitmenuwithtrans.xnb</Output>
+      <Time>2016-11-30T11:42:15.3596061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\mainmenu.PNG</Source>
@@ -349,8 +539,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\mainmenu.xnb</Output>
       <Time>2016-11-30T11:43:55.6565921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\mainmenu.xnb</Output>
+      <Time>2016-11-30T11:42:15.3846061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\mouseicons.png</Source>
@@ -358,8 +553,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\mouseicons.xnb</Output>
       <Time>2016-11-30T11:43:56.0455921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\mouseicons.xnb</Output>
+      <Time>2016-11-30T11:42:15.5006061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Props\tv.png</Source>
@@ -367,8 +567,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\tv.xnb</Output>
       <Time>2016-11-30T11:43:55.2865921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\tv.xnb</Output>
+      <Time>2016-11-30T11:42:15.1876061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\controlsmenu.png</Source>
@@ -376,8 +581,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\controlsmenu.xnb</Output>
       <Time>2016-11-30T11:43:55.5085921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\controlsmenu.xnb</Output>
+      <Time>2016-11-30T11:42:15.3056061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\head.tga</Source>
@@ -385,8 +595,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head.xnb</Output>
       <Time>2016-11-30T11:43:54.3645921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head.xnb</Output>
+      <Time>2016-11-30T11:42:14.8926061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\jacket.tga</Source>
@@ -394,8 +609,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket.xnb</Output>
       <Time>2016-11-30T11:43:54.4075921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket.xnb</Output>
+      <Time>2016-11-30T11:42:14.9316061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\pants.tga</Source>
@@ -403,8 +623,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants.xnb</Output>
       <Time>2016-11-30T11:43:54.4575921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants.xnb</Output>
+      <Time>2016-11-30T11:42:14.9666061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\Tiny_skin.dds</Source>
@@ -412,8 +637,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\Tiny_skin.xnb</Output>
       <Time>2016-11-30T11:43:54.4675921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\Tiny_skin.xnb</Output>
+      <Time>2016-11-30T11:42:14.9746061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\upBodyC.tga</Source>
@@ -421,8 +651,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC.xnb</Output>
       <Time>2016-11-30T11:43:54.5045921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC.xnb</Output>
+      <Time>2016-11-30T11:42:15.0096061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\ModelTextures\FlatColourTexture.png</Source>
@@ -430,8 +665,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture.xnb</Output>
       <Time>2016-11-30T11:43:54.2075921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture.xnb</Output>
+      <Time>2016-11-30T11:42:14.7716061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\BaseTile01_Diffuse.png</Source>
@@ -439,8 +679,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse.xnb</Output>
       <Time>2016-11-30T11:43:53.9875921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse.xnb</Output>
+      <Time>2016-11-30T11:42:14.6206061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\ground.png</Source>
@@ -448,8 +693,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\ground.xnb</Output>
       <Time>2016-11-30T11:43:55.0915921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\ground.xnb</Output>
+      <Time>2016-11-30T11:42:15.0856061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\corner2D.png</Source>
@@ -457,8 +707,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\corner2D.xnb</Output>
       <Time>2016-11-30T11:43:55.0685921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\corner2D.xnb</Output>
+      <Time>2016-11-30T11:42:15.0746061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\cross2D.png</Source>
@@ -466,8 +721,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\cross2D.xnb</Output>
       <Time>2016-11-30T11:43:55.0765921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\cross2D.xnb</Output>
+      <Time>2016-11-30T11:42:15.0776061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\deadEnd2D.png</Source>
@@ -475,8 +735,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\deadEnd2D.xnb</Output>
       <Time>2016-11-30T11:43:55.0845921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\deadEnd2D.xnb</Output>
+      <Time>2016-11-30T11:42:15.0816061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\straight2D.png</Source>
@@ -484,8 +749,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\straight2D.xnb</Output>
       <Time>2016-11-30T11:43:55.0995921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\straight2D.xnb</Output>
+      <Time>2016-11-30T11:42:15.0886061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\temp.png</Source>
@@ -493,8 +763,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\temp.xnb</Output>
       <Time>2016-11-30T11:43:55.1025921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\temp.xnb</Output>
+      <Time>2016-11-30T11:42:15.0896061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\tJunc2D.png</Source>
@@ -502,8 +777,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\tJunc2D.xnb</Output>
       <Time>2016-11-30T11:43:55.1085921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\tJunc2D.xnb</Output>
+      <Time>2016-11-30T11:42:15.0926061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\PlayerArrow.png</Source>
@@ -511,8 +791,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\PlayerArrow.xnb</Output>
       <Time>2016-11-30T11:43:56.0625921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\PlayerArrow.xnb</Output>
+      <Time>2016-11-30T11:42:15.5146061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\PotionGeneric.png</Source>
@@ -520,8 +805,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\PotionGeneric.xnb</Output>
       <Time>2016-11-30T11:43:56.0655921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\PotionGeneric.xnb</Output>
+      <Time>2016-11-30T11:42:15.5156061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_blank.png</Source>
@@ -529,8 +819,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_blank.xnb</Output>
       <Time>2016-11-30T11:43:55.8695921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_blank.xnb</Output>
+      <Time>2016-11-30T11:42:15.4186061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_corner.png</Source>
@@ -538,8 +833,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_corner.xnb</Output>
       <Time>2016-11-30T11:43:55.9025921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_corner.xnb</Output>
+      <Time>2016-11-30T11:42:15.4206061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_cross.png</Source>
@@ -547,8 +847,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_cross.xnb</Output>
       <Time>2016-11-30T11:43:55.9365921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_cross.xnb</Output>
+      <Time>2016-11-30T11:42:15.4216061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_deadend.png</Source>
@@ -556,8 +861,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_deadend.xnb</Output>
       <Time>2016-11-30T11:43:55.9395921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_deadend.xnb</Output>
+      <Time>2016-11-30T11:42:15.4236061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_straight.png</Source>
@@ -565,8 +875,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_straight.xnb</Output>
       <Time>2016-11-30T11:43:55.9435921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_straight.xnb</Output>
+      <Time>2016-11-30T11:42:15.4246061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_t.png</Source>
@@ -574,8 +889,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_t.xnb</Output>
       <Time>2016-11-30T11:43:55.9475921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_t.xnb</Output>
+      <Time>2016-11-30T11:42:15.4256061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\box.FBX</Source>
@@ -587,11 +907,19 @@
         <Data Key="PremultiplyVertexColors">False</Data>
       </Parameters>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
       <Time>2016-11-30T11:34:21.4292877+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\box_0.xml</Key>
         <Value>2016-11-30T11:45:41.1059921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
+      <Time>2016-11-30T11:41:25.6966061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\box_0.xml</Key>
+        <Value>2016-11-30T12:00:07.8186061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -600,11 +928,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\cylinder.xnb</Output>
       <Time>2016-11-30T11:43:54.5105921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\cylinder_0.xml</Key>
         <Value>2016-11-30T11:45:41.3243921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\cylinder.xnb</Output>
+      <Time>2016-11-30T11:42:15.0146061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\cylinder_0.xml</Key>
+        <Value>2016-11-30T12:00:08.0526061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -613,11 +949,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\dome.xnb</Output>
       <Time>2016-11-30T11:43:54.5185921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\dome_0.xml</Key>
         <Value>2016-11-30T11:45:41.4023921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\dome.xnb</Output>
+      <Time>2016-11-30T11:42:15.0206061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\dome_0.xml</Key>
+        <Value>2016-11-30T12:00:08.1626061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -626,11 +970,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\hedra.xnb</Output>
       <Time>2016-11-30T11:43:54.5245921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\hedra_0.xml</Key>
         <Value>2016-11-30T11:45:41.4491921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\hedra.xnb</Output>
+      <Time>2016-11-30T11:42:15.0256061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\hedra_0.xml</Key>
+        <Value>2016-11-30T12:00:08.2206061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -639,11 +991,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\octahedron.xnb</Output>
       <Time>2016-11-30T11:43:54.6755921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\octahedron_0.xml</Key>
         <Value>2016-11-30T11:45:41.4959921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\octahedron.xnb</Output>
+      <Time>2016-11-30T11:42:15.0386061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\octahedron_0.xml</Key>
+        <Value>2016-11-30T12:00:08.2736061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -652,11 +1012,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\plane.xnb</Output>
       <Time>2016-11-30T11:43:54.6855921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\plane_0.xml</Key>
         <Value>2016-11-30T11:45:41.5739921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\plane.xnb</Output>
+      <Time>2016-11-30T11:42:15.0436061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\plane_0.xml</Key>
+        <Value>2016-11-30T12:00:08.3716061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -665,11 +1033,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\prism.xnb</Output>
       <Time>2016-11-30T11:43:54.6955921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\prism_0.xml</Key>
         <Value>2016-11-30T11:45:41.6051921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\prism.xnb</Output>
+      <Time>2016-11-30T11:42:15.0476061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\prism_0.xml</Key>
+        <Value>2016-11-30T12:00:08.4216061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -678,11 +1054,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\sphere.xnb</Output>
       <Time>2016-11-30T11:43:54.7045921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\sphere_0.xml</Key>
         <Value>2016-11-30T11:45:41.6675921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\sphere.xnb</Output>
+      <Time>2016-11-30T11:42:15.0536061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\sphere_0.xml</Key>
+        <Value>2016-11-30T12:00:08.5986061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -691,11 +1075,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\spindle.xnb</Output>
       <Time>2016-11-30T11:43:54.7145921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\spindle_0.xml</Key>
         <Value>2016-11-30T11:45:41.7611921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\spindle.xnb</Output>
+      <Time>2016-11-30T11:42:15.0586061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\spindle_0.xml</Key>
+        <Value>2016-11-30T12:00:08.6616061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -704,11 +1096,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\torus.xnb</Output>
       <Time>2016-11-30T11:43:54.7245921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\torus_0.xml</Key>
         <Value>2016-11-30T11:45:41.8079921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\torus.xnb</Output>
+      <Time>2016-11-30T11:42:15.0626061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\torus_0.xml</Key>
+        <Value>2016-11-30T12:00:08.7286061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -717,11 +1117,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\torusknot.xnb</Output>
       <Time>2016-11-30T11:43:54.7385921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\torusknot_0.xml</Key>
         <Value>2016-11-30T11:45:41.9327921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\torusknot.xnb</Output>
+      <Time>2016-11-30T11:42:15.0706061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\torusknot_0.xml</Key>
+        <Value>2016-11-30T12:00:08.8376061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -730,11 +1138,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cube.xnb</Output>
       <Time>2016-11-30T11:43:53.9605921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\cube_0.xml</Key>
         <Value>2016-11-30T11:45:42.0107921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cube.xnb</Output>
+      <Time>2016-11-30T11:42:14.5956061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\cube_0.xml</Key>
+        <Value>2016-11-30T12:00:08.9106061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -743,11 +1159,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\landscape2.6.xnb</Output>
       <Time>2016-11-30T11:43:54.6415921+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\landscape2.6_0.xml</Key>
         <Value>2016-11-30T11:45:42.1979921+00:00</Value>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\landscape2.6.xnb</Output>
+      <Time>2016-11-30T11:42:15.0336061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\landscape2.6_0.xml</Key>
+        <Value>2016-11-30T12:00:09.1276061+00:00</Value>
+>>>>>>> Stashed changes
       </Dependency>
     </Item>
     <Item>
@@ -756,6 +1180,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>SkinnedModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\dude.xnb</Output>
       <Time>2016-11-30T11:43:54.2955921+00:00</Time>
       <Dependency>
@@ -766,6 +1191,18 @@
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket_0.xnb</Request>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants_0.xnb</Request>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\dude.xnb</Output>
+      <Time>2016-11-30T11:42:14.8506061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\old\Animated\dude_0.xml</Key>
+        <Value>2016-11-30T12:00:11.9356061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head_0.xnb</Request>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket_0.xnb</Request>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants_0.xnb</Request>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_potion.FBX</Source>
@@ -773,6 +1210,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_potion.xnb</Output>
       <Time>2016-11-30T11:43:53.9685921+00:00</Time>
       <Dependency>
@@ -780,6 +1218,15 @@
         <Value>2016-11-30T11:45:46.6459921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_potion.xnb</Output>
+      <Time>2016-11-30T11:42:14.6006061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Items\m_potion_0.xml</Key>
+        <Value>2016-11-30T12:00:14.4786061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Corner.FBX</Source>
@@ -787,6 +1234,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Corner.xnb</Output>
       <Time>2016-11-30T11:43:54.1475921+00:00</Time>
       <Dependency>
@@ -794,6 +1242,15 @@
         <Value>2016-11-30T11:45:46.8019921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Corner.xnb</Output>
+      <Time>2016-11-30T11:42:14.7226061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Corner_0.xml</Key>
+        <Value>2016-11-30T12:00:14.6846061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Cross.FBX</Source>
@@ -801,6 +1258,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Cross.xnb</Output>
       <Time>2016-11-30T11:43:54.1535921+00:00</Time>
       <Dependency>
@@ -808,6 +1266,15 @@
         <Value>2016-11-30T11:45:48.3931921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Cross.xnb</Output>
+      <Time>2016-11-30T11:42:14.7276061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Cross_0.xml</Key>
+        <Value>2016-11-30T12:00:16.9316061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_DeadEnd.FBX</Source>
@@ -815,6 +1282,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_DeadEnd.xnb</Output>
       <Time>2016-11-30T11:43:54.1605921+00:00</Time>
       <Dependency>
@@ -822,6 +1290,15 @@
         <Value>2016-11-30T11:45:48.4399921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_DeadEnd.xnb</Output>
+      <Time>2016-11-30T11:42:14.7326061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Maze\Tile_DeadEnd_0.xml</Key>
+        <Value>2016-11-30T12:00:16.9896061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Junction.FBX</Source>
@@ -829,6 +1306,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Junction.xnb</Output>
       <Time>2016-11-30T11:43:54.1665921+00:00</Time>
       <Dependency>
@@ -836,6 +1314,15 @@
         <Value>2016-11-30T11:45:48.5023921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Junction.xnb</Output>
+      <Time>2016-11-30T11:42:14.7376061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Junction_0.xml</Key>
+        <Value>2016-11-30T12:00:17.0446061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Puzzle.FBX</Source>
@@ -843,6 +1330,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Puzzle.xnb</Output>
       <Time>2016-11-30T11:43:54.1725921+00:00</Time>
       <Dependency>
@@ -850,6 +1338,15 @@
         <Value>2016-11-30T11:45:48.5491921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Puzzle.xnb</Output>
+      <Time>2016-11-30T11:42:14.7416061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Puzzle_0.xml</Key>
+        <Value>2016-11-30T12:00:17.0996061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Room.FBX</Source>
@@ -857,6 +1354,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Room.xnb</Output>
       <Time>2016-11-30T11:43:54.1775921+00:00</Time>
       <Dependency>
@@ -864,6 +1362,15 @@
         <Value>2016-11-30T11:45:48.5959921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Room.xnb</Output>
+      <Time>2016-11-30T11:42:14.7466061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Room_0.xml</Key>
+        <Value>2016-11-30T12:00:17.1536061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Straight.FBX</Source>
@@ -871,6 +1378,7 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Straight.xnb</Output>
       <Time>2016-11-30T11:43:54.1835921+00:00</Time>
       <Dependency>
@@ -878,6 +1386,15 @@
         <Value>2016-11-30T11:45:48.6271921+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Straight.xnb</Output>
+      <Time>2016-11-30T11:42:14.7506061+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Straight_0.xml</Key>
+        <Value>2016-11-30T12:00:17.2106061+00:00</Value>
+      </Dependency>
+      <Request>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Audio\boing.wav</Source>
@@ -885,8 +1402,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\boing.xnb</Output>
       <Time>2016-11-30T11:43:53.8355921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\boing.xnb</Output>
+      <Time>2016-11-30T11:42:14.4826061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Audio\bongbongoLoop.wav</Source>
@@ -894,8 +1416,13 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\bongbongoLoop.xnb</Output>
       <Time>2016-11-30T11:43:53.8965921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\bongbongoLoop.xnb</Output>
+      <Time>2016-11-30T11:42:14.5476061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Video\sample.wmv</Source>
@@ -903,9 +1430,15 @@
       <Importer>WmvImporter</Importer>
       <Processor>VideoProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Video\sample.xnb</Output>
       <Extra>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Video\sample.wmv</Extra>
       <Time>2016-11-30T11:43:56.1305921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Video\sample.xnb</Output>
+      <Extra>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Video\sample.wmv</Extra>
+      <Time>2016-11-30T11:42:15.5876061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Effects\Billboard.fx</Source>
@@ -913,8 +1446,13 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Effects\Billboard.xnb</Output>
       <Time>2016-11-30T11:43:53.9425921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Effects\Billboard.xnb</Output>
+      <Time>2016-11-30T11:42:14.5806061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Effects\Animated.fx</Source>
@@ -922,8 +1460,13 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Effects\Animated.xnb</Output>
       <Time>2016-11-30T11:43:53.9365921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Effects\Animated.xnb</Output>
+      <Time>2016-11-30T11:42:14.5766061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\dude_spheres.xml</Source>
@@ -931,106 +1474,167 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\dude_spheres.xnb</Output>
       <Time>2016-11-30T11:43:54.3035921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\dude_spheres.xnb</Output>
+      <Time>2016-11-30T11:42:14.8576061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\box.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\box_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:34:21.4292877+00:00</Time>
+=======
+      <Time>2016-11-30T11:41:25.6966061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\cylinder.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\cylinder_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.5105921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0146061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\dome.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\dome_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.5185921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0206061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\hedra.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\hedra_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.5245921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0256061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\octahedron.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\octahedron_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.6755921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0386061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\plane.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\plane_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.6855921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0436061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\prism.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\prism_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.6955921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0476061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\sphere.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\sphere_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.7045921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0536061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\spindle.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\spindle_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.7145921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0586061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\torus.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\torus_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.7245921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0626061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\torusknot.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\torusknot_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.7385921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0706061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\cube.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\cube_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:53.9605921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.5956061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\landscape2.6.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\landscape2.6_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.6415921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:15.0336061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\dude.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\Animated\dude_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.2955921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.8506061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\head.tga</Source>
@@ -1045,8 +1649,13 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head_0.xnb</Output>
       <Time>2016-11-30T11:43:54.3645921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head_0.xnb</Output>
+      <Time>2016-11-30T11:42:14.8926061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\jacket.tga</Source>
@@ -1061,8 +1670,13 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket_0.xnb</Output>
       <Time>2016-11-30T11:43:54.4075921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket_0.xnb</Output>
+      <Time>2016-11-30T11:42:14.9316061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\pants.tga</Source>
@@ -1077,8 +1691,13 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants_0.xnb</Output>
       <Time>2016-11-30T11:43:54.4575921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants_0.xnb</Output>
+      <Time>2016-11-30T11:42:14.9666061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\upBodyC.tga</Source>
@@ -1093,15 +1712,24 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC_0.xnb</Output>
       <Time>2016-11-30T11:43:54.5045921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC_0.xnb</Output>
+      <Time>2016-11-30T11:42:15.0096061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_potion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_potion_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:53.9685921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.6006061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\ModelTextures\FlatColourTexture.png</Source>
@@ -1116,15 +1744,24 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb</Output>
       <Time>2016-11-30T11:43:54.2075921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb</Output>
+      <Time>2016-11-30T11:42:14.7716061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Corner.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Corner_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.1475921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.7226061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\BaseTile01_Diffuse.png</Source>
@@ -1139,50 +1776,79 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
+<<<<<<< Updated upstream
       <Output>C:\Users\d00167238\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Output>
       <Time>2016-11-30T11:43:53.9875921+00:00</Time>
+=======
+      <Output>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Output>
+      <Time>2016-11-30T11:42:14.6206061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Cross.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Cross_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.1535921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.7276061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_DeadEnd.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_DeadEnd_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.1605921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.7326061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Junction.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Junction_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.1665921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.7376061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Puzzle.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Puzzle_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.1725921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.7416061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Room.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Room_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.1775921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.7466061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Straight.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Straight_0.xml</Output>
+<<<<<<< Updated upstream
       <Time>2016-11-30T11:43:54.1835921+00:00</Time>
+=======
+      <Time>2016-11-30T11:42:14.7506061+00:00</Time>
+>>>>>>> Stashed changes
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -1190,6 +1856,7 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
+<<<<<<< Updated upstream
       <RootDirectory>C:\Users\d00167238\Guidance\GDApp\GDAppContent\</RootDirectory>
       <LoggerRootDirectory>C:\Users\d00167238\Guidance\GDApp\GDApp\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\d00167238\Guidance\GDApp\GDAppContent\obj\x86\Debug\</IntermediateDirectory>
@@ -1199,6 +1866,17 @@
       <Assembly>
         <Key>C:\Users\d00167238\Guidance\GDApp\Dependencies\Animation\SkinnedModelPipeline.dll</Key>
         <Value>2016-11-30T11:43:44.5525921+00:00</Value>
+=======
+      <RootDirectory>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\d00163463\Desktop\Guidance\GDApp\GDApp\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Users\d00163463\Desktop\Guidance\GDApp\Dependencies\Animation\SkinnedModelPipeline.dll</Key>
+        <Value>2016-11-30T11:42:07.0836061+00:00</Value>
+>>>>>>> Stashed changes
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

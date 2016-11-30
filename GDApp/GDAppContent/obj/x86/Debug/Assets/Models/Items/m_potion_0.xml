@@ -3,7 +3,11 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Circle.001</Name>
     <Identity>
+<<<<<<< Updated upstream
       <SourceFilename>C:\Users\d00167238\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+=======
+      <SourceFilename>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+>>>>>>> Stashed changes
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -845,7 +849,11 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>07 - Default</Name>
       <Identity>
+<<<<<<< Updated upstream
         <SourceFilename>C:\Users\d00167238\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+=======
+        <SourceFilename>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Items\m_potion.FBX</SourceFilename>
+>>>>>>> Stashed changes
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
