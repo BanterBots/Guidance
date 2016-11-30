@@ -1279,7 +1279,7 @@ namespace GDApp
                        */
             #endregion
 
-            this.cameraManager.SetCameraLayout("splitScreen");
+            this.cameraManager.SetCameraLayout("FirstPersonMazeCamera");
         }
 
         private Vector3 positionMapCamera()
@@ -2126,7 +2126,7 @@ namespace GDApp
 
             Camera3D cam;
             int index;
-            CameraManager.FindCameraBy("splitScreen", "cam", out cam, out index);
+            CameraManager.FindCameraBy("FirstPersonMazeCamera", "cam", out cam, out index);
             if(cam != null)
             {
                 Vector3 pos = cam.Transform3D.Translation;
