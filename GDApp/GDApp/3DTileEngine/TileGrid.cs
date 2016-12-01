@@ -770,7 +770,7 @@ namespace GDApp._3DTileEngine
 
             Random rand = new Random();
             int potionTypeRandom = rand.Next(1,121);
-            int potionRandom = rand.Next(1, 40);
+            int potionRandom = rand.Next(1, 20);
             PotionType currentType = PotionType.speed;
             if (potionTypeRandom > 105)
                 currentType = PotionType.speed;
@@ -798,7 +798,7 @@ namespace GDApp._3DTileEngine
             }
             else
             {
-                if (potionRandom < 20 && this.totalPotions < 10 && x % 2 == 0 && y % 2 == 0)
+                if (potionRandom < 20 && this.totalPotions < 20 && (x % 2 == 0 && y % 2 == 0))
                     createPotionAt(x, y, effect, potionTexture, currentType);
             }
         }

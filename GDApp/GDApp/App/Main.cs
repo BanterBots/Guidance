@@ -438,7 +438,7 @@ namespace GDApp
         //EFFECT TIMERS
         private float startTime = 0;
         private float endTime;
-        private bool timerRunning = false;
+        private bool timerRunning = false, otherTimerRunning = false;
         private float tempValue;
         private TexturedPrimitiveObject[,] activePotionIcons;
 
@@ -452,6 +452,8 @@ namespace GDApp
         private float displayTime = 120;
         private bool playMusic = false;
         private string currentEffect = "none";
+        private Keys[] tempKeys;
+        private Vector3 tempVector3;
 
         #endregion
 
@@ -577,6 +579,7 @@ namespace GDApp
             {
                 //Set parameters for Hosting
                 this.cameraManager.SetCameraLayout("FirstPerson");
+                initializeServer();
             }
             else if (eventData.EventType == EventType.OnClient)
             {
@@ -891,7 +894,7 @@ namespace GDApp
             InitializeUI();
             //this.soundManager.PlayCue("bongobongoLoop");
 
-            initializeServer();
+            //initializeServer();
         }
 
         protected override void Initialize()
@@ -1290,7 +1293,7 @@ namespace GDApp
             cameraLayoutName = "splitScreen";
             #region Left Camera
             clonePawnCamera = (PawnCamera3D)leftCameraArchetype.Clone();
-            clonePawnCamera.ID = "cam";
+            clonePawnCamera.ID = "camLeft";
             clonePawnCamera.AddController(new CollidableFirstPersonController(
                 clonePawnCamera + " controller",
                 clonePawnCamera,
@@ -1324,7 +1327,7 @@ namespace GDApp
             
 
             cloneFixedCamera = (Camera3D)rightCameraArchetype.Clone();
-            cloneFixedCamera.ID = "New UI Cam";
+            cloneFixedCamera.ID = "camRight";
             cloneFixedCamera.Transform3D = transform;
             cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThree;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
@@ -2407,9 +2410,9 @@ namespace GDApp
             if (flip == true)
                 flipCamera(gameTime);
             if (extraTime == true)
-                addExtraTime(5000);
+                addExtraTime(10);
             if (lessTime == true)
-                addExtraTime(-5000);
+                addExtraTime(-10);
             if (blackout == true)
                 blackOutMap(gameTime);
             if (mapSpin == true)
@@ -2460,8 +2463,16 @@ namespace GDApp
                 this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
-                
+
                 //Static Change
+
+                this.tempKeys = KeyData.MoveKeys;
+
+                Keys[] newKeys = { Keys.S, Keys.W, //forward, bacward
+                                  Keys.D, Keys.A,  //turn left, right
+                                  Keys.Space, Keys.C};
+
+                KeyData.MoveKeys = newKeys;
             }
             else //when timer is running
             {
@@ -2473,7 +2484,7 @@ namespace GDApp
                 {
                     this.currentEffect = "none";
                     //Revert Change
-
+                    KeyData.MoveKeys = this.tempKeys;
                     //reset bools
                     reverse = false;
                     this.timerRunning = false;
@@ -2491,18 +2502,29 @@ namespace GDApp
                 this.timerRunning = true; //set timer to running
 
                 //Static Change
+                Camera3D camera;
+                int index;
+
+                this.cameraManager.FindCameraBy("splitScreen", "camLeft", out camera, out index);
+                this.tempValue = camera.Transform3D.Rotation.X;
+                camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X*2, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
             }
             else //when timer is running
             {
                 if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
+                    
+                    
                 }
                 else
                 {
                     this.currentEffect = "none";
                     //Revert Change
-
+                    Camera3D camera;
+                    int index;
+                    this.cameraManager.FindCameraBy("splitScreen", "camLeft", out camera, out index);
+                    camera.Transform3D.Rotation = new Vector3(this.tempValue, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
                     //reset bools
                     flip = false;
                     this.timerRunning = false;
@@ -2514,6 +2536,8 @@ namespace GDApp
         {
             //Add/Remove x miliseconds to Level Timer
             this.currentEffect = "none";
+            v *= 1000;
+            this.gameEndTime += v;
             //reset bools
             if (v>0)
                 extraTime = false;
@@ -2537,6 +2561,7 @@ namespace GDApp
                 if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
+                    
                 }
                 else
                 {
@@ -2560,18 +2585,31 @@ namespace GDApp
                 this.timerRunning = true; //set timer to running
 
                 //Static Change
+                Camera3D camera;
+                int index;
+
+                this.cameraManager.FindCameraBy("splitScreen", "camRight", out camera, out index);
+                this.tempVector3 = camera.Transform3D.Rotation;
             }
             else //when timer is running
             {
                 if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
+                    Camera3D camera;
+                    int index;
+                    this.cameraManager.FindCameraBy("splitScreen", "camRight", out camera, out index);
+                    camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X + 1, camera.Transform3D.Rotation.Y + 1, camera.Transform3D.Rotation.Z + 1);
                 }
                 else
                 {
                     this.currentEffect = "none";
                     //Revert Change
+                    Camera3D camera;
+                    int index;
 
+                    this.cameraManager.FindCameraBy("splitScreen", "camRight", out camera, out index);
+                    camera.Transform3D.Rotation = this.tempVector3;
                     //reset bools
                     mapSpin = false;
                     this.timerRunning = false;

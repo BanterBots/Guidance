@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3DTileEngine\MazeNode.cs" />
     <Compile Include="3DTileEngine\Objects\Items\Potion.cs" />
     <Compile Include="3DTileEngine\Objects\Maze\ModelTileObject.cs" />
     <Compile Include="3DTileEngine\TileGrid.cs" />
