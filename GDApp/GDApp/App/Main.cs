@@ -445,7 +445,7 @@ namespace GDApp
         //MAIN GAME TIMER AND SCORING
         private float gameStartTime = 0;
         private float gameEndTime;
-        private bool gameTimerRunning = false;
+        private bool gameTimerRunning = false, gameFailed = false, gameWon = false;
         private float Score = 0, goodPotionsCollected = 0, badPotionsCollected = 0;
         private float goodPotion = 50, badPotion = 40;
         private float timerLength = 120;
@@ -702,7 +702,7 @@ namespace GDApp
                     {
                         this.gameTimer = false;
                         soundManager.PlayCue("boing");
-                        DrawEndScreen(true);
+                        gameWon = true;
                     }
                 }
             }
@@ -2025,6 +2025,10 @@ namespace GDApp
                 this.spriteBatch.DrawString(debugFont, "YOU WIN", position, Color.Gold);
             else
                 this.spriteBatch.DrawString(debugFont, "YOU LOSS", position, Color.Gold);
+
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "Score:         " + this.Score + "points", position, Color.Gold);
+           
             this.spriteBatch.End();
         }
 
@@ -2053,8 +2057,7 @@ namespace GDApp
             position += positionOffset;
 
 
-            this.spriteBatch.DrawString(debugFont, "Score:         " + this.Score + "points", position, Color.Gold);
-            position += positionOffset;
+            
             this.spriteBatch.End();
 
         }
@@ -2386,7 +2389,7 @@ namespace GDApp
                         //Revert Change
                         this.gameTimerRunning = false;
                         //endScreen
-                        DrawEndScreen(false);
+                        gameFailed = true;
                     }
                 }
             }
@@ -2598,7 +2601,15 @@ namespace GDApp
 
             if (this.menuManager.Pause)
                 //drawDebugInfo();
+
+                //TIMER
             drawTimer();
+
+            //IF GAME WON OR LOST DISPLAY CORRECT ENDSCREEN
+            if (gameWon == true)
+                DrawEndScreen(true);
+            else if (gameFailed == true)
+                DrawEndScreen(false);
         }
         #endregion
     }
