@@ -431,13 +431,28 @@ namespace GDApp
             extraTime = false, 
             lessTime = false, 
             blackout = false, 
-            mapSpin = false;
+            mapSpin = false,
+            gameTimer = false;
 
+
+        //EFFECT TIMERS
         private float startTime = 0;
         private float endTime;
         private bool timerRunning = false;
         private float tempValue;
         private TexturedPrimitiveObject[,] activePotionIcons;
+
+        //MAIN GAME TIMER AND SCORING
+        private float gameStartTime = 0;
+        private float gameEndTime;
+        private bool gameTimerRunning = false;
+        private float Score = 0, goodPotionsCollected = 0, badPotionsCollected = 0;
+        private float goodPotion = 50, badPotion = 40;
+        private float timerLength = 120;
+        private float displayTime = 120;
+        private bool playMusic = false;
+        private string currentEffect = "none";
+
         #endregion
 
         #region Properties
@@ -575,28 +590,83 @@ namespace GDApp
 
         private void eventDispatcher_PickupChanged(EventData eventData)
         {
-            
             if (eventData.ID == "potionEffect")
             {
-                PotionObject potion = eventData.Reference as PotionObject;
+                PotionObject potion = eventData.Reference as PotionObject;              //BUG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 if (potion.PotionType == PotionType.speed)
-                    this.speed = true;
+                {
+                    this.goodPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "speed";
+                        this.speed = true;
+                    }
+                        
+                }
                 else if (potion.PotionType == PotionType.slow)
-                    this.slow = true;
+                {
+                    this.badPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "slow";
+                        this.slow = true;
+                    }
+                }
                 else if (potion.PotionType == PotionType.reverse)
-                    this.reverse = true;
+                {
+                    this.badPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "reverse";
+                        this.reverse = true;
+                    }
+                }
                 else if (potion.PotionType == PotionType.mapSpin)
-                    this.mapSpin = true;
+                {
+                    this.badPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "mapSpin";
+                        this.mapSpin = true;
+                    }
+                }
                 else if (potion.PotionType == PotionType.lessTime)
-                    this.lessTime = true;
+                {
+                    this.badPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "lessTime";
+                        this.lessTime = true;
+                    }
+                }
                 else if (potion.PotionType == PotionType.extraTime)
-                    this.extraTime = true;
+                {
+                    this.goodPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "extraTime";
+                        this.extraTime = true;
+                    }
+                }
                 else if (potion.PotionType == PotionType.blackout)
-                    this.blackout = true;
+                {
+                    this.badPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "blackout";
+                        this.blackout = true;
+                    }
+                }
                 else if (potion.PotionType == PotionType.flip)
-                    this.flip = true;
+                {
+                    this.badPotionsCollected++;
+                    if (this.timerRunning == false)
+                    {
+                        this.currentEffect = "flip";
+                        this.flip = true;
+                    }
+                }
             }
-                
         }
 
         private void eventDispatcher_ZoneChanged(EventData eventData)
@@ -606,7 +676,7 @@ namespace GDApp
                 if (eventData.EventType == EventType.OnZoneEnter)
                 {
                     eventData.Reference.Alpha = 0.8f;
-                    if (keyboardManager.IsKeyDown(Keys.E))
+                    if (keyboardManager.IsFirstKeyPress(Keys.E))
                         pickUpPotion(eventData.Reference);
                 }
                 else if (eventData.EventType == EventType.OnZoneExit)
@@ -620,6 +690,7 @@ namespace GDApp
                 if (eventData.EventType == EventType.OnZoneExit)
                 {
                     closeStartDoor();
+                    this.gameTimer = true;
                 }
             }
             else if (eventData.ID == "end")
@@ -627,11 +698,19 @@ namespace GDApp
                 if (eventData.EventType == EventType.OnZoneEnter)
                 {
                     finishGame();
+                    if (this.gameTimer)
+                    {
+                        this.gameTimer = false;
+                        soundManager.PlayCue("boing");
+                        DrawEndScreen(true);
+                    }
                 }
             }
         }
 
         
+
+
 
         #endregion
 
@@ -1928,7 +2007,58 @@ namespace GDApp
             this.spriteBatch.End();
 
         }
-        
+
+        private void DrawEndScreen(bool win)
+        {
+            //draw debug text after base.Draw() otherwise it will be behind the scene!
+            if (debugFont == null)
+                debugFont = this.fontDictionary["debug"];
+
+            this.Score = (this.goodPotion * this.goodPotionsCollected) - (this.badPotion * this.badPotionsCollected) + (this.displayTime * 10);
+
+
+            Vector2 position = new Vector2(20, 20);
+            position += (6 * positionOffset);
+            this.spriteBatch.Begin();
+
+            if(win)
+                this.spriteBatch.DrawString(debugFont, "YOU WIN", position, Color.Gold);
+            else
+                this.spriteBatch.DrawString(debugFont, "YOU LOSS", position, Color.Gold);
+            this.spriteBatch.End();
+        }
+
+        private void drawTimer()
+        {
+            //draw debug text after base.Draw() otherwise it will be behind the scene!
+            if (debugFont == null)
+                debugFont = this.fontDictionary["debug"];
+
+            this.Score = (this.goodPotion * this.goodPotionsCollected) - (this.badPotion * this.badPotionsCollected) + (this.displayTime * 10);
+
+
+            Vector2 position = new Vector2(20, 20);
+
+            this.spriteBatch.Begin();
+            this.spriteBatch.DrawString(debugFont, "Time Remaining:         " + this.displayTime +"s", position, Color.Gold);
+            position += positionOffset;
+            
+            this.spriteBatch.DrawString(debugFont, "Current Effect:         " + this.currentEffect, position, Color.Gold);
+            position += positionOffset;
+
+            this.spriteBatch.DrawString(debugFont, "Good Potions Used:         " + this.goodPotionsCollected + "x" + this.goodPotion+"points", position, Color.Gold);
+            position += positionOffset;
+
+            this.spriteBatch.DrawString(debugFont, "Bad Potions Used:         " + this.badPotionsCollected + "x"+this.badPotion+"points", position, Color.Gold);
+            position += positionOffset;
+
+
+            this.spriteBatch.DrawString(debugFont, "Score:         " + this.Score + "points", position, Color.Gold);
+            position += positionOffset;
+            this.spriteBatch.End();
+
+        }
+
         private void demoTextToTextureAndVideo()
         {
             /*
@@ -2105,25 +2235,60 @@ namespace GDApp
        {
            if (p != null)
            {
-               PotionObject potion = p as PotionObject;
-               if (potion.PotionType == PotionType.speed)
-                   this.speed = true;
-               else if (potion.PotionType == PotionType.slow)
-                   this.slow = true;
-               else if (potion.PotionType == PotionType.reverse)
-                   this.reverse = true;
-               else if (potion.PotionType == PotionType.mapSpin)
-                   this.mapSpin = true;
-               else if (potion.PotionType == PotionType.lessTime)
-                   this.lessTime = true;
-               else if (potion.PotionType == PotionType.extraTime)
-                   this.extraTime = true;
-               else if (potion.PotionType == PotionType.blackout)
-                   this.blackout = true;
-               else if (potion.PotionType == PotionType.flip)
-                   this.flip = true;
-               this.soundManager.Play3DCue("boing", new AudioEmitter());
-               p.Remove();
+                PotionObject potion = p as PotionObject;
+                if (potion.PotionType == PotionType.speed)
+                {
+                    this.speed = true;
+                    this.goodPotionsCollected++;
+                    this.currentEffect = "speed";
+                }
+                else if (potion.PotionType == PotionType.slow)
+                {
+                    this.slow = true;
+                    this.badPotionsCollected++;
+                    this.currentEffect = "slow";
+                }
+                else if (potion.PotionType == PotionType.reverse)
+                {
+                    this.reverse = true;
+                    this.badPotionsCollected++;
+                    this.currentEffect = "reverse";
+                }
+                else if (potion.PotionType == PotionType.mapSpin)
+                {
+                    this.mapSpin = true;
+                    this.badPotionsCollected++;
+                    this.currentEffect = "mapSpin";
+                }
+                else if (potion.PotionType == PotionType.lessTime)
+                {
+                    this.lessTime = true;
+                    this.badPotionsCollected++;
+                    this.currentEffect = "lessTime";
+                }
+                else if (potion.PotionType == PotionType.extraTime)
+                {
+                    this.extraTime = true;
+                    this.goodPotionsCollected++;
+                    this.currentEffect = "extraTime";
+                }
+                else if (potion.PotionType == PotionType.blackout)
+                {
+                    this.blackout = true;
+                    this.badPotionsCollected++;
+                    this.currentEffect = "blackout";
+                }
+                else if (potion.PotionType == PotionType.flip)
+                {
+                    this.flip = true;
+                    this.badPotionsCollected++;
+                    this.currentEffect = "flip";
+                }
+
+
+                this.soundManager.Play3DCue("boing", new AudioEmitter());
+
+                p.Remove();
 
                 for (int i = 0; i < tg.gridSize; i++)
                 {
@@ -2161,6 +2326,7 @@ namespace GDApp
                this.Exit();
            //run potion effects when needed
             gameEffects(gameTime);
+            mazeTimer(gameTime);
            #region Demos
            /*
            demoTextToTextureAndVideo();
@@ -2187,6 +2353,45 @@ namespace GDApp
             }
             base.Update(gameTime);
         }
+
+        private void mazeTimer(GameTime gameTime)
+        {
+            if(this.gameTimer == true)
+            {
+                if (this.gameTimerRunning == false)
+                {
+                    this.gameStartTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
+                    this.gameEndTime = this.gameStartTime + (this.displayTime*1000); //2 minutes or 120 second timer
+                    this.gameTimerRunning = true; //set timer to running
+
+                    //Static Change
+                    if(this.playMusic == false)
+                    {
+                        this.soundManager.PlayCue("bongobongoLoop");
+                        this.playMusic = true;
+                    }
+                }
+                else //when timer is running
+                {
+                    if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.gameEndTime) //While Timer is active
+                    {
+                        //Dynamic Change
+
+                        float timeGoneBy = ((float)gameTime.TotalGameTime.TotalMilliseconds - this.endTime) /1000;
+                        this.displayTime = this.timerLength - timeGoneBy;
+                    }
+                    else
+                    {
+                        this.soundManager.StopCue("bongobongoLoop", AudioStopOptions.Immediate);
+                        //Revert Change
+                        this.gameTimerRunning = false;
+                        //endScreen
+                        DrawEndScreen(false);
+                    }
+                }
+            }
+        }
+
         #region Potion Effects
         private void gameEffects(GameTime gameTime)
         {
@@ -2230,6 +2435,7 @@ namespace GDApp
                 }
                 else
                 {
+                    this.currentEffect = "none";
                     //Revert Change
                     GameData.PlayerMoveSpeed = this.tempValue;
                     soundManager.Play3DCue("boing", new AudioEmitter());
@@ -2238,6 +2444,7 @@ namespace GDApp
                         speed = false;
                     else
                         slow = false;
+                    this.timerRunning = false;
                 }
             }
         }
@@ -2261,10 +2468,12 @@ namespace GDApp
                 }
                 else
                 {
+                    this.currentEffect = "none";
                     //Revert Change
-                    
+
                     //reset bools
                     reverse = false;
+                    this.timerRunning = false;
                 }
             }
         }
@@ -2288,10 +2497,12 @@ namespace GDApp
                 }
                 else
                 {
+                    this.currentEffect = "none";
                     //Revert Change
 
                     //reset bools
                     flip = false;
+                    this.timerRunning = false;
                 }
             }
         }
@@ -2299,9 +2510,9 @@ namespace GDApp
         private void addExtraTime(int v)
         {
             //Add/Remove x miliseconds to Level Timer
-
+            this.currentEffect = "none";
             //reset bools
-            if(v>0)
+            if (v>0)
                 extraTime = false;
             else
                 lessTime = false;
@@ -2326,10 +2537,12 @@ namespace GDApp
                 }
                 else
                 {
+                    this.currentEffect = "none";
                     //Revert Change
 
                     //reset bools
                     blackout = false;
+                    this.timerRunning = false;
                 }
             }
         }
@@ -2353,10 +2566,12 @@ namespace GDApp
                 }
                 else
                 {
+                    this.currentEffect = "none";
                     //Revert Change
 
                     //reset bools
                     mapSpin = false;
+                    this.timerRunning = false;
                 }
             }
         }
@@ -2382,7 +2597,8 @@ namespace GDApp
             }
 
             if (this.menuManager.Pause)
-                drawDebugInfo();
+                //drawDebugInfo();
+            drawTimer();
         }
         #endregion
     }

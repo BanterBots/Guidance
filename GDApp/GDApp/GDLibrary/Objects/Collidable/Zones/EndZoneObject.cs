@@ -29,7 +29,7 @@ namespace GDLibrary
             if (collidee.Owner.ExternalData is PlayerObject)
             {
                 PlayerObject playerObject = collidee.Owner.ExternalData as PlayerObject;
-                EventDispatcher.Publish(new EventData("end", this, EventType.OnZoneExit, EventCategoryType.Zone));
+                EventDispatcher.Publish(new EventData("end", this, EventType.OnZoneEnter, EventCategoryType.Zone));
             }
 
             return base.HandleCollision(collider, collidee);

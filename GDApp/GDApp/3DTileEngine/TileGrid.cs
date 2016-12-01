@@ -14,7 +14,7 @@ namespace GDApp._3DTileEngine
         #region Properties
         // Grid that holds all tiles
         public ModelTileObject[,] grid;
-        public PotionObject[,] potionGrid;
+       
         public List<DrawnActor> itemList;
 
         // Size of our grid, and size of each tile
@@ -44,7 +44,7 @@ namespace GDApp._3DTileEngine
 
 
         //Potions
-
+        public PotionObject[,] potionGrid;
         #endregion
 
         #region Constructors
