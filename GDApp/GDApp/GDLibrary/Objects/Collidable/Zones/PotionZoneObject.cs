@@ -12,6 +12,10 @@ namespace GDLibrary
         
         #region Variables
         private DrawnActor potion;
+        
+        //temp vars
+        private CollidableObject currentCollidableObject;
+        private bool collisionStart = false;
         #endregion
 
         #region Properties
@@ -42,8 +46,22 @@ namespace GDLibrary
             {
                 PlayerObject playerObject = collidee.Owner.ExternalData as PlayerObject;
                 EventDispatcher.Publish(new EventData("potion", this, EventType.OnZoneEnter, EventCategoryType.Zone, potion));
+                this.currentCollidableObject = playerObject;
+                this.collisionStart = true;
+            }
+            else
+            {
+                this.currentCollidableObject = null;
             }
 
+            if (this.currentCollidableObject == null && this.collisionStart == true)
+            {
+                EventDispatcher.Publish(new EventData("potion", this, EventType.OnZoneExit, EventCategoryType.Zone, potion));
+                this.collisionStart = false;
+            }
+            
+               
+            
             return base.HandleCollision(collider, collidee);
         }
     }

@@ -678,14 +678,16 @@ namespace GDApp
             {
                 if (eventData.EventType == EventType.OnZoneEnter)
                 {
-                    eventData.Reference.Alpha = 0.8f;
+                    eventData.Reference.Alpha = 0.5f;
                     if (keyboardManager.IsFirstKeyPress(Keys.E))
                         pickUpPotion(eventData.Reference);
                 }
                 else if (eventData.EventType == EventType.OnZoneExit)
                 {
                     if (eventData.Reference != null)
+                    {
                         eventData.Reference.Alpha = 1f;
+                    }
                 }
             }
             else if (eventData.ID == "start")
