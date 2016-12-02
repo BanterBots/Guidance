@@ -39,12 +39,11 @@ namespace GDApp._3DTileEngine
 
         // RNG
         Random random = new Random();
-        private Texture2D potionTexture;
-        private int totalPotions = 0;
-
 
         //Potions
         public PotionObject[,] potionGrid;
+        private Texture2D potionTexture;
+        private int totalPotions = 0;
         #endregion
 
         #region Constructors
@@ -873,26 +872,26 @@ namespace GDApp._3DTileEngine
             itemList.Add(startZone);
         }
 
-        public void createDoorAt(int x, int y, IVertexData data)
+        public ModelObject createDoorAt(int x, int y, int z, Texture2D texture)
         {
             Transform3D transform = new Transform3D(
-               new Vector3(x * tileSize , 0, (y * (-1) * tileSize) - (tileSize / 2)),
+               new Vector3(x * tileSize , y, (z * (-1) * tileSize) - (tileSize / 2)),
                new Vector3(0, 0, 0),
                new Vector3(10f, 30f, 10f),
                Vector3.UnitX,
                Vector3.UnitY);
 
-            TexturedPrimitiveObject door = new TexturedPrimitiveObject(
-               "maze(" + x + "," + y + ")",
+            ModelObject door = new ModelObject(
+               "door(" + x + "," + y + ")",
                ObjectType.Pickup,
                transform,
-               data,
                effect,
+               texture,
+               models[17],
                Color.White,
-               1,
-               this.potionTexture);
+               1);
 
-            itemList.Add(door);
+            return door;
         }
 
         public int setModelIndex(PotionType potionType)

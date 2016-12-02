@@ -413,6 +413,7 @@ namespace GDApp
         Color debugColor = Color.Red;
         SpriteFont debugFont = null;
         private Effect animatedModelEffect;
+
         //private Effect texturedModelEffect;
         private float mazeWidth = 0;
         private float mazeHeight = 0;
@@ -456,6 +457,10 @@ namespace GDApp
         private string currentEffect = "none";
         private Keys[] tempKeys;
         private Vector3 tempVector3;
+
+        // Game Objects
+        ModelObject startDoor;
+        ModelObject endDoor;
 
         #endregion
 
@@ -1100,7 +1105,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = false;
+            bool bDebugMode = true;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);
@@ -1969,6 +1974,7 @@ namespace GDApp
             // size is hardcoded
             size = 5;
 
+            #region Maze Models
             Model[] mazeTiles = new Model[]{
                 this.modelDictionary["deadEnd"],    //0
                 this.modelDictionary["straight"],   //1
@@ -1999,13 +2005,13 @@ namespace GDApp
                 this.modelDictionary["room_Col"],       //5
                 this.modelDictionary["puzzle_Col"],     //6
             };
-
+            #endregion
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
             tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
             tg.generateRandomGrid();
-            tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
+            startDoor = tg.createDoorAt(0, 20, 0, this.textureDictionary["egypt"]); // can access the model from inside tg instead of mazetiles
             make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
             {
@@ -2110,7 +2116,7 @@ namespace GDApp
             //tg = new TileGrid(models, rotations, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
 
             // DOOR
-            tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
+            startDoor = tg.createDoorAt(0, 0, 0, this.textureDictionary["egypt"]);
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -2415,10 +2421,17 @@ namespace GDApp
             //start effect
         }
 
+        
         private void closeStartDoor()
         {
+            //Predicate<ModelObject> doorPredicate;
             this.soundManager.Play3DCue("boing", new AudioEmitter());
-            //close Door
+           // closeDoor(startDoor);
+        }
+
+        private void closeDoor(ModelObject door)
+        {
+            //door.Transform3D.Translation = new Vector3(0, 0, 0);
         }
 
         private void finishGame()
