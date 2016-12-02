@@ -380,6 +380,8 @@ namespace GDApp
         private Microsoft.Xna.Framework.Rectangle screenRectangle;
         private Microsoft.Xna.Framework.Rectangle menuRectangleA;
         private Microsoft.Xna.Framework.Rectangle menuRectangleB;
+
+        private string ScreenType = "SingleScreen";
         /**
         *   MANAGERS
         **/
@@ -573,13 +575,15 @@ namespace GDApp
             }
             else if (eventData.EventType == EventType.OnSplitScreen)
             {
-                this.cameraManager.SetCameraLayout("splitScreen");
+                //this.cameraManager.SetCameraLayout("splitScreen");
+                ScreenType = "SplitScreen";
             }
             else if (eventData.EventType == EventType.OnHost)
             {
                 //Set parameters for Hosting
-                this.cameraManager.SetCameraLayout("FirstPerson");
-                initializeServer();
+                //this.cameraManager.SetCameraLayout("FirstPerson");
+                ScreenType = "SingleScreen";
+                initializeServer(); // <- bad code
             }
             else if (eventData.EventType == EventType.OnClient)
             {
@@ -932,8 +936,6 @@ namespace GDApp
             base.Initialize();
         }
 
-        
-
         private void InitializeEventDispatcher()
         {
             this.eventDispatcher = new EventDispatcher(this, 50);
@@ -1207,8 +1209,6 @@ namespace GDApp
 
             #endregion
 
-            string cameraLayoutName = "FirstPerson";
-
             #region Player Arrow
             Transform3D arrowTransform = new Transform3D(new Vector3(0, 0, 0), new Vector3(-90,0,0),new Vector3(this.tileGridSize/(3*32), this.tileGridSize/(3*32), 0), - Vector3.UnitZ, Vector3.UnitY);
             TexturedPrimitiveObject playerArrow = new TexturedPrimitiveObject("arrow", ObjectType.Decorator,
@@ -1220,10 +1220,12 @@ namespace GDApp
 
             this.objectManager.Add(playerArrow);
             #endregion Player Arrow
-            
+
+            #region SingleScreen
+            string cameraLayoutName = "SingleScreen";
             #region FPS Camera
             clonePawnCamera = (PawnCamera3D)pawnCameraArchetype.Clone();
-            clonePawnCamera.ID = "cam";
+            clonePawnCamera.ID = "runnercam";
             clonePawnCamera.AddController(new CollidableFirstPersonController(
                 clonePawnCamera + " controller",
                 clonePawnCamera,
@@ -1243,26 +1245,6 @@ namespace GDApp
             this.cameraManager.Add(cameraLayoutName, clonePawnCamera);
 
 
-            #endregion
-
-            cameraLayoutName = "MazeCamera";
-
-            #region Maze Camera
-            /*
-            
-            transform = new Transform3D(
-                //new Vector3(300, 1000, -500), 
-                positionMapCamera(),
-                Vector3.Down,
-                -1 * Vector3.Right);
-
-            cloneFixedCamera = (Camera3D)fixedCameraArchetype.Clone();
-            cloneFixedCamera.ID = "Top Maze Cam";
-            cloneFixedCamera.Transform3D = transform;
-            cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThreeOrtho;
-            this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
-            
-             */
             #endregion
 
             #region New UI Camera
@@ -1286,16 +1268,18 @@ namespace GDApp
             //    -1 * Vector3.Right);
 
             cloneFixedCamera = (Camera3D)fixedCameraArchetype.Clone();
-            cloneFixedCamera.ID = "New UI Cam";
+            cloneFixedCamera.ID = "guidercam";
             cloneFixedCamera.Transform3D = transform;
             cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThree;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
+            #endregion
 
-            cameraLayoutName = "splitScreen";
-            #region Left Camera
+            #region SplitScreen
+            cameraLayoutName = "SplitScreen";
+            #region Runner Camera
             clonePawnCamera = (PawnCamera3D)leftCameraArchetype.Clone();
-            clonePawnCamera.ID = "camLeft";
+            clonePawnCamera.ID = "runnercam";
             clonePawnCamera.AddController(new CollidableFirstPersonController(
                 clonePawnCamera + " controller",
                 clonePawnCamera,
@@ -1317,7 +1301,7 @@ namespace GDApp
 
             #endregion
 
-            #region Right Camera
+            #region Guider Camera
             xLoc = (0 + tg.tileSize / 4);
             yLoc = (0 - tg.tileSize / 4);
 
@@ -1329,15 +1313,15 @@ namespace GDApp
             
 
             cloneFixedCamera = (Camera3D)rightCameraArchetype.Clone();
-            cloneFixedCamera.ID = "camRight";
+            cloneFixedCamera.ID = "guidercam";
             cloneFixedCamera.Transform3D = transform;
             cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThree;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
             #endregion
+            #endregion
 
-
-
-
+            //this.cameraManager.SetCameraLayout("FirstPerson");
+            this.cameraManager.SetCameraLayout(ScreenType);
             #region Nialls Stuff
             /*
                        #region Collidable First Person Camera
@@ -1378,8 +1362,6 @@ namespace GDApp
                        #endregion
                        */
             #endregion
-
-            this.cameraManager.SetCameraLayout("splitScreen");
         }
 
         private Vector3 positionMapCamera()
@@ -1487,111 +1469,6 @@ namespace GDApp
             collidableObject.ObjectType = ObjectType.Pickup;
             this.objectManager.Add(collidableObject);
             */
-        }
-
-        private void InitializeMaze(int size)
-        {
-            // size is hardcoded
-            size = 5;
-
-            Model[] mazeTiles = new Model[]{
-                this.modelDictionary["deadEnd"],    //0
-                this.modelDictionary["straight"],   //1
-                this.modelDictionary["corner"],     //2
-                this.modelDictionary["tJunction"],  //3
-                this.modelDictionary["cross"],      //4
-                this.modelDictionary["room"],      //5
-                this.modelDictionary["puzzle"],    //6
-                this.modelDictionary["cube"],           //7
-                this.modelDictionary["emptyPotion"],    //8
-                this.modelDictionary["bluePotion"],     //9
-                this.modelDictionary["brownPotion"],    //10
-                this.modelDictionary["greenPotion"],    //11
-                this.modelDictionary["orangePotion"],   //12
-                this.modelDictionary["pinkPotion"],     //13
-                this.modelDictionary["purplePotion"],   //14
-                this.modelDictionary["redPotion"],      //15
-                this.modelDictionary["yellowPotion"],   //16
-                this.modelDictionary["stoneDoor"]       //17
-            };
-
-            Model[] collisionTiles = new Model[]{
-                this.modelDictionary["deadEnd_Col"],    //0
-                this.modelDictionary["straight_Col"],   //1
-                this.modelDictionary["corner_Col"],     //2
-                this.modelDictionary["tJunction_Col"],  //3
-                this.modelDictionary["cross_Col"],      //4
-                this.modelDictionary["room_Col"],       //5
-                this.modelDictionary["puzzle_Col"],     //6
-            };
-
-
-            // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
-            //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
-            tg.generateRandomGrid();
-            tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
-            make2DMazeMap(tg);
-            for (int i = 0; i < tg.gridSize; i++)
-            {
-                for (int j = 0; j < tg.gridSize; j++)
-                {
-                    if (tg.grid[i, j] != null)
-                    {
-                        this.objectManager.Add(tg.grid[i, j]);
-                        if (i > this.mazeWidth)
-                            this.mazeWidth = i;
-                        if (j > this.mazeHeight)
-                            this.mazeHeight = j;
-                    }
-                }
-            }
-            tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"], PotionType.slow);
-
-        
-            // MAP CENTER
-            //int xLoc = (int)((tg.tileSize * tg.gridSize / 2) - tg.tileSize/2);
-            //int yLoc = (int)(-(tg.tileSize * tg.gridSize / 2) + tg.tileSize/2);
-
-            // MAP TOP LEFT CORNER
-            int xLoc = (int)(0 + tg.tileSize/4);
-            int yLoc = (int)(0 - tg.tileSize / 4);
-
-            ModelTileObject mazePeice = tg.createFreeTileAt(xLoc, 100, yLoc + 10, 6, 2);
-            this.objectManager.Add(mazePeice);
-
-            BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
-
-            //archetype - clone from this
-
-
-            int tableHeight = 30;
-            int tableWidth = 30;
-            Transform3D tableTransform = new Transform3D(
-               new Vector3(8, 114, 20),
-               new Vector3(-90, 0, 0),
-               new Vector3(tableWidth, tableHeight, 0),
-               Vector3.UnitX,
-               Vector3.UnitY);
-
-            BillboardPrimitiveObject table = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
-                tableTransform, //transform reset in clones
-                this.vertexDictionary["texturedquad"],
-                this.billboardEffect,
-                Color.White, 1,
-                this.textureDictionary["crate"],
-                BillboardType.Normal);
-        
-            objectManager.Add(table);
-
-
-            foreach (DrawnActor model in tg.itemList)
-            {
-                this.objectManager.Add(model);
-            }
-            
-
-
         }
 
         private void InitializeStaticCollidableGround(int scale)
@@ -1982,8 +1859,6 @@ namespace GDApp
                 this.cameraManager.CycleCamera();      
         }
 
-
-        
         private void drawDebugInfo()
         {
             //draw debug text after base.Draw() otherwise it will be behind the scene!
@@ -2086,19 +1961,239 @@ namespace GDApp
 
         #endregion
 
+        #region Game Related
+        #region Maze Creation
+        // Random Maze
+        private void InitializeMaze(int size)
+        {
+            // size is hardcoded
+            size = 5;
+
+            Model[] mazeTiles = new Model[]{
+                this.modelDictionary["deadEnd"],    //0
+                this.modelDictionary["straight"],   //1
+                this.modelDictionary["corner"],     //2
+                this.modelDictionary["tJunction"],  //3
+                this.modelDictionary["cross"],      //4
+                this.modelDictionary["room"],      //5
+                this.modelDictionary["puzzle"],    //6
+                this.modelDictionary["cube"],           //7
+                this.modelDictionary["emptyPotion"],    //8
+                this.modelDictionary["bluePotion"],     //9
+                this.modelDictionary["brownPotion"],    //10
+                this.modelDictionary["greenPotion"],    //11
+                this.modelDictionary["orangePotion"],   //12
+                this.modelDictionary["pinkPotion"],     //13
+                this.modelDictionary["purplePotion"],   //14
+                this.modelDictionary["redPotion"],      //15
+                this.modelDictionary["yellowPotion"],   //16
+                this.modelDictionary["stoneDoor"]       //17
+            };
+
+            Model[] collisionTiles = new Model[]{
+                this.modelDictionary["deadEnd_Col"],    //0
+                this.modelDictionary["straight_Col"],   //1
+                this.modelDictionary["corner_Col"],     //2
+                this.modelDictionary["tJunction_Col"],  //3
+                this.modelDictionary["cross_Col"],      //4
+                this.modelDictionary["room_Col"],       //5
+                this.modelDictionary["puzzle_Col"],     //6
+            };
+
+
+            // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
+            //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
+            tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            tg.generateRandomGrid();
+            tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
+            make2DMazeMap(tg);
+            for (int i = 0; i < tg.gridSize; i++)
+            {
+                for (int j = 0; j < tg.gridSize; j++)
+                {
+                    if (tg.grid[i, j] != null)
+                    {
+                        this.objectManager.Add(tg.grid[i, j]);
+                        if (i > this.mazeWidth)
+                            this.mazeWidth = i;
+                        if (j > this.mazeHeight)
+                            this.mazeHeight = j;
+                    }
+                }
+            }
+            tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"], PotionType.slow);
+
+
+            // MAP CENTER
+            //int xLoc = (int)((tg.tileSize * tg.gridSize / 2) - tg.tileSize/2);
+            //int yLoc = (int)(-(tg.tileSize * tg.gridSize / 2) + tg.tileSize/2);
+
+            // MAP TOP LEFT CORNER
+            int xLoc = (int)(0 + tg.tileSize / 4);
+            int yLoc = (int)(0 - tg.tileSize / 4);
+
+            ModelTileObject mazePeice = tg.createFreeTileAt(xLoc, 100, yLoc + 10, 6, 2);
+            this.objectManager.Add(mazePeice);
+
+            BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
+
+            //archetype - clone from this
+
+
+            int tableHeight = 30;
+            int tableWidth = 30;
+            Transform3D tableTransform = new Transform3D(
+               new Vector3(8, 114, 20),
+               new Vector3(-90, 0, 0),
+               new Vector3(tableWidth, tableHeight, 0),
+               Vector3.UnitX,
+               Vector3.UnitY);
+
+            BillboardPrimitiveObject table = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+                tableTransform, //transform reset in clones
+                this.vertexDictionary["texturedquad"],
+                this.billboardEffect,
+                Color.White, 1,
+                this.textureDictionary["crate"],
+                BillboardType.Normal);
+
+            objectManager.Add(table);
+
+
+            foreach (DrawnActor model in tg.itemList)
+            {
+                this.objectManager.Add(model);
+            }
+
+
+
+        }
+
+        // Maze From Network
+        private void InitializeSocketMaze(int size)
+        {
+            // size is hardcoded
+            size = 5;
+            #region InitialiseMazeModels
+            Model[] mazeTiles = new Model[]{
+                this.modelDictionary["deadEnd"],    //0
+                this.modelDictionary["straight"],   //1
+                this.modelDictionary["corner"],     //2
+                this.modelDictionary["tJunction"],  //3
+                this.modelDictionary["cross"],      //4
+                this.modelDictionary["room"],      //5
+                this.modelDictionary["puzzle"],    //6
+                this.modelDictionary["cube"],           //7
+                this.modelDictionary["emptyPotion"],    //8
+                this.modelDictionary["bluePotion"],     //9
+                this.modelDictionary["brownPotion"],    //10
+                this.modelDictionary["greenPotion"],    //11
+                this.modelDictionary["orangePotion"],   //12
+                this.modelDictionary["pinkPotion"],     //13
+                this.modelDictionary["purplePotion"],   //14
+                this.modelDictionary["redPotion"],      //15
+                this.modelDictionary["yellowPotion"],   //16
+                this.modelDictionary["stoneDoor"]       //17
+            };
+
+            Model[] collisionTiles = new Model[]{
+                this.modelDictionary["deadEnd_Col"],    //0
+                this.modelDictionary["straight_Col"],   //1
+                this.modelDictionary["corner_Col"],     //2
+                this.modelDictionary["tJunction_Col"],  //3
+                this.modelDictionary["cross_Col"],      //4
+                this.modelDictionary["room_Col"],      //5
+                this.modelDictionary["puzzle_Col"]    //6
+            };
+            #endregion
+
+            //tg = new TileGrid(models, rotations, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+
+            // DOOR
+            tg.createDoorAt(0, 0, vertexDictionary["texturedquad"]);
+            for (int i = 0; i < tg.gridSize; i++)
+            {
+                for (int j = 0; j < tg.gridSize; j++)
+                {
+                    if (tg.grid[i, j] != null)
+                    {
+                        this.objectManager.Add(tg.grid[i, j]);
+                        if (i > this.mazeWidth)
+                            this.mazeWidth = i;
+                        if (j > this.mazeHeight)
+                            this.mazeHeight = j;
+                    }
+                }
+            }
+
+            // POTION
+            tg.createPotionAt(0, 1, this.propModelEffect, this.textureDictionary["redPotion"], PotionType.slow);
+
+
+            // FREE TILE
+
+            // MAP CENTER
+            //int xLoc = (int)((tg.tileSize * tg.gridSize / 2) - tg.tileSize/2);
+            //int yLoc = (int)(-(tg.tileSize * tg.gridSize / 2) + tg.tileSize/2);
+
+            // MAP TOP LEFT CORNER
+            int xLoc = (int)(0 + tg.tileSize / 4);
+            int yLoc = (int)(0 - tg.tileSize / 4);
+
+            ModelTileObject mazePeice = tg.createFreeTileAt(xLoc, 100, yLoc + 10, 6, 2);
+            this.objectManager.Add(mazePeice);
+
+            // TABLE
+            int tableHeight = 30;
+            int tableWidth = 30;
+            Transform3D tableTransform = new Transform3D(
+               new Vector3(8, 114, 20),
+               new Vector3(-90, 0, 0),
+               new Vector3(tableWidth, tableHeight, 0),
+               Vector3.UnitX,
+               Vector3.UnitY);
+
+            BillboardPrimitiveObject table = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
+                tableTransform, //transform reset in clones
+                this.vertexDictionary["texturedquad"],
+                this.billboardEffect,
+                Color.White, 1,
+                this.textureDictionary["crate"],
+                BillboardType.Normal);
+
+            objectManager.Add(table);
+
+            /**
+            *   Add items to objectmanager 
+            **/
+
+            foreach (DrawnActor model in tg.itemList)
+            {
+                this.objectManager.Add(model);
+            }
+
+
+            /**
+            *   2D Guider Maze 
+            **/
+
+            make2DMazeMap(tg);
+        }
+        #endregion
+
         #region Networking
         static private void StartServer()
         {
             int size = tg.gridSize;
             Integer2[,] modelandrotation = new Integer2[size, size];
 
-            for(int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
-                for(int j = 0; j < size; j++)
+                for (int j = 0; j < size; j++)
                 {
                     if (tg.grid[i, j] != null)
                     {
-                        modelandrotation[i, j] = new Integer2(tg.grid[i, j].modelNo, tg.grid[i, j].rotation);
+                        modelandrotation[i, j] = new Integer2(tg.grid[i, j].modelNo, (int)(tg.grid[i, j].Transform3D.Rotation.Y / -90));
                     }
                     else
                     {
@@ -2135,7 +2230,7 @@ namespace GDApp
         }
         #endregion  
 
-        #region Game Stuff
+        #region Guider UI
         private void make2DMazeMap(TileGrid tg)
         {
             BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
@@ -2178,12 +2273,12 @@ namespace GDApp
                         int rotation = mto.rotation;
                         Vector2 pos = new Vector2(i, j);
                         create2DTile(rotation, pos, UITiles[modelNum]);
-                        if(tg.potionGrid[i,j]!=null)
+                        if (tg.potionGrid[i, j] != null)
                         {
                             Transform3D potionTransform = new Transform3D(
-                                new Vector3(i * (this.tileGridSize / 32), 115, -j * (this.tileGridSize / 32)), 
-                                new Vector3(-90, 90, 0), 
-                                new Vector3(this.tileGridSize / (2 * 32), this.tileGridSize / (2 * 32), 0), 
+                                new Vector3(i * (this.tileGridSize / 32), 115, -j * (this.tileGridSize / 32)),
+                                new Vector3(-90, 90, 0),
+                                new Vector3(this.tileGridSize / (2 * 32), this.tileGridSize / (2 * 32), 0),
                                 -Vector3.UnitZ, Vector3.UnitY);
 
                             TexturedPrimitiveObject potionIcon = new TexturedPrimitiveObject("potion(" + i + "," + j + ")", ObjectType.Decorator,
@@ -2208,7 +2303,7 @@ namespace GDApp
 
         private void create2DTile(int rotation, Vector2 pos, Texture2D tile)
         {
-            float tileSize = this.tileGridSize/32;
+            float tileSize = this.tileGridSize / 32;
             Console.WriteLine(rotation);
             float xTranslationRot = 0, yTranslationRot = 0;
             if (rotation == 0)
@@ -2234,7 +2329,7 @@ namespace GDApp
             BillboardPrimitiveObject billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
             transform, //transform reset in clones
             this.vertexDictionary["texturedquad"],
-            this.billboardEffect, 
+            this.billboardEffect,
             Color.White, 1,
             tile,
             BillboardType.Normal); //texture reset in clones
@@ -2242,11 +2337,13 @@ namespace GDApp
 
             objectManager.Add(billboardArchetypeObject);
         }
+        #endregion
 
-       private void pickUpPotion(DrawnActor p)
-       {
-           if (p != null)
-           {
+        #region Game Events & Item Handling
+        private void pickUpPotion(DrawnActor p)
+        {
+            if (p != null)
+            {
                 PotionObject potion = p as PotionObject;
                 if (potion.PotionType == PotionType.speed)
                 {
@@ -2323,61 +2420,25 @@ namespace GDApp
             this.soundManager.Play3DCue("boing", new AudioEmitter());
             //close Door
         }
+
         private void finishGame()
         {
             this.soundManager.Play3DCue("boing", new AudioEmitter());
             //End Game Stuff
         }
-        #endregion
-
-        #region Update & Draw
-        protected override void Update(GameTime gameTime)
-       {
-           // Allows the game to exit
-           if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-               this.Exit();
-           //run potion effects when needed
-            gameEffects(gameTime);
-            mazeTimer(gameTime);
-           #region Demos
-           /*
-           demoTextToTextureAndVideo();
-           demoCameraTrack(gameTime);
-           */
-                        demoCameraLayout();
-            demoSoundManager();
-            demoMousePicking();
-
-
-            #endregion
-            //if(keyboardManager.IsFirstKeyPress(Keys.R))
-            //    make2DMazeMap(tg);
-
-            Camera3D cam;
-            int index;
-            CameraManager.FindCameraBy("FirstPerson", "cam", out cam, out index);
-            if(cam != null)
-            {
-                Vector3 pos = cam.Transform3D.Translation;
-                xy[0] = pos.X;
-                xy[1] = pos.Z;
-                updateServer();
-            }
-            base.Update(gameTime);
-        }
 
         private void mazeTimer(GameTime gameTime)
         {
-            if(this.gameTimer == true)
+            if (this.gameTimer == true)
             {
                 if (this.gameTimerRunning == false)
                 {
                     this.gameStartTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
-                    this.gameEndTime = this.gameStartTime + (this.displayTime*1000); //2 minutes or 120 second timer
+                    this.gameEndTime = this.gameStartTime + (this.displayTime * 1000); //2 minutes or 120 second timer
                     this.gameTimerRunning = true; //set timer to running
 
                     //Static Change
-                    if(this.playMusic == false)
+                    if (this.playMusic == false)
                     {
                         this.soundManager.PlayCue("bongobongoLoop");
                         this.playMusic = true;
@@ -2389,7 +2450,7 @@ namespace GDApp
                     {
                         //Dynamic Change
 
-                        float timeGoneBy = ((float)gameTime.TotalGameTime.TotalMilliseconds - this.endTime) /1000;
+                        float timeGoneBy = ((float)gameTime.TotalGameTime.TotalMilliseconds - this.endTime) / 1000;
                         this.displayTime = this.timerLength - timeGoneBy;
                     }
                     else
@@ -2433,7 +2494,7 @@ namespace GDApp
                 this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
-                
+
                 this.tempValue = GameData.PlayerMoveSpeed; //store old value
 
                 //Static Change
@@ -2511,17 +2572,17 @@ namespace GDApp
                 Camera3D camera;
                 int index;
 
-                this.cameraManager.FindCameraBy("splitScreen", "camLeft", out camera, out index);
+                this.cameraManager.FindCameraBy("SplitScreen", "runnercam", out camera, out index);
                 this.tempValue = camera.Transform3D.Rotation.X;
-                camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X*2, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
+                camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X * 2, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
             }
             else //when timer is running
             {
                 if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
-                    
-                    
+
+
                 }
                 else
                 {
@@ -2529,7 +2590,7 @@ namespace GDApp
                     //Revert Change
                     Camera3D camera;
                     int index;
-                    this.cameraManager.FindCameraBy("splitScreen", "camLeft", out camera, out index);
+                    this.cameraManager.FindCameraBy("SplitScreen", "runnercam", out camera, out index);
                     camera.Transform3D.Rotation = new Vector3(this.tempValue, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
                     //reset bools
                     flip = false;
@@ -2545,7 +2606,7 @@ namespace GDApp
             v *= 1000;
             this.gameEndTime += v;
             //reset bools
-            if (v>0)
+            if (v > 0)
                 extraTime = false;
             else
                 lessTime = false;
@@ -2567,7 +2628,7 @@ namespace GDApp
                 if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
-                    
+
                 }
                 else
                 {
@@ -2624,37 +2685,121 @@ namespace GDApp
         }
 
         #endregion
+        #endregion
+        #endregion
 
-        protected override void Draw(GameTime gameTime)
+        #region Update & Draw Related Methods
+        #region Update
+        protected override void Update(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
-
-            foreach (Camera3D camera in cameraManager)
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
             {
-                if (camera.ProjectionParameters.AspectRatio == 4.0f / 3)
-                    menuManager.TextureRectangle = this.menuRectangleB;
-                else
-                    menuManager.TextureRectangle = this.menuRectangleA;
-                //set the viewport based on the current camera
-                graphics.GraphicsDevice.Viewport = camera.Viewport;
-                base.Draw(gameTime);
-
-                //set which is the active camera (remember that our objects use the CameraManager::ActiveCamera property to access View and Projection for rendering
-                this.cameraManager.ActiveCameraIndex++;
+               this.Exit();
             }
 
-            if (this.menuManager.Pause)
-                //drawDebugInfo();
+            #region Potion Update
+            // Run potion effects when needed
+            gameEffects(gameTime);
+            mazeTimer(gameTime);
+            #endregion
 
-                //TIMER
-            drawTimer();
+            #region Demos
+            //demoTextToTextureAndVideo();
+            //demoCameraTrack(gameTime);
+            demoCameraLayout();
+            demoSoundManager();
+            demoMousePicking();
+            #endregion
 
-            //IF GAME WON OR LOST DISPLAY CORRECT ENDSCREEN
-            if (gameWon == true)
-                DrawEndScreen(true);
-            else if (gameFailed == true)
-                DrawEndScreen(false);
+            #region Network Updates
+            UpdateXY();
+            #endregion
+
+            base.Update(gameTime);
         }
+
+        private void UpdateXY()
+        {
+            Camera3D cam;
+            int index;
+            CameraManager.FindCameraBy(ScreenType, "runnercam", out cam, out index);
+            if (cam != null)
+            {
+                Vector3 pos = cam.Transform3D.Translation;
+                xy[0] = pos.X;
+                xy[1] = pos.Z;
+                updateServer();
+            }
+        }
+        #endregion
+
+        #region Draw
+        protected override void Draw(GameTime gameTime)
+        {
+            // Clear the screen
+            GraphicsDevice.Clear(Color.Black);
+
+            // Display the appropriate viewport
+            DisplayViewport(gameTime);
+
+
+            // Is paused
+            /*
+            if (this.menuManager.Pause)
+            {
+                drawDebugInfo();
+            }
+            */
+
+            // Draw timer
+            
+
+            // Check gamestate
+            CheckWin();
+                
+            base.Draw(gameTime);
+
+            drawTimer();
+        }
+
+        private void CheckWin()
+        {
+            if (gameWon == true)
+            {
+                DrawEndScreen(true);
+            }
+
+            else if (gameFailed == true)
+            {
+                DrawEndScreen(false);
+            }
+        }
+
+        private void DisplayViewport(GameTime gameTime)
+        {
+            if (ScreenType.Equals("SplitScreen"))
+            {
+                foreach (Camera3D camera in cameraManager)
+                {
+                    if (camera.ProjectionParameters.AspectRatio == 4.0f / 3)
+                        menuManager.TextureRectangle = this.menuRectangleB;
+                    else
+                        menuManager.TextureRectangle = this.menuRectangleA;
+                    //set the viewport based on the current camera
+                    graphics.GraphicsDevice.Viewport = camera.Viewport;
+                    //base.Draw(gameTime);
+
+                    //set which is the active camera (remember that our objects use the CameraManager::ActiveCamera property to access View and Projection for rendering
+                    this.cameraManager.ActiveCameraIndex++;
+                }
+            }
+            else if (ScreenType.Equals("SingleScreen"))
+            {
+                graphics.GraphicsDevice.Viewport = this.cameraManager.ActiveCamera.Viewport;
+            }
+        }
+        #endregion
         #endregion
     }
 }
