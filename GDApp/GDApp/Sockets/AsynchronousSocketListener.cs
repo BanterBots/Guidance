@@ -179,13 +179,10 @@ public class AsynchronousSocketListener
         {
             for (int j = 0; j < length; j++)
             {
-                if (modelandrotation[i, j] != null)
-                {
                     content += modelandrotation[i, j].X;
                     content += ",";
                     content += modelandrotation[i, j].Y;
                     content += "n";
-                }
             }
         }
         return content;

@@ -2096,9 +2096,13 @@ namespace GDApp
             {
                 for(int j = 0; j < size; j++)
                 {
-                    if(tg.grid[i,j] != null)
+                    if (tg.grid[i, j] != null)
                     {
-                        modelandrotation[i, j] = new Integer2(tg.grid[i, j].modelNo, tg.grid[i, j].rotation); 
+                        modelandrotation[i, j] = new Integer2(tg.grid[i, j].modelNo, tg.grid[i, j].rotation);
+                    }
+                    else
+                    {
+                        modelandrotation[i, j] = new Integer2(-2, -2);
                     }
                 }
             }

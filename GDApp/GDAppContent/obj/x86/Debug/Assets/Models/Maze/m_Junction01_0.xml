@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Junction01</Name>
     <Identity>
-      <SourceFilename>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Junction01.FBX</SourceFilename>
+      <SourceFilename>C:\Users\TEMP\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Junction01.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -29,7 +29,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>07 - Default</Name>
       <Identity>
-        <SourceFilename>C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Junction01.FBX</SourceFilename>
+        <SourceFilename>C:\Users\TEMP\Desktop\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Junction01.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
