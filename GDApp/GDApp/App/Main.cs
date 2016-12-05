@@ -1109,7 +1109,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = true;
+            bool bDebugMode = false;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);
@@ -1142,8 +1142,31 @@ namespace GDApp
         {
             // GUIDANCE EFFECTS
             this.texturedModelEffect = new BasicEffect(graphics.GraphicsDevice);
+            //this.texturedModelEffect.VertexColorEnabled = true;
             this.texturedModelEffect.TextureEnabled = true;
-            //this.texturedModelEffect.EnableDefaultLighting();
+            
+            this.texturedModelEffect.EnableDefaultLighting();
+            this.texturedModelEffect.SpecularPower = 32768;
+
+            this.texturedModelEffect.DiffuseColor = new Vector3(.9f, .9f, .9f);
+            this.texturedModelEffect.SpecularColor = new Vector3(.9f, .9f, .9f);
+            this.texturedModelEffect.AmbientLightColor = new Vector3(.6f, .6f, .6f);
+
+            this.texturedModelEffect.DirectionalLight0.Enabled = true;
+            this.texturedModelEffect.DirectionalLight1.Enabled = true;
+            this.texturedModelEffect.DirectionalLight2.Enabled = true;
+
+            //this.texturedModelEffect.DirectionalLight0.DiffuseColor = new Vector3(.1f, .1f, .1f);
+            //this.texturedModelEffect.DirectionalLight1.DiffuseColor = new Vector3(.1f, .1f, .1f);
+
+            // DOWN is 0, -1, 0
+            //this.texturedModelEffect.DirectionalLight0.Direction = Vector3.Down;
+            //this.texturedModelEffect.DirectionalLight0.Direction = new Vector3(-0.6f, -0.8f, 0);
+            //this.texturedModelEffect.DirectionalLight1.Direction = Vector3.Down;
+            //this.texturedModelEffect.DirectionalLight1.Direction = new Vector3(0, -0.8f, -0.6f);
+            //this.texturedModelEffect.DirectionalLight2.Direction = Vector3.Right;
+   
+
             //this.texturedModelEffect.DirectionalLight1.Enabled = true;
             //this.texturedModelEffect.DirectionalLight2.Enabled = true;
 
