@@ -768,22 +768,22 @@ namespace GDApp._3DTileEngine
             grid[x, y] = mazeObject;
 
             Random rand = new Random();
-            int potionTypeRandom = rand.Next(1,121);
+            int potionTypeRandom = rand.Next(1,41);
             int potionRandom = rand.Next(1, 20);
             PotionType currentType = PotionType.speed;
-            if (potionTypeRandom > 105)
+            if (potionTypeRandom > 35)
                 currentType = PotionType.speed;
-            else if (potionTypeRandom > 90)
-                currentType = PotionType.slow;
-            else if (potionTypeRandom > 75)
-                currentType = PotionType.extraTime;
-            else if (potionTypeRandom > 60)
-                currentType = PotionType.lessTime;
-            else if (potionTypeRandom > 45)
-                currentType = PotionType.flip;
             else if (potionTypeRandom > 30)
-                currentType = PotionType.blackout;
+                currentType = PotionType.slow;
+            else if (potionTypeRandom > 25)
+                currentType = PotionType.extraTime;
+            else if (potionTypeRandom > 20)
+                currentType = PotionType.lessTime;
             else if (potionTypeRandom > 15)
+                currentType = PotionType.flip;
+            else if (potionTypeRandom > 10)
+                currentType = PotionType.blackout;
+            else if (potionTypeRandom > 5)
                 currentType = PotionType.reverse;
             else if (potionTypeRandom > 0)
                 currentType = PotionType.mapSpin;
@@ -797,7 +797,7 @@ namespace GDApp._3DTileEngine
             }
             else
             {
-                if (potionRandom < 20 && this.totalPotions < 20 && (x % 2 == 0 && y % 2 == 0))
+                if (potionRandom < 20 && this.totalPotions < 20)
                     createPotionAt(x, y, effect, potionTexture, currentType);
             }
         }
@@ -923,7 +923,7 @@ namespace GDApp._3DTileEngine
                 Transform3D transform = new Transform3D(
                 new Vector3(x * tileSize, 4, y * (-1) * tileSize),
                 new Vector3(0, 0 * -90, 0),
-                new Vector3(0.05f, 0.05f, 0.05f),
+                new Vector3(0.03f, 0.03f, 0.03f),
                 Vector3.UnitX,
                 Vector3.UnitY);
 
@@ -954,12 +954,14 @@ namespace GDApp._3DTileEngine
                 false,
                 potion);
 
+            Vector3 potionZoneVector = new Vector3(transform.Translation.X, transform.Translation.Y + 350, transform.Translation.Z);
+
             //no mass so we disable material properties
             potionZone.AddPrimitive(
                 new Box(
-                    new Vector3(transform.Translation.X, transform.Translation.Y +300, transform.Translation.Z), 
+                    potionZoneVector, 
                     Matrix.Identity, 
-                    new Vector3(transform.Scale.X*300, transform.Scale.Y*150, transform.Scale.Z*300)));
+                    new Vector3(transform.Scale.X*500, transform.Scale.Y*220, transform.Scale.Z*500)));
             //enabled by default
             potionZone.Enable(true);
             itemList.Add(potionZone);

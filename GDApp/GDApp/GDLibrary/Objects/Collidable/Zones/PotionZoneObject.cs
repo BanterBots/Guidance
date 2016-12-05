@@ -42,7 +42,7 @@ namespace GDLibrary
 
         public override bool HandleCollision(CollisionSkin collider, CollisionSkin collidee)
         {
-            if (collidee.Owner.ExternalData is PlayerObject)
+            if ((this.currentCollidableObject == null) && (collidee.Owner.ExternalData is PlayerObject))
             {
                 PlayerObject playerObject = collidee.Owner.ExternalData as PlayerObject;
                 EventDispatcher.Publish(new EventData("potion", this, EventType.OnZoneEnter, EventCategoryType.Zone, potion));

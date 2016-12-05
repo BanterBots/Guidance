@@ -690,6 +690,7 @@ namespace GDApp
                 if (eventData.EventType == EventType.OnZoneEnter)
                 {
                     eventData.Reference.Alpha = 0.5f;
+                    eventData.Reference.Color = Color.Green;
                     if (keyboardManager.IsFirstKeyPress(Keys.E))
                         pickUpPotion(eventData.Reference);
                 }
@@ -698,6 +699,7 @@ namespace GDApp
                     if (eventData.Reference != null)
                     {
                         eventData.Reference.Alpha = 1f;
+                        eventData.Reference.Color = Color.White;
                     }
                 }
             }
@@ -1286,7 +1288,7 @@ namespace GDApp
             cameraLayoutName = "SplitScreen";
             #region Runner Camera
             clonePawnCamera = (PawnCamera3D)leftCameraArchetype.Clone();
-            clonePawnCamera.ID = "runnercam";
+            clonePawnCamera.ID = "camLeft";
             clonePawnCamera.AddController(new CollidableFirstPersonController(
                 clonePawnCamera + " controller",
                 clonePawnCamera,
@@ -1320,7 +1322,7 @@ namespace GDApp
             
 
             cloneFixedCamera = (Camera3D)rightCameraArchetype.Clone();
-            cloneFixedCamera.ID = "guidercam";
+            cloneFixedCamera.ID = "camRight";
             cloneFixedCamera.Transform3D = transform;
             cloneFixedCamera.ProjectionParameters = ProjectionParameters.StandardMediumFourThree;
             this.cameraManager.Add(cameraLayoutName, cloneFixedCamera);
@@ -2583,7 +2585,7 @@ namespace GDApp
                 Camera3D camera;
                 int index;
 
-                this.cameraManager.FindCameraBy("SplitScreen", "runnercam", out camera, out index);
+                this.cameraManager.FindCameraBy("SplitScreen", "camLeft", out camera, out index);
                 this.tempValue = camera.Transform3D.Rotation.X;
                 camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X * 2, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
             }
@@ -2592,8 +2594,11 @@ namespace GDApp
                 if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
                 {
                     //Dynamic Change
+                    Camera3D camera;
+                    int index;
 
-
+                    this.cameraManager.FindCameraBy("SplitScreen", "camLeft", out camera, out index);
+                    camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X * 2, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
                 }
                 else
                 {
@@ -2601,7 +2606,7 @@ namespace GDApp
                     //Revert Change
                     Camera3D camera;
                     int index;
-                    this.cameraManager.FindCameraBy("SplitScreen", "runnercam", out camera, out index);
+                    this.cameraManager.FindCameraBy("SplitScreen", "camLeft", out camera, out index);
                     camera.Transform3D.Rotation = new Vector3(this.tempValue, camera.Transform3D.Rotation.Y, camera.Transform3D.Rotation.Z);
                     //reset bools
                     flip = false;
@@ -2666,7 +2671,7 @@ namespace GDApp
                 Camera3D camera;
                 int index;
 
-                this.cameraManager.FindCameraBy("splitScreen", "camRight", out camera, out index);
+                this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
                 this.tempVector3 = camera.Transform3D.Rotation;
             }
             else //when timer is running
@@ -2676,7 +2681,7 @@ namespace GDApp
                     //Dynamic Change
                     Camera3D camera;
                     int index;
-                    this.cameraManager.FindCameraBy("splitScreen", "camRight", out camera, out index);
+                    this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
                     camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X + 1, camera.Transform3D.Rotation.Y + 1, camera.Transform3D.Rotation.Z + 1);
                 }
                 else
@@ -2686,7 +2691,7 @@ namespace GDApp
                     Camera3D camera;
                     int index;
 
-                    this.cameraManager.FindCameraBy("splitScreen", "camRight", out camera, out index);
+                    this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
                     camera.Transform3D.Rotation = this.tempVector3;
                     //reset bools
                     mapSpin = false;
