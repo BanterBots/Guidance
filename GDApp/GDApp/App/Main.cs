@@ -582,12 +582,14 @@ namespace GDApp
             {
                 //this.cameraManager.SetCameraLayout("splitScreen");
                 ScreenType = "SplitScreen";
+                this.cameraManager.SetCameraLayout(ScreenType);
             }
             else if (eventData.EventType == EventType.OnHost)
             {
                 //Set parameters for Hosting
                 //this.cameraManager.SetCameraLayout("FirstPerson");
                 ScreenType = "SingleScreen";
+                this.cameraManager.SetCameraLayout(ScreenType);
                 initializeServer(); // <- bad code
             }
             else if (eventData.EventType == EventType.OnClient)
@@ -2041,11 +2043,7 @@ namespace GDApp
             ModelTileObject mazePeice = tg.createFreeTileAt(xLoc, 100, yLoc + 10, 6, 2);
             this.objectManager.Add(mazePeice);
 
-            BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
-
-            //archetype - clone from this
-
-
+            
             int tableHeight = 30;
             int tableWidth = 30;
             Transform3D tableTransform = new Transform3D(
@@ -2752,26 +2750,12 @@ namespace GDApp
         {
             // Clear the screen
             GraphicsDevice.Clear(Color.Black);
+            
+            // Check gamestate
+            CheckWin();
 
             // Display the appropriate viewport
             DisplayViewport(gameTime);
-
-
-            // Is paused
-            /*
-            if (this.menuManager.Pause)
-            {
-                drawDebugInfo();
-            }
-            */
-
-            // Draw timer
-            
-
-            // Check gamestate
-            CheckWin();
-                
-            base.Draw(gameTime);
 
             drawTimer();
         }
@@ -2791,6 +2775,7 @@ namespace GDApp
 
         private void DisplayViewport(GameTime gameTime)
         {
+
             if (ScreenType.Equals("SplitScreen"))
             {
                 foreach (Camera3D camera in cameraManager)
@@ -2801,7 +2786,7 @@ namespace GDApp
                         menuManager.TextureRectangle = this.menuRectangleA;
                     //set the viewport based on the current camera
                     graphics.GraphicsDevice.Viewport = camera.Viewport;
-                    //base.Draw(gameTime);
+                    base.Draw(gameTime);
 
                     //set which is the active camera (remember that our objects use the CameraManager::ActiveCamera property to access View and Projection for rendering
                     this.cameraManager.ActiveCameraIndex++;
@@ -2810,6 +2795,7 @@ namespace GDApp
             else if (ScreenType.Equals("SingleScreen"))
             {
                 graphics.GraphicsDevice.Viewport = this.cameraManager.ActiveCamera.Viewport;
+                base.Draw(gameTime);
             }
         }
         #endregion

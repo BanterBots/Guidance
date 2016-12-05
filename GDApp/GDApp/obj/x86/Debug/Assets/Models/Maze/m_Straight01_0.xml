@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>m_Straight01</Name>
     <Identity>
-      <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Straight01.FBX</SourceFilename>
+      <SourceFilename>D:\SecondSight\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Straight01.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -29,7 +29,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>07 - Default</Name>
       <Identity>
-        <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Straight01.FBX</SourceFilename>
+        <SourceFilename>D:\SecondSight\Guidance\GDApp\GDAppContent\Assets\Models\Maze\m_Straight01.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
