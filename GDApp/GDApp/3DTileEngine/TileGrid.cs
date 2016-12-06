@@ -769,7 +769,7 @@ namespace GDApp._3DTileEngine
 
             Random rand = new Random();
             int potionTypeRandom = rand.Next(1,41);
-            int potionRandom = rand.Next(1, 20);
+            int potionRandom = rand.Next(1, 40);
             PotionType currentType = PotionType.speed;
             if (potionTypeRandom > 35)
                 currentType = PotionType.speed;
@@ -781,12 +781,12 @@ namespace GDApp._3DTileEngine
                 currentType = PotionType.lessTime;
             else if (potionTypeRandom > 15)
                 currentType = PotionType.flip;
-            else if (potionTypeRandom > 10)
-                currentType = PotionType.blackout;
-            else if (potionTypeRandom > 5)
-                currentType = PotionType.reverse;
-            else if (potionTypeRandom > 0)
-                currentType = PotionType.mapSpin;
+            //else if (potionTypeRandom > 10)
+            //    currentType = PotionType.blackout;
+            //else if (potionTypeRandom > 5)
+            //    currentType = PotionType.reverse;
+            //else if (potionTypeRandom > 0)
+            //    currentType = PotionType.mapSpin;
             if (x == 0 && y == 0)
             {
                 //startRoom
@@ -797,7 +797,7 @@ namespace GDApp._3DTileEngine
             }
             else
             {
-                if (potionRandom < 20 && this.totalPotions < 20)
+                if (potionRandom < 20 && this.totalPotions < 30)
                     createPotionAt(x, y, effect, potionTexture, currentType);
             }
         }

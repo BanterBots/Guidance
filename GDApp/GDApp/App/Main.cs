@@ -1518,7 +1518,7 @@ namespace GDApp
             transform3D = new Transform3D(
                 location, 
                 new Vector3(0, 0, 0),
-                new Vector3(this.mazeWidth*(this.tileGridSize+7), 0.2f, this.mazeHeight * (this.tileGridSize+7)), 
+                new Vector3(this.mazeWidth*(this.tileGridSize+14), 0.2f, this.mazeHeight * (this.tileGridSize+14)), 
                 Vector3.UnitX, 
                 Vector3.UnitY);
 
@@ -2695,7 +2695,8 @@ namespace GDApp
                 int index;
 
                 this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
-                this.tempVector3 = camera.Transform3D.Rotation;
+                PawnCamera3D pawnCamera = camera as PawnCamera3D;
+                this.tempVector3 = pawnCamera.Transform3D.Rotation;
             }
             else //when timer is running
             {
@@ -2705,7 +2706,8 @@ namespace GDApp
                     Camera3D camera;
                     int index;
                     this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
-                    camera.Transform3D.Rotation = new Vector3(camera.Transform3D.Rotation.X + 1, camera.Transform3D.Rotation.Y + 1, camera.Transform3D.Rotation.Z + 1);
+                    PawnCamera3D pawnCamera = camera as PawnCamera3D;
+                    pawnCamera.Transform3D.Rotation = new Vector3(pawnCamera.Transform3D.Rotation.X + 1, pawnCamera.Transform3D.Rotation.Y + 1, pawnCamera.Transform3D.Rotation.Z + 1);
                 }
                 else
                 {
@@ -2779,13 +2781,17 @@ namespace GDApp
             // Clear the screen
             GraphicsDevice.Clear(Color.Black);
             
-            // Check gamestate
-            CheckWin();
+            
 
             // Display the appropriate viewport
             DisplayViewport(gameTime);
 
+
             drawTimer();
+
+            // Check gamestate
+            CheckWin();
+
         }
 
         private void CheckWin()

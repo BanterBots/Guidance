@@ -16,10 +16,10 @@ namespace GDApp
 
         #region Player Move Multipliers
         //speed at which we move forward and backwards
-        public static float PlayerMoveSpeed = 0.3f * 6;
+        public static float PlayerMoveSpeed = 0.3f * 5;
         //scale so that we can strafe 70% slower than moving always
         public static float PlayerStrafeSpeed = PlayerMoveSpeed * 0.8f;
-        public static float PlayerRotationSpeed = 0.08f;
+        public static float PlayerRotationSpeed = 0.1f;
         //jump height for player
         public static float PlayerJumpHeight = 20;
 
