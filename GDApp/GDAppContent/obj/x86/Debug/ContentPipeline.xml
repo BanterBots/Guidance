@@ -8,7 +8,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Fonts\debug.xnb</Output>
-      <Time>2016-11-29T09:33:43.7604719+00:00</Time>
+      <Time>2016-12-06T12:19:02.9819842+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Fonts\UI.spritefont</Source>
@@ -17,7 +17,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Fonts\UI.xnb</Output>
-      <Time>2016-11-29T09:33:43.7994953+00:00</Time>
+      <Time>2016-12-06T12:19:03.0520402+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Fonts\menu.spritefont</Source>
@@ -26,7 +26,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Fonts\menu.xnb</Output>
-      <Time>2016-11-29T09:33:43.7984947+00:00</Time>
+      <Time>2016-12-06T12:19:03.0510394+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Abstract\abstract1.jpg</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\abstract1.xnb</Output>
-      <Time>2016-11-29T09:33:44.4769015+00:00</Time>
+      <Time>2016-12-06T12:19:03.4563634+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Abstract\pink.jpg</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\pink.xnb</Output>
-      <Time>2016-11-29T09:33:44.4839057+00:00</Time>
+      <Time>2016-12-06T12:19:03.4593658+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Abstract\pink_trans1.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Abstract\pink_trans1.xnb</Output>
-      <Time>2016-11-29T09:33:44.4879081+00:00</Time>
+      <Time>2016-12-06T12:19:03.4623682+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence1.jpg</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence1.xnb</Output>
-      <Time>2016-11-29T09:33:44.4969135+00:00</Time>
+      <Time>2016-12-06T12:19:03.4663714+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence2.jpg</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence2.xnb</Output>
-      <Time>2016-11-29T09:33:44.5039177+00:00</Time>
+      <Time>2016-12-06T12:19:03.4693738+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence3.jpg</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence3.xnb</Output>
-      <Time>2016-11-29T09:33:44.5119225+00:00</Time>
+      <Time>2016-12-06T12:19:03.4723762+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Fence\fence4.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Fence\fence4.xnb</Output>
-      <Time>2016-11-29T09:33:44.5279321+00:00</Time>
+      <Time>2016-12-06T12:19:03.4803826+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Structures\backwall.jpg</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Structures\backwall.xnb</Output>
-      <Time>2016-11-29T09:33:44.5359369+00:00</Time>
+      <Time>2016-12-06T12:19:03.4843858+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Architecture\Structures\sidewall.jpg</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Architecture\Structures\sidewall.xnb</Output>
-      <Time>2016-11-29T09:33:44.5429411+00:00</Time>
+      <Time>2016-12-06T12:19:03.4873882+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\alarm1.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\alarm1.xnb</Output>
-      <Time>2016-11-29T09:33:44.5449423+00:00</Time>
+      <Time>2016-12-06T12:19:03.4873882+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\alarm2.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\alarm2.xnb</Output>
-      <Time>2016-11-29T09:33:44.5459429+00:00</Time>
+      <Time>2016-12-06T12:19:03.488389+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\billboardtexture.jpg</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\billboardtexture.xnb</Output>
-      <Time>2016-11-29T09:33:44.5519465+00:00</Time>
+      <Time>2016-12-06T12:19:03.4913914+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\chevron1.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\chevron1.xnb</Output>
-      <Time>2016-11-29T09:33:44.5529471+00:00</Time>
+      <Time>2016-12-06T12:19:03.4913914+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\chevron2.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\chevron2.xnb</Output>
-      <Time>2016-11-29T09:33:44.5549483+00:00</Time>
+      <Time>2016-12-06T12:19:03.4943938+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\snow1.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\snow1.xnb</Output>
-      <Time>2016-11-29T09:33:44.5569495+00:00</Time>
+      <Time>2016-12-06T12:19:03.4953946+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Billboards\welcome.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Billboards\welcome.xnb</Output>
-      <Time>2016-11-29T09:33:44.5579501+00:00</Time>
+      <Time>2016-12-06T12:19:03.4963954+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Debug\Textures\ml.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Textures\ml.xnb</Output>
-      <Time>2016-11-29T09:33:43.7664755+00:00</Time>
+      <Time>2016-12-06T12:19:02.9849866+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Debug\Textures\slj.jpg</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Debug\Textures\slj.xnb</Output>
-      <Time>2016-11-29T09:33:43.7734797+00:00</Time>
+      <Time>2016-12-06T12:19:03.0250186+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Ground\foliage.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Ground\foliage.xnb</Output>
-      <Time>2016-11-29T09:33:44.5619525+00:00</Time>
+      <Time>2016-12-06T12:19:03.498397+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Ground\grass1.jpg</Source>
@@ -206,7 +206,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Ground\grass1.xnb</Output>
-      <Time>2016-11-29T09:33:44.5699573+00:00</Time>
+      <Time>2016-12-06T12:19:03.5024002+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Trees\tree1.png</Source>
@@ -215,7 +215,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree1.xnb</Output>
-      <Time>2016-11-29T09:33:44.5719585+00:00</Time>
+      <Time>2016-12-06T12:19:03.503401+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Trees\tree2.png</Source>
@@ -224,7 +224,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree2.xnb</Output>
-      <Time>2016-11-29T09:33:44.5749603+00:00</Time>
+      <Time>2016-12-06T12:19:03.5044018+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Foliage\Trees\tree3.png</Source>
@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Foliage\Trees\tree3.xnb</Output>
-      <Time>2016-11-29T09:33:44.5789627+00:00</Time>
+      <Time>2016-12-06T12:19:03.5064034+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Props\Crates\crate1.jpg</Source>
@@ -242,7 +242,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\Crates\crate1.xnb</Output>
-      <Time>2016-11-29T09:33:44.5869675+00:00</Time>
+      <Time>2016-12-06T12:19:03.5114074+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Props\Crates\crate2.jpg</Source>
@@ -251,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\Crates\crate2.xnb</Output>
-      <Time>2016-11-29T09:33:44.5949723+00:00</Time>
+      <Time>2016-12-06T12:19:03.5154106+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\back.bmp</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\back.xnb</Output>
-      <Time>2016-11-29T09:33:44.6089807+00:00</Time>
+      <Time>2016-12-06T12:19:03.5224162+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\front.bmp</Source>
@@ -269,7 +269,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\front.xnb</Output>
-      <Time>2016-11-29T09:33:44.6209879+00:00</Time>
+      <Time>2016-12-06T12:19:03.5294218+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\ground2.bmp</Source>
@@ -278,7 +278,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\ground2.xnb</Output>
-      <Time>2016-11-29T09:33:44.6339957+00:00</Time>
+      <Time>2016-12-06T12:19:03.5354266+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\left.bmp</Source>
@@ -287,7 +287,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\left.xnb</Output>
-      <Time>2016-11-29T09:33:44.6450023+00:00</Time>
+      <Time>2016-12-06T12:19:03.5414314+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\right.bmp</Source>
@@ -296,7 +296,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\right.xnb</Output>
-      <Time>2016-11-29T09:33:44.6570095+00:00</Time>
+      <Time>2016-12-06T12:19:03.548437+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Skybox\sky.bmp</Source>
@@ -305,7 +305,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Skybox\sky.xnb</Output>
-      <Time>2016-11-29T09:33:44.6680161+00:00</Time>
+      <Time>2016-12-06T12:19:03.5544418+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\white.png</Source>
@@ -314,7 +314,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\white.xnb</Output>
-      <Time>2016-11-29T09:33:45.0632531+00:00</Time>
+      <Time>2016-12-06T12:19:03.7295818+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\audiomenu.png</Source>
@@ -323,7 +323,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\audiomenu.xnb</Output>
-      <Time>2016-11-29T09:33:44.7350563+00:00</Time>
+      <Time>2016-12-06T12:19:03.5894698+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\exitmenu.png</Source>
@@ -332,7 +332,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\exitmenu.xnb</Output>
-      <Time>2016-11-29T09:33:44.7790827+00:00</Time>
+      <Time>2016-12-06T12:19:03.6064834+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\exitmenuwithtrans.png</Source>
@@ -341,7 +341,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\exitmenuwithtrans.xnb</Output>
-      <Time>2016-11-29T09:33:44.8261109+00:00</Time>
+      <Time>2016-12-06T12:19:03.6214954+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\mainmenu.PNG</Source>
@@ -350,7 +350,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\mainmenu.xnb</Output>
-      <Time>2016-11-29T09:33:44.8681361+00:00</Time>
+      <Time>2016-12-06T12:19:03.6375082+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\mouseicons.png</Source>
@@ -359,7 +359,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\mouseicons.xnb</Output>
-      <Time>2016-11-29T09:33:45.0402393+00:00</Time>
+      <Time>2016-12-06T12:19:03.7165714+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\old\Props\tv.png</Source>
@@ -368,7 +368,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\old\Props\tv.xnb</Output>
-      <Time>2016-11-29T09:33:44.5969735+00:00</Time>
+      <Time>2016-12-06T12:19:03.5154106+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Menu\controlsmenu.png</Source>
@@ -377,7 +377,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\controlsmenu.xnb</Output>
-      <Time>2016-11-29T09:33:44.7390587+00:00</Time>
+      <Time>2016-12-06T12:19:03.5904706+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\head.tga</Source>
@@ -386,7 +386,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head.xnb</Output>
-      <Time>2016-11-29T09:33:44.2117425+00:00</Time>
+      <Time>2016-12-06T12:19:03.3142498+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\jacket.tga</Source>
@@ -395,7 +395,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket.xnb</Output>
-      <Time>2016-11-29T09:33:44.2577701+00:00</Time>
+      <Time>2016-12-06T12:19:03.3422722+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\pants.tga</Source>
@@ -404,7 +404,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants.xnb</Output>
-      <Time>2016-11-29T09:33:44.3017965+00:00</Time>
+      <Time>2016-12-06T12:19:03.3672922+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\Tiny_skin.dds</Source>
@@ -413,7 +413,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\Tiny_skin.xnb</Output>
-      <Time>2016-11-29T09:33:44.3118025+00:00</Time>
+      <Time>2016-12-06T12:19:03.3722962+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\upBodyC.tga</Source>
@@ -422,7 +422,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC.xnb</Output>
-      <Time>2016-11-29T09:33:44.3528271+00:00</Time>
+      <Time>2016-12-06T12:19:03.3963154+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\ModelTextures\FlatColourTexture.png</Source>
@@ -431,7 +431,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture.xnb</Output>
-      <Time>2016-11-29T09:33:44.0696573+00:00</Time>
+      <Time>2016-12-06T12:19:03.2371882+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\BaseTile01_Diffuse.png</Source>
@@ -440,7 +440,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse.xnb</Output>
-      <Time>2016-11-29T09:33:43.8355169+00:00</Time>
+      <Time>2016-12-06T12:19:03.1401106+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\ground.png</Source>
@@ -449,7 +449,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\ground.xnb</Output>
-      <Time>2016-11-29T09:33:44.4588907+00:00</Time>
+      <Time>2016-12-06T12:19:03.4473562+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\corner2D.png</Source>
@@ -458,7 +458,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\corner2D.xnb</Output>
-      <Time>2016-11-29T09:33:44.4458829+00:00</Time>
+      <Time>2016-12-06T12:19:03.4403506+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\cross2D.png</Source>
@@ -467,7 +467,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\cross2D.xnb</Output>
-      <Time>2016-11-29T09:33:44.4488847+00:00</Time>
+      <Time>2016-12-06T12:19:03.4423522+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\deadEnd2D.png</Source>
@@ -476,7 +476,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\deadEnd2D.xnb</Output>
-      <Time>2016-11-29T09:33:44.4528871+00:00</Time>
+      <Time>2016-12-06T12:19:03.4453546+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\straight2D.png</Source>
@@ -485,7 +485,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\straight2D.xnb</Output>
-      <Time>2016-11-29T09:33:44.4628931+00:00</Time>
+      <Time>2016-12-06T12:19:03.4503586+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\temp.png</Source>
@@ -494,7 +494,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\temp.xnb</Output>
-      <Time>2016-11-29T09:33:44.4648943+00:00</Time>
+      <Time>2016-12-06T12:19:03.4503586+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\Game\Maze\tJunc2D.png</Source>
@@ -503,7 +503,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Game\Maze\tJunc2D.xnb</Output>
-      <Time>2016-11-29T09:33:44.4678961+00:00</Time>
+      <Time>2016-12-06T12:19:03.4523602+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\PlayerArrow.png</Source>
@@ -512,7 +512,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\PlayerArrow.xnb</Output>
-      <Time>2016-11-29T09:33:45.0592507+00:00</Time>
+      <Time>2016-12-06T12:19:03.7265794+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\PotionGeneric.png</Source>
@@ -521,7 +521,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\PotionGeneric.xnb</Output>
-      <Time>2016-11-29T09:33:45.0622525+00:00</Time>
+      <Time>2016-12-06T12:19:03.7275802+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_blank.png</Source>
@@ -530,7 +530,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_blank.xnb</Output>
-      <Time>2016-12-06T09:13:47.5823609+00:00</Time>
+      <Time>2016-12-06T12:19:03.658525+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_corner.png</Source>
@@ -539,7 +539,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_corner.xnb</Output>
-      <Time>2016-12-06T09:13:47.5873659+00:00</Time>
+      <Time>2016-12-06T12:19:03.6595258+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_cross.png</Source>
@@ -548,7 +548,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_cross.xnb</Output>
-      <Time>2016-12-06T09:13:47.6133919+00:00</Time>
+      <Time>2016-12-06T12:19:03.6615274+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_deadend.png</Source>
@@ -557,7 +557,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_deadend.xnb</Output>
-      <Time>2016-12-06T09:13:47.6183969+00:00</Time>
+      <Time>2016-12-06T12:19:03.6625282+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_straight.png</Source>
@@ -566,7 +566,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_straight.xnb</Output>
-      <Time>2016-12-06T09:13:47.6234019+00:00</Time>
+      <Time>2016-12-06T12:19:03.663529+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\map_t.png</Source>
@@ -575,7 +575,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\map_t.xnb</Output>
-      <Time>2016-12-06T09:13:47.6284069+00:00</Time>
+      <Time>2016-12-06T12:19:03.663529+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Textures\UI\potionIcon.png</Source>
@@ -584,7 +584,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\UI\potionIcon.xnb</Output>
-      <Time>2016-12-06T09:13:47.7265049+00:00</Time>
+      <Time>2016-12-06T12:19:03.728581+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\box.FBX</Source>
@@ -597,10 +597,10 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\box.xnb</Output>
-      <Time>2016-11-29T09:33:15.6916407+00:00</Time>
+      <Time>2016-12-06T12:18:06.1745746+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\box_0.xml</Key>
-        <Value>2016-12-06T09:23:03.1097831+00:00</Value>
+        <Value>2016-12-06T12:29:52.9643036+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -610,10 +610,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\cylinder.xnb</Output>
-      <Time>2016-11-29T09:33:44.3608319+00:00</Time>
+      <Time>2016-12-06T12:19:03.3993178+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\cylinder_0.xml</Key>
-        <Value>2016-12-06T09:23:03.3594151+00:00</Value>
+        <Value>2016-12-06T12:29:53.1493221+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -623,10 +623,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\dome.xnb</Output>
-      <Time>2016-11-29T09:33:44.3698373+00:00</Time>
+      <Time>2016-12-06T12:19:03.403321+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\dome_0.xml</Key>
-        <Value>2016-12-06T09:23:03.4998331+00:00</Value>
+        <Value>2016-12-06T12:29:53.2163288+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -636,10 +636,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\hedra.xnb</Output>
-      <Time>2016-11-29T09:33:44.3768415+00:00</Time>
+      <Time>2016-12-06T12:19:03.4063234+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\hedra_0.xml</Key>
-        <Value>2016-12-06T09:23:03.5934451+00:00</Value>
+        <Value>2016-12-06T12:29:53.2493321+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -649,10 +649,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\octahedron.xnb</Output>
-      <Time>2016-11-29T09:33:44.3958529+00:00</Time>
+      <Time>2016-12-06T12:19:03.4193338+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\octahedron_0.xml</Key>
-        <Value>2016-12-06T09:23:03.6558531+00:00</Value>
+        <Value>2016-12-06T12:29:53.2773349+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -662,10 +662,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\plane.xnb</Output>
-      <Time>2016-11-29T09:33:44.4018565+00:00</Time>
+      <Time>2016-12-06T12:19:03.4223362+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\plane_0.xml</Key>
-        <Value>2016-12-06T09:23:03.7650671+00:00</Value>
+        <Value>2016-12-06T12:29:53.3303402+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -675,10 +675,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\prism.xnb</Output>
-      <Time>2016-11-29T09:33:44.4078601+00:00</Time>
+      <Time>2016-12-06T12:19:03.4243378+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\prism_0.xml</Key>
-        <Value>2016-12-06T09:23:03.8430771+00:00</Value>
+        <Value>2016-12-06T12:29:53.3603432+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -688,10 +688,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\sphere.xnb</Output>
-      <Time>2016-11-29T09:33:44.4168655+00:00</Time>
+      <Time>2016-12-06T12:19:03.4273402+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\sphere_0.xml</Key>
-        <Value>2016-12-06T09:23:04.0615051+00:00</Value>
+        <Value>2016-12-06T12:29:53.448352+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -701,10 +701,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\spindle.xnb</Output>
-      <Time>2016-11-29T09:33:44.4228691+00:00</Time>
+      <Time>2016-12-06T12:19:03.4303426+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\spindle_0.xml</Key>
-        <Value>2016-12-06T09:23:04.1395151+00:00</Value>
+        <Value>2016-12-06T12:29:53.4863558+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -714,10 +714,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\torus.xnb</Output>
-      <Time>2016-11-29T09:33:44.4298733+00:00</Time>
+      <Time>2016-12-06T12:19:03.433345+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\torus_0.xml</Key>
-        <Value>2016-12-06T09:23:04.2331271+00:00</Value>
+        <Value>2016-12-06T12:29:53.5233595+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -727,10 +727,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\torusknot.xnb</Output>
-      <Time>2016-11-29T09:33:44.4398793+00:00</Time>
+      <Time>2016-12-06T12:19:03.4373482+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\torusknot_0.xml</Key>
-        <Value>2016-12-06T09:23:04.3735451+00:00</Value>
+        <Value>2016-12-06T12:29:53.5833655+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -740,10 +740,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\cube.xnb</Output>
-      <Time>2016-11-29T09:33:43.8075001+00:00</Time>
+      <Time>2016-12-06T12:19:03.0570442+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\cube_0.xml</Key>
-        <Value>2016-12-06T09:23:04.4515551+00:00</Value>
+        <Value>2016-12-06T12:29:53.6163688+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -753,10 +753,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\landscape2.6.xnb</Output>
-      <Time>2016-11-29T09:33:44.3878481+00:00</Time>
+      <Time>2016-12-06T12:19:03.4113274+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\landscape2.6_0.xml</Key>
-        <Value>2016-12-06T09:23:04.7947991+00:00</Value>
+        <Value>2016-12-06T12:29:53.7463818+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -766,10 +766,10 @@
       <Processor>SkinnedModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\dude.xnb</Output>
-      <Time>2016-11-29T09:33:44.1607119+00:00</Time>
+      <Time>2016-12-06T12:19:03.2852266+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\old\Animated\dude_0.xml</Key>
-        <Value>2016-12-06T09:23:07.7903831+00:00</Value>
+        <Value>2016-12-06T12:29:55.5595631+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head_0.xnb</Request>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket_0.xnb</Request>
@@ -783,10 +783,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_potion.xnb</Output>
-      <Time>2016-11-29T09:33:43.8135037+00:00</Time>
+      <Time>2016-12-06T12:19:03.108085+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_potion_0.xml</Key>
-        <Value>2016-12-06T09:23:10.5831411+00:00</Value>
+        <Value>2016-12-06T12:29:56.9066978+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -797,10 +797,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Corner.xnb</Output>
-      <Time>2016-11-29T09:33:43.9756009+00:00</Time>
+      <Time>2016-12-06T12:19:03.2051626+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Corner_0.xml</Key>
-        <Value>2016-12-06T09:23:10.8327731+00:00</Value>
+        <Value>2016-12-06T12:29:57.02871+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -811,10 +811,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Cross.xnb</Output>
-      <Time>2016-11-29T09:33:43.9826051+00:00</Time>
+      <Time>2016-12-06T12:19:03.2071642+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Cross_0.xml</Key>
-        <Value>2016-12-06T09:23:13.1262671+00:00</Value>
+        <Value>2016-12-06T12:29:58.2738345+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -825,10 +825,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_DeadEnd.xnb</Output>
-      <Time>2016-11-29T09:33:44.0116225+00:00</Time>
+      <Time>2016-12-06T12:19:03.2121682+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\Tile_DeadEnd_0.xml</Key>
-        <Value>2016-12-06T09:23:13.1886751+00:00</Value>
+        <Value>2016-12-06T12:29:58.3008372+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -839,10 +839,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Junction.xnb</Output>
-      <Time>2016-11-29T09:33:44.0176261+00:00</Time>
+      <Time>2016-12-06T12:19:03.2151706+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Junction_0.xml</Key>
-        <Value>2016-12-06T09:23:13.2822871+00:00</Value>
+        <Value>2016-12-06T12:29:58.3308402+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -853,10 +853,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Puzzle.xnb</Output>
-      <Time>2016-11-29T09:33:44.0266315+00:00</Time>
+      <Time>2016-12-06T12:19:03.218173+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Puzzle_0.xml</Key>
-        <Value>2016-12-06T09:23:13.3758991+00:00</Value>
+        <Value>2016-12-06T12:29:58.3618433+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -867,10 +867,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Room.xnb</Output>
-      <Time>2016-11-29T09:33:44.0336357+00:00</Time>
+      <Time>2016-12-06T12:19:03.2211754+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Room_0.xml</Key>
-        <Value>2016-12-06T09:23:13.4383071+00:00</Value>
+        <Value>2016-12-06T12:29:58.3978469+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -881,10 +881,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\Tile_Straight.xnb</Output>
-      <Time>2016-11-29T09:33:44.0406399+00:00</Time>
+      <Time>2016-12-06T12:19:03.223177+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\Tile_Straight_0.xml</Key>
-        <Value>2016-12-06T09:23:13.5163171+00:00</Value>
+        <Value>2016-12-06T12:29:58.4248496+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -895,10 +895,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Corner01.xnb</Output>
-      <Time>2016-11-29T09:33:43.8455229+00:00</Time>
+      <Time>2016-12-06T12:19:03.1461154+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Corner01_0.xml</Key>
-        <Value>2016-12-06T09:23:13.6567351+00:00</Value>
+        <Value>2016-12-06T12:29:58.4978569+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -909,10 +909,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Corner01_Col.xnb</Output>
-      <Time>2016-11-29T09:33:43.8525271+00:00</Time>
+      <Time>2016-12-06T12:19:03.1501186+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Corner01_Col_0.xml</Key>
-        <Value>2016-12-06T09:23:16.0282391+00:00</Value>
+        <Value>2016-12-06T12:29:59.7159787+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -922,10 +922,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Cross01.xnb</Output>
-      <Time>2016-11-29T09:33:43.8665355+00:00</Time>
+      <Time>2016-12-06T12:19:03.1571242+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Cross01_0.xml</Key>
-        <Value>2016-12-06T09:23:16.2622691+00:00</Value>
+        <Value>2016-12-06T12:29:59.8359907+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -936,10 +936,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Cross01_Col.xnb</Output>
-      <Time>2016-11-29T09:33:43.8765415+00:00</Time>
+      <Time>2016-12-06T12:19:03.1601266+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Cross01_Col_0.xml</Key>
-        <Value>2016-12-06T09:23:16.3402791+00:00</Value>
+        <Value>2016-12-06T12:29:59.8729944+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -949,10 +949,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_DeadEnd01.xnb</Output>
-      <Time>2016-11-29T09:33:43.8845463+00:00</Time>
+      <Time>2016-12-06T12:19:03.1641298+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_DeadEnd01_0.xml</Key>
-        <Value>2016-12-06T09:23:16.4962991+00:00</Value>
+        <Value>2016-12-06T12:29:59.9279999+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -963,10 +963,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_DeadEnd01_Col.xnb</Output>
-      <Time>2016-11-29T09:33:43.8915505+00:00</Time>
+      <Time>2016-12-06T12:19:03.1671322+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_DeadEnd01_Col_0.xml</Key>
-        <Value>2016-12-06T09:23:16.5743091+00:00</Value>
+        <Value>2016-12-06T12:29:59.9620033+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -976,10 +976,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Junction01.xnb</Output>
-      <Time>2016-11-29T09:33:43.9015565+00:00</Time>
+      <Time>2016-12-06T12:19:03.1721362+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Junction01_0.xml</Key>
-        <Value>2016-12-06T09:23:16.7459311+00:00</Value>
+        <Value>2016-12-06T12:30:00.049012+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -990,10 +990,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Junction01_Col.xnb</Output>
-      <Time>2016-11-29T09:33:43.9095613+00:00</Time>
+      <Time>2016-12-06T12:19:03.1751386+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Junction01_Col_0.xml</Key>
-        <Value>2016-12-06T09:23:16.8551451+00:00</Value>
+        <Value>2016-12-06T12:30:00.0810152+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1003,10 +1003,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Puzzle01.xnb</Output>
-      <Time>2016-11-29T09:33:43.9275721+00:00</Time>
+      <Time>2016-12-06T12:19:03.1851466+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Puzzle01_0.xml</Key>
-        <Value>2016-12-06T09:23:17.2607971+00:00</Value>
+        <Value>2016-12-06T12:30:00.2800351+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -1017,10 +1017,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Puzzle01_Col.xnb</Output>
-      <Time>2016-11-29T09:33:43.9355769+00:00</Time>
+      <Time>2016-12-06T12:19:03.188149+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Puzzle01_Col_0.xml</Key>
-        <Value>2016-12-06T09:23:17.4012151+00:00</Value>
+        <Value>2016-12-06T12:30:00.3250396+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1030,10 +1030,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Room01.xnb</Output>
-      <Time>2016-11-29T09:33:43.9455829+00:00</Time>
+      <Time>2016-12-06T12:19:03.1921522+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Room01_0.xml</Key>
-        <Value>2016-12-06T09:23:17.7756631+00:00</Value>
+        <Value>2016-12-06T12:30:00.5510622+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -1044,10 +1044,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Room01_Col.xnb</Output>
-      <Time>2016-11-29T09:33:43.9525871+00:00</Time>
+      <Time>2016-12-06T12:19:03.1951546+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Room01_Col_0.xml</Key>
-        <Value>2016-12-06T09:23:17.8692751+00:00</Value>
+        <Value>2016-12-06T12:30:00.5910662+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1057,10 +1057,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Straight01.xnb</Output>
-      <Time>2016-11-29T09:33:43.9625931+00:00</Time>
+      <Time>2016-12-06T12:19:03.2001586+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Straight01_0.xml</Key>
-        <Value>2016-12-06T09:23:18.0252951+00:00</Value>
+        <Value>2016-12-06T12:30:00.669074+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -1071,10 +1071,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Straight01_Col.xnb</Output>
-      <Time>2016-11-29T09:33:43.9675961+00:00</Time>
+      <Time>2016-12-06T12:19:03.2021602+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Maze\m_Straight01_Col_0.xml</Key>
-        <Value>2016-12-06T09:23:18.1033051+00:00</Value>
+        <Value>2016-12-06T12:30:00.7030774+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1084,10 +1084,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_BluePotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.4682469+00:00</Time>
+      <Time>2016-12-06T12:19:03.0640498+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_BluePotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.1969171+00:00</Value>
+        <Value>2016-12-06T12:30:00.759083+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1098,10 +1098,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_BrownPotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.4872659+00:00</Time>
+      <Time>2016-12-06T12:19:03.088069+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_BrownPotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.4777531+00:00</Value>
+        <Value>2016-12-06T12:30:00.8870958+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1112,10 +1112,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_EmptyPotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.4952739+00:00</Time>
+      <Time>2016-12-06T12:19:03.0920722+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_EmptyPotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.5401611+00:00</Value>
+        <Value>2016-12-06T12:30:00.9250996+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1126,10 +1126,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_GreenPotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.5022809+00:00</Time>
+      <Time>2016-12-06T12:19:03.0960754+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_GreenPotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.6025691+00:00</Value>
+        <Value>2016-12-06T12:30:00.9631034+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1140,10 +1140,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_OrangePotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.5092879+00:00</Time>
+      <Time>2016-12-06T12:19:03.1010794+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_OrangePotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.6805791+00:00</Value>
+        <Value>2016-12-06T12:30:01.0011072+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1154,10 +1154,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_PinkPotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.5162949+00:00</Time>
+      <Time>2016-12-06T12:19:03.1040818+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_PinkPotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.7429871+00:00</Value>
+        <Value>2016-12-06T12:30:01.039111+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1168,10 +1168,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_PurplePotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.5243029+00:00</Time>
+      <Time>2016-12-06T12:19:03.1120882+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_PurplePotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.8053951+00:00</Value>
+        <Value>2016-12-06T12:30:01.0771148+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1182,10 +1182,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_RedPotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.5313099+00:00</Time>
+      <Time>2016-12-06T12:19:03.1160914+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_RedPotion_0.xml</Key>
-        <Value>2016-12-06T09:23:18.8678031+00:00</Value>
+        <Value>2016-12-06T12:30:01.1141185+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1196,10 +1196,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_StoneDoor.xnb</Output>
-      <Time>2016-12-06T09:13:47.5393179+00:00</Time>
+      <Time>2016-12-06T12:19:03.1210954+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_StoneDoor_0.xml</Key>
-        <Value>2016-12-06T09:23:18.9302111+00:00</Value>
+        <Value>2016-12-06T12:30:01.1501221+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -1210,10 +1210,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\m_YellowPotion.xnb</Output>
-      <Time>2016-12-06T09:13:47.5743529+00:00</Time>
+      <Time>2016-12-06T12:19:03.1250986+00:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Assets\Models\Items\m_YellowPotion_0.xml</Key>
-        <Value>2016-12-06T09:23:19.0082211+00:00</Value>
+        <Value>2016-12-06T12:30:01.1921263+00:00</Value>
       </Dependency>
       <Request>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Request>
     </Item>
@@ -1224,7 +1224,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\boing.xnb</Output>
-      <Time>2016-11-29T09:33:43.6424011+00:00</Time>
+      <Time>2016-12-06T12:19:02.9099266+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Audio\bongbongoLoop.wav</Source>
@@ -1233,7 +1233,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\bongbongoLoop.xnb</Output>
-      <Time>2016-11-29T09:33:43.7214485+00:00</Time>
+      <Time>2016-12-06T12:19:02.952961+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Video\sample.wmv</Source>
@@ -1243,7 +1243,7 @@
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Video\sample.xnb</Output>
       <Extra>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Video\sample.wmv</Extra>
-      <Time>2016-11-29T09:33:45.1382981+00:00</Time>
+      <Time>2016-12-06T12:19:03.7716154+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Effects\Billboard.fx</Source>
@@ -1252,7 +1252,7 @@
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Effects\Billboard.xnb</Output>
-      <Time>2016-11-29T09:33:43.7874881+00:00</Time>
+      <Time>2016-12-06T12:19:03.0440338+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Effects\Animated.fx</Source>
@@ -1261,7 +1261,7 @@
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Effects\Animated.xnb</Output>
-      <Time>2016-11-29T09:33:43.7814845+00:00</Time>
+      <Time>2016-12-06T12:19:03.0400306+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\dude_spheres.xml</Source>
@@ -1270,105 +1270,105 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\dude_spheres.xnb</Output>
-      <Time>2016-11-29T09:33:44.1717185+00:00</Time>
+      <Time>2016-12-06T12:19:03.2892298+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\box.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\box_0.xml</Output>
-      <Time>2016-11-29T09:33:15.6916407+00:00</Time>
+      <Time>2016-12-06T12:18:06.1745746+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\cylinder.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\cylinder_0.xml</Output>
-      <Time>2016-11-29T09:33:44.3608319+00:00</Time>
+      <Time>2016-12-06T12:19:03.3993178+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\dome.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\dome_0.xml</Output>
-      <Time>2016-11-29T09:33:44.3698373+00:00</Time>
+      <Time>2016-12-06T12:19:03.403321+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\hedra.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\hedra_0.xml</Output>
-      <Time>2016-11-29T09:33:44.3768415+00:00</Time>
+      <Time>2016-12-06T12:19:03.4063234+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\octahedron.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\octahedron_0.xml</Output>
-      <Time>2016-11-29T09:33:44.3958529+00:00</Time>
+      <Time>2016-12-06T12:19:03.4193338+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\plane.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\plane_0.xml</Output>
-      <Time>2016-11-29T09:33:44.4018565+00:00</Time>
+      <Time>2016-12-06T12:19:03.4223362+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\prism.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\prism_0.xml</Output>
-      <Time>2016-11-29T09:33:44.4078601+00:00</Time>
+      <Time>2016-12-06T12:19:03.4243378+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\sphere.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\sphere_0.xml</Output>
-      <Time>2016-11-29T09:33:44.4168655+00:00</Time>
+      <Time>2016-12-06T12:19:03.4273402+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\spindle.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\spindle_0.xml</Output>
-      <Time>2016-11-29T09:33:44.4228691+00:00</Time>
+      <Time>2016-12-06T12:19:03.4303426+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\torus.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\torus_0.xml</Output>
-      <Time>2016-11-29T09:33:44.4298733+00:00</Time>
+      <Time>2016-12-06T12:19:03.433345+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\torusknot.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\torusknot_0.xml</Output>
-      <Time>2016-11-29T09:33:44.4398793+00:00</Time>
+      <Time>2016-12-06T12:19:03.4373482+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\cube.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\cube_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8075001+00:00</Time>
+      <Time>2016-12-06T12:19:03.0570442+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\landscape2.6.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\landscape2.6_0.xml</Output>
-      <Time>2016-11-29T09:33:44.3878481+00:00</Time>
+      <Time>2016-12-06T12:19:03.4113274+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\dude.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\old\Animated\dude_0.xml</Output>
-      <Time>2016-11-29T09:33:44.1607119+00:00</Time>
+      <Time>2016-12-06T12:19:03.2852266+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\head.tga</Source>
@@ -1384,7 +1384,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\head_0.xnb</Output>
-      <Time>2016-11-29T09:33:44.2117425+00:00</Time>
+      <Time>2016-12-06T12:19:03.3142498+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\jacket.tga</Source>
@@ -1400,7 +1400,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\jacket_0.xnb</Output>
-      <Time>2016-11-29T09:33:44.2577701+00:00</Time>
+      <Time>2016-12-06T12:19:03.3422722+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\pants.tga</Source>
@@ -1416,7 +1416,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\pants_0.xnb</Output>
-      <Time>2016-11-29T09:33:44.3017965+00:00</Time>
+      <Time>2016-12-06T12:19:03.3672922+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\old\Animated\upBodyC.tga</Source>
@@ -1432,14 +1432,14 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\old\Animated\upBodyC_0.xnb</Output>
-      <Time>2016-11-29T09:33:44.3528271+00:00</Time>
+      <Time>2016-12-06T12:19:03.3963154+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_potion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_potion_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8135037+00:00</Time>
+      <Time>2016-12-06T12:19:03.108085+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\ModelTextures\FlatColourTexture.png</Source>
@@ -1455,14 +1455,14 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb</Output>
-      <Time>2016-11-29T09:33:44.0696573+00:00</Time>
+      <Time>2016-12-06T12:19:03.2371882+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Corner.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Corner_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9756009+00:00</Time>
+      <Time>2016-12-06T12:19:03.2051626+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\BaseTile01_Diffuse.png</Source>
@@ -1478,56 +1478,56 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb</Output>
-      <Time>2016-11-29T09:33:43.8355169+00:00</Time>
+      <Time>2016-12-06T12:19:03.1401106+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Cross.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Cross_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9826051+00:00</Time>
+      <Time>2016-12-06T12:19:03.2071642+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_DeadEnd.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_DeadEnd_0.xml</Output>
-      <Time>2016-11-29T09:33:44.0116225+00:00</Time>
+      <Time>2016-12-06T12:19:03.2121682+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Junction.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Junction_0.xml</Output>
-      <Time>2016-11-29T09:33:44.0176261+00:00</Time>
+      <Time>2016-12-06T12:19:03.2151706+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Puzzle.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Puzzle_0.xml</Output>
-      <Time>2016-11-29T09:33:44.0266315+00:00</Time>
+      <Time>2016-12-06T12:19:03.218173+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Room.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Room_0.xml</Output>
-      <Time>2016-11-29T09:33:44.0336357+00:00</Time>
+      <Time>2016-12-06T12:19:03.2211754+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\Tile_Straight.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\Tile_Straight_0.xml</Output>
-      <Time>2016-11-29T09:33:44.0406399+00:00</Time>
+      <Time>2016-12-06T12:19:03.223177+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Corner01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Corner01_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8455229+00:00</Time>
+      <Time>2016-12-06T12:19:03.1461154+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\ModelTextures\BaseTile01_Diffuse.png</Source>
@@ -1543,105 +1543,105 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Output>
-      <Time>2016-11-29T09:33:44.0676561+00:00</Time>
+      <Time>2016-12-06T12:19:03.2361874+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Corner01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Corner01_Col_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8525271+00:00</Time>
+      <Time>2016-12-06T12:19:03.1501186+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Cross01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Cross01_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8665355+00:00</Time>
+      <Time>2016-12-06T12:19:03.1571242+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Cross01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Cross01_Col_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8765415+00:00</Time>
+      <Time>2016-12-06T12:19:03.1601266+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_DeadEnd01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_DeadEnd01_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8845463+00:00</Time>
+      <Time>2016-12-06T12:19:03.1641298+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_DeadEnd01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_DeadEnd01_Col_0.xml</Output>
-      <Time>2016-11-29T09:33:43.8915505+00:00</Time>
+      <Time>2016-12-06T12:19:03.1671322+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Junction01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Junction01_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9015565+00:00</Time>
+      <Time>2016-12-06T12:19:03.1721362+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Junction01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Junction01_Col_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9095613+00:00</Time>
+      <Time>2016-12-06T12:19:03.1751386+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Puzzle01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Puzzle01_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9275721+00:00</Time>
+      <Time>2016-12-06T12:19:03.1851466+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Puzzle01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Puzzle01_Col_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9355769+00:00</Time>
+      <Time>2016-12-06T12:19:03.188149+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Room01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Room01_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9455829+00:00</Time>
+      <Time>2016-12-06T12:19:03.1921522+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Room01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Room01_Col_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9525871+00:00</Time>
+      <Time>2016-12-06T12:19:03.1951546+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Straight01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Straight01_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9625931+00:00</Time>
+      <Time>2016-12-06T12:19:03.2001586+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Straight01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Maze\m_Straight01_Col_0.xml</Output>
-      <Time>2016-11-29T09:33:43.9675961+00:00</Time>
+      <Time>2016-12-06T12:19:03.2021602+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_BluePotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_BluePotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.4682469+00:00</Time>
+      <Time>2016-12-06T12:19:03.0640498+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\FlatColourTexture.png</Source>
@@ -1657,70 +1657,70 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\d00163463\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Items\FlatColourTexture_0.xnb</Output>
-      <Time>2016-12-06T09:13:47.4612399+00:00</Time>
+      <Time>2016-12-06T12:19:03.058045+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_BrownPotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_BrownPotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.4872659+00:00</Time>
+      <Time>2016-12-06T12:19:03.088069+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_EmptyPotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_EmptyPotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.4952739+00:00</Time>
+      <Time>2016-12-06T12:19:03.0920722+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_GreenPotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_GreenPotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.5022809+00:00</Time>
+      <Time>2016-12-06T12:19:03.0960754+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_OrangePotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_OrangePotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.5092879+00:00</Time>
+      <Time>2016-12-06T12:19:03.1010794+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_PinkPotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_PinkPotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.5162949+00:00</Time>
+      <Time>2016-12-06T12:19:03.1040818+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_PurplePotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_PurplePotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.5243029+00:00</Time>
+      <Time>2016-12-06T12:19:03.1120882+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_RedPotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_RedPotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.5313099+00:00</Time>
+      <Time>2016-12-06T12:19:03.1160914+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_StoneDoor.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_StoneDoor_0.xml</Output>
-      <Time>2016-12-06T09:13:47.5393179+00:00</Time>
+      <Time>2016-12-06T12:19:03.1210954+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Items\m_YellowPotion.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Assets\Models\Items\m_YellowPotion_0.xml</Output>
-      <Time>2016-12-06T09:13:47.5743529+00:00</Time>
+      <Time>2016-12-06T12:19:03.1250986+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -1736,7 +1736,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\d00163463\Guidance\GDApp\Dependencies\Animation\SkinnedModelPipeline.dll</Key>
-        <Value>2016-11-29T09:33:34.8281157+00:00</Value>
+        <Value>2016-12-06T12:18:59.0708578+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

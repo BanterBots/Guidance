@@ -173,6 +173,11 @@ namespace GDLibrary
             }
         }
 
+        public void spinMap()
+        {
+
+        }
+
         public bool SetCameraLayout(string cameraLayout)
         {
             //if first time and NULL or not the same as current
@@ -197,7 +202,15 @@ namespace GDLibrary
             {
                 for (int i = 0; i < this.activeCameraList.Count; i++)
                 {
-                    this.activeCameraList[i].Update(gameTime);
+                    if (this.activeCameraList[i].ID.Equals("camRight"))
+                    {
+                        //Vector3 rotation = this.activeCameraList[i].Transform3D.Rotation;
+                        //Vector3 look = this.activeCameraList[i].Transform3D.Look;
+                        //this.activeCameraList[i].Transform3D.Look = (new Vector3(look.X, look.Y + 0.0001f, look.Z));
+                        //this.activeCameraList[i].Transform3D.Rotation = (new Vector3(rotation.X, rotation.Y+1, rotation.Z));
+                    }
+                     this.activeCameraList[i].Update(gameTime);
+                    
                 }
             }
             base.Update(gameTime);

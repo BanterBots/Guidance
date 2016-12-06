@@ -780,13 +780,13 @@ namespace GDApp._3DTileEngine
             else if (potionTypeRandom > 20)
                 currentType = PotionType.lessTime;
             else if (potionTypeRandom > 15)
-                currentType = PotionType.flip;
-            //else if (potionTypeRandom > 10)
-            //    currentType = PotionType.blackout;
-            //else if (potionTypeRandom > 5)
-            //    currentType = PotionType.reverse;
-            //else if (potionTypeRandom > 0)
-            //    currentType = PotionType.mapSpin;
+                currentType = PotionType.flip;      //WORKING
+            else if (potionTypeRandom > 10)
+                currentType = PotionType.blackout;
+            else if (potionTypeRandom > 5)
+                currentType = PotionType.reverse;   //WORKING
+            else if (potionTypeRandom > 0)
+                currentType = PotionType.mapSpin;   //WORKING
             if (x == 0 && y == 0)
             {
                 //startRoom
@@ -797,8 +797,8 @@ namespace GDApp._3DTileEngine
             }
             else
             {
-                if (potionRandom < 20 && this.totalPotions < 30)
-                    createPotionAt(x, y, effect, potionTexture, currentType);
+                //if (potionRandom < 20 && this.totalPotions < 30)
+                createPotionAt(x, y, effect, potionTexture, PotionType.blackout);
             }
         }
 
