@@ -690,7 +690,6 @@ namespace GDApp
                 if (eventData.EventType == EventType.OnZoneEnter)
                 {
                     eventData.Reference.Alpha = 0.5f;
-                    eventData.Reference.Color = Color.Green;
                     if (keyboardManager.IsFirstKeyPress(Keys.E))
                         pickUpPotion(eventData.Reference);
                 }
@@ -699,7 +698,6 @@ namespace GDApp
                     if (eventData.Reference != null)
                     {
                         eventData.Reference.Alpha = 1f;
-                        eventData.Reference.Color = Color.White;
                     }
                 }
             }
@@ -1924,7 +1922,7 @@ namespace GDApp
         {
             //draw debug text after base.Draw() otherwise it will be behind the scene!
             if (debugFont == null)
-                debugFont = this.fontDictionary["debug"];
+                debugFont = this.fontDictionary["ui"];
 
             this.Score = (this.goodPotion * this.goodPotionsCollected) - (this.badPotion * this.badPotionsCollected) + (this.displayTime * 10);
 
@@ -1938,8 +1936,15 @@ namespace GDApp
             else
                 this.spriteBatch.DrawString(debugFont, "YOU LOSS", position, Color.Gold);
 
+
+            this.spriteBatch.DrawString(debugFont, "Good Potions Used:         " + this.goodPotionsCollected + "x" + this.goodPotion + "points", position, Color.Gold);
             position += positionOffset;
-            this.spriteBatch.DrawString(debugFont, "Score:         " + this.Score + "points", position, Color.Gold);
+
+            this.spriteBatch.DrawString(debugFont, "Bad Potions Used:         " + this.badPotionsCollected + "x" + this.badPotion + "points", position, Color.Gold);
+            position += positionOffset;
+
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "Final Score:         " + this.Score + "points", position, Color.Gold);
            
             this.spriteBatch.End();
         }
@@ -1948,7 +1953,7 @@ namespace GDApp
         {
             //draw debug text after base.Draw() otherwise it will be behind the scene!
             if (debugFont == null)
-                debugFont = this.fontDictionary["debug"];
+                debugFont = this.fontDictionary["ui"];
 
             this.Score = (this.goodPotion * this.goodPotionsCollected) - (this.badPotion * this.badPotionsCollected) + (this.displayTime * 10);
 
@@ -1961,14 +1966,6 @@ namespace GDApp
             
             this.spriteBatch.DrawString(debugFont, "Current Effect:         " + this.currentEffect, position, Color.Gold);
             position += positionOffset;
-
-            this.spriteBatch.DrawString(debugFont, "Good Potions Used:         " + this.goodPotionsCollected + "x" + this.goodPotion+"points", position, Color.Gold);
-            position += positionOffset;
-
-            this.spriteBatch.DrawString(debugFont, "Bad Potions Used:         " + this.badPotionsCollected + "x"+this.badPotion+"points", position, Color.Gold);
-            position += positionOffset;
-
-
             
             this.spriteBatch.End();
 
@@ -2688,37 +2685,7 @@ namespace GDApp
             if (this.timerRunning == false) //if it isn't currently running
             {
                 this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
-                this.endTime = this.startTime + 5000; //5 second timer
-                this.timerRunning = true; //set timer to running
-
-                //Static Change
-            }
-            else //when timer is running
-            {
-                if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
-                {
-                    //Dynamic Change
-
-                }
-                else
-                {
-                    this.currentEffect = "none";
-                    //Revert Change
-
-                    //reset bools
-                    blackout = false;
-                    this.timerRunning = false;
-                }
-            }
-        }
-
-        private void spinMap(GameTime gameTime)
-        {
-            //Spin Map Screen for x number of seconds
-            if (this.timerRunning == false) //if it isn't currently running
-            {
-                this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
-                this.endTime = this.startTime + 5000; //5 second timer
+                this.endTime = this.startTime + 10000; //10 second timer
                 this.timerRunning = true; //set timer to running
 
                 //Static Change
@@ -2738,7 +2705,51 @@ namespace GDApp
                     int index;
                     this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
                     PawnCamera3D pawnCamera = camera as PawnCamera3D;
-                    pawnCamera.Transform3D.Look = new Vector3(pawnCamera.Transform3D.Look.X + 0.01f, pawnCamera.Transform3D.Look.Y, pawnCamera.Transform3D.Look.Z + 0.01f);
+                    pawnCamera.Transform3D.Look = new Vector3(pawnCamera.Transform3D.Look.X - 0.05f, pawnCamera.Transform3D.Look.Y + 0.05f, pawnCamera.Transform3D.Look.Z);
+                }
+                else
+                {
+                    this.currentEffect = "none";
+                    //Revert Change
+                    Camera3D camera;
+                    int index;
+
+                    this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
+                    camera.Transform3D.Look = this.tempVector3;
+                    //reset bools
+                    blackout = false;
+                    this.timerRunning = false;
+                }
+            }
+        }
+
+        private void spinMap(GameTime gameTime)
+        {
+            //Spin Map Screen for x number of seconds
+            if (this.timerRunning == false) //if it isn't currently running
+            {
+                this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
+                this.endTime = this.startTime + 10000; //10 second timer
+                this.timerRunning = true; //set timer to running
+
+                //Static Change
+                Camera3D camera;
+                int index;
+
+                this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
+                PawnCamera3D pawnCamera = camera as PawnCamera3D;
+                this.tempVector3 = pawnCamera.Transform3D.Look;
+            }
+            else //when timer is running
+            {
+                if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.endTime) //While Timer is active
+                {
+                    //Dynamic Change
+                    Camera3D camera;
+                    int index;
+                    this.cameraManager.FindCameraBy("SplitScreen", "camRight", out camera, out index);
+                    PawnCamera3D pawnCamera = camera as PawnCamera3D;
+                    pawnCamera.Transform3D.Look = new Vector3(pawnCamera.Transform3D.Look.X, pawnCamera.Transform3D.Look.Y, pawnCamera.Transform3D.Look.Z +0.1f );
                 }
                 else
                 {

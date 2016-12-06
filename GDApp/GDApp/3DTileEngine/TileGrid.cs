@@ -783,11 +783,11 @@ namespace GDApp._3DTileEngine
             else if (potionTypeRandom > 15)
                 currentType = PotionType.flip;      //WORKING
             else if (potionTypeRandom > 10)
-                currentType = PotionType.blackout;
+                currentType = PotionType.blackout;  //WORKING
             else if (potionTypeRandom > 5)
                 currentType = PotionType.reverse;   //WORKING
             else if (potionTypeRandom > 0)
-                currentType = PotionType.mapSpin;   //WORKING
+                currentType = PotionType.mapSpin;   
             if (x == 0 && y == 0)
             {
                 //startRoom
