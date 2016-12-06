@@ -39,6 +39,7 @@ namespace GDApp._3DTileEngine
 
         // RNG
         Random random = new Random();
+        Random random2 = new Random();
 
         //Potions
         public PotionObject[,] potionGrid;
@@ -769,7 +770,7 @@ namespace GDApp._3DTileEngine
 
             Random rand = new Random();
             int potionTypeRandom = rand.Next(1,41);
-            int potionRandom = rand.Next(1, 40);
+            int potionRandom = random2.Next(1, 40);
             PotionType currentType = PotionType.speed;
             if (potionTypeRandom > 35)
                 currentType = PotionType.speed;
@@ -797,8 +798,8 @@ namespace GDApp._3DTileEngine
             }
             else
             {
-                //if (potionRandom < 20 && this.totalPotions < 30)
-                createPotionAt(x, y, effect, potionTexture, PotionType.blackout);
+                if (potionRandom < 3 && this.totalPotions < 30)
+                createPotionAt(x, y, effect, potionTexture, currentType);
             }
         }
 
