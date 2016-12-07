@@ -775,6 +775,7 @@ namespace GDApp
             this.textureDictionary.Add("room2D", Content.Load<Texture2D>("Assets/Textures/Game/Maze/temp"));
             this.textureDictionary.Add("emptySpace", Content.Load<Texture2D>("Assets/Textures/UI/map_blank"));
             this.textureDictionary.Add("playerArrow", Content.Load<Texture2D>("Assets/Textures/UI/PlayerArrow"));
+            this.textureDictionary.Add("anubis", Content.Load<Texture2D>("Assets/Models/Decorations/ANUBIS2BC"));
             //billboards
             //this.textureDictionary.Add("billboardtexture", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/billboardtexture"));
             //this.textureDictionary.Add("snow1", Content.Load<Texture2D>("Assets/Textures/Game/Billboards/snow1"));
@@ -824,7 +825,9 @@ namespace GDApp
             this.modelDictionary.Add("yellowPotion", Content.Load<Model>("Assets/Models/Items/m_YellowPotion"));
             this.modelDictionary.Add("purplePotion", Content.Load<Model>("Assets/Models/Items/m_PurplePotion"));
             this.modelDictionary.Add("stoneDoor", Content.Load<Model>("Assets/Models/Items/m_StoneDoor"));
+            this.modelDictionary.Add("decoAnubis", Content.Load<Model>("Assets/Models/Decorations/m_decoAnubis"));
 
+            
 
             this.modelDictionary.Add("cube", Content.Load<Model>("Assets\\Models\\cube"));
             
@@ -2002,7 +2005,7 @@ namespace GDApp
 
             #region Maze Models
             Model[] mazeTiles = new Model[]{
-                this.modelDictionary["deadEnd"],        //0
+                this.modelDictionary["deadEnd"],        //0         ROOM TILES
                 this.modelDictionary["straight"],       //1
                 this.modelDictionary["corner"],         //2
                 this.modelDictionary["tJunction"],      //3
@@ -2011,7 +2014,7 @@ namespace GDApp
                 this.modelDictionary["puzzle"],         //6
                 this.modelDictionary["endRoom"],        //7
                 this.modelDictionary["cube"],           //8
-                this.modelDictionary["emptyPotion"],    //9
+                this.modelDictionary["emptyPotion"],    //9         POTIONS
                 this.modelDictionary["bluePotion"],     //10
                 this.modelDictionary["brownPotion"],    //11
                 this.modelDictionary["greenPotion"],    //12
@@ -2021,10 +2024,11 @@ namespace GDApp
                 this.modelDictionary["redPotion"],      //16
                 this.modelDictionary["yellowPotion"],   //17
                 this.modelDictionary["stoneDoor"],      //18
+                this.modelDictionary["decoAnubis"]      //19        DECORATIONS
             };
 
             Model[] collisionTiles = new Model[]{
-                this.modelDictionary["deadEnd_Col"],    //0
+                this.modelDictionary["deadEnd_Col"],    //0         ROOM TILE COLLISIONS
                 this.modelDictionary["straight_Col"],   //1
                 this.modelDictionary["corner_Col"],     //2
                 this.modelDictionary["tJunction_Col"],  //3
@@ -2033,11 +2037,17 @@ namespace GDApp
                 this.modelDictionary["puzzle_Col"],     //6
                 this.modelDictionary["endRoom_Col"]     //7
             };
+
+            Texture2D[] textures = new Texture2D[]{
+                this.textureDictionary["egypt"],
+                this.textureDictionary["redPotion"],
+                this.textureDictionary["anubis"],
+            };
             #endregion
 
             // is a tilegrid class even necessary? maybe just tilegridcreator to handle map generation
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
-            tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
+            tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, textures);
             tg.generateRandomGrid();
             startDoor = tg.createDoorAt(0, 20, 0, this.textureDictionary["egypt"]); // can access the model from inside tg instead of mazetiles
             make2DMazeMap(tg);

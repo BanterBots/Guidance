@@ -708,6 +708,237 @@
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Models\Decorations\m_decoAnubis.FBX">
+      <Name>m_decoAnubis</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Models\Decorations\ANKHAC.JPG">
+      <Name>ANKHAC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\ANKHBC.jpg">
+      <Name>ANKHBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\ANUBIS01C.JPG">
+      <Name>ANUBIS01C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\ANUBIS02C.JPG">
+      <Name>ANUBIS02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\ANUBIS1BC.jpg">
+      <Name>ANUBIS1BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\ANUBIS2BC.jpg">
+      <Name>ANUBIS2BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\BASE01AC.JPG">
+      <Name>BASE01AC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\BASE01BC.jpg">
+      <Name>BASE01BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\BASE02BC.jpg">
+      <Name>BASE02BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\BASE02C.JPG">
+      <Name>BASE02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\BASTBC.jpg">
+      <Name>BASTBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\BASTC.JPG">
+      <Name>BASTC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\CROWNBC.jpg">
+      <Name>CROWNBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\CROWNC.JPG">
+      <Name>CROWNC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\FALCONC.jpg">
+      <Name>FALCONC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\HORUSBC.jpg">
+      <Name>HORUSBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\HORUSC.JPG">
+      <Name>HORUSC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\HUMANC.jpg">
+      <Name>HUMANC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\MUMMYC.jpg">
+      <Name>MUMMYC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\RAMC.jpg">
+      <Name>RAMC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\REFLECT.JPG">
+      <Name>REFLECT</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\SPEARC.jpg">
+      <Name>SPEARC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHAC.JPG">
+      <Name>ANKHAC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHBC.jpg">
+      <Name>ANKHBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS01C.JPG">
+      <Name>ANUBIS01C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS02C.JPG">
+      <Name>ANUBIS02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS1BC.jpg">
+      <Name>ANUBIS1BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS2BC.jpg">
+      <Name>ANUBIS2BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01AC.JPG">
+      <Name>BASE01AC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01BC.jpg">
+      <Name>BASE01BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02BC.jpg">
+      <Name>BASE02BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02C.JPG">
+      <Name>BASE02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTBC.jpg">
+      <Name>BASTBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTC.JPG">
+      <Name>BASTC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNBC.jpg">
+      <Name>CROWNBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNC.JPG">
+      <Name>CROWNC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\FALCONC.jpg">
+      <Name>FALCONC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSBC.jpg">
+      <Name>HORUSBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSC.JPG">
+      <Name>HORUSC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HUMANC.jpg">
+      <Name>HUMANC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\MUMMYC.jpg">
+      <Name>MUMMYC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\RAMC.jpg">
+      <Name>RAMC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\REFLECT.JPG">
+      <Name>REFLECT</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\SPEARC.jpg">
+      <Name>SPEARC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

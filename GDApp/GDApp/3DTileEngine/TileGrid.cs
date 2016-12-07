@@ -45,6 +45,7 @@ namespace GDApp._3DTileEngine
         public PotionObject[,] potionGrid;
         private Texture2D potionTexture;
         private int totalPotions = 0;
+        private Texture2D[] allTextures;
         #endregion
 
         #region Constructors
@@ -73,6 +74,21 @@ namespace GDApp._3DTileEngine
             this.grid = new ModelTileObject[gridSize, gridSize];
             this.potionGrid = new PotionObject[gridSize, gridSize];
             this.potionTexture = potionTexture;
+            initializeInfo();
+        }
+        // Random maze with different collision models with multi Textures
+        public TileGrid(int gridSize, float tileSize, Model[] models, Model[] collisionModels, BasicEffect effect, Texture2D[] textures)
+        {
+            this.gridSize = gridSize;
+            this.tileSize = tileSize;
+            this.models = models;
+            this.collisionModels = collisionModels;
+            this.texture = textures[0];
+            this.effect = effect;
+            this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionGrid = new PotionObject[gridSize, gridSize];
+            this.potionTexture = textures[1];
+            this.allTextures = textures;
             initializeInfo();
         }
         #endregion
@@ -836,6 +852,10 @@ namespace GDApp._3DTileEngine
             //enabled by default
             endZone.Enable(true);
             itemList.Add(endZone);
+
+            
+            itemList.Add(createDecorationAt(x, y, 0, 19, this.allTextures[2]));
+
         }
 
         private void createStartTileAt(int x, int y, int model, int rotation)
@@ -873,10 +893,32 @@ namespace GDApp._3DTileEngine
             itemList.Add(startZone);
         }
 
+        public ModelObject createDecorationAt(int x, int y, int z, int modelNum, Texture2D texture)
+        {
+            Transform3D transform = new Transform3D(
+               new Vector3(x * tileSize, z, (y * (-1) * tileSize) - (tileSize / 2)),
+               new Vector3(0, 0, 0),
+               new Vector3(0.025f, 0.025f, 0.025f),
+               Vector3.UnitX,
+               Vector3.UnitY);
+
+            ModelObject decoration = new ModelObject(
+               "decoration(" + x + "," + y + ")",
+               ObjectType.Pickup,
+               transform,
+               effect,
+               texture,
+               models[modelNum],
+               Color.White,
+               1);
+
+            return decoration;
+        }
+
         public ModelObject createDoorAt(int x, int y, int z, Texture2D texture)
         {
             Transform3D transform = new Transform3D(
-               new Vector3(x * tileSize , y, (z * (-1) * tileSize) - (tileSize / 2)),
+               new Vector3(x * tileSize, y, (z * (-1) * tileSize) - (tileSize / 2)),
                new Vector3(0, 0, 0),
                new Vector3(10f, 30f, 10f),
                Vector3.UnitX,
@@ -888,7 +930,7 @@ namespace GDApp._3DTileEngine
                transform,
                effect,
                texture,
-               models[17],
+               models[18],
                Color.White,
                1);
 
