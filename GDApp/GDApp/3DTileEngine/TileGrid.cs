@@ -103,7 +103,7 @@ namespace GDApp._3DTileEngine
                 createTileAt(0, 1, 1, 0);
 
                 // END TILES
-                createEndTileAt(gridSize - 1, gridSize - 1, 5, 2);
+                createEndTileAt(gridSize - 1, gridSize - 1, 7, 2);
                 createTileAt(gridSize - 1, gridSize - 2, 1, 2);
 
                 // RANDOM CHAINS
@@ -898,23 +898,23 @@ namespace GDApp._3DTileEngine
         public int setModelIndex(PotionType potionType)
         {
             if (potionType == PotionType.speed)
-                return 15;  //red
+                return 16;  //red
             else if (potionType == PotionType.slow)
-                return 13;  //pink
+                return 14;  //pink
             else if (potionType == PotionType.reverse)
-                return 10;   //brown
+                return 11;   //brown
             else if (potionType == PotionType.mapSpin)
-                return 16;  //yellow
+                return 17;  //yellow
             else if (potionType == PotionType.lessTime)
-                return 9;   //blue
+                return 10;   //blue
             else if (potionType == PotionType.flip)
-                return 12;  //orange
+                return 13;  //orange
             else if (potionType == PotionType.extraTime)
-                return 11;  //green
+                return 12;  //green
             else if (potionType == PotionType.blackout)
-                return 14;  //purple
+                return 15;  //purple
             else
-                return 8; //empty
+                return 9; //empty
         }
         public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex, PotionType potionType)
         {

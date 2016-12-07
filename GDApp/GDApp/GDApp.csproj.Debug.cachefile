@@ -123,6 +123,8 @@ Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb
 Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb
 Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb
 Content\Assets\Models\Items\FlatColourTexture_0.xnb
+Content\Assets\Models\Maze\m_EndRoom01.xnb
+Content\Assets\Models\Maze\m_EndRoom01_Col.xnb
 Content\Assets\Video\sample.wmv
 Content\Assets\Audio\Demo2DSound.xgs
 Content\Assets\Audio\WaveBank1.xwb

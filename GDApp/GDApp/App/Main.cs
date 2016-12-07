@@ -796,6 +796,7 @@ namespace GDApp
         {
             // GUIDANCE MODELS
             this.modelDictionary.Add("room", Content.Load<Model>("Assets/Models/Maze/m_Room01"));
+            this.modelDictionary.Add("endRoom", Content.Load<Model>("Assets/Models/Maze/m_EndRoom01"));
             this.modelDictionary.Add("corner", Content.Load<Model>("Assets/Models/Maze/m_Corner01"));
             this.modelDictionary.Add("tJunction", Content.Load<Model>("Assets/Models/Maze/m_Junction01"));
             this.modelDictionary.Add("straight", Content.Load<Model>("Assets/Models/Maze/m_Straight01"));
@@ -804,6 +805,7 @@ namespace GDApp
             this.modelDictionary.Add("puzzle", Content.Load<Model>("Assets/Models/Maze/m_Puzzle01"));
 
             this.modelDictionary.Add("room_Col", Content.Load<Model>("Assets/Models/Maze/m_Room01_Col"));
+            this.modelDictionary.Add("endRoom_Col", Content.Load<Model>("Assets/Models/Maze/m_EndRoom01_Col"));
             this.modelDictionary.Add("corner_Col", Content.Load<Model>("Assets/Models/Maze/m_Corner01_Col"));
             this.modelDictionary.Add("tJunction_Col", Content.Load<Model>("Assets/Models/Maze/m_Junction01_Col"));
             this.modelDictionary.Add("straight_Col", Content.Load<Model>("Assets/Models/Maze/m_Straight01_Col"));
@@ -2000,24 +2002,25 @@ namespace GDApp
 
             #region Maze Models
             Model[] mazeTiles = new Model[]{
-                this.modelDictionary["deadEnd"],    //0
-                this.modelDictionary["straight"],   //1
-                this.modelDictionary["corner"],     //2
-                this.modelDictionary["tJunction"],  //3
-                this.modelDictionary["cross"],      //4
-                this.modelDictionary["room"],      //5
-                this.modelDictionary["puzzle"],    //6
-                this.modelDictionary["cube"],           //7
-                this.modelDictionary["emptyPotion"],    //8
-                this.modelDictionary["bluePotion"],     //9
-                this.modelDictionary["brownPotion"],    //10
-                this.modelDictionary["greenPotion"],    //11
-                this.modelDictionary["orangePotion"],   //12
-                this.modelDictionary["pinkPotion"],     //13
-                this.modelDictionary["purplePotion"],   //14
-                this.modelDictionary["redPotion"],      //15
-                this.modelDictionary["yellowPotion"],   //16
-                this.modelDictionary["stoneDoor"]       //17
+                this.modelDictionary["deadEnd"],        //0
+                this.modelDictionary["straight"],       //1
+                this.modelDictionary["corner"],         //2
+                this.modelDictionary["tJunction"],      //3
+                this.modelDictionary["cross"],          //4
+                this.modelDictionary["room"],           //5
+                this.modelDictionary["puzzle"],         //6
+                this.modelDictionary["endRoom"],        //7
+                this.modelDictionary["cube"],           //8
+                this.modelDictionary["emptyPotion"],    //9
+                this.modelDictionary["bluePotion"],     //10
+                this.modelDictionary["brownPotion"],    //11
+                this.modelDictionary["greenPotion"],    //12
+                this.modelDictionary["orangePotion"],   //13
+                this.modelDictionary["pinkPotion"],     //14
+                this.modelDictionary["purplePotion"],   //15
+                this.modelDictionary["redPotion"],      //16
+                this.modelDictionary["yellowPotion"],   //17
+                this.modelDictionary["stoneDoor"],      //18
             };
 
             Model[] collisionTiles = new Model[]{
@@ -2028,6 +2031,7 @@ namespace GDApp
                 this.modelDictionary["cross_Col"],      //4
                 this.modelDictionary["room_Col"],       //5
                 this.modelDictionary["puzzle_Col"],     //6
+                this.modelDictionary["endRoom_Col"]     //7
             };
             #endregion
 
@@ -2272,13 +2276,14 @@ namespace GDApp
 
             Texture2D[] UITiles = new Texture2D[]
             {
-                this.textureDictionary["deadEnd2D"],
-                this.textureDictionary["straight2D"],
-                this.textureDictionary["corner2D"],
-                this.textureDictionary["tJunc2D"],
-                this.textureDictionary["cross2D"],
-                this.textureDictionary["room2D"],
-                this.textureDictionary["emptySpace"]
+                this.textureDictionary["deadEnd2D"],    //0
+                this.textureDictionary["straight2D"],   //1
+                this.textureDictionary["corner2D"],     //2
+                this.textureDictionary["tJunc2D"],      //3
+                this.textureDictionary["cross2D"],      //4
+                this.textureDictionary["room2D"],       //5
+                this.textureDictionary["emptySpace"],   //6
+                this.textureDictionary["room2D"]        //7
             };
             this.activePotionIcons = new TexturedPrimitiveObject[tg.gridSize, tg.gridSize];
             //Transform3D mapTransform;
