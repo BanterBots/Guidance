@@ -895,10 +895,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Corner01.xnb</Output>
-      <Time>2016-11-30T20:26:02.8361834+00:00</Time>
+      <Time>2016-12-08T20:59:56.761898+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Corner01_0.xml</Key>
-        <Value>2016-12-05T09:10:06.8432419+00:00</Value>
+        <Value>2016-12-08T21:21:04.7115807+00:00</Value>
       </Dependency>
       <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -922,10 +922,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Cross01.xnb</Output>
-      <Time>2016-11-30T20:26:02.8461803+00:00</Time>
+      <Time>2016-12-08T20:59:56.7668978+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Cross01_0.xml</Key>
-        <Value>2016-12-05T09:10:08.1612725+00:00</Value>
+        <Value>2016-12-08T21:21:04.8635795+00:00</Value>
       </Dependency>
       <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -936,10 +936,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Cross01_Col.xnb</Output>
-      <Time>2016-11-30T20:26:02.8491528+00:00</Time>
+      <Time>2016-12-08T20:59:56.7708973+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Cross01_Col_0.xml</Key>
-        <Value>2016-12-05T09:10:08.2062725+00:00</Value>
+        <Value>2016-12-08T21:21:04.9075797+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -949,10 +949,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_DeadEnd01.xnb</Output>
-      <Time>2016-11-30T20:26:02.8541531+00:00</Time>
+      <Time>2016-12-08T20:59:56.7748981+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_DeadEnd01_0.xml</Key>
-        <Value>2016-12-05T09:10:08.2802658+00:00</Value>
+        <Value>2016-12-08T21:21:04.982111+00:00</Value>
       </Dependency>
       <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -976,10 +976,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Junction01.xnb</Output>
-      <Time>2016-11-30T20:26:02.863153+00:00</Time>
+      <Time>2016-12-08T20:59:56.7918989+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Junction01_0.xml</Key>
-        <Value>2016-12-05T09:10:08.4162652+00:00</Value>
+        <Value>2016-12-08T21:21:05.0985799+00:00</Value>
       </Dependency>
       <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -990,10 +990,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Junction01_Col.xnb</Output>
-      <Time>2016-11-30T20:26:02.866153+00:00</Time>
+      <Time>2016-12-08T20:59:56.7948982+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Junction01_Col_0.xml</Key>
-        <Value>2016-12-05T09:10:08.4602724+00:00</Value>
+        <Value>2016-12-08T21:21:05.1435802+00:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -1030,10 +1030,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Room01.xnb</Output>
-      <Time>2016-11-30T20:26:02.8841806+00:00</Time>
+      <Time>2016-12-08T20:59:56.8028976+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Room01_0.xml</Key>
-        <Value>2016-12-05T09:10:08.91734+00:00</Value>
+        <Value>2016-12-08T21:21:05.3310799+00:00</Value>
       </Dependency>
       <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -1057,10 +1057,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_Straight01.xnb</Output>
-      <Time>2016-11-30T20:26:02.892154+00:00</Time>
+      <Time>2016-12-08T20:59:56.8078983+00:00</Time>
       <Dependency>
         <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Straight01_0.xml</Key>
-        <Value>2016-12-05T09:10:09.0564009+00:00</Value>
+        <Value>2016-12-08T21:21:05.4200798+00:00</Value>
       </Dependency>
       <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
     </Item>
@@ -1527,7 +1527,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Corner01_0.xml</Output>
-      <Time>2016-11-30T20:26:02.8361834+00:00</Time>
+      <Time>2016-12-08T20:59:56.761898+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\ModelTextures\BaseTile01_Diffuse.png</Source>
@@ -1557,21 +1557,21 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Cross01_0.xml</Output>
-      <Time>2016-11-30T20:26:02.8461803+00:00</Time>
+      <Time>2016-12-08T20:59:56.7668978+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Cross01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Cross01_Col_0.xml</Output>
-      <Time>2016-11-30T20:26:02.8491528+00:00</Time>
+      <Time>2016-12-08T20:59:56.7708973+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_DeadEnd01.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_DeadEnd01_0.xml</Output>
-      <Time>2016-11-30T20:26:02.8541531+00:00</Time>
+      <Time>2016-12-08T20:59:56.7748981+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_DeadEnd01_Col.FBX</Source>
@@ -1585,14 +1585,14 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Junction01_0.xml</Output>
-      <Time>2016-11-30T20:26:02.863153+00:00</Time>
+      <Time>2016-12-08T20:59:56.7918989+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Junction01_Col.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Junction01_Col_0.xml</Output>
-      <Time>2016-11-30T20:26:02.866153+00:00</Time>
+      <Time>2016-12-08T20:59:56.7948982+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Puzzle01.FBX</Source>
@@ -1613,7 +1613,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Room01_0.xml</Output>
-      <Time>2016-11-30T20:26:02.8841806+00:00</Time>
+      <Time>2016-12-08T20:59:56.8028976+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Room01_Col.FBX</Source>
@@ -1627,7 +1627,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_Straight01_0.xml</Output>
-      <Time>2016-11-30T20:26:02.892154+00:00</Time>
+      <Time>2016-12-08T20:59:56.8078983+00:00</Time>
     </Item>
     <Item>
       <Source>Assets\Models\Maze\m_Straight01_Col.FBX</Source>
@@ -1721,6 +1721,480 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Items\m_YellowPotion_0.xml</Output>
       <Time>2016-11-30T20:26:02.8271535+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\ANKHAC.JPG</Source>
+      <Name>Assets\Models\Decorations\ANKHAC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\ANKHAC.xnb</Output>
+      <Time>2016-12-08T20:59:56.3998969+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\ANKHBC.jpg</Source>
+      <Name>Assets\Models\Decorations\ANKHBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\ANKHBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4038992+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\ANUBIS01C.JPG</Source>
+      <Name>Assets\Models\Decorations\ANUBIS01C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\ANUBIS01C.xnb</Output>
+      <Time>2016-12-08T20:59:56.408898+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\ANUBIS02C.JPG</Source>
+      <Name>Assets\Models\Decorations\ANUBIS02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\ANUBIS02C.xnb</Output>
+      <Time>2016-12-08T20:59:56.4138984+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\ANUBIS1BC.jpg</Source>
+      <Name>Assets\Models\Decorations\ANUBIS1BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\ANUBIS1BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4178973+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\ANUBIS2BC.jpg</Source>
+      <Name>Assets\Models\Decorations\ANUBIS2BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\ANUBIS2BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4238981+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\BASE01AC.JPG</Source>
+      <Name>Assets\Models\Decorations\BASE01AC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\BASE01AC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4278977+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\BASE01BC.jpg</Source>
+      <Name>Assets\Models\Decorations\BASE01BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\BASE01BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4328974+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\BASE02BC.jpg</Source>
+      <Name>Assets\Models\Decorations\BASE02BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\BASE02BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4358977+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\BASE02C.JPG</Source>
+      <Name>Assets\Models\Decorations\BASE02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\BASE02C.xnb</Output>
+      <Time>2016-12-08T20:59:56.4418979+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\BASTBC.jpg</Source>
+      <Name>Assets\Models\Decorations\BASTBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\BASTBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4458978+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\BASTC.JPG</Source>
+      <Name>Assets\Models\Decorations\BASTC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\BASTC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4488971+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\CROWNBC.jpg</Source>
+      <Name>Assets\Models\Decorations\CROWNBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\CROWNBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5498975+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\CROWNC.JPG</Source>
+      <Name>Assets\Models\Decorations\CROWNC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\CROWNC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5538973+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\FALCONC.jpg</Source>
+      <Name>Assets\Models\Decorations\FALCONC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\FALCONC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5598985+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\HORUSBC.jpg</Source>
+      <Name>Assets\Models\Decorations\HORUSBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\HORUSBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5638968+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\HORUSC.JPG</Source>
+      <Name>Assets\Models\Decorations\HORUSC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\HORUSC.xnb</Output>
+      <Time>2016-12-08T20:59:56.566898+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\HUMANC.jpg</Source>
+      <Name>Assets\Models\Decorations\HUMANC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\HUMANC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5728985+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\MUMMYC.jpg</Source>
+      <Name>Assets\Models\Decorations\MUMMYC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\MUMMYC.xnb</Output>
+      <Time>2016-12-08T20:59:56.6058984+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\RAMC.jpg</Source>
+      <Name>Assets\Models\Decorations\RAMC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\RAMC.xnb</Output>
+      <Time>2016-12-08T20:59:56.6128979+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\REFLECT.JPG</Source>
+      <Name>Assets\Models\Decorations\REFLECT</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\REFLECT.xnb</Output>
+      <Time>2016-12-08T20:59:56.6178967+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\SPEARC.jpg</Source>
+      <Name>Assets\Models\Decorations\SPEARC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\SPEARC.xnb</Output>
+      <Time>2016-12-08T20:59:56.6208973+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHAC.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHAC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHAC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4528976+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHBC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4588987+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS01C.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS01C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS01C.xnb</Output>
+      <Time>2016-12-08T20:59:56.4628973+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS02C.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS02C.xnb</Output>
+      <Time>2016-12-08T20:59:56.4668966+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS1BC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS1BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS1BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4729011+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS2BC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS2BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS2BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4788977+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01AC.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01AC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01AC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4828966+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01BC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE01BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4858972+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02BC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02BC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02BC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4908987+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02C.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASE02C.xnb</Output>
+      <Time>2016-12-08T20:59:56.4948971+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTBC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.4978973+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTC.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\BASTC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5008976+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNBC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5048977+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNC.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\CROWNC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5098975+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\FALCONC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\FALCONC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\FALCONC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5168967+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSBC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSBC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSBC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5198976+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSC.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HORUSC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5248982+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HUMANC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HUMANC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\HUMANC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5308975+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\MUMMYC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\MUMMYC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\MUMMYC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5338972+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\RAMC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\RAMC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\RAMC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5408976+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\REFLECT.JPG</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\REFLECT</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\REFLECT.xnb</Output>
+      <Time>2016-12-08T20:59:56.543896+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\SPEARC.jpg</Source>
+      <Name>Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\SPEARC</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\SPEARC.xnb</Output>
+      <Time>2016-12-08T20:59:56.5468978+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Maze\m_EndRoom01.FBX</Source>
+      <Name>Assets\Models\Maze\m_EndRoom01</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_EndRoom01.xnb</Output>
+      <Time>2016-12-08T20:59:56.7828968+00:00</Time>
+      <Dependency>
+        <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_EndRoom01_0.xml</Key>
+        <Value>2016-12-08T21:21:05.6335798+00:00</Value>
+      </Dependency>
+      <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Maze\m_EndRoom01_Col.FBX</Source>
+      <Name>Assets\Models\Maze\m_EndRoom01_Col</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_EndRoom01_Col.xnb</Output>
+      <Time>2016-12-08T20:59:56.7858974+00:00</Time>
+      <Dependency>
+        <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_EndRoom01_Col_0.xml</Key>
+        <Value>2016-12-08T21:21:05.68858+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\m_decoAnubis.FBX</Source>
+      <Name>Assets\Models\Decorations\m_decoAnubis</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\m_decoAnubis.xnb</Output>
+      <Time>2016-12-08T20:59:56.6018974+00:00</Time>
+      <Dependency>
+        <Key>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Decorations\m_decoAnubis_0.xml</Key>
+        <Value>2016-12-08T21:21:06.3170809+00:00</Value>
+      </Dependency>
+      <Request>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\anubis2bc_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Maze\m_EndRoom01.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_EndRoom01_0.xml</Output>
+      <Time>2016-12-08T20:59:56.7828968+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Maze\m_EndRoom01_Col.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Maze\m_EndRoom01_Col_0.xml</Output>
+      <Time>2016-12-08T20:59:56.7858974+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Models\Decorations\m_decoAnubis.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\obj\x86\Debug\Assets\Models\Decorations\m_decoAnubis_0.xml</Output>
+      <Time>2016-12-08T20:59:56.6018974+00:00</Time>
+    </Item>
+    <Item>
+      <Source>D:\SecondSight\Cadnav_A0817_065\Cadnav_A0817_065\anubis2bc.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\anubis2bc_0.xnb</Output>
+      <Time>2016-12-08T20:59:56.4788977+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

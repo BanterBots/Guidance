@@ -891,9 +891,11 @@ namespace GDApp._3DTileEngine
             //enabled by default
             startZone.Enable(true);
             itemList.Add(startZone);
+
+            itemList.Add(createDoorAt(x, y, 30, this.allTextures[0]));
         }
 
-        public ModelObject createDecorationAt(int x, int y, int z, int modelNum, Texture2D texture)
+        public ModelObject createDecorationAt(float x, float y, float z, int modelNum, Texture2D texture)
         {
             Transform3D transform = new Transform3D(
                new Vector3(x * tileSize, z, (y * (-1) * tileSize) - (tileSize / 2)),
@@ -915,16 +917,18 @@ namespace GDApp._3DTileEngine
             return decoration;
         }
 
-        public ModelObject createDoorAt(int x, int y, int z, Texture2D texture)
+        public ModelObject createDoorAt(float x, float y, float z, Texture2D texture)
         {
+            //DOOR OPENED =>    z=30f 
+            //DOOR CLOSED =>    z=12.5f 
             Transform3D transform = new Transform3D(
-               new Vector3(x * tileSize, y, (z * (-1) * tileSize) - (tileSize / 2)),
+               new Vector3(x * tileSize, z, (y * (-1) * tileSize) - (tileSize / 2)),
                new Vector3(0, 0, 0),
-               new Vector3(10f, 30f, 10f),
+               new Vector3(0.1f, 0.1f, 0.1f),
                Vector3.UnitX,
                Vector3.UnitY);
 
-            ModelObject door = new ModelObject(
+            CollidableObject door = new CollidableObject(
                "door(" + x + "," + y + ")",
                ObjectType.Pickup,
                transform,
@@ -933,7 +937,12 @@ namespace GDApp._3DTileEngine
                models[18],
                Color.White,
                1);
+            
 
+            door.AddPrimitive( new Box(transform.Translation, Matrix.Identity, new Vector3(20, 26, 15)), new MaterialProperties(0.2f, 0.8f, 0.7f));
+            door.Enable(true, 1);
+
+            door.AddController(new DoorController("door", door, true));
             return door;
         }
 

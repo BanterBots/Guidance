@@ -131,6 +131,7 @@
     <Compile Include="GDLibrary\Cameras\PawnCamera3D.cs" />
     <Compile Include="GDLibrary\Controllers\Camera\SecurityController.cs" />
     <Compile Include="GDLibrary\Controllers\Camera\ThirdPersonController.cs" />
+    <Compile Include="GDLibrary\Controllers\Object\DoorController.cs" />
     <Compile Include="GDLibrary\Controllers\Object\PotionController.cs" />
     <Compile Include="GDLibrary\Controllers\Physics\PhysicsController.cs" />
     <Compile Include="GDLibrary\Controllers\PlayerArrowController.cs" />

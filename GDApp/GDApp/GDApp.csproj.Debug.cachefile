@@ -123,8 +123,6 @@ Content\Assets\Models\ModelTextures\FlatColourTexture_0.xnb
 Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb
 Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb
 Content\Assets\Models\Items\FlatColourTexture_0.xnb
-Content\Assets\Models\Maze\m_EndRoom01.xnb
-Content\Assets\Models\Maze\m_EndRoom01_Col.xnb
 Content\Assets\Models\Decorations\ANKHAC.xnb
 Content\Assets\Models\Decorations\ANKHBC.xnb
 Content\Assets\Models\Decorations\ANUBIS01C.xnb
@@ -147,7 +145,6 @@ Content\Assets\Models\Decorations\MUMMYC.xnb
 Content\Assets\Models\Decorations\RAMC.xnb
 Content\Assets\Models\Decorations\REFLECT.xnb
 Content\Assets\Models\Decorations\SPEARC.xnb
-Content\Assets\Models\Decorations\m_decoAnubis.xnb
 Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHAC.xnb
 Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANKHBC.xnb
 Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\ANUBIS01C.xnb
@@ -170,6 +167,9 @@ Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\MUMMYC.xnb
 Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\RAMC.xnb
 Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\REFLECT.xnb
 Content\Assets\Models\Decorations\Cadnav_A0817_065\Cadnav_A0817_065\SPEARC.xnb
+Content\Assets\Models\Maze\m_EndRoom01.xnb
+Content\Assets\Models\Maze\m_EndRoom01_Col.xnb
+Content\Assets\Models\Decorations\m_decoAnubis.xnb
 Content\anubis2bc_0.xnb
 Content\Assets\Video\sample.wmv
 Content\Assets\Audio\Demo2DSound.xgs
