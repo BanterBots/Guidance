@@ -1,14 +1,14 @@
-﻿/*
+﻿using System;
+using Microsoft.Xna.Framework;
+
+/*
 Function: 		Encapsulates the transformation and World matrix specific parameters for any entity that can have a position e.g. a player, a prop, a camera
 Author: 		NMCG
 Version:		1.0
-Date Updated:	1/10/16
+Date Updated:	1/1/16
 Bugs:			None
 Fixes:			None
 */
-
-using System;
-using Microsoft.Xna.Framework;
 
 namespace GDLibrary
 {
@@ -22,11 +22,7 @@ namespace GDLibrary
         private Vector3 look, up;
         private Matrix world;
         private bool isDirty;
-        private Transform3D originalTransform3D;
-
-        //used when moving primitive objects to check for CD/CR
-        private Vector3 translateIncrement;
-        private float rotateIncrement;
+        private Vector3 originalRotation, originalLook, originalUp, originalTranslation, originalScale;
         #endregion
 
         #region Properties
@@ -131,46 +127,25 @@ namespace GDLibrary
                 return Vector3.Normalize(Vector3.Cross(this.look, this.up));
             }
         }
-        public Transform3D OriginalTransform3D
+        public Vector3 OriginalUp
         {
             get
             {
-                return this.originalTransform3D;
+                return this.originalUp;
             }
         }
-      
-        public Vector3 TranslateIncrement
+        public Vector3 OriginalLook
         {
             get
             {
-                return translateIncrement;
-            }
-            set
-            {
-                translateIncrement = value;
+                return this.originalLook;
             }
         }
-        public float TranslateIncrementY //used by 1st person camera to constrain vertical movement
+        public Vector3 OriginalTranslation
         {
             get
             {
-                return translateIncrement.Y;
-            }
-            set
-            {
-                translateIncrement.Y = value;
-            }
-        }
-
-        public float RotateIncrement
-        {
-            get
-            {
-                return rotateIncrement;
-            }
-            set
-            {
-                rotateIncrement = value;
+                return this.originalTranslation;
             }
         }
         #endregion
@@ -185,23 +160,27 @@ namespace GDLibrary
         //used by drawn objects
         public Transform3D(Vector3 translation, Vector3 rotation, Vector3 scale, Vector3 look, Vector3 up)
         {
-            this.Translation = translation;
-            this.Rotation = rotation;
-            this.Scale = scale;
+            this.Translation = this.originalTranslation = translation;
+            this.Rotation = this.originalRotation = rotation;
+            this.Scale = this.originalScale = scale;
 
-            this.Look = Vector3.Normalize(look);
-            this.Up = Vector3.Normalize(up);
-
-            this.originalTransform3D = (Transform3D)this.Clone();
+            //set look, up
+            this.Look = this.originalLook = Vector3.Normalize(look);
+            this.Up = this.originalUp = Vector3.Normalize(up);
         }
 
         public void Reset()
         {
-            this.translation = this.originalTransform3D.Translation;
-            this.rotation = this.originalTransform3D.Rotation;
-            this.scale = this.originalTransform3D.Scale;
-            this.look = this.originalTransform3D.Look;
-            this.up = this.originalTransform3D.Up;
+            this.translation = this.originalTranslation;
+            this.rotation = this.originalRotation;
+            this.scale = this.originalScale;
+            this.look = this.originalLook;
+            this.up = this.originalUp;
+        }
+
+        public object Clone() //deep copy - Vector3 are structures (i.e. value types) and so MemberwiseClone() will copy by value and effectively make a deep copy
+        {
+            return this.MemberwiseClone();
         }
 
         public override bool Equals(object obj)
@@ -227,14 +206,14 @@ namespace GDLibrary
 
         public void RotateBy(Vector3 rotateBy)
         {
-            this.rotation = this.OriginalTransform3D.Rotation + rotateBy;
+            this.rotation = this.originalRotation + rotateBy;
 
             //update the look and up - RADIANS!!!!
             Matrix rot = Matrix.CreateFromYawPitchRoll(MathHelper.ToRadians(this.rotation.X),
                 MathHelper.ToRadians(this.rotation.Y), MathHelper.ToRadians(this.rotation.Z));
 
-            this.look = Vector3.Transform(this.originalTransform3D.Look, rot);
-            this.up = Vector3.Transform(this.originalTransform3D.Up, rot);
+            this.look = Vector3.Transform(this.originalLook, rot);
+            this.up = Vector3.Transform(this.originalUp, rot);
 
             this.isDirty = true;
         }
@@ -242,11 +221,12 @@ namespace GDLibrary
         public void RotateAroundYBy(float magnitude)
         {
             this.rotation.Y += magnitude;
-            this.look = Vector3.Normalize(Vector3.Transform(this.originalTransform3D.Look,
+            this.look = Vector3.Normalize(Vector3.Transform(originalLook,
                 Matrix.CreateRotationY(MathHelper.ToRadians(rotation.Y))));
-
+   
             this.isDirty = true;
         }
+
         public void Rotate(Vector3 rotateBy)
         {
             this.rotation += rotateBy;
@@ -255,20 +235,15 @@ namespace GDLibrary
             Matrix rot = Matrix.CreateFromYawPitchRoll(MathHelper.ToRadians(this.rotation.X),
                 MathHelper.ToRadians(this.rotation.Y), MathHelper.ToRadians(this.rotation.Z));
 
-            this.look = Vector3.Transform(this.OriginalTransform3D.Look, rot);
-            this.up = Vector3.Transform(this.OriginalTransform3D.Up, rot);
+            this.look = Vector3.Transform(this.originalLook, rot);
+            this.up = Vector3.Transform(this.originalUp, rot);
 
             this.isDirty = true;
         }
 
-        public void TranslateBy(Vector3 translateBy)
-        {
-            TranslateBy(translateBy, 1);
-        }
-
         public void TranslateBy(Vector3 translateBy, float speedMultiplier)
         {
-            this.translation += (translateBy * speedMultiplier);
+            this.translation += translateBy * speedMultiplier;
             this.isDirty = true;
         }
 
@@ -278,15 +253,8 @@ namespace GDLibrary
             this.isDirty = true;
         }
 
-        public void ScaleBy(Vector3 scaleBy)
-        {
-            this.scale *= scaleBy;
-            this.isDirty = true;
-        }
 
-        public object Clone() //deep copy - Vector3 are structures (i.e. value types) and so MemberwiseClone() will copy by value and effectively make a deep copy
-        {
-            return this.MemberwiseClone();
-        }
+
+
     }
 }

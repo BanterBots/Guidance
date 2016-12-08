@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sections>
+  <WaveBank Name="WaveBank1">Wave Bank
+{
+    Name = WaveBank1;
+    Xbox File = Xbox\WaveBank1.xwb;
+    Windows File = Win\WaveBank1.xwb;
+    Xbox Bank Path Edited = 0;
+    Windows Bank Path Edited = 0;
+    Seek Tables = 1;
+    Compression Preset Name = &lt;none&gt;;
+    Bank Last Revised Low = 1836740428;
+    Bank Last Revised High = 30557460;
+
+    Wave
+    {
+        Name = boing;
+        File = boing.wav;
+        Build Settings Last Modified Low = 809922770;
+        Build Settings Last Modified High = 30430317;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 11025;
+            Bits Per Sample = 0;
+            Play Region Offset = 44;
+            Play Region Length = 7696;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1835722874;
+            Last Modified High = 30557243;
+        }
+    }
+
+    Wave
+    {
+        Name = bongbongoLoop;
+        File = bongbongoLoop.wav;
+        Build Settings Last Modified Low = 3885344906;
+        Build Settings Last Modified High = 30557459;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 5644800;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1965128784;
+            Last Modified High = 30557245;
+        }
+    }
+}
+
+</WaveBank>
+</Sections>

@@ -1,6 +1,7 @@
 ﻿using GDApp._3DTileEngine.Objects.Items;
 using GDLibrary;
 using JigLibX.Collision;
+using JigLibX.Geometry;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -13,7 +14,8 @@ namespace GDApp._3DTileEngine
         #region Properties
         // Grid that holds all tiles
         public ModelTileObject[,] grid;
-        public List<DrawnActor3D> itemList;
+       
+        public List<DrawnActor> itemList;
 
         // Size of our grid, and size of each tile
         public int gridSize;
@@ -23,12 +25,13 @@ namespace GDApp._3DTileEngine
         public BasicEffect effect;
         public Texture2D texture;
         public Model[] models;
+        public Model[] collisionModels;
 
         // Directional data
         public int[] tileInfo;
 
         // Generation settings
-        private int minTiles = 20;
+        private int minTiles = 5;
         private int tiles = 0;
 
         // Regeneration list
@@ -36,27 +39,17 @@ namespace GDApp._3DTileEngine
 
         // RNG
         Random random = new Random();
+        Random random2 = new Random();
 
         //Potions
-
+        public PotionObject[,] potionGrid;
+        private Texture2D potionTexture;
+        private int totalPotions = 0;
+        private Texture2D[] allTextures;
         #endregion
 
         #region Constructors
-        // Hardcoded maze
-        public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, int[,] modelTypes, int[,] modelRotations, Texture2D potionTexture)
-        {
-            this.gridSize = gridSize;
-            this.tileSize = tileSize;
-            this.models = models;
-            this.texture = texture;
-            this.effect = effect;
-            this.grid = new ModelTileObject[gridSize, gridSize];
-
-            initializeInfo();
-            generateGridFromArrays(modelTypes, modelRotations);
-        }
-
-        // Random maze
+        // Random maze with collision off models
         public TileGrid(int gridSize, float tileSize, Model[] models, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
         {
             this.gridSize = gridSize;
@@ -65,43 +58,118 @@ namespace GDApp._3DTileEngine
             this.texture = texture;
             this.effect = effect;
             this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionGrid = new PotionObject[gridSize, gridSize];
+            this.potionTexture = potionTexture;
             initializeInfo();
-            generateRandomGrid();
+        }
+        // Random maze with different collision models
+        public TileGrid(int gridSize, float tileSize, Model[] models, Model[] collisionModels, BasicEffect effect, Texture2D texture, Texture2D potionTexture)
+        {
+            this.gridSize = gridSize;
+            this.tileSize = tileSize;
+            this.models = models;
+            this.collisionModels = collisionModels;
+            this.texture = texture;
+            this.effect = effect;
+            this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionGrid = new PotionObject[gridSize, gridSize];
+            this.potionTexture = potionTexture;
+            initializeInfo();
+        }
+        // Random maze with different collision models with multi Textures
+        public TileGrid(int gridSize, float tileSize, Model[] models, Model[] collisionModels, BasicEffect effect, Texture2D[] textures)
+        {
+            this.gridSize = gridSize;
+            this.tileSize = tileSize;
+            this.models = models;
+            this.collisionModels = collisionModels;
+            this.texture = textures[0];
+            this.effect = effect;
+            this.grid = new ModelTileObject[gridSize, gridSize];
+            this.potionGrid = new PotionObject[gridSize, gridSize];
+            this.potionTexture = textures[1];
+            this.allTextures = textures;
+            initializeInfo();
         }
         #endregion
 
         #region Maze Creation
+        #region Debug Maze
+        public void generateDebugMaze()
+        {
+            createTileAt(0, 0, 2, 0);
+            createTileAt(0, 1, 2, 1);
+            createTileAt(1, 0, 2, 3);
+            createTileAt(1, 1, 2, 2);
+        }
+        #endregion
+
         #region Random Gen
         public void generateRandomGrid()
         {
             while (tiles < minTiles)
             {
-                // Reset values upon failed generation
                 regenCoords = new List<Integer3>();
                 tiles = 0;
-                grid = new ModelTileObject[gridSize,gridSize];
-                itemList = new List<DrawnActor3D>();
+                grid = new ModelTileObject[gridSize, gridSize];
+                itemList = new List<DrawnActor>();
 
-                
-                
+                // START TILES
+                createStartTileAt(0, 0, 5, 0);
+                createTileAt(0, 1, 1, 0);
 
-                // Hardcoded item
-                
-  
+                // END TILES
+                createEndTileAt(gridSize - 1, gridSize - 1, 7, 2);
+                createTileAt(gridSize - 1, gridSize - 2, 1, 2);
 
-                // Create two random chains that link with start and finish
-                createRandomChainAt(0, 1, 3);      
-                createRandomChainAt(gridSize - 1, gridSize - 2, 1);
+                // RANDOM CHAINS
+                createRandomChainAt(0, 2, 3);
+                createRandomChainAt(gridSize - 1, gridSize - 3, 1);
 
-                //  Create hardcoded start and finish
-                createTileAt(0, 0, 0, 0);
-                createTileAt(gridSize - 1, gridSize - 1, 0, 2);
+                // REGENERATE EXIT
+                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 3, 1));
 
-
-                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 2, 1));
-           }
+                if (tiles < minTiles)
+                {
+                    clean();
+                }
+            }
             
             regenerateGaps();
+            InitializeCollisions();
+        }
+
+        private void clean()
+        { 
+            // Reset values upon failed generation
+
+            for (int i = 0; i < gridSize; i++)
+            {
+                for (int j = 0; j < gridSize; j++)
+                {
+                    if (grid[i, j] != null)
+                    {
+                        grid[i, j].Remove();
+                    }
+                }
+            }
+            foreach(DrawnActor da in itemList){
+                da.Remove();
+            }
+        }
+
+        private void InitializeCollisions()
+        {
+            for (int i = 0; i < gridSize; i++)
+            {
+                for (int j = 0; j < gridSize; j++)
+                {
+                    if (grid[i, j] != null)
+                    {
+                        grid[i, j].InitializeCollision();
+                    }
+                }
+            }
         }
         #endregion
 
@@ -124,7 +192,7 @@ namespace GDApp._3DTileEngine
 
                     grid[x, y] = mazeObject = new ModelTileObject(
                         "maze(" + x + "," + y + ")",
-                        ActorType.Pickup,
+                        ObjectType.CollidableGround,
                         transform,
                         effect,
                         Color.White,
@@ -178,7 +246,7 @@ namespace GDApp._3DTileEngine
             /**
             *   1) We check if this tile already exists
             **/
-
+            
             if (grid[x,y] != null)
             {
                 return false;
@@ -282,10 +350,25 @@ namespace GDApp._3DTileEngine
                 /**
                 *   5) We compare the possible directions and the directions of our model + rotations.
                 **/
-                int rotation = -1;
+
+                // NON RANDOM ROTATION
+                //int rotation = -1;
+                
+                // RANDOM ROTATION
+                int rotation = random.Next(-1, 3);
+                possibleDirs = rotateDirs(possibleDirs, rotation);
 
                 for (int otries = 0; otries < 4; otries++)
                 {
+                    if (rotation > 6)
+                    {
+                        rotation = rotation - 8;
+                    }
+                    if (rotation > 2)
+                    {
+                        rotation = rotation - 4;
+                    }
+
                     if (compareDirs(allowedDirs, possibleDirs, originDir))
                     {
                         createTileAt(x, y, modelNumber, rotation);
@@ -296,7 +379,7 @@ namespace GDApp._3DTileEngine
                     else
                     {
                         possibleDirs = rotateDirs(possibleDirs);
-                        System.Console.Write("Rotating");
+                        //System.Console.Write("Rotating");
                         rotation++;
                     }
                 }
@@ -315,46 +398,58 @@ namespace GDApp._3DTileEngine
 
                 if (isBitSet(possibleDirs, 2))      // If we can go south...
                 {
-                    if(grid[x + 1, y] == null)
+                    if (x+1 >= 0 && y >= 0)
                     {
-                        createRandomChainAt(x + 1, y, 4);           // We create a new chain heading with north as origin
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x + 1, y, 4)); // Regenerate tile to the south
+                        if (grid[x + 1, y] == null)
+                        {
+                            createRandomChainAt(x + 1, y, 4);           // We create a new chain heading with north as origin
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x + 1, y, 4)); // Regenerate tile to the south
+                        }
                     }
                 }
                 if (isBitSet(possibleDirs, 3))      // If we can go west...
-                {
-                    if (grid[x, y - 1] == null)
+                {  
+                    if(x >= 0 && y-1 >= 0)
                     {
-                        createRandomChainAt(x, y - 1, 1);           // We create a new chain heading east
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x, y - 1, 1)); // Regenerate tile to the west
+                        if (grid[x, y - 1] == null)
+                        {
+                            createRandomChainAt(x, y - 1, 1);           // We create a new chain heading east
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x, y - 1, 1)); // Regenerate tile to the west
+                        }
                     }
                 }
                 if (isBitSet(possibleDirs, 4))      // If we can go north...
                 {
-                    if (grid[x - 1, y] == null)
+                    if (x-1 >= 0 && y >= 0)
                     {
-                        createRandomChainAt(x - 1, y, 2);           // We create a new chain heading north with south (2) as origin
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x - 1, y, 2)); // Regenerate the tile to the north
+                        if (grid[x - 1, y] == null)
+                        {
+                            createRandomChainAt(x - 1, y, 2);           // We create a new chain heading north with south (2) as origin
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x - 1, y, 2)); // Regenerate the tile to the north
+                        }
                     }
                 }              
                 if (isBitSet(possibleDirs, 1))      // If we can go east...
                 {
-                    if (grid[x, y + 1] == null)
+                    if (x >= 0 && y+1 >= 0)
                     {
-                        createRandomChainAt(x, y + 1, 3);           // We create a new chain heading east with west (3) as origin
-                    }
-                    else
-                    {
-                        regenCoords.Add(new Integer3(x, y + 1, 3)); // Regenerate the tile to the east
+                        if (grid[x, y + 1] == null)
+                        {
+                            createRandomChainAt(x, y + 1, 3);           // We create a new chain heading east with west (3) as origin
+                        }
+                        else
+                        {
+                            regenCoords.Add(new Integer3(x, y + 1, 3)); // Regenerate the tile to the east
+                        }
                     }
                 }
                 return true;
@@ -392,9 +487,9 @@ namespace GDApp._3DTileEngine
         private int randomTile()
         {
             int modelNumber = -1;
-            int rand = random.Next(1, 110);
+            int rand = random.Next(1, 50);
 
-            if(rand > 60)
+            if(rand > 30)
             {
                 modelNumber = 4;
             }
@@ -413,7 +508,7 @@ namespace GDApp._3DTileEngine
             }
             else
             {
-                modelNumber = 3;
+                modelNumber = 1;
             }
             //else if (rand > 5)
            // {
@@ -457,6 +552,29 @@ namespace GDApp._3DTileEngine
                 newBits += 2;
             }
             return newBits;
+        }
+
+        private int rotateDirs(int dirs, int times)
+        {
+            if(times == -1)
+            {
+                return dirs;
+            }
+            else if(times == 0){
+                dirs = rotateDirs(dirs);
+            }
+            else if (times == 1)
+            {
+                dirs = rotateDirs(dirs);
+                dirs = rotateDirs(dirs);
+            }
+            else if (times == 2)
+            {
+                dirs = rotateDirs(dirs);
+                dirs = rotateDirs(dirs);
+                dirs = rotateDirs(dirs);
+            }
+            return dirs;
         }
 
         private bool compareDirs(int allowedDirs, int possibleDirs, int originDir)
@@ -575,20 +693,20 @@ namespace GDApp._3DTileEngine
 
         private void genRandomTile(int x, int y, int requiredDirs, int originDir)
         {
-            System.Console.WriteLine("Required direction: " + requiredDirs);
+            //System.Console.WriteLine("Required direction: " + requiredDirs);
             int possibleDirs = 0;
             int modelNumber = 0;
             bool created = false;
 
             for (int tries = 0; tries < tileInfo.Length; tries++)
             {
-                System.Console.WriteLine("Trying model no: " + modelNumber);
+                //System.Console.WriteLine("Trying model no: " + modelNumber);
                 int rotation = -1;
                 possibleDirs = tileInfo[modelNumber];
 
                 for (int rotations = 0; rotations < 4; rotations++)
                 {
-                    System.Console.WriteLine("Possible directions: " + possibleDirs + "\n");
+                    //System.Console.WriteLine("Possible directions: " + possibleDirs + "\n");
                     if (requiredDirs == possibleDirs)
                     {
                         createTileAt(x, y, modelNumber, rotation);
@@ -612,7 +730,33 @@ namespace GDApp._3DTileEngine
         }
         #endregion
 
-        // This function is used to create all tiles
+        #region Objects In Maze Creation
+        public ModelTileObject createFreeTileAt(int x, int y, int z, int model, int rotation)
+        {
+            Transform3D transform = new Transform3D(
+                new Vector3(x, y, z),
+                new Vector3(0, rotation * -90, 0),
+                new Vector3(0.1f, 0.1f, 0.1f),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            ModelTileObject mazeObject = new ModelTileObject(
+               "maze(" + x + "," + y + ")",
+               ObjectType.CollidableGround,
+               transform,
+               effect,
+               Color.White,
+               1,
+               texture,
+               models[model],
+               collisionModels[model],
+               model,
+               x,
+               y);
+
+            return mazeObject;
+        }
+
         private void createTileAt(int x, int y, int model, int rotation)
         {
             Transform3D transform = new Transform3D(
@@ -624,13 +768,14 @@ namespace GDApp._3DTileEngine
 
             ModelTileObject mazeObject = new ModelTileObject(
                "maze(" + x + "," + y + ")",
-               ActorType.CollidableGround,
+               ObjectType.CollidableGround,
                transform,
                effect,
                Color.White,
                1,
                texture,
                models[model],
+               collisionModels[model],
                model,
                x,
                y);
@@ -638,37 +783,243 @@ namespace GDApp._3DTileEngine
             mazeObject.rotation = rotation;
             tiles++;
             grid[x, y] = mazeObject;
+
+            Random rand = new Random();
+            int potionTypeRandom = rand.Next(1,41);
+            int potionRandom = random2.Next(1, 40);
+            PotionType currentType = PotionType.speed;
+            if (potionTypeRandom > 35)
+                currentType = PotionType.speed;
+            else if (potionTypeRandom > 30)
+                currentType = PotionType.slow;
+            else if (potionTypeRandom > 25)
+                currentType = PotionType.extraTime;
+            else if (potionTypeRandom > 20)
+                currentType = PotionType.lessTime;
+            else if (potionTypeRandom > 15)
+                currentType = PotionType.flip;      //WORKING
+            else if (potionTypeRandom > 10)
+                currentType = PotionType.blackout;  //WORKING
+            else if (potionTypeRandom > 5)
+                currentType = PotionType.reverse;   //WORKING
+            else if (potionTypeRandom > 0)
+                currentType = PotionType.mapSpin;   
+            if (x == 0 && y == 0)
+            {
+                //startRoom
+            }
+            else if (x == (gridSize - 1) && y == (gridSize - 1))
+            {
+                //endRoom
+            }
+            else
+            {
+                if (potionRandom < 3 && this.totalPotions < 30)
+                createPotionAt(x, y, effect, potionTexture, currentType);
+            }
         }
 
-        public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex)
+        private void createEndTileAt(int x, int y, int model, int rotation)
         {
-            CollidableObject collidableObject = null;
+            createTileAt(x, y, model, rotation);
+
+            float newX = x * tileSize;
+            float newZ = y * tileSize * (-1);
 
             Transform3D transform = new Transform3D(
-                new Vector3(x * tileSize, 4, y * (-1) * tileSize),
-                new Vector3(0, 0 * -90, 0),
-                new Vector3(0.1f, 0.1f, 0.1f),
+                new Vector3(newX, 0, newZ),
+                new Vector3(0, rotation * -90, 0),
+                new Vector3(30, 15, 30),
                 Vector3.UnitX,
                 Vector3.UnitY);
 
-            collidableObject = new TriangleMeshObject(
-               "maze(" + x + "," + y + ")",
-               ActorType.CollidableProp,
+            EndZoneObject endZone = new EndZoneObject(
+                "potionZone(" + x + "," + y + ")",
+                ObjectType.CollidableTriggerZone,
+                transform,
+                effect,
+                Color.White,
+                0,
+                null,
+                false);
+            newX += 200;
+            //no mass so we disable material properties
+            endZone.AddPrimitive(
+                new Box(
+                    new Vector3(0, 0, -60),
+                    Matrix.Identity,
+                    new Vector3(40, 15, 40)));
+            //enabled by default
+            endZone.Enable(true);
+            itemList.Add(endZone);
+
+            
+            itemList.Add(createDecorationAt(x, y, 0, 19, this.allTextures[2]));
+
+        }
+
+        private void createStartTileAt(int x, int y, int model, int rotation)
+        {
+            createTileAt(x, y, model, rotation);
+
+            float newX = x * tileSize;
+            float newZ = y * tileSize * (-1);
+
+            Transform3D transform = new Transform3D(
+                new Vector3(0, 0, -60),
+                new Vector3(0, rotation * -90, 0),
+                new Vector3(30, 15, 30),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            StartZoneObject startZone = new StartZoneObject(
+                "potionZone(" + x + "," + y + ")",
+                ObjectType.CollidableTriggerZone,
+                transform,
+                effect,
+                Color.White,
+                0,
+                null,
+                false);
+            newX += 200;
+            //no mass so we disable material properties
+            startZone.AddPrimitive(
+                new Box(
+                    new Vector3(0, 0, -60),
+                    Matrix.Identity,
+                    new Vector3(30, 15, 5)));
+            //enabled by default
+            startZone.Enable(true);
+            itemList.Add(startZone);
+
+            itemList.Add(createDoorAt(x, y, 30, this.allTextures[0]));
+        }
+
+        public ModelObject createDecorationAt(float x, float y, float z, int modelNum, Texture2D texture)
+        {
+            Transform3D transform = new Transform3D(
+               new Vector3(x * tileSize, z, (y * (-1) * tileSize) - (tileSize / 2)),
+               new Vector3(0, 0, 0),
+               new Vector3(0.025f, 0.025f, 0.025f),
+               Vector3.UnitX,
+               Vector3.UnitY);
+
+            ModelObject decoration = new ModelObject(
+               "decoration(" + x + "," + y + ")",
+               ObjectType.Pickup,
                transform,
                effect,
+               texture,
+               models[modelNum],
+               Color.White,
+               1);
+
+            return decoration;
+        }
+
+        public ModelObject createDoorAt(float x, float y, float z, Texture2D texture)
+        {
+            //DOOR OPENED =>    z=30f 
+            //DOOR CLOSED =>    z=12.5f 
+            Transform3D transform = new Transform3D(
+               new Vector3(x * tileSize, z, (y * (-1) * tileSize) - (tileSize / 2)),
+               new Vector3(0, 0, 0),
+               new Vector3(0.1f, 0.1f, 0.1f),
+               Vector3.UnitX,
+               Vector3.UnitY);
+
+            CollidableObject door = new CollidableObject(
+               "door(" + x + "," + y + ")",
+               ObjectType.Pickup,
+               transform,
+               effect,
+               texture,
+               models[18],
+               Color.White,
+               1);
+            
+
+            door.AddPrimitive( new Box(transform.Translation, Matrix.Identity, new Vector3(20, 26, 15)), new MaterialProperties(0.2f, 0.8f, 0.7f));
+            door.Enable(true, 1);
+
+            door.AddController(new DoorController("door", door, true));
+            return door;
+        }
+
+        public int setModelIndex(PotionType potionType)
+        {
+            if (potionType == PotionType.speed)
+                return 16;  //red
+            else if (potionType == PotionType.slow)
+                return 14;  //pink
+            else if (potionType == PotionType.reverse)
+                return 11;   //brown
+            else if (potionType == PotionType.mapSpin)
+                return 17;  //yellow
+            else if (potionType == PotionType.lessTime)
+                return 10;   //blue
+            else if (potionType == PotionType.flip)
+                return 13;  //orange
+            else if (potionType == PotionType.extraTime)
+                return 12;  //green
+            else if (potionType == PotionType.blackout)
+                return 15;  //purple
+            else
+                return 9; //empty
+        }
+        public void createPotionAt(int x, int y, BasicEffect effect, Texture2D potionTex, PotionType potionType)
+        {
+            PotionObject potion = null;
+            int potionModelIndex = setModelIndex(potionType);
+            
+                Transform3D transform = new Transform3D(
+                new Vector3(x * tileSize, 4, y * (-1) * tileSize),
+                new Vector3(0, 0 * -90, 0),
+                new Vector3(0.03f, 0.03f, 0.03f),
+                Vector3.UnitX,
+                Vector3.UnitY);
+
+            potion = new PotionObject(
+               "potion(" + x + "," + y + ")",
+               ObjectType.Pickup,
+               transform,
+               effect,
+               potionTex,
+               models[potionModelIndex],
                Color.White,
                1,
-               potionTex,
-               models[7],
-               new MaterialProperties(0.2f, 0.8f, 0.7f));
+               potionType);
 
-            collidableObject.Enable(true, 1);
-            collidableObject.ActorType = ActorType.Pickup;
+            potionGrid[x, y] = potion;
 
+            potion.AddController(new PotionController("updown", potion, new Vector3(0, 0.1f, 0)));
+            itemList.Add(potionGrid[x, y]);
+            
+            PotionZoneObject potionZone = new PotionZoneObject(
+                "potionZone(" + x + "," + y + ")", 
+                ObjectType.CollidableTriggerZone, 
+                transform, 
+                effect, 
+                Color.White, 
+                0, 
+                null, 
+                false,
+                potion);
 
-            collidableObject.AttachController(new TranslationLerpController("updown",ControllerType.LerpTranslation));
-            collidableObject.AttachController(new RotationController("rotate", ControllerType.LerpRotation,new Vector3(0,0.1f,0)));
-            itemList.Add(collidableObject);
+            Vector3 potionZoneVector = new Vector3(transform.Translation.X, transform.Translation.Y + 350, transform.Translation.Z);
+
+            //no mass so we disable material properties
+            potionZone.AddPrimitive(
+                new Box(
+                    potionZoneVector, 
+                    Matrix.Identity, 
+                    new Vector3(transform.Scale.X*500, transform.Scale.Y*220, transform.Scale.Z*500)));
+            //enabled by default
+            potionZone.Enable(true);
+            itemList.Add(potionZone);
+
+            this.totalPotions++;
         }
+        #endregion
     }
 }

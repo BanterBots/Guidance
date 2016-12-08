@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
+using System;
 using Microsoft.Xna.Framework;
+
 namespace GDLibrary
 {
     public class VertexData<T> : IVertexData where T : struct, IVertexType
@@ -11,41 +13,56 @@ namespace GDLibrary
         #endregion
 
         #region Properties
+        public T[] Vertices
+        {
+            get
+            {
+                return vertices;
+            }
+            set
+            {
+                vertices = value;
+            }
+        }
         public PrimitiveType PrimitiveType
         {
             get
             {
-                return this.primitiveType;
+                return primitiveType;
+            }
+            set
+            {
+                primitiveType = value;
             }
         }
         public int PrimitiveCount
         {
             get
             {
-                return this.primitiveCount;
+                return primitiveCount;
             }
-        }
-        public T[] Vertices
-        {
-            get
+            set
             {
-                return this.vertices;
+                primitiveCount = value;
             }
         }
         #endregion
 
-        public VertexData(T[] vertices,
-            PrimitiveType primitiveType, int primitiveCount)
+        public VertexData(T[] vertices, PrimitiveType primitiveType, int primitiveCount)
         {
             this.vertices = vertices;
             this.primitiveType = primitiveType;
             this.primitiveCount = primitiveCount;
         }
 
-        public void Draw(GameTime gameTime, BasicEffect effect)
+        public virtual void Draw(GameTime gameTime, Effect effect)
         {
-            effect.GraphicsDevice.DrawUserPrimitives<T>(
-                this.primitiveType, this.vertices, 0, this.primitiveCount);
+            effect.GraphicsDevice.DrawUserPrimitives<T>(primitiveType, this.vertices, 0, primitiveCount);
+        }
+
+        public virtual object Clone()
+        {
+            return new VertexData<T>(this.Vertices, this.primitiveType, this.primitiveCount);
         }
     }
 }

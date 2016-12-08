@@ -84,8 +84,20 @@ namespace GDLibrary
             this.physicsDebugDrawer = new PhysicsDebugDrawer(game);
             game.Components.Add(this.physicsDebugDrawer);
  
-     
+            //register for the menu events
+            this.game.EventDispatcher.MainMenuChanged += EventDispatcher_MainMenu;
         }
+
+        #region Event Handling
+        //handle the relevant menu events
+        public virtual void EventDispatcher_MainMenu(EventData eventData)
+        {
+            if ((eventData.EventType == EventType.OnPlay) || (eventData.EventType == EventType.OnRestart))
+                this.bPaused = false;
+            else if (eventData.EventType == EventType.OnPause)
+                this.bPaused = true;
+        }
+        #endregion
 
         public override void Initialize()
         {

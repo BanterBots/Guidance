@@ -1,217 +1,272 @@
-﻿/*
-Function: 		Store, update, and draw all visible objects
-Author: 		NMCG
-Version:		1.0
-Date Updated:	13/10/16
-Bugs:			None
-Fixes:			None
-*/
-
-using System.Collections.Generic;
+﻿using GDApp;
 using Microsoft.Xna.Framework;
-using GDApp;
 using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
 
 namespace GDLibrary
 {
-    public class ObjectManager : DrawableGameComponent
+    public class ObjectManager : GenericDraweableManager<DrawnActor>
     {
-        #region Variables
-        private string name;
-        private List<IActor> drawList;
+        #region Fields
         private RasterizerState rasterizerState;
-        private bool bPaused;
         private bool bDebugMode;
-        private Main game;
         #endregion
 
         #region Properties
-        public bool IsDebugMode 
-        { 
+        public bool IsDebugMode
+        {
             get
             {
-                return this.bDebugMode;
+                return bDebugMode;
             }
             set
             {
-                this.bDebugMode = value;
-            }
-        }
-        public int Count
-        {
-            get
-            {
-                return this.drawList.Count;
-            }
-        }
-        public IActor this[int index]
-        {
-            get
-            {
-                return this.drawList[index];
-            }
-        }
-        public bool Paused //to do...
-        {
-            get
-            {
-                return this.bPaused;
-            }
-            set
-            {
-                this.bPaused = value;
+                bDebugMode = value;
             }
         }
         #endregion
 
-        public ObjectManager(Main game, string name, bool bDebugMode)
-            : this(game, name, 10)
+        public ObjectManager(Main game, int initialDrawSize, int initialRemoveSize, bool bDebugMode)
+            : base(game, initialDrawSize, initialRemoveSize)
         {
-            this.game = game;
             this.bDebugMode = bDebugMode;
+            SetGraphicsStateObjects();
+
+            #region Event Handling
+            //add any class specific event handling methods here
+            #endregion
         }
 
-        public ObjectManager(Main game, string name,
-            int initialSize) : base(game)
-        {
-            this.name = name;
-            this.drawList = new List<IActor>(initialSize);
 
-            InitializeGraphicsStateObjects();
-        }
+        #region Event Handling
+        //add any class specific event handling methods here   
+        #endregion
 
-        private void InitializeGraphicsStateObjects()
+        public override void SetGraphicsStateObjects()
         {
             this.rasterizerState = new RasterizerState();
             this.rasterizerState.FillMode = FillMode.Solid;
 
             //set to None for transparent objects
-            this.rasterizerState.CullMode = CullMode.None;
-        }
-
-        public void Add(IActor actor)
-        {
-            //unique? this.drawList.Contains(actor)
-            this.drawList.Add(actor);
-        }
-
-        public void Add(List<IActor> actorList)
-        {
-            foreach (IActor actor in actorList)
-                this.drawList.Add(actor);
-        }
-
-        public bool Remove(IActor actor)
-        {
-            return this.drawList.Remove(actor);
-        }
-
-        public bool Remove(IFilter<Actor> filter)
-        {
-            Actor actor = Find(filter);
-            if (actor != null)
-            {
-                this.drawList.Remove(actor);
-                return true;
-            }
-
-            return false;
-        }
-        public int RemoveAll(IFilter<Actor> filter)
-        {
-            Actor actor;
-            int count = 0;
-            for (int i = 0; i < this.drawList.Count; i++)
-            {
-                actor = this.drawList[i] as Actor;
-                if (filter.Matches(actor))
-                {
-                    this.drawList.Remove(actor);
-                    count++; //counts how many we remove
-                    i--; //if we remove then decrement i to ensure we remove duplicate neighbour 
-                }
-            }
-            return count;
-        }
-
-        public Actor Find(IFilter<Actor> filter)
-        {
-            Actor actor;
-            for (int i = 0; i < this.drawList.Count; i++)
-            {
-                actor = this.drawList[i] as Actor;
-                if (filter.Matches(actor))
-                    return actor;
-            }
-            return null;
-        }
-
-        public List<Actor> FindAll(IFilter<Actor> filter)
-        {
-            List<Actor> outList = new List<Actor>();
-            Actor actor;
-            for (int i = 0; i < this.drawList.Count; i++)
-            {
-                actor = this.drawList[i] as Actor;
-                if (filter.Matches(actor))
-                    outList.Add(actor);
-            }
-
-            //if nothing found then return null, otherwise return list
-            return outList.Count > 0 ? outList : null;
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            if (!this.bPaused)
-            {
-                //update all your visible or invisible things
-                foreach (IActor actor in this.drawList)
-                {
-                    actor.Update(gameTime);
-                }
-            }
-            base.Update(gameTime);
+            this.rasterizerState.CullMode = CullMode.CullCounterClockwiseFace;
         }
 
         public override void Draw(GameTime gameTime)
         {
-            if (!this.bPaused)
+            DrawnActor gameObject = null;
+
+            //if you want to see game around menu edges then disable this if()
+            if (!this.IsPaused)
             {
-                SetGraphicsStateObjects();
-                foreach (IActor actor in this.drawList)
+                //Remember this code from our initial aliasing problems with the Sky box?
+                //enable anti-aliasing along the edges of the quad i.e. to remove jagged edges to the primitive
+                this.Game.GraphicsDevice.SamplerStates[0] = SamplerState.LinearClamp;
+
+                //set the appropriate state e.g. wireframe, cull none?
+                this.Game.GraphicsDevice.RasterizerState = this.rasterizerState;
+
+                //enable alpha blending for transparent objects i.e. trees
+                this.Game.GraphicsDevice.BlendState = BlendState.AlphaBlend;
+
+                //disable to see what happens when we disable depth buffering - look at the boxes
+                this.Game.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+
+                for (int i = 0; i < Size; i++)
                 {
-                    actor.Draw(gameTime);
-                    DebugDrawCollisionSkin(actor);
+                    gameObject = this[i];
+
+                    if (gameObject is AnimatedPlayerObject)
+                    {
+                        DrawObject(gameTime, gameObject as AnimatedPlayerObject);
+                    }
+                    else if (gameObject is ModelObject)
+                    {
+                        DrawObject(gameTime, gameObject as ModelObject);
+                    }
+                    else if (gameObject is BillboardPrimitiveObject)
+                    {
+                        DrawObject(gameTime, gameObject as BillboardPrimitiveObject);
+                    }
+                    else if (gameObject is TexturedPrimitiveObject)
+                    {
+                        DrawObject(gameTime, gameObject as TexturedPrimitiveObject);
+                    }
+                    else if (gameObject is PrimitiveObject)
+                    {
+                        DrawObject(gameTime, gameObject as PrimitiveObject);
+                    }
+
+                    if ((this.IsDebugMode) && ((gameObject is ZoneObject) || (gameObject is ModelObject)))
+                        DebugDrawCollisionSkin(gameObject);
                 }
             }
-
-            base.Draw(gameTime);
         }
 
-        private void SetGraphicsStateObjects()
+        private void DrawObject(GameTime gameTime, AnimatedPlayerObject animatedPlayerObject)
         {
-            //Remember this code from our initial aliasing problems with the Sky box?
-            //enable anti-aliasing along the edges of the quad i.e. to remove jagged edges to the primitive
-            this.Game.GraphicsDevice.SamplerStates[0] = SamplerState.LinearClamp;
+            Effect effect = animatedPlayerObject.Effect;
 
-            //set the appropriate state e.g. wireframe, cull none?
-            this.Game.GraphicsDevice.RasterizerState = this.rasterizerState;
+            Model model = animatedPlayerObject.Model;
 
-            //enable alpha blending for transparent objects i.e. trees
-            this.Game.GraphicsDevice.BlendState = BlendState.AlphaBlend;
+            //an array of the current positions of the model meshes
+            Matrix[] bones = animatedPlayerObject.AnimationPlayer.GetSkinTransforms();
 
-            //disable to see what happens when we disable depth buffering - look at the boxes
-            this.Game.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+            Matrix world = animatedPlayerObject.GetWorldMatrix();
+
+            for (int i = 0; i < bones.Length; i++)
+            {
+                bones[i] *= world;
+            }
+
+            //remember we can move this code inside the first foreach loop below
+            //and use mesh.Name to change the textures applied during the effect
+            effect.CurrentTechnique = effect.Techniques["SimpleTexture"];
+            effect.Parameters["DiffuseMapTexture"].SetValue(animatedPlayerObject.Texture);
+
+            effect.Parameters["Bones"].SetValue(bones);
+            effect.Parameters["View"].SetValue((this.Game as Main).CameraManager.ActiveCamera.View);
+            effect.Parameters["Projection"].SetValue((this.Game as Main).CameraManager.ActiveCamera.ProjectionParameters.Projection);
+            effect.Parameters["Alpha"].SetValue(animatedPlayerObject.Alpha);
+
+            foreach (ModelMesh mesh in model.Meshes)
+            {
+                foreach (ModelMeshPart part in mesh.MeshParts)
+                {
+                    part.Effect = effect;
+                }
+                mesh.Draw();
+            }
+        }
+
+        //draw a model object 
+        private void DrawObject(GameTime gameTime, ModelObject modelObject)
+        {
+            if (modelObject.Model != null)
+            {
+                BasicEffect effect = modelObject.Effect as BasicEffect;
+
+                effect.View = (this.Game as Main).CameraManager.ActiveCamera.View;
+                effect.Projection = (this.Game as Main).CameraManager.ActiveCamera.ProjectionParameters.Projection;
+
+                effect.Texture = modelObject.Texture;
+                effect.DiffuseColor = modelObject.ColorAsVector3;
+                effect.Alpha = modelObject.Alpha;
+
+                //apply or serialise the variables above to the GFX card
+                effect.CurrentTechnique.Passes[0].Apply();
+
+                foreach (ModelMesh mesh in modelObject.Model.Meshes)
+                {
+                    foreach (ModelMeshPart part in mesh.MeshParts)
+                    {
+                        part.Effect = effect;
+                    }
+                    effect.World = modelObject.BoneTransforms[mesh.ParentBone.Index] * modelObject.GetWorldMatrix();
+                    mesh.Draw();
+                }
+            }
+        }
+
+        //draw a NON-TEXTURED primitive i.e. vertices (and possibly indices) defined by the user
+        private void DrawObject(GameTime gameTime, PrimitiveObject primitiveObject)
+        {
+            BasicEffect effect = primitiveObject.Effect as BasicEffect;
+
+            //W, V, P, Apply, Draw
+            effect.World = primitiveObject.GetWorldMatrix();
+            effect.View = (this.Game as Main).CameraManager.ActiveCamera.View;
+            effect.Projection = (this.Game as Main).CameraManager.ActiveCamera.ProjectionParameters.Projection;
+
+            effect.DiffuseColor = primitiveObject.ColorAsVector3;
+            effect.Alpha = primitiveObject.Alpha;
+
+            effect.CurrentTechnique.Passes[0].Apply();
+
+            primitiveObject.VertexData.Draw(gameTime, effect);
+        }
+
+        //draw a NON-TEXTURED primitive i.e. vertices (and possibly indices) defined by the user
+        private void DrawObject(GameTime gameTime, TexturedPrimitiveObject texturedPrimitiveObject)
+        {
+            BasicEffect effect = texturedPrimitiveObject.Effect as BasicEffect;
+
+            //W, V, P, Apply, Draw
+            effect.World = texturedPrimitiveObject.GetWorldMatrix();
+            effect.View = (this.Game as Main).CameraManager.ActiveCamera.View;
+            effect.Projection = (this.Game as Main).CameraManager.ActiveCamera.ProjectionParameters.Projection;
+
+            if (texturedPrimitiveObject.Texture != null) //e.g. VertexPositionColor vertices will have no UV coordinates - so no texture
+                effect.Texture = texturedPrimitiveObject.Texture;
+
+            effect.DiffuseColor = texturedPrimitiveObject.ColorAsVector3;
+            effect.Alpha = texturedPrimitiveObject.Alpha;
+
+            effect.CurrentTechnique.Passes[0].Apply();
+
+            texturedPrimitiveObject.VertexData.Draw(gameTime, effect);
+        }
+
+        BillboardParameters billboardParameters;
+        private void DrawObject(GameTime gameTime, BillboardPrimitiveObject billboardPrimitiveObject)
+        {
+            Effect effect = billboardPrimitiveObject.Effect;
+            billboardParameters = billboardPrimitiveObject.BillboardParameters;
+
+            //W, V, P, Apply, Draw
+            effect.CurrentTechnique = effect.Techniques[billboardParameters.Technique];
+            effect.Parameters["World"].SetValue(billboardPrimitiveObject.Transform3D.World);
+            effect.Parameters["View"].SetValue((this.Game as Main).CameraManager.ActiveCamera.View);
+            effect.Parameters["Projection"].SetValue((this.Game as Main).CameraManager.ActiveCamera.ProjectionParameters.Projection);
+            effect.Parameters["Up"].SetValue(billboardPrimitiveObject.Transform3D.Up);
+            effect.Parameters["DiffuseTexture"].SetValue(billboardPrimitiveObject.Texture);
+            effect.Parameters["Alpha"].SetValue(billboardPrimitiveObject.Alpha);
+
+            if (billboardParameters.BillboardType == BillboardType.Normal)
+            {
+                effect.Parameters["Right"].SetValue(billboardPrimitiveObject.Transform3D.Right);
+            }
+
+            if (billboardParameters.IsScrolling)
+            {
+                effect.Parameters["IsScrolling"].SetValue(billboardParameters.IsScrolling);
+                effect.Parameters["scrollRate"].SetValue(billboardParameters.scrollValue);
+            }
+            else
+            {
+                effect.Parameters["IsScrolling"].SetValue(false);
+            }
+
+            if (billboardParameters.IsAnimated)
+            {
+                effect.Parameters["IsAnimated"].SetValue(billboardParameters.IsAnimated);
+                effect.Parameters["InverseFrameCount"].SetValue(billboardParameters.inverseFrameCount);
+                effect.Parameters["CurrentFrame"].SetValue(billboardParameters.currentFrame);
+            }
+            else
+            {
+                effect.Parameters["IsAnimated"].SetValue(false);
+            }
+
+
+            effect.CurrentTechnique.Passes[0].Apply();
+            billboardPrimitiveObject.VertexData.Draw(gameTime, effect);
         }
 
         //debug method to draw collision skins for collidable objects and zone objects
-        private void DebugDrawCollisionSkin(IActor actor)
+        private void DebugDrawCollisionSkin(DrawnActor gameObject)
         {
-            if ((actor is CollidableObject) && (this.IsDebugMode))
-            {                  
-                CollidableObject collidableObject = actor as CollidableObject;
-                this.game.PhysicsManager.DebugDrawer.DrawDebug(collidableObject.Body, collidableObject.Collision);
+            if (this.IsDebugMode)
+            {
+                if (gameObject is ZoneObject)
+                {
+                    ZoneObject zoneObject = gameObject as ZoneObject;
+                    (this.Game as Main).PhysicsManager.DebugDrawer.DrawDebug(zoneObject.Body, zoneObject.Collision);
+                }
+                else if (gameObject is CollidableObject)
+                {
+                    CollidableObject collidableObject = gameObject as CollidableObject;
+                    (this.Game as Main).PhysicsManager.DebugDrawer.DrawDebug(collidableObject.Body, collidableObject.Collision);
+                }
             }
         }
     }

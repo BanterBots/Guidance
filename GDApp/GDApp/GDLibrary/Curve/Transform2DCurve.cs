@@ -4,29 +4,29 @@ using System;
 namespace GDLibrary
 {
     /*
-     * Allow the user to pass in offsets for a 2D curve so that platforms can use the same curve but
-     * operate "out of sync" by the offsets specified. 
+     * Allow the user to pass in offsets for a curve so that platforms can use the same curve but
+     * operate "out of sync" by the offsets specified. See MainApp for an example.
      */
     public class Transform2DCurveOffsets : ICloneable
     {
         public static Transform2DCurveOffsets Zero = new Transform2DCurveOffsets(Vector2.Zero, Vector2.One, 0, 0);
 
-        #region Variables
-        private Vector2 translation, scale;
+        #region Fields
+        private Vector2 position, scale;
         private float rotation;
         private float timeInSecs;
         #endregion
 
         #region Properties
-        public Vector2 Translation
+        public Vector2 Position
         {
             get
             {
-                return this.translation;
+                return this.position;
             }
             set
             {
-                this.translation = value;
+                this.position = value;
             }
         }
         public Vector2 Scale
@@ -71,26 +71,25 @@ namespace GDLibrary
         }
         #endregion
 
-        public Transform2DCurveOffsets(Vector2 translation, Vector2 scale, float rotation, float timeInSecs)
+        public Transform2DCurveOffsets(Vector2 position, Vector2 scale, float rotation, float timeInSecs)
         {
-            this.translation = translation;
+            this.position = position;
             this.scale = scale;
             this.rotation = rotation;
             this.timeInSecs = timeInSecs;
         }
+
         public object Clone()
         {
             return this.MemberwiseClone(); //simple C# or XNA types so use MemberwiseClone()
         }
     }
 
-    //Represents a 2D point on a curve (i.e. position, rotation, and scale) at a specified time in seconds
+    //Represents a point on a curve (i.e. position, rotation, and scale) at a specified time in seconds
     public class Transform2DCurve
     {
-        #region Variables
         private Curve1D rotationCurve;
         private Curve2D translationCurve, scaleCurve;
-        #endregion
 
         public Transform2DCurve(CurveLoopType curveLoopType)
         {
@@ -98,20 +97,20 @@ namespace GDLibrary
             this.scaleCurve = new Curve2D(curveLoopType);
             this.rotationCurve = new Curve1D(curveLoopType);
         }
+
         public void Add(Vector2 translation, Vector2 scale, float rotation, float timeInSecs)
         {
             this.translationCurve.Add(translation, timeInSecs);
             this.scaleCurve.Add(scale, timeInSecs);
             this.rotationCurve.Add(rotation, timeInSecs);
         }
+
         public void Clear()
         {
             this.translationCurve.Clear();
             this.scaleCurve.Clear();
             this.rotationCurve.Clear();
         }
-
-        //add clone...
 
         //See https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx for information on using the out keyword
         public void Evalulate(float timeInSecs, int precision, out Vector2 translation, out Vector2 scale, out float rotation)

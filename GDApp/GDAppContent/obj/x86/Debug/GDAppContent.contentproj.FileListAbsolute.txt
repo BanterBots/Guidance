@@ -1,4 +1,6 @@
-I:\Projects\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
-E:\Projects\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
 C:\Users\ciara_000\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
-D:\Projects\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+D:\SecondSight\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+C:\Users\d00163463\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+C:\Users\d00163463\Guidance\GDApp\GDAppContent\obj\x86\Debug\Assets\Audio\Demo2DSound.xml
+C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\obj\x86\Debug\GDAppContent.contentprojResolveAssemblyReference.cache
+C:\Users\d00163463\Desktop\Guidance\GDApp\GDAppContent\obj\x86\Debug\Assets\Audio\Demo2DSound.xml

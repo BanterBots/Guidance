@@ -1,29 +1,19 @@
-﻿/*
-Function: 		Provide mouse input functions
-Author: 		
-Version:		1.0
-Date Updated:	
-Bugs:			None
-Fixes:			None
-*/
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using GDApp;
-using System.Collections;
 using System;
+using System.Collections;
 
 namespace GDLibrary
 {
     public class CameraManager : GameComponent, IEnumerable<Camera3D>
     {
-        #region Variables
-        private Dictionary<string, List<Camera3D>> dictionary;
+        #region Fields
+        private Dictionary<string, List<Camera3D>> cameraDictionary;
         private List<Camera3D> activeCameraList;
-        private string activeCameraLayout;
-        private Camera3D activeCamera;
+        private string currentCameraLayout;
         private int activeCameraIndex;
-        private bool bPaused = false;
+        private bool bPaused;
         #endregion
 
         #region Properties
@@ -46,164 +36,134 @@ namespace GDLibrary
                 return this.activeCameraIndex;
             }
         }
-        public string ActiveCameraLayout
+        public string CurrentCameraLayout
         {
             get
             {
-                return this.activeCameraLayout;
+                return this.currentCameraLayout;
             }
         }
-        public List<Camera3D> this[string cameraLayout]
+        public Camera3D this[int index]
         {
             get
             {
-                if(this.dictionary.ContainsKey(cameraLayout))
-                    return this.dictionary[cameraLayout];
-                else
-                    return null;
+                return this.activeCameraList[index];
             }
         }
-        public int Count
+        public int Size
         {
             get
             {
                 return this.activeCameraList.Count;
             }
         }
-        public bool Paused //to do...
+        public bool Paused
         {
             get
             {
-                return this.bPaused;
+                return bPaused;
             }
             set
             {
-                this.bPaused = value;
+                bPaused = value;
             }
         }
         #endregion
 
-        public CameraManager(Main game) : base(game)
+        public CameraManager(Main game)
+            : base(game)
         {
-            this.dictionary
-                = new Dictionary<string, List<Camera3D>>();
+            this.cameraDictionary =new Dictionary<string, List<Camera3D>>();
+
+            game.EventDispatcher.CameraChanged += new EventDispatcher.CameraEventHandler(EventDispatcher_CameraChanged);
+
+            //register for the menu events
+            game.EventDispatcher.MainMenuChanged += EventDispatcher_MainMenu;
         }
 
-        public bool SetCamera(string cameraLayout, string cameraID)
+ 
+
+        #region Event Handling
+        //handle the relevant menu events
+        public virtual void EventDispatcher_MainMenu(EventData eventData)
         {
-            cameraLayout = cameraLayout.ToLower().Trim();
-            cameraID = cameraID.ToLower().Trim();
-
-            SetActiveCameraLayout(cameraLayout); //set to the appropriate layout
-            int index = 0;
-            Camera3D camera = null;
-
-            Find(cameraLayout, cameraID, out camera, out index); //find the camera
-            ActiveCameraIndex = index; //set to be active
-
-            return (camera != null); //true if we found the camera
+            if ((eventData.EventType == EventType.OnPlay) || (eventData.EventType == EventType.OnRestart))
+                this.bPaused = false;
+            else if (eventData.EventType == EventType.OnPause)
+                this.bPaused = true;
         }
-
-
-        public bool SetActiveCameraLayout(string cameraLayout)
+        public virtual void EventDispatcher_CameraChanged(EventData eventData)
         {
-            cameraLayout = cameraLayout.ToLower().Trim();
-
-            //if first time and NULL or not the same as current
-            if((this.activeCameraList == null) || (!this.activeCameraLayout.Equals(cameraLayout)))
-            {
-                //if layout exists in the dictionary
-                if(this.dictionary.ContainsKey(cameraLayout))
-                {
-                    this.activeCameraList = this.dictionary[cameraLayout];
-                    this.ActiveCameraIndex = 0;
-                    this.activeCameraLayout = cameraLayout;
-                    return true;
-                }
-            }
-            return false;
+            CameraEventData cameraEventData = eventData as CameraEventData;
+            SetCamera(cameraEventData.CameraLayout, cameraEventData.CameraID);
         }
+        #endregion
 
-        public void CycleCamera()
-        {
-            this.ActiveCameraIndex += 1;
-        }
 
         public void Add(string cameraLayout, Camera3D camera)
         {
-            cameraLayout = cameraLayout.ToLower().Trim();
-
-            if (this.dictionary.ContainsKey(cameraLayout))
+            if (this.cameraDictionary.ContainsKey(cameraLayout))
             {
-                List<Camera3D> list = this.dictionary[cameraLayout];
-                list.Add(camera);
+                List<Camera3D> list = this.cameraDictionary[cameraLayout];
+
+                if(!list.Contains(camera))
+                    list.Add(camera);
             }
             else
             {
                 List<Camera3D> list = new List<Camera3D>();
                 list.Add(camera);
-                this.dictionary.Add(cameraLayout, list);
+                this.cameraDictionary.Add(cameraLayout, list);
             }
         }
-        public bool Remove(string cameraLayout, 
-                                IFilter<Actor> filter)
+
+        public void Remove(string cameraLayout, string id)
         {
-            cameraLayout = cameraLayout.ToLower().Trim();
-
-            Camera3D camera = Find(cameraLayout, filter);
-            if (camera != null)
+            if (this.cameraDictionary.ContainsKey(cameraLayout))
             {
-                this.activeCameraList.Remove(camera);
-                return true;
-            }
+                List<Camera3D> list = this.cameraDictionary[cameraLayout];
 
-            return false;
-        }
-
-        public Camera3D Find(string cameraLayout,
-                                IFilter<Actor> filter)
-        {
-            if (this.dictionary.ContainsKey(cameraLayout))
-            {
-                List<Camera3D> list = this.dictionary[cameraLayout];
-                for (int i = 0; i < list.Count; i++)
+                foreach (Camera3D camera in list)
                 {
-                    if (filter.Matches(list[i]))
-                    {
-                        return list[i];
-                    }
-                } //for
-            } //if
-            return null;
+                    if(camera.ID.Equals(id))
+                        list.Remove(camera);
+                }
+            }
         }
 
-        //another form of Find method that uses a Predicate (this is functional programming)
-        public Camera3D Find(string cameraLayout, Predicate<Camera3D> predicate)
+        /// <summary>
+        /// Call to cycle through the camera in the current list
+        /// </summary>
+        public void CycleCamera()
         {
-            if (this.dictionary.ContainsKey(cameraLayout))
-            {
-                List<Camera3D> list = this.dictionary[cameraLayout];
-                return list.Find(predicate);
-            } //if
-            return null;
+            this.ActiveCameraIndex += 1;
         }
 
+        public bool SetCamera(string cameraLayout, string cameraID)
+        {
+            SetCameraLayout(cameraLayout); //set to the appropriate layout
+            int index = 0;
+            Camera3D camera = null;
 
+            FindCameraBy(cameraLayout, cameraID, out camera, out index); //find the camera
+            ActiveCameraIndex = index; //set to be active
 
+            return (camera != null); //true if we found the camera
+        }
 
-        public void Find(string cameraLayout, string cameraID,
+        public void FindCameraBy(string cameraLayout, string cameraID, 
             out Camera3D camera, out int index)
         {
             camera = null;
             index = -1;
 
-            List<Camera3D> list = this.dictionary[cameraLayout];
+            List<Camera3D> list = this.cameraDictionary[cameraLayout];
 
-            if (list != null)
+            if(list != null)
             {
-                for (int i = 0; i < list.Count; i++)
+                for(int i = 0; i < list.Count; i++)
                 {
-                    if (list[i].ID.Equals(cameraID))
+                    if(list[i].ID.Equals(cameraID))
                     {
                         camera = list[i];
                         index = i;
@@ -213,14 +173,44 @@ namespace GDLibrary
             }
         }
 
+        public void spinMap()
+        {
+
+        }
+
+        public bool SetCameraLayout(string cameraLayout)
+        {
+            //if first time and NULL or not the same as current
+            if((this.activeCameraList == null) || (!this.currentCameraLayout.Equals(cameraLayout)))
+            {
+                //if layout exists in the dictionary
+                if(this.cameraDictionary.ContainsKey(cameraLayout))
+                {
+                    this.activeCameraList = this.cameraDictionary[cameraLayout];
+                    this.ActiveCameraIndex = 0;
+                    this.currentCameraLayout = cameraLayout;
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+
         public override void Update(GameTime gameTime)
         {
             if (!this.bPaused)
             {
-                foreach (Camera3D camera in this.activeCameraList)
+                for (int i = 0; i < this.activeCameraList.Count; i++)
                 {
-                    this.activeCamera = camera; //do this do anything?
-                    camera.Update(gameTime);
+                    if (this.activeCameraList[i].ID.Equals("camRight"))
+                    {
+                        //Vector3 rotation = this.activeCameraList[i].Transform3D.Rotation;
+                        //Vector3 look = this.activeCameraList[i].Transform3D.Look;
+                        //this.activeCameraList[i].Transform3D.Look = (new Vector3(look.X, look.Y + 0.0001f, look.Z));
+                        //this.activeCameraList[i].Transform3D.Rotation = (new Vector3(rotation.X, rotation.Y+1, rotation.Z));
+                    }
+                     this.activeCameraList[i].Update(gameTime);
+                    
                 }
             }
             base.Update(gameTime);
