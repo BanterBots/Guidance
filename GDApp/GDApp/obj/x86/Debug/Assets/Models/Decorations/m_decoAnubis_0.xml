@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Anubis</Name>
     <Identity>
-      <SourceFilename>D:\SecondSight\Guidance\GDApp\GDAppContent\Assets\Models\Decorations\m_decoAnubis.FBX</SourceFilename>
+      <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Decorations\m_decoAnubis.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -36,7 +36,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>ANB201</Name>
       <Identity>
-        <SourceFilename>D:\SecondSight\Guidance\GDApp\GDAppContent\Assets\Models\Decorations\m_decoAnubis.FBX</SourceFilename>
+        <SourceFilename>C:\Users\ciara_000\Guidance\GDApp\GDAppContent\Assets\Models\Decorations\m_decoAnubis.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

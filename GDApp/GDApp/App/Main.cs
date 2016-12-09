@@ -718,7 +718,9 @@ namespace GDApp
             {
                 if (eventData.EventType == EventType.OnZoneExit)
                 {
-                    closeStartDoor();
+
+                    //this.startDoor.Transform3D.Translation;
+                    doorClose();
                     this.gameTimer = true;
                 }
             }
@@ -2064,7 +2066,7 @@ namespace GDApp
             //TileGrid tg = new TileGrid(size, 76, mazeTiles, this.texturedModelEffect, this.textureDictionary["crate1"], modelTypes, modelRotations);
             tg = new TileGrid(9, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, textures);
             tg.generateRandomGrid();
-            startDoor = tg.createDoorAt(0, 20, 0, this.textureDictionary["egypt"]); // can access the model from inside tg instead of mazetiles
+            this.startDoor = tg.createDoorAt(0, 20, 0, this.textureDictionary["egypt"]); // can access the model from inside tg instead of mazetiles
             make2DMazeMap(tg);
             for (int i = 0; i < tg.gridSize; i++)
             {
@@ -2166,7 +2168,7 @@ namespace GDApp
             //tg = new TileGrid(models, rotations, this.tileGridSize, mazeTiles, collisionTiles, this.texturedModelEffect, this.textureDictionary["egypt"], this.textureDictionary["redPotion"]);
 
             // DOOR
-            startDoor = tg.createDoorAt(0, 0, 0, this.textureDictionary["egypt"]);
+            this.startDoor = tg.createDoorAt(0, 0, 0, this.textureDictionary["egypt"]);
             for (int i = 0; i < tg.gridSize; i++)
             {
                 for (int j = 0; j < tg.gridSize; j++)
@@ -2401,7 +2403,7 @@ namespace GDApp
         {
             if (p != null)
             {
-                soundManager.Play3DCue("s_drinkingPotion", new AudioEmitter());
+                drinkSound();
 
 
                 PotionObject potion = p as PotionObject;
@@ -2475,13 +2477,6 @@ namespace GDApp
             //start effect
         }
 
-        
-        private void closeStartDoor()
-        {
-            //Predicate<ModelObject> doorPredicate;
-            this.soundManager.Play3DCue("s_doorClosing", new AudioEmitter());
-           // closeDoor(startDoor);
-        }
 
         private void closeDoor(ModelObject door)
         {
@@ -2490,6 +2485,7 @@ namespace GDApp
 
         private void finishGame()
         {
+            this.soundManager.PauseCue("bongobongoLoop");
             this.soundManager.Play3DCue("s_ambientRumble", new AudioEmitter());
             //End Game Stuff
         }
@@ -2535,27 +2531,51 @@ namespace GDApp
         #region Potion Effects
         private void gameEffects(GameTime gameTime)
         {
-            if (speed == true)
-                changeSpeed(1.5f, gameTime);
-            if (slow == true)
-                changeSpeed(-0.5f, gameTime);
-            if (reverse == true)
-                reverseControls(gameTime);
-            if (flip == true)
-                flipCamera(gameTime);
-            if (extraTime == true)
-                addExtraTime(10);
-            if (lessTime == true)
-                addExtraTime(-10);
-            if (blackout == true)
-                blackOutMap(gameTime);
-            if (mapSpin == true)
-                spinMap(gameTime);
+                if (speed == true)
+                {
+                    changeSpeed(1.5f, gameTime);
+                    positivePotion();
+                }
+                if (slow == true)
+                {
+                    changeSpeed(-0.5f, gameTime);
+                    negativePotion();
+                }
+                if (reverse == true)
+                {
+                    reverseControls(gameTime);
+                    negativePotion();
+                }
+                if (flip == true)
+                {
+                    flipCamera(gameTime);
+                    negativePotion();
+                }
+                if (extraTime == true)
+                {
+                    addExtraTime(10);
+                    positivePotion();
+                }
+                if (lessTime == true)
+                {
+                    addExtraTime(-10);
+                    negativePotion();
+                }
+                if (blackout == true)
+                {
+                    blackOutMap(gameTime);
+                    negativePotion();
+                }
+                if (mapSpin == true)
+                {
+                    spinMap(gameTime);
+                    negativePotion();
+                }
         }
 
         private void changeSpeed(float v, GameTime gameTime)
         {
-            soundManager.Play3DCue("s_positivePotion", new AudioEmitter());
+            //soundManager.Play3DCue("s_positivePotion", new AudioEmitter());
             //Change Players Speed by the passed in value for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
@@ -2579,7 +2599,7 @@ namespace GDApp
                     this.currentEffect = "none";
                     //Revert Change
                     GameData.PlayerMoveSpeed = this.tempValue;
-                    soundManager.Play3DCue("s_positivePotion", new AudioEmitter());
+                    //soundManager.Play3DCue("s_positivePotion", new AudioEmitter());
                     //reset bools
                     if (v > 0)
                         speed = false;
@@ -2596,7 +2616,7 @@ namespace GDApp
             //Change key bindings so forward is backwards, left is right and vice-versa
             if (this.timerRunning == false) //if it isn't currently running
             {
-                soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+                //soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
                 this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
@@ -2627,7 +2647,7 @@ namespace GDApp
 
                 }
 
-                soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+                //soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
             }
             else //when timer is running
             {
@@ -2663,7 +2683,7 @@ namespace GDApp
 
         private void flipCamera(GameTime gameTime)
         {
-            soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+            //soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
             //Rotate Player Camera 180 degrees for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
@@ -2706,7 +2726,7 @@ namespace GDApp
 
         private void addExtraTime(int v)
         {
-            soundManager.Play3DCue("s_positivePotion", new AudioEmitter());
+            //soundManager.Play3DCue("s_positivePotion", new AudioEmitter());
             //Add/Remove x miliseconds to Level Timer
             this.currentEffect = "none";
             v *= 1000;
@@ -2720,7 +2740,7 @@ namespace GDApp
 
         private void blackOutMap(GameTime gameTime)
         {
-            soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+            //soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
             //Black out Map screen for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
@@ -2765,7 +2785,8 @@ namespace GDApp
 
         private void spinMap(GameTime gameTime)
         {
-            soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+            //soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+            
             //Spin Map Screen for x number of seconds
             if (this.timerRunning == false) //if it isn't currently running
             {
@@ -2808,7 +2829,45 @@ namespace GDApp
             }
         }
 
+
+
         #endregion
+        #endregion
+
+        #region Sound Cues
+        private void drinkSound()
+        {
+            soundManager.Play3DCue("s_drinkingPotion", new AudioEmitter());
+        }
+
+        private void positivePotion()
+        {
+            soundManager.Play3DCue("s_positivePotion", new AudioEmitter());
+        }
+
+        private void negativePotion()
+        {
+            soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+        }
+        private void doorClose()
+        {
+            soundManager.Play3DCue("s_doorClosing", new AudioEmitter());
+        }
+
+        private void doorOpen()
+        {
+            soundManager.Play3DCue("s_doorOpening", new AudioEmitter());
+        }
+
+        private void footSteps()
+        {
+            soundManager.Play3DCue("s_footsteps", new AudioEmitter());
+        }
+
+        private void reversePotion()
+        {
+            soundManager.Play3DCue("s_reversePotion", new AudioEmitter());
+        }
         #endregion
         #endregion
 
@@ -2823,10 +2882,10 @@ namespace GDApp
             }
 
             //breath every 2 seconds
-            int seconds = (int)gameTime.TotalGameTime.TotalSeconds;
-            if (seconds % 12 == 0)
-                soundManager.PlayCue("s_breathing");
-
+            //int seconds = (int)gameTime.TotalGameTime.TotalSeconds;
+            //if (seconds % 12 == 0)
+            //   soundManager.PlayCue("s_breathing");
+            
             #region Potion Update
             // Run potion effects when needed
             gameEffects(gameTime);
