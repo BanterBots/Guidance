@@ -107,7 +107,7 @@ namespace GDLibrary
                 case EventCategoryType.Pickup:
                     OnPickup(eventData);
                     break;
-
+                    
                 //add a case to handle the On...() method for each type
 
                 default:

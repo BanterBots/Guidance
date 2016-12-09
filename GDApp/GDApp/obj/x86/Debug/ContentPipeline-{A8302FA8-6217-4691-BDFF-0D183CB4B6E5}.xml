@@ -2268,6 +2268,33 @@
       <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_positivePotion.xnb</Output>
       <Time>2016-12-09T09:59:36.5612632+00:00</Time>
     </Item>
+    <Item>
+      <Source>Assets\Audio\s_breathing.wav</Source>
+      <Name>Assets\Audio\s_breathing</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_breathing.xnb</Output>
+      <Time>2016-12-09T10:23:58.0871872+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Audio\s_footsteps.wav</Source>
+      <Name>Assets\Audio\s_footsteps</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_footsteps.xnb</Output>
+      <Time>2016-12-09T10:23:58.090181+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Assets\Audio\s_reversePotion.wav</Source>
+      <Name>Assets\Audio\s_reversePotion</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_reversePotion.xnb</Output>
+      <Time>2016-12-09T10:23:58.093206+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{A8302FA8-6217-4691-BDFF-0D183CB4B6E5}</ContentProjectGUID>

@@ -9,8 +9,8 @@
     Windows Bank Path Edited = 0;
     Seek Tables = 1;
     Compression Preset Name = &lt;none&gt;;
-    Bank Last Revised Low = 297889196;
-    Bank Last Revised High = 30560771;
+    Bank Last Revised Low = 1891728396;
+    Bank Last Revised High = 30560774;
 
     Wave
     {
@@ -239,6 +239,75 @@
             File Type = 1;
             Last Modified Low = 4075034712;
             Last Modified High = 30560770;
+        }
+    }
+
+    Wave
+    {
+        Name = s_breathing;
+        File = s_breathing.wav;
+        Build Settings Last Modified Low = 1851351538;
+        Build Settings Last Modified High = 30560774;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 1567432;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1510424768;
+            Last Modified High = 30560774;
+        }
+    }
+
+    Wave
+    {
+        Name = s_footsteps;
+        File = s_footsteps.wav;
+        Build Settings Last Modified Low = 1851351538;
+        Build Settings Last Modified High = 30560774;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 340808;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1510454706;
+            Last Modified High = 30560774;
+        }
+    }
+
+    Wave
+    {
+        Name = s_reversePotion;
+        File = s_reversePotion.wav;
+        Build Settings Last Modified Low = 1851351538;
+        Build Settings Last Modified High = 30560774;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 327848;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1510484956;
+            Last Modified High = 30560774;
         }
     }
 }

@@ -55,12 +55,16 @@ namespace GDLibrary
             //forward/backward
             if (game.KeyboardManager.IsKeyDown(this.MoveKeys[KeyData.KeysIndexMoveForward]))
             {
+                if(game.KeyboardManager.IsFirstKeyPress(this.MoveKeys[KeyData.KeysIndexMoveForward]))
+                    EventDispatcher.Publish(new EventData("movement", this, EventType.OnMove, EventCategoryType.Player));
                 Vector3 restrictedLook = this.ParentActor.Transform3D.Look;
                 restrictedLook.Y = 0;
                 this.playerObject.CharacterBody.Velocity += restrictedLook * GameData.PlayerMoveSpeed * gameTime.ElapsedGameTime.Milliseconds;
             }
             else if (game.KeyboardManager.IsKeyDown(this.MoveKeys[KeyData.KeysIndexMoveBackward]))
             {
+                if (game.KeyboardManager.IsFirstKeyPress(this.MoveKeys[KeyData.KeysIndexMoveBackward]))
+                    EventDispatcher.Publish(new EventData("movement", this, EventType.OnMove, EventCategoryType.Player));
                 Vector3 restrictedLook = this.ParentActor.Transform3D.Look;
                 restrictedLook.Y = 0;
                 this.playerObject.CharacterBody.Velocity -= restrictedLook * GameData.PlayerMoveSpeed * gameTime.ElapsedGameTime.Milliseconds;

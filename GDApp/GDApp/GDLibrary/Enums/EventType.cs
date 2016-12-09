@@ -3,7 +3,7 @@ namespace GDLibrary
 {
     public enum EventType : sbyte
     {
-        /*
+        
            //main menu
         OnMainMenuPlay,
         OnMainMenuExit,
@@ -58,7 +58,7 @@ namespace GDLibrary
 
         //pickups
         OnPickup,
-         */
+         
 
         //sent by menu, audio, video
         OnPlay,
@@ -71,22 +71,15 @@ namespace GDLibrary
         OnMute,
         OnClick,
         OnHover,
-
-        //zones
-        OnZoneEnter,
-        OnZoneExit,
-
-        //camera
-        OnCameraChanged,
+        
 
         //player or  nonplayer
         OnLoseHealth,
         OnGainHealth,
         OnLose,
         OnWin,
-
-        //pickups
-        OnPickup,
+        OnMove,
+        
 
         //text renderer event
         OnTextRender,

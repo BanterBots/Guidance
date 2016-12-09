@@ -179,6 +179,9 @@ Content\Assets\Audio\s_menuUIFeedback.xnb
 Content\Assets\Audio\s_negativePotion.xnb
 Content\Assets\Audio\s_playGameUIFeedback.xnb
 Content\Assets\Audio\s_positivePotion.xnb
+Content\Assets\Audio\s_breathing.xnb
+Content\Assets\Audio\s_footsteps.xnb
+Content\Assets\Audio\s_reversePotion.xnb
 Content\Assets\Video\sample.wmv
 Content\Assets\Audio\Demo2DSound.xgs
 Content\Assets\Audio\WaveBank1.xwb

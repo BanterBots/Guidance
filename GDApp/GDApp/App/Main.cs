@@ -686,6 +686,15 @@ namespace GDApp
             }
         }
 
+        private void eventDispatcher_PlayerChanged(EventData eventData)
+        {
+            if(eventData.EventType == EventType.OnMove)
+            {
+                soundManager.PlayCue("s_footsteps");
+            }
+        }
+
+
         private void eventDispatcher_ZoneChanged(EventData eventData)
         {
             if (eventData.ID == "potion")
@@ -722,7 +731,7 @@ namespace GDApp
                     {
                         this.gameTimer = false;
                         soundManager.PlayCue("s_doorOpening");
-                        soundManager.PauseCue("bongbongoLoop");
+                        soundManager.PauseCue("bongobongoLoop");
                         gameWon = true;
                     }
                 }
@@ -944,6 +953,7 @@ namespace GDApp
             this.eventDispatcher.MainMenuChanged += new EventDispatcher.MainMenuEventHandler(eventDispatcher_MainMenuChanged);
             this.eventDispatcher.PickupChanged += new EventDispatcher.PickupEventHandler(eventDispatcher_PickupChanged);
             this.eventDispatcher.ZoneChanged += new EventDispatcher.ZoneEventHandler(eventDispatcher_ZoneChanged);
+            this.eventDispatcher.PlayerChanged += new EventDispatcher.PlayerEventHandler(eventDispatcher_PlayerChanged);
             #endregion
 
             #region Demos
@@ -2506,7 +2516,7 @@ namespace GDApp
                     if ((float)gameTime.TotalGameTime.TotalMilliseconds < this.gameEndTime) //While Timer is active
                     {
                         //Dynamic Change
-
+                        
                         float timeGoneBy = ((float)gameTime.TotalGameTime.TotalMilliseconds - this.endTime) / 1000;
                         this.displayTime = this.timerLength - timeGoneBy;
                     }
@@ -2582,10 +2592,11 @@ namespace GDApp
 
         private void reverseControls(GameTime gameTime)
         {
-            soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
+            
             //Change key bindings so forward is backwards, left is right and vice-versa
             if (this.timerRunning == false) //if it isn't currently running
             {
+                soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
                 this.startTime = (float)gameTime.TotalGameTime.TotalMilliseconds; //get start time
                 this.endTime = this.startTime + 5000; //5 second timer
                 this.timerRunning = true; //set timer to running
@@ -2616,7 +2627,7 @@ namespace GDApp
 
                 }
 
-                
+                soundManager.Play3DCue("s_negativePotion", new AudioEmitter());
             }
             else //when timer is running
             {
@@ -2810,6 +2821,11 @@ namespace GDApp
             {
                this.Exit();
             }
+
+            //breath every 2 seconds
+            int seconds = (int)gameTime.TotalGameTime.TotalSeconds;
+            if (seconds % 12 == 0)
+                soundManager.PlayCue("s_breathing");
 
             #region Potion Update
             // Run potion effects when needed

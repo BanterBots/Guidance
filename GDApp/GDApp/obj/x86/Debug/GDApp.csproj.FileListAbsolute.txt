@@ -654,3 +654,6 @@ D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_menuUIF
 D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_negativePotion.xnb
 D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_playGameUIFeedback.xnb
 D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_positivePotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_breathing.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_footsteps.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_reversePotion.xnb
