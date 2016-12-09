@@ -937,10 +937,18 @@ namespace GDApp._3DTileEngine
                models[18],
                Color.White,
                1);
-            
 
-            door.AddPrimitive( new Box(transform.Translation, Matrix.Identity, new Vector3(20, 26, 15)), new MaterialProperties(0.2f, 0.8f, 0.7f));
-            
+            door.AddPrimitive(new Box(transform.Translation, Matrix.Identity, new Vector3(20, 26, 15)), new MaterialProperties(0.2f, 0.8f, 0.7f));
+
+            //ModelObject door = new ModelObject(
+            //   "door(" + x + "," + y + ")",
+            //   ObjectType.Pickup,
+            //   transform,
+            //   effect,
+            //   texture,
+            //   models[18],
+            //   Color.White,
+            //   1);
 
             door.AddController(new DoorController("door", door, true));
             return door;

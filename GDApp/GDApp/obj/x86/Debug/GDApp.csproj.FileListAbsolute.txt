@@ -646,3 +646,11 @@ D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_E
 D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Maze\m_EndRoom01_Col.xnb
 D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Models\Decorations\m_decoAnubis.xnb
 D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\anubis2bc_0.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_ambientRumble.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_doorClosing.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_doorOpening.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_drinkingPotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_menuUIFeedback.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_negativePotion.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_playGameUIFeedback.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_positivePotion.xnb

@@ -37,22 +37,22 @@ namespace GDLibrary
             {
                 if (this.lockDoor == false)
                 {
-                    CollidableObject actor = this.ParentActor as CollidableObject;
                     if (this.isDoorOpen != true)
                     {
-                        if (actor.Transform3D.Translation.Y > 12.5f)
+                        if (this.ParentActor.Transform3D.Translation.Y > 12.5f)
                         {
-                            actor.Transform3D.Translation -= 0.2f * Vector3.UnitY;
+                            this.ParentActor.Transform3D.Translation -= 0.2f * Vector3.UnitY;
                         }
                         else
                         {
+                            CollidableObject actor = this.ParentActor as CollidableObject;
                             this.lockDoor = true;
                             actor.Enable(true, 1);
                         }
                     }
                     else
                     {
-                        actor.Transform3D.Translation = new Vector3(actor.Transform3D.Translation.X, 30, this.ParentActor.Transform3D.Translation.Z);
+                        this.ParentActor.Transform3D.Translation = new Vector3(this.ParentActor.Transform3D.Translation.X, 30, this.ParentActor.Transform3D.Translation.Z);
                     }
                 }
             }
