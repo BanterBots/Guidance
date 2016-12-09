@@ -6,6 +6,7 @@ namespace GDLibrary
     public class DoorController : Controller
     {
         private bool isDoorOpen = true;
+        private bool lockDoor = false;
 
         public bool IsDoorOpen
         {
@@ -24,28 +25,34 @@ namespace GDLibrary
         {
             this.isDoorOpen = isDoorOpen;
         }
-       
+
+        
         public override void Update(GameTime gameTime)
         {
             game.EventDispatcher.ZoneChanged += new EventDispatcher.ZoneEventHandler(eventDispatcher_ZoneChanged);
 
-
-            //DOOR OPENED =>    z=30f 
-            //DOOR CLOSED =>    z=12.5f 
+            //DOOR OPENED =>    y = 30f
+            //DOOR CLOSED =>    y = 12.5f
             if (this.ParentActor != null)
             {
-                if(this.isDoorOpen == true)
-                    this.ParentActor.Transform3D.Translation = new Vector3(this.ParentActor.Transform3D.Translation.X, this.ParentActor.Transform3D.Translation.Y, 30);
-                else
+                if (this.lockDoor == false)
                 {
-                    if(this.ParentActor.Transform3D.Translation.Y > 12.5f)
+                    CollidableObject actor = this.ParentActor as CollidableObject;
+                    if (this.isDoorOpen != true)
                     {
-                        float sinTime = (float)Math.Sin(MathHelper.ToRadians(300 * (float)gameTime.TotalGameTime.TotalSeconds));
-
-                        sinTime *= 0.5f; //-0.5f -> + 0.5f
-                        sinTime += 0.5f; //0 -> 1
-
-                        this.ParentActor.Transform3D.Translation = this.ParentActor.Transform3D.OriginalTranslation - sinTime * 10 * Vector3.UnitY;
+                        if (actor.Transform3D.Translation.Y > 12.5f)
+                        {
+                            actor.Transform3D.Translation -= 0.2f * Vector3.UnitY;
+                        }
+                        else
+                        {
+                            this.lockDoor = true;
+                            actor.Enable(true, 1);
+                        }
+                    }
+                    else
+                    {
+                        actor.Transform3D.Translation = new Vector3(actor.Transform3D.Translation.X, 30, this.ParentActor.Transform3D.Translation.Z);
                     }
                 }
             }
