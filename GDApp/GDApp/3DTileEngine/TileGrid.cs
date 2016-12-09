@@ -31,7 +31,7 @@ namespace GDApp._3DTileEngine
         public int[] tileInfo;
 
         // Generation settings
-        private int minTiles = 5;
+        private int minTiles = 15;
         private int tiles = 0;
 
         // Regeneration list
@@ -120,14 +120,18 @@ namespace GDApp._3DTileEngine
 
                 // END TILES
                 createEndTileAt(gridSize - 1, gridSize - 1, 7, 2);
-                createTileAt(gridSize - 1, gridSize - 2, 1, 2);
 
                 // RANDOM CHAINS
                 createRandomChainAt(0, 2, 3);
-                createRandomChainAt(gridSize - 1, gridSize - 3, 1);
+
+                // CONNECT END TO CHAIN
+                connectEndTile();
+
+                //createRandomChainAt(gridSize - 1, gridSize - 3, 1);
+
 
                 // REGENERATE EXIT
-                regenCoords.Add(new Integer3(gridSize - 1, gridSize - 3, 1));
+                //regenCoords.Add(new Integer3(gridSize - 1, gridSize - 3, 1));
 
                 if (tiles < minTiles)
                 {
@@ -731,6 +735,50 @@ namespace GDApp._3DTileEngine
         #endregion
 
         #region Objects In Maze Creation
+        private void connectEndTile()
+        {
+            bool connection = false;
+            int westOffset = 2;
+            while (!connection)
+            {
+                if(westOffset > gridSize)
+                {
+                    break;
+                }
+                // If the north tile is not null
+                if (grid[gridSize - 2, gridSize - westOffset] != null)
+                {
+                    // If the west tile is not null
+                    if (grid[gridSize - 1, gridSize - westOffset] != null)
+                    {         
+                        //Create a T
+                        createTileAt(gridSize - 1, gridSize - westOffset, 3, -1);
+                        regenCoords.Add(new Integer3(gridSize - 2, gridSize - westOffset, 2));      // REGEN TILE TO THE NORTH
+                        regenCoords.Add(new Integer3(gridSize - 1, gridSize - westOffset - 1, 1));  // REGEN TILE TO THE WEST :)
+                        connection = true;
+                        break;
+
+                        
+                    }
+                    else
+                    {
+                        // Create a corner
+                        createTileAt(gridSize - 1, gridSize - westOffset, 2, -2);
+                        regenCoords.Add(new Integer3(gridSize - 2, gridSize - westOffset, 2));      // REGEN TILE TO THE NORTH
+                        connection = true;
+                        break;
+                    }
+
+                }
+                else
+                {
+                    // Create a straight
+                    createTileAt(gridSize - 1, gridSize - westOffset, 1, 2);
+                    westOffset = westOffset + 1;
+                }
+            }
+        }
+
         public ModelTileObject createFreeTileAt(int x, int y, int z, int model, int rotation)
         {
             Transform3D transform = new Transform3D(
