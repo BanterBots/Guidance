@@ -45,24 +45,24 @@ namespace GDLibrary
         internal static int TextureIndexOnlineMenu = 4;
 
         //bounding rectangles used to detect mouse over
-        public static Rectangle BoundsMenuPlay = new Rectangle(370, 250, 290, 110); //x, y, width, height
-        public static Rectangle BoundsMenuSplitScreen = new Rectangle(660, 250, 290, 110);
-        public static Rectangle BoundsMenuOnline = new Rectangle(80, 250, 290, 110);
-        public static Rectangle BoundsMenuRestart = new Rectangle(50, 100, 290, 110);
-        public static Rectangle BoundsMenuAudio = new Rectangle(370, 410, 290, 110);
-        public static Rectangle BoundsMenuControls = new Rectangle(50, 200, 290, 110);
-        public static Rectangle BoundsMenuExit = new Rectangle(370, 575, 290, 110);
+        public static Rectangle BoundsMenuPlay = new Rectangle(295, 200, 230, 85); //x, y, width, height
+        public static Rectangle BoundsMenuSplitScreen = new Rectangle(600, 200, 230, 85);
+        public static Rectangle BoundsMenuOnline = new Rectangle(30, 200, 230, 85);
+        public static Rectangle BoundsMenuRestart = new Rectangle(50, 100, 230, 85);
+        public static Rectangle BoundsMenuAudio = new Rectangle(295, 330, 230, 85);
+        public static Rectangle BoundsMenuControls = new Rectangle(295, 200, 230, 85);
+        public static Rectangle BoundsMenuExit = new Rectangle(295, 460, 230, 85);
 
-        public static Rectangle BoundsMenuBack = new Rectangle(370, 575, 290, 110);
-        public static Rectangle BoundsMenuVolumeUp = new Rectangle(690, 250, 140, 100);
-        public static Rectangle BoundsMenuVolumeDown = new Rectangle(220, 250, 140, 100);
-        public static Rectangle BoundsMenuVolumeMute = new Rectangle(370, 410, 290, 110);
+        public static Rectangle BoundsMenuBack = new Rectangle(295, 460, 230, 85);
+        public static Rectangle BoundsMenuVolumeUp = new Rectangle(540, 200, 100, 90);
+        public static Rectangle BoundsMenuVolumeDown = new Rectangle(175, 200, 100, 90);
+        public static Rectangle BoundsMenuVolumeMute = new Rectangle(295, 330, 230, 85);
 
-        public static Rectangle BoundsMenuExitYes = new Rectangle(157, 250, 220, 100);
-        public static Rectangle BoundsMenuExitNo = new Rectangle(650, 250, 220, 100);
+        public static Rectangle BoundsMenuExitYes = new Rectangle(130, 200, 180, 85);
+        public static Rectangle BoundsMenuExitNo = new Rectangle(530, 200, 180, 85);
 
-        public static Rectangle BoundsMenuHost = new Rectangle(157, 250, 220, 100);
-        public static Rectangle BoundsMenuClient = new Rectangle(650, 250, 220, 100);
+        public static Rectangle BoundsMenuHost = new Rectangle(175, 200, 220, 100);
+        public static Rectangle BoundsMenuClient = new Rectangle(540, 200, 220, 100);
         #endregion
 
         #region UI Menu

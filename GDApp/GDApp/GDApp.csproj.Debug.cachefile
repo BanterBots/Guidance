@@ -182,6 +182,9 @@ Content\Assets\Models\Maze\BaseTile01_Diffuse_0.xnb
 Content\Assets\Models\ModelTextures\BaseTile01_Diffuse_0.xnb
 Content\Assets\Models\Items\FlatColourTexture_0.xnb
 Content\anubis2bc_0.xnb
+Content\Assets\Textures\Menu\lose.xnb
+Content\Assets\Textures\Menu\win.xnb
+Content\Assets\Textures\Menu\blank.xnb
 Content\Assets\Video\sample.wmv
 Content\Assets\Audio\Demo2DSound.xgs
 Content\Assets\Audio\WaveBank1.xwb

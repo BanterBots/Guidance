@@ -405,11 +405,9 @@ namespace GDApp
         private GenericDictionary<string, Camera3DTrack> trackDictionary;
 
         private EventDispatcher eventDispatcher;
+        
 
-        //temp demo vars
-        private MoveableModelObject playerActor;
-
-        Vector2 positionOffset = new Vector2(0, 25);
+        Vector2 positionOffset = new Vector2(0, 25), positionOffsetX = new Vector2(25,0);
         Color debugColor = Color.Red;
         SpriteFont debugFont = null;
         private Effect animatedModelEffect;
@@ -418,8 +416,8 @@ namespace GDApp
         private float mazeWidth = 0;
         private float mazeHeight = 0;
         private float tileGridSize = 76.20f;
-        private int width = 1920; //2048
-        private int height = 617; //768
+        private int width = 3360; //1920; //2048
+        private int height = 1080; //617; //768
         
 
         // NETWORK
@@ -441,7 +439,7 @@ namespace GDApp
         //EFFECT TIMERS
         private float startTime = 0;
         private float endTime;
-        private bool timerRunning = false, otherTimerRunning = false;
+        private bool timerRunning = false;
         private float tempValue;
         private TexturedPrimitiveObject[,] activePotionIcons;
 
@@ -460,7 +458,6 @@ namespace GDApp
 
         // Game Objects
         ModelObject startDoor;
-        ModelObject endDoor;
 
         #endregion
 
@@ -806,7 +803,9 @@ namespace GDApp
             this.textureDictionary.Add("audiomenu", Content.Load<Texture2D>("Assets/Textures/Menu/audiomenu"));
             this.textureDictionary.Add("controlsmenu", Content.Load<Texture2D>("Assets/Textures/Menu/controlsmenu"));
             this.textureDictionary.Add("exitmenuwithtrans", Content.Load<Texture2D>("Assets/Textures/Menu/exitmenuwithtrans"));
-
+            this.textureDictionary.Add("winScreen", Content.Load<Texture2D>("Assets/Textures/Menu/win"));
+            this.textureDictionary.Add("loseScreen", Content.Load<Texture2D>("Assets/Textures/Menu/lose"));
+            this.textureDictionary.Add("blank", Content.Load<Texture2D>("Assets/Textures/Menu/blank"));
         }
 
         private void InitalizeModels()
@@ -898,17 +897,7 @@ namespace GDApp
 
             //setup the world and all its objects
             int worldScale = 1000;
-            #region Non Collidable Primitives
-            InitializeSkyBox(worldScale);
-            InitializeNonCollidablePrimitives();
-            InitializeNonCollidableBillboards();
- 
-            #endregion
 
-            #region Non Collidable Models
-            InitializeNonCollidableModels();
-
-            #endregion
 
             #region Collidable
             // GUIDANCE
@@ -916,18 +905,9 @@ namespace GDApp
             InitializeMaze(size);
 
             InitializeStaticCollidableGround(worldScale);
-            InitializeStaticTriangleMeshObjects();
-            InitializeDynamicCollidableObjects();
-            InitializePlayerObjects();
-            InitializeAnimatedPlayerObjects();
-            InitializeZoneObjects();
             #endregion
-
-            InitializeCameraTracks();
+            
             InitializeCameras();
-            InitializeUI();
-            //this.soundManager.PlayCue("bongobongoLoop");
-
             //initializeServer();
         }
 
@@ -957,11 +937,7 @@ namespace GDApp
             this.eventDispatcher.ZoneChanged += new EventDispatcher.ZoneEventHandler(eventDispatcher_ZoneChanged);
             this.eventDispatcher.PlayerChanged += new EventDispatcher.PlayerEventHandler(eventDispatcher_PlayerChanged);
             #endregion
-
-            #region Demos
-            demoPathFinding();
-            #endregion
-
+            
             base.Initialize();
         }
 
@@ -976,21 +952,8 @@ namespace GDApp
             IVertexData vertexData = null;
             Microsoft.Xna.Framework.Graphics.PrimitiveType primitiveType;
             int primitiveCount;
-            VertexPositionColor[] vertices = null;                  //anything wireframe
-            VertexPositionColorTexture[] texturedVertices = null;   //anything with a texture!
-            /*
-            #region Origin Helper
-            vertices = VertexInfo.GetVerticesPositionColorOriginHelper(out primitiveType, out primitiveCount);
-            vertexData = new VertexData<VertexPositionColor>(vertices, primitiveType, primitiveCount);
-            this.vertexDictionary.Add("origin", vertexData);
-            #endregion
-
-            #region Sphere
-            vertices = VertexInfo.GetVerticesPositionColorSphere(1, 15, out primitiveType, out primitiveCount);
-            vertexData = new VertexData<VertexPositionColor>(vertices, primitiveType, primitiveCount);
-            this.vertexDictionary.Add("sphere", vertexData);
-            #endregion
-            */
+            VertexPositionColorTexture[] texturedVertices = null; 
+            
             #region Textured Quad (e.g. sky, signs, billboards)
             texturedVertices = VertexInfo.GetVerticesPositionColorTextureQuad(1, out primitiveType, out primitiveCount);
             vertexData = new VertexData<VertexPositionColorTexture>(texturedVertices, primitiveType, primitiveCount);
@@ -998,88 +961,7 @@ namespace GDApp
             #endregion
 
         }
-
-        private void InitializeUI()
-        {
-            InitializeUIInventoryMenu();
-            InitializeUIMousePointer();
-        }
-
-        private void InitializeUIMousePointer()
-        {
-            /*
-            Transform2D transform = null;
-            Texture2D texture = null;
-            Microsoft.Xna.Framework.Rectangle sourceRectangle;
-
-            //texture
-            texture = this.textureDictionary["mouseicons"];
-            transform = new Transform2D(Vector2.One);
-
-            //show first of three images from the file
-            sourceRectangle = new Microsoft.Xna.Framework.Rectangle(0, 0, 128, 128);
-
-            UITextureObject texture2DObject = new UIMouseObject("mouse icon",
-                ObjectType.UITexture2D, transform, new Color(127, 127, 127, 50),
-                SpriteEffects.None, 1, texture, 
-                sourceRectangle,
-                new Vector2(sourceRectangle.Width / 2.0f, sourceRectangle.Height / 2.0f),
-                true);
-            this.uiManager.Add(texture2DObject);
-            */
-        }
-
-        private void InitializeUIInventoryMenu()
-        {
-            /*
-            Transform2D transform = null;
-            SpriteFont font = null;
-            Texture2D texture = null;
-
-            //text
-            font = this.fontDictionary["ui"];
-            String text = "help me!";
-            Vector2 dimensions = font.MeasureString(text);
-            transform = new Transform2D(new Vector2(50, 600), 0, Vector2.One, Vector2.Zero, new Integer2(dimensions));
-            UITextObject textObject = new UITextObject("test1", ObjectType.UIText, transform, new Color(15, 15, 15, 150), SpriteEffects.None, 0, "help", font, true);
-            this.uiManager.Add(textObject);
-
-            //texture
-            texture = this.textureDictionary["white"];
-            transform = new Transform2D(new Vector2(40, 590), 0, new Vector2(4, 4), Vector2.Zero, new Integer2(texture.Width, texture.Height));
-            UITextureObject texture2DObject = new UITextureObject("texture1", 
-                ObjectType.UITexture2D, transform, new Color(127, 127, 127, 50), 
-                SpriteEffects.None, 1, texture, true);
-            this.uiManager.Add(texture2DObject);
-            */
-        }
-       
-        private void InitializeCameraTracks()
-        {
-            /*
-            Camera3DTrack cameraTrack = null;
-
-            cameraTrack = new Camera3DTrack(CurveLoopType.Oscillate);
-            cameraTrack.Add(new Vector3(-20, 10, 10), -Vector3.UnitZ, Vector3.UnitY, 0);
-            cameraTrack.Add(new Vector3(20, 5, 10), -Vector3.UnitZ, Vector3.UnitY, 5);
-            cameraTrack.Add(new Vector3(50, 5, 10), -Vector3.UnitX, Vector3.UnitY, 10);
-
-            this.trackDictionary.Add("simple", cameraTrack);
-
-            cameraTrack = new Camera3DTrack(CurveLoopType.Oscillate);
-            //start
-            cameraTrack.Add(new Vector3(0, 2, 0), -Vector3.UnitY, Vector3.UnitZ, 0);
-            //fast
-            cameraTrack.Add(new Vector3(0, 100, 0), Vector3.UnitZ, Vector3.UnitY, 5);
-            //slow
-            cameraTrack.Add(new Vector3(0, 105, 0), Vector3.UnitZ, Vector3.UnitY, 7);
-            //fall
-            cameraTrack.Add(new Vector3(0, 2, 0), -Vector3.UnitY, Vector3.UnitZ, 8);
-
-            this.trackDictionary.Add("puke", cameraTrack);
-            */
-        }
-
+        
         private void InitializeDictionaries()
         {
             this.textureDictionary = new GenericDictionary<string, Texture2D>("textures");
@@ -1129,7 +1011,7 @@ namespace GDApp
             this.mouseManager.SetPosition(this.screenCentre); 
             Components.Add(this.mouseManager);
 
-            bool bDebugMode = true;
+            bool bDebugMode = false;
             this.objectManager = new ObjectManager(this, 10, 10, bDebugMode);
             this.objectManager.DrawOrder = 1;
             Components.Add(this.objectManager);
@@ -1431,97 +1313,6 @@ namespace GDApp
         #endregion
 
         #region Initialize Drawn Objects
-        private void InitializeZoneObjects()
-        {/*
-            #region Camera Switcher Zone
-            Transform3D transform3D = new Transform3D(new Vector3(40, 0, 0),
-                Vector3.Zero, new Vector3(20, 5, 10),
-                Vector3.UnitX, Vector3.UnitY); //look and up dont matter and arent used for anything
-
-            CameraZoneObject zoneObject = new CameraZoneObject("alarm zone 1",
-                ObjectType.CollidableTriggerZone, transform3D, 
-                this.primitiveEffect, Color.Red, 1,
-                false, "FirstPersonFullScreen", "non-collidable front left fixed");
-
-            //no mass so we disable material properties
-            zoneObject.AddPrimitive(new Box(transform3D.Translation, Matrix.Identity, transform3D.Scale));
-            //enabled by default
-            zoneObject.Enable(true);
-
-            this.objectManager.Add(zoneObject);
-            #endregion
-            */
-        }
-
-        private void InitializePlayerObjects()
-        {
-            /*
-            PlayerObject playerObject = null;
-            Transform3D transform3D = null;
-
-            transform3D = new Transform3D(new Vector3(60, 5, -50),
-                Vector3.Zero, new Vector3(1.5f, 1.5f, 5), //scale?
-                Vector3.UnitZ, Vector3.UnitY);
-
-            playerObject = new PlayerObject("p1",
-                ObjectType.Player, transform3D,
-                this.texturedModelEffect,
-                this.textureDictionary["slj"],
-                this.modelDictionary["cube"], 
-                Color.White,
-                1, 
-                KeyData.MoveKeysOther, 1, 5, 1.2f, 1, Vector3.Zero);
-            playerObject.Enable(false, 1);
-
-            this.objectManager.Add(playerObject);
-            */
-        }
-        
-        private void InitializeAnimatedPlayerObjects()
-        {
-            /*
-            AnimatedPlayerObject playerObject = null;
-            Transform3D transform3D = null;
-
-            transform3D = new Transform3D(new Vector3(20, 20, 20),
-                new Vector3(-90, 0, 0),
-                 0.1f * Vector3.One, //y-z are reversed because the capsule is rotation by 90 degrees around X-axis - See CharacterObject constructor
-                 -Vector3.UnitZ, Vector3.UnitY);
-
-            playerObject = new AnimatedPlayerObject("ap1",
-                ObjectType.AnimatedPlayer, transform3D,
-                this.animatedModelEffect,
-                this.textureDictionary["slj"],
-                this.modelDictionary["dude"],
-                Color.White,
-                1,
-                KeyData.MoveKeysAnimated, 1.5f, 5, 1, 1,
-                "Take 001", new Vector3(0, -4, 0));
-            playerObject.Enable(false, 1);
-      
-
-            this.objectManager.Add(playerObject);
-            */
-        }
-        
-        private void InitializeStaticTriangleMeshObjects()
-        {
-            /*
-            CollidableObject collidableObject = null;
-            Transform3D transform3D = null;
-
-            transform3D = new Transform3D(new Vector3(-5, 0.5f, 0),
-                new Vector3(45, 0, 0), 0.05f * Vector3.One, Vector3.UnitX, Vector3.UnitY);
-            collidableObject = new TriangleMeshObject("torus", ObjectType.CollidableProp,
-            transform3D, this.texturedModelEffect,
-            this.textureDictionary["grass1"], this.modelDictionary["torus"],
-                Color.White, 1,
-                new MaterialProperties(0.2f, 0.8f, 0.7f));
-            collidableObject.Enable(true, 1);
-            collidableObject.ObjectType = ObjectType.Pickup;
-            this.objectManager.Add(collidableObject);
-            */
-        }
 
         private void InitializeStaticCollidableGround(int scale)
         {
@@ -1550,361 +1341,10 @@ namespace GDApp
             this.objectManager.Add(collidableObject);
             
         }
-
-        private void InitializeDynamicCollidableObjects()
-        {
-            /*
-            CollidableObject collidableObject = null;
-            Transform3D transform3D = null;
-            Texture2D texture = null;
-            Model model = null;
-
-            #region Spheres
-            //these boxes, spheres and cylinders are all centered around (0,0,0) in 3DS Max
-            model = this.modelDictionary["sphere"];
-            texture = this.textureDictionary["crate1"];
-            for (int i = 0; i < 10; i++)
-            {
-                transform3D = new Transform3D(
-                    new Vector3(-5, 20 + 8 * i, i),
-                    new Vector3(0, 0, 0),
-                    0.082f * Vector3.One, //notice theres a certain amount of tweaking the radii with reference to the collision sphere radius of 2.54f below
-                    Vector3.UnitX, Vector3.UnitY);
-                collidableObject = new CollidableObject("sphere " + i,
-                    ObjectType.CollidableProp, transform3D, this.texturedModelEffect, texture, model,
-                     Color.White, 1);
-                collidableObject.AddPrimitive(
-                    new Sphere(transform3D.Translation, 2.54f),
-                    new MaterialProperties(0.2f, 0.8f, 0.7f));
-                collidableObject.Enable(true, 1);
-                collidableObject.ObjectType = ObjectType.Pickup;
-                this.objectManager.Add(collidableObject);
-            }
-            #endregion
-
-            #region Box
-            model = this.modelDictionary["cube"];
-            texture = this.textureDictionary["crate1"];
-
-            for (int i = 0; i < 10; i++)
-            {
-                transform3D = new Transform3D(
-                        new Vector3(-20, 5 + 8 * i, i),
-                        new Vector3(0, 0, 0),
-                        3 * Vector3.One, 
-                        Vector3.UnitX, Vector3.UnitY);
-
-                collidableObject = new CollidableObject("cube",
-                    ObjectType.CollidableProp, transform3D, this.texturedModelEffect, texture, model, Color.White, 1);
-
-                collidableObject.AddPrimitive(
-                    new Box(Vector3.Zero, Matrix.Identity, transform3D.Scale),
-                    new MaterialProperties(0.2f, 0.8f, 0.7f));
-
-                collidableObject.Enable(false, 1);
-                collidableObject.ObjectType = ObjectType.Pickup;
-                this.objectManager.Add(collidableObject);
-            }
-
-            #endregion*/
-        }
-
-        private void InitializeNonCollidableModels()
-        {/*
-            Transform3D transform = null;
-            transform = new Transform3D(new Vector3(-30, 25, 20),
-                new Vector3(45, 0, 45), 0.5f * Vector3.One,
-                Vector3.UnitX, Vector3.UnitY);
-            this.playerActor = new MoveableModelObject("m",
-                ObjectType.Player, transform,
-                this.texturedModelEffect,
-                this.textureDictionary["crate1"],
-                this.modelDictionary["box"],
-                Color.White, 0.8f, 
-                KeyData.MoveKeys);
-
-            playerActor.AddController(new Video3DController("vc1", playerActor,
-        this.textureDictionary["crate1"], this.videoDictionary["sample"], "sample.wmv", 0.1f, 0.5f));
-
-
-            this.objectManager.Add(this.playerActor);*/
-        }
-
-        private void InitializeSkyBox(int scale)
-        {
-        /*
-            VertexPositionColorTexture[] vertices = VertexFactory.GetTextureQuadVertices();
-
-            Transform3D transform = null;
-            TexturedPrimitiveObject texturedPrimitive = null, clone = null;
-            IVertexData vertexData = null;
-            int halfScale = scale / 2;
-
-            //back
-            transform = new Transform3D(new Vector3(0, 0, -halfScale), new Vector3(0, 0, 0), scale * Vector3.One, Vector3.UnitZ, Vector3.UnitY);
-            vertexData = this.vertexDictionary["texturedquad"];
-            texturedPrimitive = new TexturedPrimitiveObject("sky", ObjectType.Decorator,
-            transform, vertexData, this.texturedPrimitiveEffect, Color.White, 1, this.textureDictionary["back"]);              
-            this.objectManager.Add(texturedPrimitive);
-
-            //top
-            clone = (TexturedPrimitiveObject)texturedPrimitive.Clone();
-            clone.Texture = this.textureDictionary["sky"];
-            clone.Transform3D.Translation = new Vector3(0, halfScale, 0);
-            clone.Transform3D.Rotation = new Vector3(90, -90, 0);
-            this.objectManager.Add(clone);
-
-            //left
-            clone = (TexturedPrimitiveObject)texturedPrimitive.Clone();
-            clone.Texture = this.textureDictionary["left"];
-            clone.Transform3D.Translation = new Vector3(-halfScale, 0, 0);
-            clone.Transform3D.Rotation = new Vector3(0, 90, 0);
-            this.objectManager.Add(clone);
-
-            //right
-            clone = (TexturedPrimitiveObject)texturedPrimitive.Clone();
-            clone.Texture = this.textureDictionary["right"];
-            clone.Transform3D.Translation = new Vector3(halfScale, 0, 0);
-            clone.Transform3D.Rotation = new Vector3(0, -90, 0);
-            this.objectManager.Add(clone);
-
-            //front
-            clone = (TexturedPrimitiveObject)texturedPrimitive.Clone();
-            clone.Texture = this.textureDictionary["front"];
-            clone.Transform3D.Translation = new Vector3(0, 0, halfScale);
-            clone.Transform3D.Rotation = new Vector3(0, 180, 0);
-            this.objectManager.Add(clone);
-            */
-        }
-
-        private void InitializeNonCollidablePrimitives()
-        {
-            /*
-            //Origin
-            Transform3D transform = null;
-            PrimitiveObject primitiveObject = null;
-            IVertexData vertexData = null;
-
-            //origin helper
-            transform = new Transform3D(new Vector3(0, 5, -10), Vector3.Zero, 4 * Vector3.One, Vector3.UnitX, Vector3.UnitY);
-            vertexData = this.vertexDictionary["origin"];
-            primitiveObject = new PrimitiveObject("origin", ObjectType.Helper, transform, vertexData, this.primitiveEffect, Color.White, 1);
-            this.objectManager.Add(primitiveObject);
-            */
-            
-        }
-
-        private void AddNonCollidableVideoBillboards()
-        {
-            //BillboardPrimitiveObject billboardPrimitiveObject = null;
-            //Texture2D texture = null;
-            //Transform3D transform = null;
-            //IVertexData vertexData = PrimitiveFactory.GetVertexDataInstance(this.GraphicsDevice, PrimitiveFactory.GeometryType.BillboardQuad, PrimitiveFactory.StorageType.Buffered);
-
-            ////since its video it doesnt matter what the start texture is
-            //texture = this.textureDictionary["tv"];
-            ////rotate on +ve X just to look like its hanging on a wall
-            ////notice that we scale very small because we later scale up by actual video width and height - see 4 lines down
-            //transform = new Transform3D(new Vector3(0, 30, 20), new Vector3(22.5f, 0, 0), new Vector3(0.015f, 0.015f, 1), Vector3.UnitZ, Vector3.UnitY);
-            //billboardPrimitiveObject = new BillboardPrimitiveObject(this, transform, this.billboardEffect, vertexData, texture, Color.White, 1f, BillboardType.Normal);
-
-            //Video sampleVideo = this.videoDictionary["sample"];
-            //billboardPrimitiveObject.Transform.Scale *= new Vector3(sampleVideo.Width, sampleVideo.Height, 1);
-            //billboardPrimitiveObject.ObjectController = new Video3DController(this, "tv1", billboardPrimitiveObject, sampleVideo, "uniqueNameForVideo", 0.05f, 0.1f);
-            //this.objectManager.Add(billboardPrimitiveObject);
-        }
-
-        private void InitializeNonCollidableBillboards()
-        {
-            /*
-            BillboardPrimitiveObject billboardArchetypeObject = null, cloneBillboardObject = null;
-
-            //archetype - clone from this
-            billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard, 
-                Transform3D.Zero, //transform reset in clones
-                this.vertexDictionary["texturedquad"], 
-                this.billboardEffect, Color.White, 1, 
-                this.textureDictionary["white"],
-                BillboardType.Normal); //texture reset in clones
-
-            #region Normal
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.BillboardType = BillboardType.Spherical;
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(0, 5, -10), Vector3.Zero, 4 * Vector3.One, Vector3.UnitZ, Vector3.UnitY);
-            cloneBillboardObject.Texture = this.textureDictionary["chevron1"];
-            this.objectManager.Add(cloneBillboardObject);
-            #endregion
-
-            
-            #region Normal Scrolling
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(-15, 5, -10), new Vector3(45, 0, 0), new Vector3(16, 10, 1), Vector3.UnitX, Vector3.UnitY);
-            cloneBillboardObject.Alpha = 0.4f; //remember we can set alpha
-            cloneBillboardObject.Texture = this.textureDictionary["ml"];
-            cloneBillboardObject.BillboardParameters.SetScrolling(true);
-            cloneBillboardObject.BillboardParameters.SetScrollRate(new Vector2(0, -50));
-            this.objectManager.Add(cloneBillboardObject);
-            #endregion
-
-            #region Normal Animated
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(15, 5, -10), new Vector3(0, 0, 0), new Vector3(4, 4, 1), Vector3.UnitX, Vector3.UnitY);
-            cloneBillboardObject.Texture = this.textureDictionary["alarm2"];
-            cloneBillboardObject.Color = Color.Red;
-            cloneBillboardObject.BillboardParameters.SetAnimated(true);
-            cloneBillboardObject.BillboardParameters.SetAnimationRate(4, 1, 0);
-            this.objectManager.Add(cloneBillboardObject);
-            #endregion
-
-            #region Normal Scrolling - Snow
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(20, -25, -10), new Vector3(0, 0, 0), new Vector3(25, 25, 1), Vector3.UnitX, Vector3.UnitY);
-            cloneBillboardObject.Texture = this.textureDictionary["snow1"];
-            cloneBillboardObject.BillboardParameters.SetScrolling(true);
-            cloneBillboardObject.BillboardParameters.SetScrollRate(new Vector2(5, -15));
-            this.objectManager.Add(cloneBillboardObject);
-
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(20, -25, -15), new Vector3(0, 30, 0), new Vector3(25, 25, 1), Vector3.UnitX, Vector3.UnitY);
-            cloneBillboardObject.Texture = this.textureDictionary["snow1"];
-            cloneBillboardObject.BillboardParameters.SetScrolling(true);
-            cloneBillboardObject.BillboardParameters.SetScrollRate(new Vector2(3, -10));
-            this.objectManager.Add(cloneBillboardObject);
-
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(20, -25, -20), new Vector3(0, -15, 0), new Vector3(25, 25, 1), Vector3.UnitX, Vector3.UnitY);
-            cloneBillboardObject.Texture = this.textureDictionary["snow1"];
-            cloneBillboardObject.BillboardParameters.SetScrolling(true);
-            cloneBillboardObject.BillboardParameters.SetScrollRate(new Vector2(1, -6));
-            this.objectManager.Add(cloneBillboardObject);
-            #endregion
-
-            #region Normal Text To Texture
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(-30, 5f, 20), new Vector3(0, 0, 0), 
-                new Vector3(20, 5, 1), Vector3.UnitX, Vector3.UnitY);
-            cloneBillboardObject.Texture = this.textureDictionary["white"];
-            cloneBillboardObject.AddController(new TextRendererController("trc1", cloneBillboardObject, 
-                this.fontDictionary["ui"], "Press V to play video", Color.Black, 
-                new Color(255, 0, 255, 0)));
-            this.objectManager.Add(cloneBillboardObject);
-            #endregion
-
-            #region Normal Video
-            cloneBillboardObject = (BillboardPrimitiveObject)billboardArchetypeObject.Clone();
-            cloneBillboardObject.Transform3D = new Transform3D(new Vector3(-30, -5, 20), new Vector3(0, 0, 0),
-                new Vector3(8, 8, 1), Vector3.UnitX, Vector3.UnitY);
-            cloneBillboardObject.Texture = this.textureDictionary["white"];
-            cloneBillboardObject.AddController(new Video3DController("vc1", cloneBillboardObject,
-                  this.textureDictionary["white"], this.videoDictionary["sample"], "sample.wmv", 0.1f, 0.5f));
-            this.objectManager.Add(cloneBillboardObject);
-            #endregion
-            
-            */
-        }
-
         #endregion
 
         #region Demos
-        //nmcg - 18.3.16
-        private void demoPathFinding()
-        {
-            /*
-            PathFindingEngine pathEngine = new PathFindingEngine("enemy path system");
-
-            pathEngine.AddNode(new Node("a", new Vector3(-10, 2, 0)));
-            pathEngine.AddNode(new Node("b", new Vector3(-5, 2, 0)));
-            pathEngine.AddNode(new Node("c", new Vector3(0, 2, 0)));
-            pathEngine.AddNode(new Node("d", new Vector3(5, 2, 0)));
-            pathEngine.AddNode(new Node("e", new Vector3(10, 2, 0)));
-
-            //define connections
-            pathEngine.AddEdge("a", "b", 1);
-            pathEngine.AddEdge("b", "c", 1);
-            pathEngine.AddEdge("c", "d", 1);
-            pathEngine.AddEdge("d", "e", 1);
-
-            //obviously a could connect directly to e also but with a high cost e.g. 10
-            pathEngine.AddEdge("a", "e", 10);
-
-
-            //demo how to find a path between two points
-            List<Node> nodeList = pathEngine.CalculatePath("a", "e");
-
-            //show in debug output
-            PathFindingEngine.Print(nodeList);
-            */
-        }
-
         
-
-        //ModelObject lastPickedModelObject;
-        private void demoMousePicking()
-        {
-            //mouseManager.IsVisible = true;
-            //if ((this.cameraManager.ActiveCamera != null)
-            //    && (this.mouseManager.IsLeftButtonClicked()))
-            //{
-            //    Vector3 pos, normal;
-
-            //    Actor pickedActor = this.mouseManager.GetPickedObject(
-            //       this.cameraManager.ActiveCamera, 3 /*5 == how far from 1st Person collidable to start testing for collisions - should always exceed capsule collision skin radius*/,
-            //       1000, out pos, out normal);
-
-            //    if (pickedActor != null)
-            //    {
-            //        if (pickedActor.ObjectType == ObjectType.Pickup)
-            //        {
-            //            ModelObject nextPickedModelObject = pickedActor as ModelObject;
-            //            nextPickedModelObject.OriginalAlpha = 1;
-            //            nextPickedModelObject.OriginalColor = Color.White;
-                        
-            //            if (nextPickedModelObject != lastPickedModelObject)
-            //            {
-            //                //set the last back to original color
-            //                if (this.lastPickedModelObject != null)
-            //                {
-            //                    this.lastPickedModelObject.Color =
-            //                        this.lastPickedModelObject.OriginalColor;
-            //                    this.lastPickedModelObject.Alpha =
-            //                        this.lastPickedModelObject.OriginalAlpha;
-            //                }
-
-            //                //set next to picked color
-            //                nextPickedModelObject.Color = Color.Red;
-            //                nextPickedModelObject.Alpha = 0.5f;
-            //                EventDispatcher.Publish(new EventData("pickup event", this, EventType.OnPickup, EventCategoryType.Pickup));
-            //            }
-
-            //            this.lastPickedModelObject = nextPickedModelObject;
-            //        }
-            //    }
-            //}
-        }
-
-
-        //nmcg - 18.3.16
-
-        private void demoSoundManager()
-        {
-            
-            if (this.keyboardManager.IsFirstKeyPress(Keys.B))
-            {
-                //Notice that the cue name is taken from inside SoundBank1
-                //To see the sound bank contents open the file Demo2DSound.xap using XACT3 found through the start menu on Windows
-                this.soundManager.PlayCue("s_playGameUIFeedback");
-            }
-        }
-
-        private void demoCameraTrack(GameTime gameTime)
-        {
-            /*
-            Vector3 translation, look, up; //not used, just to show we can access
-            Camera3DTrack cameraTrack = this.trackDictionary["puke"];
-            cameraTrack.Evalulate((float)gameTime.TotalGameTime.TotalMilliseconds, 1, out translation, out look, out up);
-            */
-        }
-
         private void demoCameraLayout()
         {
             if (this.keyboardManager.IsFirstKeyPress(Keys.F1))
@@ -1949,24 +1389,29 @@ namespace GDApp
             this.Score = (this.goodPotion * this.goodPotionsCollected) - (this.badPotion * this.badPotionsCollected) + (this.displayTime * 10);
 
 
-            Vector2 position = new Vector2(20, 20);
+            Vector2 position = new Vector2(80, 20);
             position += (6 * positionOffset);
             this.spriteBatch.Begin();
 
-            if(win)
-                this.spriteBatch.DrawString(debugFont, "YOU WIN", position, Color.Gold);
+            spriteBatch.Draw(textureDictionary["blank"], new Microsoft.Xna.Framework.Rectangle(0, 0, (this.width / 28) * 12, this.height), Color.White);
+
+            if (win)
+            {
+                spriteBatch.Draw(textureDictionary["winScreen"], new Microsoft.Xna.Framework.Rectangle(0, 0, (this.width / 28) * 12, this.height), Color.White);
+            }
             else
-                this.spriteBatch.DrawString(debugFont, "YOU LOSS", position, Color.Gold);
+            {
+                spriteBatch.Draw(textureDictionary["loseScreen"], new Microsoft.Xna.Framework.Rectangle(0, 0, (this.width / 28) * 12, this.height), Color.White);
+            }
 
-
-            this.spriteBatch.DrawString(debugFont, "Good Potions Used:         " + this.goodPotionsCollected + "x" + this.goodPotion + "points", position, Color.Gold);
+            this.spriteBatch.DrawString(debugFont, "Good Potions Used:         " + this.goodPotionsCollected + "x" + this.goodPotion + "points", position, Color.Black);
             position += positionOffset;
 
-            this.spriteBatch.DrawString(debugFont, "Bad Potions Used:         " + this.badPotionsCollected + "x" + this.badPotion + "points", position, Color.Gold);
+            this.spriteBatch.DrawString(debugFont, "Bad Potions Used:         " + this.badPotionsCollected + "x" + this.badPotion + "points", position, Color.Black);
             position += positionOffset;
 
             position += positionOffset;
-            this.spriteBatch.DrawString(debugFont, "Final Score:         " + this.Score + "points", position, Color.Gold);
+            this.spriteBatch.DrawString(debugFont, "Final Score:         " + this.Score + "points", position, Color.Black);
            
             this.spriteBatch.End();
         }
@@ -1983,10 +1428,41 @@ namespace GDApp
             Vector2 position = new Vector2(20, 20);
 
             this.spriteBatch.Begin();
-            this.spriteBatch.DrawString(debugFont, "Time Remaining:         " + this.displayTime +"s", position, Color.Gold);
+            spriteBatch.Draw(textureDictionary["blank"], new Microsoft.Xna.Framework.Rectangle(0, 0, (this.width / 28) * 12, this.height/6), Color.White);
+
+            this.spriteBatch.DrawString(debugFont, "Time Remaining:    " + this.displayTime +"s", position, Color.Gold);
             position += positionOffset;
             
-            this.spriteBatch.DrawString(debugFont, "Current Effect:         " + this.currentEffect, position, Color.Gold);
+            this.spriteBatch.DrawString(debugFont, "Current Effect:    " + this.currentEffect, position, Color.Gold);
+            position += -positionOffset;
+            position += positionOffsetX*13;
+
+
+
+            this.spriteBatch.DrawString(debugFont, "Potions:", position, Color.Gold);
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "red:speed", position, Color.Red);
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "pink:slow", position, Color.Pink);
+
+
+            position += -positionOffset*2;
+            position += positionOffsetX * 5;
+            this.spriteBatch.DrawString(debugFont, "brown:reverse", position, Color.Brown);
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "yellow:spin", position, Color.Yellow);
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "blue:lessTime", position, Color.Blue);
+
+            position += -positionOffset * 2;
+            position += positionOffsetX *6;
+            this.spriteBatch.DrawString(debugFont, "green:extraTime", position, Color.Green);
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "purple:blackout", position, Color.Purple);
+            position += positionOffset;
+            this.spriteBatch.DrawString(debugFont, "orange:flip", position, Color.Orange);
+
+            
             position += positionOffset;
             
             this.spriteBatch.End();
@@ -2291,7 +1767,7 @@ namespace GDApp
         #region Guider UI
         private void make2DMazeMap(TileGrid tg)
         {
-            BillboardPrimitiveObject billboardArchetypeObject = null, mapPiece = null;
+            BillboardPrimitiveObject billboardArchetypeObject = null;
 
             //archetype - clone from this
             billboardArchetypeObject = new BillboardPrimitiveObject("billboard", ObjectType.Billboard,
@@ -2893,11 +2369,7 @@ namespace GDApp
             #endregion
 
             #region Demos
-            //demoTextToTextureAndVideo();
-            //demoCameraTrack(gameTime);
             demoCameraLayout();
-            demoSoundManager();
-            demoMousePicking();
             #endregion
 
             #region Network Updates
@@ -2933,7 +2405,7 @@ namespace GDApp
             // Display the appropriate viewport
             DisplayViewport(gameTime);
 
-
+            if(gameTimer == true)
             drawTimer();
 
             // Check gamestate
@@ -2961,10 +2433,10 @@ namespace GDApp
             {
                 foreach (Camera3D camera in cameraManager)
                 {
-                    if (camera.ProjectionParameters.AspectRatio == 4.0f / 3)
+                    //if (camera.ProjectionParameters.AspectRatio == 4.0f / 3)
                         menuManager.TextureRectangle = this.menuRectangleB;
-                    else
-                        menuManager.TextureRectangle = this.menuRectangleA;
+                    //else
+                        //menuManager.TextureRectangle = this.menuRectangleA;
                     //set the viewport based on the current camera
                     graphics.GraphicsDevice.Viewport = camera.Viewport;
                     base.Draw(gameTime);

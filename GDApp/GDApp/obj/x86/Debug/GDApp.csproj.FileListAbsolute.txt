@@ -716,3 +716,6 @@ C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_bre
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_footsteps.xnb
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Audio\s_reversePotion.xnb
 C:\Users\ciara_000\Guidance\GDApp\GDApp\bin\x86\Debug\Content\anubis2bc_0.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\lose.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\win.xnb
+D:\SecondSight\Guidance\GDApp\GDApp\bin\x86\Debug\Content\Assets\Textures\Menu\blank.xnb
